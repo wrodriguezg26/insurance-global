@@ -1,0 +1,7 @@
+{
+  "name": "insurance-global-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Envío del certificado de póliza por correo (SMTP) para Insurance Global",
+  "dependencies": {}
+}

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Insurance Global · Seguros para todo lo que te importa</title>
+<meta name="description" content="Seguros de autos, hogar, vida, salud, viajes, mascotas y empresas. Compra en línea o en oficina; cada póliza se aprueba en nuestro servidor central y se puede verificar.">
+<meta name="theme-color" content="#0e2a47">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgYXJpYS1oaWRkZW49InRydWUiPjxwYXRoIGQ9Ik0yNCAyLjVsMTggNi40djEzLjZDNDIgMzQgMzQuMiA0MS44IDI0IDQ1LjUgMTMuOCA0MS44IDYgMzQgNiAyMi41VjguOXoiIGZpbGw9IiMwZTJhNDciLz48cGF0aCBkPSJNMjQgMi41bDE4IDYuNHY0LjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M5OWEyZSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjIzIiByPSIxMC41IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xMy41IDIzaDIxTTI0IDEyLjVjNC4yIDQuNCA0LjIgMTYuNiAwIDIxTTI0IDEyLjVjLTQuMiA0LjQtNC4yIDE2LjYgMCAyMSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNiIvPjwvc3ZnPg==">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e2a47;--navy-2:#163a5f;--blue:#1f5fbf;--blue-l:#e8f0fc;--teal:#0f8f7e;--teal-l:#e2f4f1;--gold:#c99a2e;--gold-l:#fbf3e0;--red:#c0392b;--red-l:#fbeaea;--amber:#a86a12;--amber-l:#fdf1dc;--bg:#f5f7fb;--line:#dde3ec;--ink:#14213d;--muted:#5b6b82;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+a{color:var(--blue)}
+h1,h2,h3,h4{line-height:1.2;color:var(--navy)}
+h3{margin:0 0 6px;font-size:18px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.muted{color:var(--muted)} .tiny{font-size:12.5px;color:var(--muted)} .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.demo{background:var(--gold-l);color:#6b4e00;font-size:13px;text-align:center;padding:6px 12px}
+.util{background:var(--navy);color:#c9d6e6;font-size:13px}
+.util .wrap{display:flex;justify-content:space-between;gap:12px;height:34px;align-items:center}
+.util a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+.util a:hover{text-decoration:underline}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+.top .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:800;font-size:19px;letter-spacing:-.2px;white-space:nowrap}
+.brand svg{width:36px;height:36px}
+.brand small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.4px;text-transform:uppercase}
+nav.main{display:flex;gap:2px;flex:1}
+nav.main a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14.5px}
+nav.main a:hover,nav.main a.on{background:var(--blue-l);color:var(--blue)}
+.menu-btn{display:none;background:none;border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;background:var(--blue);color:#fff;font-size:15px}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:18px;height:18px}
+.btn.sec{background:#fff;color:var(--navy);border:1.5px solid var(--line)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn.teal{background:var(--teal)} .btn.red{background:var(--red)} .btn.sm{padding:8px 14px;font-size:14px} .btn.full{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed;filter:none}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:16px}
+/* hero */
+.hero{background:radial-gradient(1200px 400px at 85% -10%,#2a6bb0 0,transparent 60%),linear-gradient(135deg,var(--navy),#174775);color:#fff;padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:46px;margin:0 0 16px;color:#fff;letter-spacing:-.6px}
+.hero p{color:#d3e0ef;font-size:18px;margin:0 0 26px;max-width:600px}
+.quick{color:var(--ink)}
+.qopts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0 16px}
+.qo input{position:absolute;opacity:0}
+.qo span{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:10px;padding:10px;font-weight:600;font-size:14px;cursor:pointer}
+.qo span svg{width:20px;height:20px;color:var(--blue)}
+.qo input:checked+span{border-color:var(--blue);background:var(--blue-l)}
+.qo input:focus-visible+span{outline:2px solid var(--blue)}
+/* sections */
+.sec{padding:56px 0}
+.sec.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:30px;margin:0 0 8px;letter-spacing:-.3px}
+.lead{color:var(--muted);margin:0 0 28px;max-width:720px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.prod-card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;transition:.15s}
+.prod-card:hover{border-color:var(--blue);box-shadow:0 10px 26px rgba(20,33,61,.08);transform:translateY(-2px)}
+.prod-card p{margin:0;font-size:14.5px;flex:1}
+.from{font-weight:700;color:var(--blue);font-size:14.5px;margin-top:8px}
+.ic{width:46px;height:46px;border-radius:12px;background:var(--blue-l);color:var(--blue);display:grid;place-items:center;flex:none}
+.ic svg{width:25px;height:25px}
+.ic.teal{background:var(--teal-l);color:var(--teal)} .ic.gold{background:var(--gold-l);color:var(--gold)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-36px;position:relative}
+.trust .card{display:flex;gap:14px;align-items:flex-start;box-shadow:0 10px 30px rgba(14,42,71,.08)}
+.trust b{display:block;color:var(--navy)} .trust span{font-size:13.5px;color:var(--muted)}
+.how{counter-reset:h}
+.how .card{position:relative;padding-top:52px}
+.how .card:before{counter-increment:h;content:counter(h);position:absolute;top:18px;left:22px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+/* flow diagram */
+.flow{display:grid;grid-template-columns:1fr auto 1.1fr auto 1fr;gap:14px;align-items:center}
+.flow .col{display:grid;gap:10px}
+.node{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-weight:600;font-size:14.5px}
+.node svg{width:20px;height:20px;color:var(--blue);flex:none}
+.node.core{background:var(--navy);color:#fff;border-color:var(--navy);flex-direction:column;align-items:flex-start;padding:20px}
+.node.core svg{color:#9cc3ef;width:28px;height:28px}
+.node.core small{color:#c9d6e6;font-weight:500}
+.node.out{border-color:var(--teal);background:var(--teal-l)} .node.out svg{color:var(--teal)}
+.arrow{color:var(--muted);font-size:26px}
+/* forms */
+label.l{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-l)}
+input.bad,select.bad{border-color:var(--red);box-shadow:0 0 0 3px var(--red-l)}
+textarea{min-height:110px;resize:vertical}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg3{grid-template-columns:repeat(3,1fr)}
+.full{grid-column:1/-1}
+.hint{font-size:12.5px;color:var(--muted);margin-top:4px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin:10px 0;cursor:pointer}
+.check input{width:18px;height:18px;margin-top:2px;flex:none}
+.errbox{background:var(--red-l);color:var(--red);border-radius:10px;padding:10px 14px;font-weight:600;font-size:14px;margin:12px 0}
+.errbox:empty{display:none}
+.okbox{background:var(--teal-l);color:#0b6b5f;border-radius:10px;padding:14px 16px}
+.warnbox{background:var(--amber-l);color:#7a4c08;border-radius:10px;padding:14px 16px}
+fieldset{border:1px solid var(--line);border-radius:var(--r);padding:20px;margin:0 0 18px;background:#fff}
+legend{font-weight:800;color:var(--navy);padding:0 8px;font-size:17px}
+.paytabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.paytabs label{flex:1;min-width:140px}
+.paytabs input{position:absolute;opacity:0}
+.paytabs span{display:block;text-align:center;border:1.5px solid var(--line);border-radius:10px;padding:11px;font-weight:700;font-size:14px;cursor:pointer}
+.paytabs input:checked+span{border-color:var(--blue);background:var(--blue-l);color:var(--blue)}
+.paytabs input:focus-visible+span{outline:2px solid var(--blue)}
+/* quote */
+.layout2{display:grid;grid-template-columns:1fr 370px;gap:26px;align-items:start}
+.side{position:sticky;top:92px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.plan{border:2px solid var(--line);border-radius:var(--r);padding:18px;background:#fff;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.plan.on{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-l)}
+.plan h4{margin:0 0 6px;font-size:15px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.plan .p{font-size:26px;font-weight:800;color:var(--navy)}
+.plan .m{font-size:13px;color:var(--muted)}
+.plan.on h4{color:var(--blue)}
+table.cov{width:100%;border-collapse:collapse;font-size:14px;background:#fff}
+table.cov th,table.cov td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.cov th{background:#f0f3f8;font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+table.cov td.c{text-align:center} table.cov th.c{text-align:center}
+.yes{color:var(--teal);font-weight:800} .no{color:#a6b0be}
+.sumrow{display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:14.5px;border-bottom:1px dashed var(--line)}
+.sumrow:last-child{border:0}
+.sumrow.tot{font-size:18px;font-weight:800;color:var(--navy)}
+/* steps */
+.steps{list-style:none;padding:0;margin:0}
+.st{display:flex;gap:14px;padding:12px 0;align-items:flex-start;color:var(--muted)}
+.st .dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--line);flex:none;margin-top:1px;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff}
+.st b{display:block;color:inherit}
+.st small{display:block;font-size:13px}
+.st.run{color:var(--ink)} .st.run .dot{border-color:var(--blue);border-top-color:transparent;animation:spin .8s linear infinite}
+.st.done{color:var(--ink)} .st.done .dot{background:var(--teal);border-color:var(--teal)} .st.done .dot:after{content:"✓"}
+.st.warn{color:var(--ink)} .st.warn .dot{background:var(--amber);border-color:var(--amber)} .st.warn .dot:after{content:"!"}
+.st.fail{color:var(--ink)} .st.fail .dot{background:var(--red);border-color:var(--red)} .st.fail .dot:after{content:"×"}
+.st.skip{opacity:.5}
+@keyframes spin{to{transform:rotate(360deg)}}
+.bignum{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:22px;font-weight:800;color:var(--navy);letter-spacing:.5px;background:#f0f3f8;border-radius:10px;padding:10px 14px;display:inline-block;margin:4px 0}
+.kv{display:grid;grid-template-columns:200px 1fr;gap:6px 16px;font-size:14.5px}
+.kv dt{color:var(--muted)} .kv dd{margin:0;font-weight:600}
+.badge{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:800;white-space:nowrap}
+.b-ok{background:var(--teal-l);color:var(--teal)} .b-rev{background:var(--amber-l);color:var(--amber)} .b-pre{background:var(--blue-l);color:var(--blue)} .b-bad{background:var(--red-l);color:var(--red)} .b-gray{background:#eef1f5;color:var(--muted)}
+/* tables */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+table.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.tbl th{background:#f0f3f8;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+.tbl tr.click{cursor:pointer} .tbl tr.click:hover td{background:#f7f9fd}
+.tbl tr:last-child td{border-bottom:0}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:22px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.kpi b{display:block;font-size:24px;color:var(--navy)} .kpi span{font-size:13px;color:var(--muted)}
+.console-h{background:var(--navy);color:#fff;border-radius:var(--r);padding:20px 24px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.console-h h1{color:#fff;margin:0;font-size:24px} .console-h p{margin:4px 0 0;color:#c9d6e6;font-size:14px}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:13px;color:#9ee6d8}
+.live:before{content:"";width:9px;height:9px;border-radius:50%;background:#2fd3b5;box-shadow:0 0 0 4px rgba(47,211,181,.2)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.filters select,.filters input{width:auto;min-width:160px;padding:8px 10px}
+.loglist{list-style:none;margin:0;padding:0;font-size:13.5px}
+.loglist li{padding:8px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:10px}
+.loglist time{color:var(--muted)}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:18px;flex-wrap:wrap}
+.tabs a{padding:10px 14px;text-decoration:none;color:var(--muted);font-weight:700;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs a.on{color:var(--blue);border-color:var(--blue)}
+/* certificate */
+.cert{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:34px;max-width:900px;margin:0 auto}
+.cert-h{display:flex;justify-content:space-between;gap:20px;border-bottom:3px solid var(--navy);padding-bottom:16px;margin-bottom:20px;align-items:flex-start}
+.cert-h .brand{font-size:22px}
+.seal{border:2px dashed var(--teal);border-radius:12px;padding:12px 16px;color:#0b6b5f;background:var(--teal-l);font-size:13.5px}
+.page-h{padding:36px 0 8px}
+.page-h h1{font-size:34px;margin:0 0 6px;letter-spacing:-.4px}
+.crumbs{font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.crumbs a{color:var(--muted)}
+.legal h2{font-size:21px;margin-top:28px}
+.legal p,.legal li{color:#2b3a52}
+.office-list .card{display:flex;gap:14px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer;color:var(--navy)}
+/* footer */
+footer{background:var(--navy);color:#c9d6e6;padding:48px 0 26px;margin-top:48px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;margin:0 0 12px;font-size:15px}
+footer a{color:#e6eef8;text-decoration:none;display:block;margin:6px 0}
+footer a:hover{text-decoration:underline}
+footer .brand{color:#fff}
+.foot-b{border-top:1px solid rgba(255,255,255,.15);margin-top:28px;padding-top:18px;font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:10px;opacity:0;transition:.25s;pointer-events:none;z-index:60;font-weight:600}
+#toast.on{opacity:1;transform:translateX(-50%)}
+/* chat */
+.chat-fab{position:fixed;right:20px;bottom:20px;z-index:50;background:var(--navy);color:#fff;border:0;border-radius:99px;padding:12px 18px 12px 14px;font:inherit;font-weight:700;display:flex;gap:8px;align-items:center;cursor:pointer;box-shadow:0 10px 28px rgba(14,42,71,.3)}
+.chat-fab svg{width:22px;height:22px}
+.chat-box{position:fixed;right:20px;bottom:84px;width:360px;max-width:calc(100vw - 40px);height:480px;max-height:calc(100vh - 120px);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 20px 50px rgba(14,42,71,.25);display:none;flex-direction:column;z-index:50;overflow:hidden}
+.chat-box.open{display:flex}
+.chat-h{background:var(--navy);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.chat-h button{background:none;border:0;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+.chat-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#f7f9fc}
+.msg{max-width:85%;padding:10px 12px;border-radius:12px;font-size:14px}
+.msg.bot{background:#fff;border:1px solid var(--line);align-self:flex-start}
+.msg.me{background:var(--blue);color:#fff;align-self:flex-end}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:8px 12px;border-top:1px solid var(--line)}
+.chips button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:5px 10px;font:inherit;font-size:12.5px;font-weight:600;cursor:pointer}
+.chat-in{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
+.chat-in input{padding:9px 11px}
+@media (max-width:1000px){
+  .hero .wrap,.layout2,.flow{grid-template-columns:1fr}
+  .arrow{transform:rotate(90deg);justify-self:center}
+  .g3,.g4,.trust{grid-template-columns:repeat(2,1fr)}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  footer .cols{grid-template-columns:1fr 1fr}
+  .side{position:static}
+  .menu-btn{display:block;margin-left:auto}
+  nav.main{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 20px;border-bottom:1px solid var(--line)}
+  nav.main.open{display:flex}
+  .top .wrap{position:relative}
+}
+@media (max-width:640px){
+  .hero h1{font-size:34px} .g2,.g3,.g4,.trust,.fg,.fg3,.plans{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)} .kv{grid-template-columns:1fr}
+  .util .wrap span{display:none}
+}
+@media print{
+  .demo,.util,.top,footer,.chat-fab,.chat-box,.noprint{display:none!important}
+  body{background:#fff} .cert{border:0;padding:0}
+}
+.hero .quick p{color:var(--muted);font-size:12.5px}
+footer .brand svg>path:first-child{fill:#1f5fbf}
+.chat-fab svg{width:30px;height:30px;margin:-4px 0}
+.chat-who{display:flex;gap:10px;align-items:center}.chat-who svg{width:38px;height:38px}.chat-who small{display:block;font-size:12px;color:#9ee6d8;font-weight:600}
+.ig-eye{animation:igblink 4s infinite;transform-origin:32px 29px}@keyframes igblink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.seal-row{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:center;margin-top:22px}
+.qrbox{text-align:center}.qrbox svg{width:140px;height:140px;border:1px solid var(--line);border-radius:8px}.qrbox small{display:block;font-size:11px;color:var(--muted);line-height:1.3}
+.linkbox{margin-top:18px;background:#f6f8fb;border:1px solid var(--line);border-radius:12px;padding:14px}
+.linkbox input{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;color:var(--muted)}
+.cert-actions{gap:8px}
+@media (max-width:640px){.seal-row{grid-template-columns:1fr}}
+@media print{.seal-row{grid-template-columns:1fr 130px}}
+
+</style>
+</head>
+<body>
+<div class="demo">Sitio académico simulado: Insurance Global es una compañía ficticia. No se venden seguros reales ni se procesan pagos.</div>
+<div class="util"><div class="wrap"><span>Línea de atención (601) 000 0000 · Siniestros 24/7</span><div><a href="#/mis-polizas">Mis pólizas</a><a href="#/oficina">Portal de asesores</a><a href="#/central">Servidor central</a></div></div></div>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#/" aria-label="Insurance Global, inicio"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5l18 6.4v13.6C42 34 34.2 41.8 24 45.5 13.8 41.8 6 34 6 22.5V8.9z" fill="#0e2a47"/><path d="M24 2.5l18 6.4v4.2" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="23" r="10.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13.5 23h21M24 12.5c4.2 4.4 4.2 16.6 0 21M24 12.5c-4.2 4.4-4.2 16.6 0 21" fill="none" stroke="#fff" stroke-width="1.6"/></svg><span>Insurance Global<small>Compañía de seguros</small></span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menú">☰</button>
+  <nav class="main" aria-label="Principal"><a href="#/cotizar">Seguros</a><a href="#/canales">Canales</a><a href="#/verificar">Verificar póliza</a><a href="#/siniestros">Siniestros</a><a href="#/atencion">Atención</a></nav>
+  <a class="btn sm" href="#/cotizar" style="white-space:nowrap">Cotizar</a>
+</div></header>
+<main id="app"></main>
+<footer><div class="wrap"><div class="cols">
+  <div><a class="brand" href="#/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5l18 6.4v13.6C42 34 34.2 41.8 24 45.5 13.8 41.8 6 34 6 22.5V8.9z" fill="#0e2a47"/><path d="M24 2.5l18 6.4v4.2" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="23" r="10.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13.5 23h21M24 12.5c4.2 4.4 4.2 16.6 0 21M24 12.5c-4.2 4.4-4.2 16.6 0 21" fill="none" stroke="#fff" stroke-width="1.6"/></svg><span>Insurance Global</span></a><p style="margin-top:12px">Seguros para personas y empresas. Todas las ventas, en la web y en oficinas, se aprueban en nuestro servidor central.</p><p>(601) 000 0000 · seguros@t-shits.co</p></div>
+  <div><h4>Seguros</h4><a href="#/cotizar/auto">Autos</a><a href="#/cotizar/hogar">Hogar</a><a href="#/cotizar/vida">Vida</a><a href="#/cotizar/salud">Salud</a><a href="#/cotizar/viaje">Viajes</a><a href="#/cotizar/mascotas">Mascotas</a><a href="#/cotizar/pyme">Empresas</a></div>
+  <div><h4>Clientes</h4><a href="#/mis-polizas">Mis pólizas</a><a href="#/verificar">Verificar póliza</a><a href="#/siniestros">Reportar siniestro</a><a href="#/atencion">Peticiones, quejas y reclamos</a><a href="#/canales">Oficinas y canales</a></div>
+  <div><h4>Legal</h4><a href="#/legal/condiciones">Condiciones generales</a><a href="#/legal/privacidad">Tratamiento de datos</a><a href="#/legal/consumidor">Derechos del consumidor financiero</a><a href="#/legal/sarlaft">SARLAFT</a><a href="#/legal/seguridad">Cómo protegemos tu compra</a><a href="https://www.superfinanciera.gov.co" target="_blank" rel="noopener">Superintendencia Financiera ↗</a></div>
+</div><div class="foot-b"><span>© 2026 Insurance Global Compañía de Seguros S.A. (ficticia) · NIT 900.000.000-0 (simulado)</span><span>Simulador académico · Desplegado en Azure Static Web Apps</span></div></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<button class="chat-fab" id="chatFab" aria-expanded="false" aria-controls="chat"><svg viewBox="0 0 64 64" aria-hidden="true"><line x1="32" y1="4" x2="32" y2="13" stroke="#9cc3ef" stroke-width="2.5"/><circle cx="32" cy="5" r="3.5" fill="#9cc3ef"/><rect x="5" y="25" width="6" height="14" rx="2" fill="#9cc3ef"/><rect x="53" y="25" width="6" height="14" rx="2" fill="#9cc3ef"/><rect x="10" y="13" width="44" height="38" rx="11" fill="#163a5f" stroke="#9cc3ef" stroke-width="2.5"/><rect x="16" y="20" width="32" height="18" rx="6" fill="#0b1f36"/><g class="ig-eye"><rect x="21" y="25" width="7" height="8" rx="2" fill="#9cc3ef"/><rect x="36" y="25" width="7" height="8" rx="2" fill="#9cc3ef"/></g><path d="M24 44 h16" stroke="#9cc3ef" stroke-width="2.5" stroke-linecap="round"/><rect x="22" y="51" width="20" height="7" rx="2" fill="#163a5f" stroke="#9cc3ef" stroke-width="2"/></svg>Agente IG</button>
+<div class="chat-box" id="chat" role="dialog" aria-label="Agente IG"><div class="chat-h"><span class="chat-who"><svg viewBox="0 0 64 64" aria-hidden="true"><line x1="32" y1="4" x2="32" y2="13" stroke="#9cc3ef" stroke-width="2.5"/><circle cx="32" cy="5" r="3.5" fill="#9cc3ef"/><rect x="5" y="25" width="6" height="14" rx="2" fill="#9cc3ef"/><rect x="53" y="25" width="6" height="14" rx="2" fill="#9cc3ef"/><rect x="10" y="13" width="44" height="38" rx="11" fill="#163a5f" stroke="#9cc3ef" stroke-width="2.5"/><rect x="16" y="20" width="32" height="18" rx="6" fill="#0b1f36"/><g class="ig-eye"><rect x="21" y="25" width="7" height="8" rx="2" fill="#9cc3ef"/><rect x="36" y="25" width="7" height="8" rx="2" fill="#9cc3ef"/></g><path d="M24 44 h16" stroke="#9cc3ef" stroke-width="2.5" stroke-linecap="round"/><rect x="22" y="51" width="20" height="7" rx="2" fill="#163a5f" stroke="#9cc3ef" stroke-width="2"/></svg><span><b>Agente IG</b><small>Asistente virtual · en línea</small></span></span><button id="chatX" aria-label="Cerrar">×</button></div><div class="chat-msgs" id="chatMsgs" aria-live="polite"></div><div class="chips"><button>Cotizar</button><button>Verificar póliza</button><button>Reportar siniestro</button><button>Oficinas</button></div><form class="chat-in" id="chatF"><input id="chatIn" placeholder="Escribe tu pregunta" aria-label="Pregunta"><button class="btn sm">Enviar</button></form></div>
+<script>
+"use strict";
+/* ============ Utilidades ============ */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=n=>"$"+Math.round(n).toLocaleString("es-CO");
+const MEM={};
+const store={
+  get(k,d){try{const v=localStorage.getItem("ig_"+k);return v!=null?JSON.parse(v):(k in MEM?MEM[k]:d)}catch(e){return k in MEM?MEM[k]:d}},
+  set(k,v){MEM[k]=v;try{localStorage.setItem("ig_"+k,JSON.stringify(v))}catch(e){}},
+  del(k){delete MEM[k];try{localStorage.removeItem("ig_"+k)}catch(e){}}
+};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const rnd=n=>{const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%n};
+const digits=n=>Array.from({length:n},()=>rnd(10)).join("");
+const pad=(n,l=2)=>String(n).padStart(l,"0");
+const isoDate=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const compact=d=>`${d.getFullYear()}${pad(d.getMonth()+1)}${pad(d.getDate())}`;
+const fdate=s=>s?new Date(s.length===10?s+"T12:00:00":s).toLocaleDateString("es-CO",{year:"numeric",month:"long",day:"numeric"}):"—";
+const fdt=s=>new Date(s).toLocaleString("es-CO",{day:"2-digit",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
+const addDays=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return isoDate(d)};
+const addYear=s=>{const d=new Date(s+"T12:00:00");d.setFullYear(d.getFullYear()+1);return isoDate(d)};
+function addBizDays(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);const w=d.getDay();if(w&&w<6)n--}return d}
+function seq(k){const c=store.get("seq",{});c[k]=(c[k]||0)+1;store.set("seq",c);return c[k]}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),2800)}
+function luhn(n){n=String(n).replace(/\D/g,"");if(n.length<13||n.length>19)return false;let s=0,alt=false;for(let i=n.length-1;i>=0;i--){let d=+n[i];if(alt){d*=2;if(d>9)d-=9}s+=d;alt=!alt}return s%10===0}
+function hash(str){let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<str.length;i++){const c=str.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return(4294967296*(2097151&h2)+(h1>>>0)).toString(16).toUpperCase().padStart(14,"0")}
+const maskDoc=d=>d?"•••• "+String(d).slice(-4):"—";
+const maskName=c=>c?`${c.nombres.split(" ")[0]} ${c.apellidos.charAt(0)}.`:"—";
+const fullName=c=>c?`${c.nombres} ${c.apellidos}`:"";
+let AFTER=[];const after=f=>AFTER.push(f);
+
+/* ============ Iconos ============ */
+const ICONS={
+ auto:'<path d="M3 13.5l2-5.2A2 2 0 0 1 6.9 7h10.2a2 2 0 0 1 1.9 1.3l2 5.2V18h-3v-2H6v2H3z"/><path d="M3 13.5h18"/><circle cx="7.5" cy="15.5" r=".6"/><circle cx="16.5" cy="15.5" r=".6"/>',
+ hogar:'<path d="M3 11l9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>',
+ vida:'<path d="M12 20s-7-4.4-9-9a4.8 4.8 0 0 1 9-2.6A4.8 4.8 0 0 1 21 11c-2 4.6-9 9-9 9z"/>',
+ salud:'<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M12 8v8M8 12h8"/>',
+ viaje:'<path d="M10.5 13.5L3 11l18-7-7 18-2.5-7.5z"/><path d="M10.5 13.5L21 4"/>',
+ mascotas:'<circle cx="6.5" cy="10" r="1.8"/><circle cx="10" cy="6" r="1.8"/><circle cx="14" cy="6" r="1.8"/><circle cx="17.5" cy="10" r="1.8"/><path d="M8 17.5c0-3 1.8-5 4-5s4 2 4 5c0 1.8-1.8 2.6-4 1.8-2.2.8-4 0-4-1.8z"/>',
+ pyme:'<rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2M11 21v-3h2v3"/>',
+ shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
+ lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+ server:'<rect x="4" y="3" width="16" height="7" rx="1.5"/><rect x="4" y="14" width="16" height="7" rx="1.5"/><path d="M8 6.5h.01M8 17.5h.01M12 10v4"/>',
+ web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',
+ office:'<path d="M3 9l2-5h14l2 5"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/>',
+ phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+ chat:'<path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/>',
+ whatsapp:'<path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2 2 4 4.5 5l1-1.2 1.8.8c-.3 1.2-1.3 1.6-2.3 1.4-3-.6-5.4-3-6-6-.2-1 .2-2 1.4-2.3l.8 1.8z"/>',
+ search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',
+ doc:'<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/>',
+ alert:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>',
+ users:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.6 3.2-6 6.5-6s6 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c2 .8 3.2 3 3.5 6"/>',
+ key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/>',
+ print:'<path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/>',
+ handshake:'<path d="M2 12l4-4 4 2 3-2 4 1 5 3"/><path d="M6 8v6l5 5 2-1 2 1 4-4-5-5"/><path d="M11 19l-2-2M13 18l-2-2"/>',
+ api:'<path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/>'
+};
+const ic=(k,cls="")=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" ${cls?`class="${cls}"`:""} aria-hidden="true">${ICONS[k]||""}</svg>`;
+const LOGO=`<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5l18 6.4v13.6C42 34 34.2 41.8 24 45.5 13.8 41.8 6 34 6 22.5V8.9z" fill="#0e2a47"/><path d="M24 2.5l18 6.4v4.2" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="23" r="10.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13.5 23h21M24 12.5c4.2 4.4 4.2 16.6 0 21M24 12.5c-4.2 4.4-4.2 16.6 0 21" fill="none" stroke="#fff" stroke-width="1.6"/></svg>`;
+
+/* ============ Empresa (ficticia) ============ */
+const CO={name:"Insurance Global",legal:"Insurance Global Compañía de Seguros S.A. (ficticia)",nit:"900.000.000-0 (simulado)",domain:"seguros.t-shits.co",
+  tel:"(601) 000 0000",cel:"#000 desde celular",wa:"+57 300 000 0000",mail:"seguros@t-shits.co",datos:"seguros@t-shits.co",
+  defensor:{name:"Defensoría del Consumidor Financiero (simulada)",mail:"seguros@t-shits.co (asunto: Defensor del Consumidor)",tel:"(601) 000 0001",addr:"Calle 93 # 11-26, oficina 502, Bogotá"}};
+const OFFICES=[
+ {id:"BOG",city:"Bogotá",name:"Sede principal Chicó",addr:"Calle 93 # 11-26",hours:"Lun–vie 8:00–18:00 · sáb 9:00–13:00",central:true,sellers:["Camila Rojas","Julián Herrera"]},
+ {id:"MED",city:"Medellín",name:"Oficina El Poblado",addr:"Carrera 43A # 7-50",hours:"Lun–vie 8:00–18:00 · sáb 9:00–13:00",sellers:["Daniela Restrepo","Santiago Mejía"]},
+ {id:"CAL",city:"Cali",name:"Oficina Granada",addr:"Avenida 9N # 15-40",hours:"Lun–vie 8:00–17:30",sellers:["Valentina Cruz","Felipe Ocampo"]},
+ {id:"BAQ",city:"Barranquilla",name:"Oficina Alto Prado",addr:"Carrera 53 # 82-86",hours:"Lun–vie 8:00–17:30",sellers:["María José Díaz","Andrés Barrios"]},
+ {id:"BGA",city:"Bucaramanga",name:"Oficina Cabecera",addr:"Calle 52 # 35-10",hours:"Lun–vie 8:00–17:30",sellers:["Laura Ardila","Sergio Pinzón"]}
+];
+const officeById=id=>OFFICES.find(o=>o.id===id);
+
+/* ============ Productos ============ */
+const CITIES=["Bogotá","Medellín","Cali","Barranquilla","Bucaramanga","Cartagena","Pereira","Otra ciudad"];
+const PLANS=[["esencial","Esencial",.75],["plus","Plus",1],["total","Total",1.4]];
+const planName=k=>(PLANS.find(p=>p[0]===k)||[])[1]||k;
+const P={
+ auto:{name:"Autos",code:"AUT",ic:"auto",tag:"Todo riesgo para tu carro, con grúa y asistencia 24/7.",iva:true,
+  fields:[{id:"valor",label:"Valor comercial del vehículo (guía Fasecolda)",type:"money",def:85000000,min:10000000,max:600000000},
+          {id:"modelo",label:"Año del modelo",type:"number",def:2021,min:2000,max:2027},
+          {id:"ciudad",label:"Ciudad de circulación",type:"select",opts:CITIES,def:"Bogotá"},
+          {id:"uso",label:"Uso del vehículo",type:"select",opts:["Particular","Trabajo o plataformas"],def:"Particular"}],
+  calc:v=>{const age=Math.max(0,2026-v.modelo);const cf={"Bogotá":1.1,"Medellín":1.05,"Cali":1.08,"Cartagena":1.04}[v.ciudad]||1;return v.valor*.026*(1+age*.012)*cf*(v.uso==="Particular"?1:1.3)},
+  review:v=>v.valor>300000000?"Vehículo de alto valor: requiere inspección y suscripción manual.":null,
+  extra:[{id:"placa",label:"Placa",ph:"ABC123",re:/^[A-Z]{3}\d{2}[A-Z0-9]$/i,msg:"La placa debe tener 3 letras y 3 caracteres (ej. ABC123)."},{id:"marca",label:"Marca y línea",ph:"Ej. Mazda 3 Touring"}],
+  desc:v=>`Vehículo modelo ${v.modelo}, valor asegurado ${money(v.valor)}, ${v.ciudad}, uso ${v.uso.toLowerCase()}`,
+  cov:[["Responsabilidad civil extracontractual","$1.000 M","$2.000 M","$4.000 M"],["Pérdida total por daños o hurto","✓","✓","✓"],["Pérdida parcial por daños","—","✓","✓"],["Pérdida parcial por hurto","—","✓","✓"],["Grúa y asistencia en carretera 24/7","✓","✓","✓"],["Vehículo de reemplazo","—","10 días","30 días"],["Conductor elegido","—","3 al año","Ilimitado"]]},
+ hogar:{name:"Hogar",code:"HOG",ic:"hogar",tag:"Tu casa y lo que hay en ella, protegidos contra incendio, agua y hurto.",iva:true,
+  fields:[{id:"inmueble",label:"Valor de reconstrucción del inmueble",type:"money",def:300000000,min:0,max:5000000000},
+          {id:"contenido",label:"Valor de tus contenidos (muebles, equipos)",type:"money",def:40000000,min:0,max:800000000},
+          {id:"tipo",label:"Tipo de vivienda",type:"select",opts:["Apartamento","Casa"],def:"Apartamento"},
+          {id:"ciudad",label:"Ciudad",type:"select",opts:CITIES,def:"Bogotá"}],
+  calc:v=>(v.inmueble*.0021+v.contenido*.009)*(v.tipo==="Casa"?1.15:1),
+  review:v=>v.inmueble>2000000000?"Inmueble de alto valor: requiere inspección del riesgo.":(v.inmueble+v.contenido===0?"No hay valores asegurados.":null),
+  extra:[{id:"dir_riesgo",label:"Dirección del inmueble asegurado",ph:"Calle 100 # 15-20, apto 501"}],
+  desc:v=>`${v.tipo} en ${v.ciudad}; inmueble ${money(v.inmueble)}, contenidos ${money(v.contenido)}`,
+  cov:[["Incendio, terremoto y eventos de la naturaleza","✓","✓","✓"],["Daños por agua","—","✓","✓"],["Hurto de contenidos","—","✓","✓"],["Responsabilidad civil familiar","$50 M","$150 M","$300 M"],["Asistencia hogar (plomería, cerrajería, electricidad)","2 al año","4 al año","Ilimitada"],["Equipos electrónicos fuera de casa","—","—","✓"]]},
+ vida:{name:"Vida",code:"VID",ic:"vida",tag:"Respaldo económico para tu familia cuando más lo necesita.",iva:false,
+  fields:[{id:"edad",label:"Tu edad",type:"number",def:35,min:18,max:75},
+          {id:"suma",label:"Suma asegurada",type:"money",def:200000000,min:20000000,max:2000000000},
+          {id:"fuma",label:"¿Fumas?",type:"select",opts:["No","Sí"],def:"No"}],
+  calc:v=>v.suma*(.55+(v.edad-18)*.085)/1000*(v.fuma==="Sí"?1.6:1),
+  review:v=>(v.suma>800000000||v.edad>65)?"Suma o edad fuera del rango automático: requiere declaración médica y suscripción manual.":null,
+  extra:"beneficiarios",
+  desc:v=>`Suma asegurada ${money(v.suma)}; asegurado de ${v.edad} años${v.fuma==="Sí"?", fumador":""}`,
+  cov:[["Muerte por cualquier causa","✓","✓","✓"],["Incapacidad total y permanente","—","✓","✓"],["Enfermedades graves (anticipo)","—","30%","50%"],["Auxilio funerario","$5 M","$10 M","$15 M"],["Renta diaria por hospitalización","—","—","$150.000"]]},
+ salud:{name:"Salud",code:"SAL",ic:"salud",tag:"Especialistas sin autorizaciones y red de clínicas en todo el país.",iva:false,
+  fields:[{id:"edad",label:"Edad del titular",type:"number",def:32,min:0,max:70},
+          {id:"personas",label:"Personas a asegurar (incluido el titular)",type:"number",def:1,min:1,max:6},
+          {id:"ciudad",label:"Ciudad",type:"select",opts:CITIES,def:"Bogotá"}],
+  calc:v=>1450000*(1+Math.max(0,v.edad-18)*.028)*(1+(v.personas-1)*.85),
+  review:v=>v.edad>60?"Titular mayor de 60 años: requiere valoración médica.":null,
+  extra:[{id:"eps",label:"EPS a la que estás afiliado",ph:"Nombre de tu EPS"}],
+  desc:v=>`${v.personas} persona(s), titular de ${v.edad} años, ${v.ciudad}`,
+  cov:[["Consulta con especialista sin autorización","✓","✓","✓"],["Hospitalización y cirugía","Red básica","Red amplia","Red premium"],["Medicamentos ambulatorios","—","70%","90%"],["Urgencias en el exterior","—","USD 20.000","USD 100.000"],["Copago por consulta","$35.000","$20.000","$0"]]},
+ viaje:{name:"Viajes",code:"VIA",ic:"viaje",tag:"Asistencia médica y de equipaje en cualquier destino.",iva:true,monthly:false,
+  fields:[{id:"destino",label:"Destino",type:"select",opts:["Nacional","Latinoamérica","Estados Unidos y Canadá","Europa (Schengen)","Resto del mundo"],def:"Europa (Schengen)"},
+          {id:"dias",label:"Días de viaje",type:"number",def:15,min:1,max:180},
+          {id:"viajeros",label:"Viajeros",type:"number",def:2,min:1,max:8},
+          {id:"edad",label:"Edad del viajero mayor",type:"number",def:40,min:0,max:85}],
+  calc:v=>v.dias*({"Nacional":6000,"Latinoamérica":14000,"Estados Unidos y Canadá":26000,"Europa (Schengen)":22000,"Resto del mundo":28000}[v.destino])*v.viajeros*(v.edad>70?1.8:1),
+  review:v=>v.edad>80?"Viajero mayor de 80 años: requiere valoración médica.":null,
+  extra:[{id:"salida",label:"Fecha de salida",type:"date"}],
+  desc:v=>`${v.destino}, ${v.dias} días, ${v.viajeros} viajero(s)`,
+  cov:[["Gastos médicos por enfermedad o accidente","USD 30.000","USD 60.000","USD 150.000"],["Cumple requisito Schengen (€30.000)","✓","✓","✓"],["Pérdida o demora de equipaje","—","USD 1.200","USD 3.000"],["Cancelación del viaje","—","USD 1.000","USD 5.000"],["Repatriación sanitaria","✓","✓","✓"]]},
+ mascotas:{name:"Mascotas",code:"MAS",ic:"mascotas",tag:"Veterinario, urgencias y responsabilidad civil para tu perro o gato.",iva:true,
+  fields:[{id:"tipo",label:"Mascota",type:"select",opts:["Perro","Gato"],def:"Perro"},
+          {id:"edad",label:"Edad (años)",type:"number",def:3,min:0,max:12}],
+  calc:v=>(v.tipo==="Perro"?420000:330000)*(1+v.edad*.09),
+  review:()=>null,
+  extra:[{id:"mascota",label:"Nombre de la mascota",ph:"Luna"},{id:"raza",label:"Raza",ph:"Criolla"}],
+  desc:v=>`${v.tipo} de ${v.edad} año(s)`,
+  cov:[["Consultas veterinarias","2 al año","6 al año","Ilimitadas"],["Urgencias y cirugía","$2 M","$5 M","$10 M"],["Responsabilidad civil por daños a terceros","$5 M","$15 M","$30 M"],["Vacunación anual","—","✓","✓"],["Exequias","—","✓","✓"]]},
+ pyme:{name:"Empresas",code:"EMP",ic:"pyme",tag:"Protección para el negocio, sus activos y su responsabilidad.",iva:true,
+  fields:[{id:"activos",label:"Valor de activos (local, inventario, equipos)",type:"money",def:250000000,min:20000000,max:10000000000},
+          {id:"actividad",label:"Actividad",type:"select",opts:["Comercio","Oficina y servicios","Restaurante","Manufactura"],def:"Comercio"},
+          {id:"empleados",label:"Número de empleados",type:"number",def:8,min:1,max:500}],
+  calc:v=>v.activos*.0034*({"Comercio":1,"Oficina y servicios":.8,"Restaurante":1.3,"Manufactura":1.5}[v.actividad])+v.empleados*45000,
+  review:v=>v.activos>3000000000?"Activos superiores a $3.000 M: requiere inspección del riesgo.":null,
+  extra:[{id:"razon",label:"Razón social",ph:"Mi Empresa S.A.S."},{id:"nit",label:"NIT",ph:"900123456-7",re:/^\d{9}-?\d$/,msg:"El NIT debe tener 9 dígitos y el dígito de verificación."}],
+  desc:v=>`${v.actividad}, activos ${money(v.activos)}, ${v.empleados} empleados`,
+  cov:[["Incendio y terremoto de local e inventario","✓","✓","✓"],["Hurto y equipos electrónicos","—","✓","✓"],["Responsabilidad civil","$100 M","$300 M","$1.000 M"],["Lucro cesante","—","3 meses","6 meses"],["Manejo y fidelidad de empleados","—","—","✓"]]}
+};
+const defaults=pid=>Object.fromEntries(P[pid].fields.map(f=>[f.id,f.def]));
+function validParams(p,v){for(const f of p.fields){if(f.type==="select")continue;const n=v[f.id];if(!Number.isFinite(n))return `Completa “${f.label}”.`;if(n<f.min||n>f.max)return `“${f.label}” debe estar entre ${f.type==="money"?money(f.min):f.min} y ${f.type==="money"?money(f.max):f.max}.`}return ""}
+function price(pid,v,plan){const p=P[pid];const k=(PLANS.find(x=>x[0]===plan)||PLANS[1])[2];let neta=Math.round(Math.max(120000,p.calc(v))*k/100)*100;const iva=p.iva?Math.round(neta*.19):0;const total=neta+iva;return{neta,iva,total,mensual:Math.round(total*1.05/12)}}
+
+/* ============ Servidor central (simulado) ============ */
+const STEPS=["Recepción en el servidor central","Identidad y listas de control (SARLAFT)","Suscripción y tarifa","Autorización del pago","Emisión y número de aprobación"];
+const STATUS={nueva:["Recibida","b-gray"],procesando:["Procesando","b-pre"],revision:["En revisión","b-rev"],preaprobada:["Pendiente de aprobado del asesor","b-pre"],aprobada:["Emitida","b-ok"],rechazada:["Rechazada","b-bad"],bloqueada:["Bloqueada","b-bad"],revocada:["Revocada","b-gray"]};
+const badge=s=>`<span class="badge ${(STATUS[s]||["",""])[1]}">${(STATUS[s]||[s])[0]}</span>`;
+const chName=t=>t.channel==="web"?"Web":"Oficina "+(officeById(t.office)||{}).city;
+const allTx=()=>store.get("txs",{});
+const getTx=id=>allTx()[id];
+function upd(id,fn){const all=allTx();const t=all[id];if(!t)return null;fn(t);all[id]=t;store.set("txs",all);return t}
+function audit(tx,ev,by){const a=store.get("audit",[]);const prev=a.length?a[a.length-1].h:"GENESIS";const e={n:a.length+1,at:new Date().toISOString(),tx,ev,by};e.h=hash(prev+"|"+JSON.stringify(e));a.push(e);store.set("audit",a)}
+function verifyAudit(){const a=store.get("audit",[]);let prev="GENESIS";for(const e of a){const {h,...r}=e;if(hash(prev+"|"+JSON.stringify(r))!==h)return{ok:false,at:e.n,n:a.length};prev=h}return{ok:true,n:a.length}}
+function logTx(t,ev,by){t.log.push({at:new Date().toISOString(),ev,by});audit(t.id,ev,by)}
+function newTx(o){
+  const id="TX-"+pad(seq("tx"),6);
+  const tx={id,createdAt:new Date().toISOString(),status:"nueva",log:[],steps:[],attempts:0,...o};
+  const all=allTx();all[id]=tx;store.set("txs",all);
+  upd(id,t=>logTx(t,t.channel==="web"?"Solicitud de compra recibida desde el canal web":`Venta registrada en ${officeById(t.office).name} por ${t.seller}`,t.channel==="web"?"Cliente (web)":t.seller));
+  return id;
+}
+const newApproval=()=>({code:"APR-"+compact(new Date())+"-"+digits(6),at:new Date().toISOString()});
+function fingerprint(t){return hash([t.policy,t.approval&&t.approval.code,t.premium.total,t.client.doc,t.start].join("|"))}
+function emit(t,by){
+  t.approval=t.approval||newApproval();
+  t.policy=`IG-${P[t.product].code}-${new Date().getFullYear()}-${pad(seq("pol_"+t.product),6)}`;
+  t.status="aprobada";t.approvedAt=new Date().toISOString();
+  t.end=t.product==="viaje"?addDays(t.start,t.params.dias):addYear(t.start);
+  t.fp=fingerprint(t);
+  logTx(t,`Póliza ${t.policy} emitida con número de aprobación ${t.approval.code}`,by);
+  queueMail(t);
+}
+function preapprove(t){
+  t.approval=newApproval();t.status="preaprobada";t.attempts=0;
+  logTx(t,`Número de aprobación ${t.approval.code} generado; pendiente del aprobado del asesor`,"Servidor central");
+}
+const RUNNING=new Set();
+const CENTRAL={
+  async process(id,on,fast){
+    if(RUNNING.has(id))return;const t0=getTx(id);if(!t0||!["nueva","procesando"].includes(t0.status))return;
+    RUNNING.add(id);const wait=ms=>fast?Promise.resolve():sleep(ms);
+    const mark=(i,st,msg)=>{upd(id,t=>{t.steps[i]={st,msg}});on&&on(i,st,msg)};
+    upd(id,t=>{t.status="procesando";t.steps=[];logTx(t,"Transacción recibida por el servidor central ("+chName(t)+")","Servidor central")});
+    mark(0,"run");await wait(550);mark(0,"done","Transacción "+id+" registrada");
+    mark(1,"run");await wait(700);
+    const t=getTx(id);const reasons=[];
+    if(/0000$/.test(t.client.doc))reasons.push("Coincidencia parcial en listas de control (SARLAFT): requiere revisión de cumplimiento.");
+    mark(1,reasons.length?"warn":"done",reasons.length?"Requiere revisión de cumplimiento":"Identidad validada, sin alertas");
+    mark(2,"run");await wait(650);
+    const r=P[t.product].review(t.params);if(r)reasons.push(r);
+    mark(2,r?"warn":"done",r?"Requiere suscripción manual":"Tarifa confirmada: "+money(t.premium.total));
+    mark(3,"run");await wait(800);
+    if(t.pay.declined){
+      upd(id,x=>{x.status="rechazada";x.reason="La entidad emisora rechazó el pago. No se realizó ningún cobro.";logTx(x,"Pago rechazado por la entidad emisora","Servidor central")});
+      mark(3,"fail","Pago rechazado por la entidad emisora");mark(4,"skip","No se emitió la póliza");RUNNING.delete(id);on&&on("end");return;
+    }
+    mark(3,"done",payMsg(t));
+    mark(4,"run");await wait(650);
+    if(reasons.length){
+      upd(id,x=>{x.status="revision";x.reasons=reasons;logTx(x,"Enviada a revisión manual: "+reasons.join(" "),"Servidor central")});
+      mark(4,"warn","En revisión manual en el servidor central");
+    }else if(t.channel==="web"){
+      upd(id,x=>emit(x,"Servidor central"));mark(4,"done","Póliza emitida");
+    }else{
+      upd(id,x=>preapprove(x));mark(4,"done","Número de aprobación generado: falta el aprobado del asesor");
+    }
+    RUNNING.delete(id);on&&on("end");sendQueued();
+  },
+  officeClose(id,code,total,seller){
+    let res={ok:false};
+    upd(id,t=>{
+      if(t.status!=="preaprobada"){res.msg="Esta venta no está pendiente de aprobado.";return}
+      const okCode=code.trim().toUpperCase()===t.approval.code, okTotal=Number(String(total).replace(/\D/g,""))===t.premium.total;
+      if(okCode&&okTotal){emit(t,seller+" (aprobado dado en oficina)");res={ok:true};setTimeout(sendQueued,0);return}
+      t.attempts++;logTx(t,`Intento de aprobado fallido (${!okCode?"número de aprobación":"valor"} no coincide). Intento ${t.attempts} de 3`,seller);
+      if(t.attempts>=3){t.status="bloqueada";logTx(t,"Venta bloqueada por 3 intentos fallidos. Requiere desbloqueo en el servidor central","Servidor central");res.msg="Venta bloqueada por seguridad tras 3 intentos. El servidor central debe desbloquearla."}
+      else res.msg=(!okCode?"El número de aprobación no coincide con el emitido por el servidor central.":"El valor cobrado no coincide con el valor aprobado.")+` Intento ${t.attempts} de 3.`;
+    });
+    return res;
+  },
+  approveReview(id,by="Analista de suscripción"){upd(id,t=>{if(t.status!=="revision")return;logTx(t,"Revisión manual aprobada",by);if(t.channel==="web")emit(t,"Servidor central");else preapprove(t)});setTimeout(sendQueued,0)},
+  reject(id,reason,by="Analista de suscripción"){upd(id,t=>{t.status="rechazada";t.reason=reason;logTx(t,"Solicitud rechazada: "+reason,by)})},
+  unlock(id,by="Supervisor central"){upd(id,t=>{if(t.status!=="bloqueada")return;logTx(t,"Venta desbloqueada; el número de aprobación anterior quedó anulado",by);preapprove(t)})},
+  revoke(id,by){let refund=0;upd(id,t=>{if(t.status!=="aprobada")return;const s=new Date(t.start+"T00:00:00"),e=new Date(t.end+"T00:00:00"),n=new Date();const total=(e-s),left=Math.max(0,Math.min(total,e-Math.max(n,s)));refund=Math.round(t.premium.total*left/total);t.status="revocada";t.refund=refund;t.revokedAt=new Date().toISOString();logTx(t,`Póliza revocada por el tomador (art. 1071 C. de Co.). Devolución de prima no causada: ${money(refund)}`,by)});return refund}
+};
+function payMsg(t){const p=t.pay;return{pse:"Pago aprobado por PSE ("+p.bank+")",credito:`Tarjeta de crédito •••• ${p.last4} autorizada${p.cuotas>1?" a "+p.cuotas+" cuotas":""}`,debito:`Tarjeta débito •••• ${p.last4} autorizada`,efectivo:"Pago en efectivo registrado en caja",datafono:`Datáfono: tarjeta •••• ${p.last4} autorizada`,link:"Enlace de pago PSE pagado por el cliente"}[p.method]||"Pago autorizado"}
+const payName=m=>({pse:"PSE",credito:"Tarjeta de crédito",debito:"Tarjeta débito",efectivo:"Efectivo en caja",datafono:"Datáfono",link:"Enlace PSE"}[m]||m);
+const findPolicy=no=>Object.values(allTx()).find(t=>t.policy&&t.policy.toUpperCase()===String(no).trim().toUpperCase());
+
+/*! QR Code Generator for JavaScript · Copyright (c) 2009 Kazuhiko Arase · MIT license */
+var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],f={},c=function(t,r){o=function(t){for(var r=new Array(t),e=0;e<t;e+=1){r[e]=new Array(t);for(var n=0;n<t;n+=1)r[e][n]=null}return r}(i=4*e+17),l(0,0),l(i-7,0),l(0,i-7),s(),h(),d(t,r),e>=7&&v(t),null==a&&(a=p(e,n,u)),w(a,r)},l=function(t,r){for(var e=-1;e<=7;e+=1)if(!(t+e<=-1||i<=t+e))for(var n=-1;n<=7;n+=1)r+n<=-1||i<=r+n||(o[t+e][r+n]=0<=e&&e<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==e||6==e)||2<=e&&e<=4&&2<=n&&n<=4)},h=function(){for(var t=8;t<i-8;t+=1)null==o[t][6]&&(o[t][6]=t%2==0);for(var r=8;r<i-8;r+=1)null==o[6][r]&&(o[6][r]=r%2==0)},s=function(){for(var t=B.getPatternPosition(e),r=0;r<t.length;r+=1)for(var n=0;n<t.length;n+=1){var i=t[r],a=t[n];if(null==o[i][a])for(var u=-2;u<=2;u+=1)for(var f=-2;f<=2;f+=1)o[i+u][a+f]=-2==u||2==u||-2==f||2==f||0==u&&0==f}},v=function(t){for(var r=B.getBCHTypeNumber(e),n=0;n<18;n+=1){var a=!t&&1==(r>>n&1);o[Math.floor(n/3)][n%3+i-8-3]=a}for(n=0;n<18;n+=1){a=!t&&1==(r>>n&1);o[n%3+i-8-3][Math.floor(n/3)]=a}},d=function(t,r){for(var e=n<<3|r,a=B.getBCHTypeInfo(e),u=0;u<15;u+=1){var f=!t&&1==(a>>u&1);u<6?o[u][8]=f:u<8?o[u+1][8]=f:o[i-15+u][8]=f}for(u=0;u<15;u+=1){f=!t&&1==(a>>u&1);u<8?o[8][i-u-1]=f:u<9?o[8][15-u-1+1]=f:o[8][15-u-1]=f}o[i-8][8]=!t},w=function(t,r){for(var e=-1,n=i-1,a=7,u=0,f=B.getMaskFunction(r),c=i-1;c>0;c-=2)for(6==c&&(c-=1);;){for(var g=0;g<2;g+=1)if(null==o[n][c-g]){var l=!1;u<t.length&&(l=1==(t[u]>>>a&1)),f(n,c-g)&&(l=!l),o[n][c-g]=l,-1==(a-=1)&&(u+=1,a=7)}if((n+=e)<0||i<=n){n-=e,e=-e;break}}},p=function(t,r,e){for(var n=A.getRSBlocks(t,r),o=b(),i=0;i<e.length;i+=1){var a=e[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var u=0;for(i=0;i<n.length;i+=1)u+=n[i].dataCount;if(o.getLengthInBits()>8*u)throw"code length overflow. ("+o.getLengthInBits()+">"+8*u+")";for(o.getLengthInBits()+4<=8*u&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*u||(o.put(236,8),o.getLengthInBits()>=8*u));)o.put(17,8);return function(t,r){for(var e=0,n=0,o=0,i=new Array(r.length),a=new Array(r.length),u=0;u<r.length;u+=1){var f=r[u].dataCount,c=r[u].totalCount-f;n=Math.max(n,f),o=Math.max(o,c),i[u]=new Array(f);for(var g=0;g<i[u].length;g+=1)i[u][g]=255&t.getBuffer()[g+e];e+=f;var l=B.getErrorCorrectPolynomial(c),h=k(i[u],l.getLength()-1).mod(l);for(a[u]=new Array(l.getLength()-1),g=0;g<a[u].length;g+=1){var s=g+h.getLength()-a[u].length;a[u][g]=s>=0?h.getAt(s):0}}var v=0;for(g=0;g<r.length;g+=1)v+=r[g].totalCount;var d=new Array(v),w=0;for(g=0;g<n;g+=1)for(u=0;u<r.length;u+=1)g<i[u].length&&(d[w]=i[u][g],w+=1);for(g=0;g<o;g+=1)for(u=0;u<r.length;u+=1)g<a[u].length&&(d[w]=a[u][g],w+=1);return d}(o,n)};f.addData=function(t,r){var e=null;switch(r=r||"Byte"){case"Numeric":e=M(t);break;case"Alphanumeric":e=x(t);break;case"Byte":e=m(t);break;case"Kanji":e=L(t);break;default:throw"mode:"+r}u.push(e),a=null},f.isDark=function(t,r){if(t<0||i<=t||r<0||i<=r)throw t+","+r;return o[t][r]},f.getModuleCount=function(){return i},f.make=function(){if(e<1){for(var t=1;t<40;t++){for(var r=A.getRSBlocks(t,n),o=b(),i=0;i<u.length;i++){var a=u[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var g=0;for(i=0;i<r.length;i++)g+=r[i].dataCount;if(o.getLengthInBits()<=8*g)break}e=t}c(!1,function(){for(var t=0,r=0,e=0;e<8;e+=1){c(!0,e);var n=B.getLostPoint(f);(0==e||t>n)&&(t=n,r=e)}return r}())},f.createTableTag=function(t,r){t=t||2;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+(r=void 0===r?4*t:r)+"px;",e+='">',e+="<tbody>";for(var n=0;n<f.getModuleCount();n+=1){e+="<tr>";for(var o=0;o<f.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+t+"px;",e+=" height: "+t+"px;",e+=" background-color: ",e+=f.isDark(n,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>"},f.createSvgTag=function(t,r,e,n){var o={};"object"==typeof arguments[0]&&(t=(o=arguments[0]).cellSize,r=o.margin,e=o.alt,n=o.title),t=t||2,r=void 0===r?4*t:r,(e="string"==typeof e?{text:e}:e||{}).text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,u,c,g=f.getModuleCount()*t+2*r,l="";for(c="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",l+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',l+=o.scalable?"":' width="'+g+'px" height="'+g+'px"',l+=' viewBox="0 0 '+g+" "+g+'" ',l+=' preserveAspectRatio="xMinYMin meet"',l+=n.text||e.text?' role="img" aria-labelledby="'+y([n.id,e.id].join(" ").trim())+'"':"",l+=">",l+=n.text?'<title id="'+y(n.id)+'">'+y(n.text)+"</title>":"",l+=e.text?'<description id="'+y(e.id)+'">'+y(e.text)+"</description>":"",l+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',l+='<path d="',a=0;a<f.getModuleCount();a+=1)for(u=a*t+r,i=0;i<f.getModuleCount();i+=1)f.isDark(a,i)&&(l+="M"+(i*t+r)+","+u+c);return l+='" stroke="transparent" fill="black"/>',l+="</svg>"},f.createDataURL=function(t,r){t=t||2,r=void 0===r?4*t:r;var e=f.getModuleCount()*t+2*r,n=r,o=e-r;return I(e,e,function(r,e){if(n<=r&&r<o&&n<=e&&e<o){var i=Math.floor((r-n)/t),a=Math.floor((e-n)/t);return f.isDark(a,i)?0:1}return 1})},f.createImgTag=function(t,r,e){t=t||2,r=void 0===r?4*t:r;var n=f.getModuleCount()*t+2*r,o="";return o+="<img",o+=' src="',o+=f.createDataURL(t,r),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',e&&(o+=' alt="',o+=y(e),o+='"'),o+="/>"};var y=function(t){for(var r="",e=0;e<t.length;e+=1){var n=t.charAt(e);switch(n){case"<":r+="&lt;";break;case">":r+="&gt;";break;case"&":r+="&amp;";break;case'"':r+="&quot;";break;default:r+=n}}return r};return f.createASCII=function(t,r){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var r,e,n,o,i,a=1*f.getModuleCount()+2*t,u=t,c=a-t,g={"██":"█","█ ":"▀"," █":"▄","  ":" "},l={"██":"▀","█ ":"▀"," █":" ","  ":" "},h="";for(r=0;r<a;r+=2){for(n=Math.floor((r-u)/1),o=Math.floor((r+1-u)/1),e=0;e<a;e+=1)i="█",u<=e&&e<c&&u<=r&&r<c&&f.isDark(n,Math.floor((e-u)/1))&&(i=" "),u<=e&&e<c&&u<=r+1&&r+1<c&&f.isDark(o,Math.floor((e-u)/1))?i+=" ":i+="█",h+=t<1&&r+1>=c?l[i]:g[i];h+="\n"}return a%2&&t>0?h.substring(0,h.length-a-1)+Array(a+1).join("▀"):h.substring(0,h.length-1)}(r);t-=1,r=void 0===r?2*t:r;var e,n,o,i,a=f.getModuleCount()*t+2*r,u=r,c=a-r,g=Array(t+1).join("██"),l=Array(t+1).join("  "),h="",s="";for(e=0;e<a;e+=1){for(o=Math.floor((e-u)/t),s="",n=0;n<a;n+=1)i=1,u<=n&&n<c&&u<=e&&e<c&&f.isDark(o,Math.floor((n-u)/t))&&(i=0),s+=i?g:l;for(o=0;o<t;o+=1)h+=s+"\n"}return h.substring(0,h.length-1)},f.renderTo2dContext=function(t,r){r=r||2;for(var e=f.getModuleCount(),n=0;n<e;n++)for(var o=0;o<e;o++)t.fillStyle=f.isDark(n,o)?"black":"white",t.fillRect(n*r,o*r,r,r)},f};t.stringToBytes=(t.stringToBytesFuncs={default:function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);r.push(255&n)}return r}}).default,t.createStringToBytes=function(t,r){var e=function(){for(var e=S(t),n=function(){var t=e.read();if(-1==t)throw"eof";return t},o=0,i={};;){var a=e.read();if(-1==a)break;var u=n(),f=n()<<8|n();i[String.fromCharCode(a<<8|u)]=f,o+=1}if(o!=r)throw o+" != "+r;return i}(),n="?".charCodeAt(0);return function(t){for(var r=[],o=0;o<t.length;o+=1){var i=t.charCodeAt(o);if(i<128)r.push(i);else{var a=e[t.charAt(o)];"number"==typeof a?(255&a)==a?r.push(a):(r.push(a>>>8),r.push(255&a)):r.push(n)}}return r}};var r,e,n,o,i,a=1,u=2,f=4,c=8,g={L:1,M:0,Q:3,H:2},l=0,h=1,s=2,v=3,d=4,w=5,p=6,y=7,B=(r=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],e=1335,n=7973,i=function(t){for(var r=0;0!=t;)r+=1,t>>>=1;return r},(o={}).getBCHTypeInfo=function(t){for(var r=t<<10;i(r)-i(e)>=0;)r^=e<<i(r)-i(e);return 21522^(t<<10|r)},o.getBCHTypeNumber=function(t){for(var r=t<<12;i(r)-i(n)>=0;)r^=n<<i(r)-i(n);return t<<12|r},o.getPatternPosition=function(t){return r[t-1]},o.getMaskFunction=function(t){switch(t){case l:return function(t,r){return(t+r)%2==0};case h:return function(t,r){return t%2==0};case s:return function(t,r){return r%3==0};case v:return function(t,r){return(t+r)%3==0};case d:return function(t,r){return(Math.floor(t/2)+Math.floor(r/3))%2==0};case w:return function(t,r){return t*r%2+t*r%3==0};case p:return function(t,r){return(t*r%2+t*r%3)%2==0};case y:return function(t,r){return(t*r%3+(t+r)%2)%2==0};default:throw"bad maskPattern:"+t}},o.getErrorCorrectPolynomial=function(t){for(var r=k([1],0),e=0;e<t;e+=1)r=r.multiply(k([1,C.gexp(e)],0));return r},o.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case a:return 10;case u:return 9;case f:case c:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case a:return 12;case u:return 11;case f:return 16;case c:return 10;default:throw"mode:"+t}else{if(!(r<41))throw"type:"+r;switch(t){case a:return 14;case u:return 13;case f:return 16;case c:return 12;default:throw"mode:"+t}}},o.getLostPoint=function(t){for(var r=t.getModuleCount(),e=0,n=0;n<r;n+=1)for(var o=0;o<r;o+=1){for(var i=0,a=t.isDark(n,o),u=-1;u<=1;u+=1)if(!(n+u<0||r<=n+u))for(var f=-1;f<=1;f+=1)o+f<0||r<=o+f||0==u&&0==f||a==t.isDark(n+u,o+f)&&(i+=1);i>5&&(e+=3+i-5)}for(n=0;n<r-1;n+=1)for(o=0;o<r-1;o+=1){var c=0;t.isDark(n,o)&&(c+=1),t.isDark(n+1,o)&&(c+=1),t.isDark(n,o+1)&&(c+=1),t.isDark(n+1,o+1)&&(c+=1),0!=c&&4!=c||(e+=3)}for(n=0;n<r;n+=1)for(o=0;o<r-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(e+=40);for(o=0;o<r;o+=1)for(n=0;n<r-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(e+=40);var g=0;for(o=0;o<r;o+=1)for(n=0;n<r;n+=1)t.isDark(n,o)&&(g+=1);return e+=Math.abs(100*g/r/r-50)/5*10},o),C=function(){for(var t=new Array(256),r=new Array(256),e=0;e<8;e+=1)t[e]=1<<e;for(e=8;e<256;e+=1)t[e]=t[e-4]^t[e-5]^t[e-6]^t[e-8];for(e=0;e<255;e+=1)r[t[e]]=e;var n={glog:function(t){if(t<1)throw"glog("+t+")";return r[t]},gexp:function(r){for(;r<0;)r+=255;for(;r>=256;)r-=255;return t[r]}};return n}();function k(t,r){if(void 0===t.length)throw t.length+"/"+r;var e=function(){for(var e=0;e<t.length&&0==t[e];)e+=1;for(var n=new Array(t.length-e+r),o=0;o<t.length-e;o+=1)n[o]=t[o+e];return n}(),n={getAt:function(t){return e[t]},getLength:function(){return e.length},multiply:function(t){for(var r=new Array(n.getLength()+t.getLength()-1),e=0;e<n.getLength();e+=1)for(var o=0;o<t.getLength();o+=1)r[e+o]^=C.gexp(C.glog(n.getAt(e))+C.glog(t.getAt(o)));return k(r,0)},mod:function(t){if(n.getLength()-t.getLength()<0)return n;for(var r=C.glog(n.getAt(0))-C.glog(t.getAt(0)),e=new Array(n.getLength()),o=0;o<n.getLength();o+=1)e[o]=n.getAt(o);for(o=0;o<t.getLength();o+=1)e[o]^=C.gexp(C.glog(t.getAt(o))+r);return k(e,0).mod(t)}};return n}var A=function(){var t=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(t,r){var e={};return e.totalCount=t,e.dataCount=r,e},e={};return e.getRSBlocks=function(e,n){var o=function(r,e){switch(e){case g.L:return t[4*(r-1)+0];case g.M:return t[4*(r-1)+1];case g.Q:return t[4*(r-1)+2];case g.H:return t[4*(r-1)+3];default:return}}(e,n);if(void 0===o)throw"bad rs block @ typeNumber:"+e+"/errorCorrectionLevel:"+n;for(var i=o.length/3,a=[],u=0;u<i;u+=1)for(var f=o[3*u+0],c=o[3*u+1],l=o[3*u+2],h=0;h<f;h+=1)a.push(r(c,l));return a},e}(),b=function(){var t=[],r=0,e={getBuffer:function(){return t},getAt:function(r){var e=Math.floor(r/8);return 1==(t[e]>>>7-r%8&1)},put:function(t,r){for(var n=0;n<r;n+=1)e.putBit(1==(t>>>r-n-1&1))},getLengthInBits:function(){return r},putBit:function(e){var n=Math.floor(r/8);t.length<=n&&t.push(0),e&&(t[n]|=128>>>r%8),r+=1}};return e},M=function(t){var r=a,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+2<r.length;)t.put(o(r.substring(n,n+3)),10),n+=3;n<r.length&&(r.length-n==1?t.put(o(r.substring(n,n+1)),4):r.length-n==2&&t.put(o(r.substring(n,n+2)),7))}},o=function(t){for(var r=0,e=0;e<t.length;e+=1)r=10*r+i(t.charAt(e));return r},i=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return n},x=function(t){var r=u,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+1<r.length;)t.put(45*o(r.charAt(n))+o(r.charAt(n+1)),11),n+=2;n<r.length&&t.put(o(r.charAt(n)),6)}},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return n},m=function(r){var e=f,n=t.stringToBytes(r),o={getMode:function(){return e},getLength:function(t){return n.length},write:function(t){for(var r=0;r<n.length;r+=1)t.put(n[r],8)}};return o},L=function(r){var e=c,n=t.stringToBytesFuncs.SJIS;if(!n)throw"sjis not supported.";!function(){var t=n("友");if(2!=t.length||38726!=(t[0]<<8|t[1]))throw"sjis not supported."}();var o=n(r),i={getMode:function(){return e},getLength:function(t){return~~(o.length/2)},write:function(t){for(var r=o,e=0;e+1<r.length;){var n=(255&r[e])<<8|255&r[e+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(e+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),t.put(n,13),e+=2}if(e<r.length)throw"illegal char at "+(e+1)}};return i},D=function(){var t=[],r={writeByte:function(r){t.push(255&r)},writeShort:function(t){r.writeByte(t),r.writeByte(t>>>8)},writeBytes:function(t,e,n){e=e||0,n=n||t.length;for(var o=0;o<n;o+=1)r.writeByte(t[o+e])},writeString:function(t){for(var e=0;e<t.length;e+=1)r.writeByte(t.charCodeAt(e))},toByteArray:function(){return t},toString:function(){var r="";r+="[";for(var e=0;e<t.length;e+=1)e>0&&(r+=","),r+=t[e];return r+="]"}};return r},S=function(t){var r=t,e=0,n=0,o=0,i={read:function(){for(;o<8;){if(e>=r.length){if(0==o)return-1;throw"unexpected end of file./"+o}var t=r.charAt(e);if(e+=1,"="==t)return o=0,-1;t.match(/^\s$/)||(n=n<<6|a(t.charCodeAt(0)),o+=6)}var i=n>>>o-8&255;return o-=8,i}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return i},I=function(t,r,e){for(var n=function(t,r){var e=t,n=r,o=new Array(t*r),i={setPixel:function(t,r,n){o[r*e+t]=n},write:function(t){t.writeString("GIF87a"),t.writeShort(e),t.writeShort(n),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(e),t.writeShort(n),t.writeByte(0);var r=a(2);t.writeByte(2);for(var o=0;r.length-o>255;)t.writeByte(255),t.writeBytes(r,o,255),o+=255;t.writeByte(r.length-o),t.writeBytes(r,o,r.length-o),t.writeByte(0),t.writeString(";")}},a=function(t){for(var r=1<<t,e=1+(1<<t),n=t+1,i=u(),a=0;a<r;a+=1)i.add(String.fromCharCode(a));i.add(String.fromCharCode(r)),i.add(String.fromCharCode(e));var f,c,g,l=D(),h=(f=l,c=0,g=0,{write:function(t,r){if(t>>>r!=0)throw"length over";for(;c+r>=8;)f.writeByte(255&(t<<c|g)),r-=8-c,t>>>=8-c,g=0,c=0;g|=t<<c,c+=r},flush:function(){c>0&&f.writeByte(g)}});h.write(r,n);var s=0,v=String.fromCharCode(o[s]);for(s+=1;s<o.length;){var d=String.fromCharCode(o[s]);s+=1,i.contains(v+d)?v+=d:(h.write(i.indexOf(v),n),i.size()<4095&&(i.size()==1<<n&&(n+=1),i.add(v+d)),v=d)}return h.write(i.indexOf(v),n),h.write(e,n),h.flush(),l.toByteArray()},u=function(){var t={},r=0,e={add:function(n){if(e.contains(n))throw"dup key:"+n;t[n]=r,r+=1},size:function(){return r},indexOf:function(r){return t[r]},contains:function(r){return void 0!==t[r]}};return e};return i}(t,r),o=0;o<r;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,e(i,o));var a=D();n.write(a);for(var u=function(){var t=0,r=0,e=0,n="",o={},i=function(t){n+=String.fromCharCode(a(63&t))},a=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return o.writeByte=function(n){for(t=t<<8|255&n,r+=8,e+=1;r>=6;)i(t>>>r-6),r-=6},o.flush=function(){if(r>0&&(i(t<<6-r),t=0,r=0),e%3!=0)for(var o=3-e%3,a=0;a<o;a+=1)n+="="},o.toString=function(){return n},o}(),f=a.toByteArray(),c=0;c<f.length;c+=1)u.writeByte(f[c]);return u.flush(),"data:image/gif;base64,"+u};return t}();qrcode.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var r=[],e=0;e<t.length;e++){var n=t.charCodeAt(e);n<128?r.push(n):n<2048?r.push(192|n>>6,128|63&n):n<55296||n>=57344?r.push(224|n>>12,128|n>>6&63,128|63&n):(e++,n=65536+((1023&n)<<10|1023&t.charCodeAt(e)),r.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return r}(t)},function(t){"function"==typeof define&&define.amd?define([],t):"object"==typeof exports&&(module.exports=t())}(function(){return qrcode});
+
+/* ============ Piezas comunes ============ */
+const BANKS=["Bancolombia","Banco de Bogotá","Davivienda","BBVA Colombia","Banco de Occidente","Banco Popular","Scotiabank Colpatria","Nequi","Daviplata"];
+const pageH=(title,sub,crumb)=>`<div class="wrap page-h">${crumb?`<div class="crumbs"><a href="#/">Inicio</a> › ${crumb}</div>`:""}<h1>${title}</h1>${sub?`<p class="muted" style="max-width:760px;margin:0">${sub}</p>`:""}</div>`;
+function inputHTML(f,val){
+  const v=val??f.def??"";
+  if(f.type==="select")return `<select name="${f.id}" id="f_${f.id}">${f.opts.map(o=>`<option ${o===v?"selected":""}>${esc(o)}</option>`).join("")}</select>`;
+  if(f.type==="date")return `<input type="date" name="${f.id}" id="f_${f.id}" value="${esc(v)}">`;
+  if(f.type==="money"||f.type==="number")return `<input type="number" inputmode="numeric" name="${f.id}" id="f_${f.id}" value="${esc(v)}" min="${f.min}" max="${f.max}" step="${f.type==="money"?1000000:1}">`;
+  return `<input type="text" name="${f.id}" id="f_${f.id}" value="${esc(v)}" placeholder="${esc(f.ph||"")}" autocomplete="off">`;
+}
+const fieldHTML=(f,val,cls="")=>`<div class="${cls}"><label class="l" for="f_${f.id}">${esc(f.label)}</label>${inputHTML(f,val)}${f.type==="money"?`<div class="hint" data-money="${f.id}"></div>`:""}</div>`;
+function moneyHints(form){$$("[data-money]",form).forEach(h=>{const el=form.elements[h.dataset.money];const n=Number(el.value);h.textContent=Number.isFinite(n)&&el.value!==""?money(n):""})}
+function readParams(p,form){const o={};p.fields.forEach(f=>{const el=form.elements[f.id];o[f.id]=f.type==="select"?el.value:(el.value===""?NaN:Number(el.value))});return o}
+const CLIENT_F=[
+ {id:"tipoDoc",label:"Tipo de documento",type:"select",opts:["Cédula de ciudadanía","Cédula de extranjería","Pasaporte"],def:"Cédula de ciudadanía"},
+ {id:"doc",label:"Número de documento",ph:"Sin puntos"},
+ {id:"nombres",label:"Nombres",ph:"Como aparecen en tu documento"},
+ {id:"apellidos",label:"Apellidos",ph:""},
+ {id:"nacimiento",label:"Fecha de nacimiento",type:"date"},
+ {id:"celular",label:"Celular",ph:"3001234567"},
+ {id:"email",label:"Correo electrónico",ph:"tucorreo@ejemplo.com"},
+ {id:"ciudad",label:"Ciudad de residencia",type:"select",opts:CITIES,def:"Bogotá"},
+ {id:"direccion",label:"Dirección de correspondencia",ph:"Calle, carrera, número"}
+];
+const clientHTML=c=>`<div class="fg">${CLIENT_F.map(f=>fieldHTML(f,c?c[f.id]:undefined,f.id==="direccion"?"full":"")).join("")}</div>`;
+function readClient(form){
+  const c={};CLIENT_F.forEach(f=>c[f.id]=form.elements[f.id].value.trim());
+  const bad=(id,msg)=>({c,err:msg,el:form.elements[id]});
+  if(c.tipoDoc==="Pasaporte"?!/^[A-Z0-9]{5,12}$/i.test(c.doc):!/^\d{5,12}$/.test(c.doc))return bad("doc","Escribe un número de documento válido (solo números, 5 a 12 dígitos).");
+  if(c.nombres.length<2)return bad("nombres","Escribe tus nombres.");
+  if(c.apellidos.length<2)return bad("apellidos","Escribe tus apellidos.");
+  if(!c.nacimiento)return bad("nacimiento","Escribe tu fecha de nacimiento.");
+  const age=(Date.now()-new Date(c.nacimiento+"T12:00:00"))/31557600000;
+  if(age<18||age>100)return bad("nacimiento","El tomador debe ser mayor de edad.");
+  if(!/^3\d{9}$/.test(c.celular))return bad("celular","El celular debe tener 10 dígitos y empezar por 3.");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(c.email))return bad("email","Escribe un correo electrónico válido.");
+  if(c.direccion.length<6)return bad("direccion","Escribe tu dirección de correspondencia.");
+  return{c};
+}
+function showErr(box,r){$$(".bad").forEach(e=>e.classList.remove("bad"));box.textContent=r.err||"";if(r.el){r.el.classList.add("bad");r.el.focus()}}
+function covTable(pid,only){const p=P[pid];const cols=only?PLANS.filter(x=>x[0]===only):PLANS;const idx=k=>PLANS.findIndex(x=>x[0]===k)+1;
+  return `<div class="tblwrap"><table class="cov"><thead><tr><th>Cobertura</th>${cols.map(c=>`<th class="c">${c[1]}</th>`).join("")}</tr></thead><tbody>${p.cov.map(r=>`<tr><td>${r[0]}</td>${cols.map(c=>{const v=r[idx(c[0])];return `<td class="c ${v==="✓"?"yes":v==="—"?"no":""}">${v}</td>`}).join("")}</tr>`).join("")}</tbody></table></div>`}
+
+/* ============ Inicio ============ */
+function vHome(){
+  after(()=>{$("#quick").onsubmit=e=>{e.preventDefault();location.hash="#/cotizar/"+new FormData(e.target).get("qp")};wireVerify($("#hv"))});
+  const cards=Object.entries(P).map(([k,p])=>{const pr=price(k,defaults(k),"esencial");return `<a class="card prod-card" href="#/cotizar/${k}"><span class="ic">${ic(p.ic)}</span><h3 style="margin-top:8px">Seguro de ${p.name.toLowerCase()}</h3><p class="muted">${p.tag}</p><span class="from">${p.monthly===false?"Desde "+money(pr.total)+" por viaje":"Desde "+money(pr.mensual)+" al mes"}</span></a>`}).join("");
+  return `
+  <section class="hero"><div class="wrap">
+    <div><span class="pill">Seguros para personas y empresas en Colombia</span>
+      <h1>Protege lo que más te importa, con una póliza que puedes verificar.</h1>
+      <p>Cotiza en minutos y compra en línea o en nuestras oficinas. Cada venta se aprueba en nuestro servidor central y recibe un número de aprobación único que tú y cualquier tercero pueden consultar.</p>
+      <div class="row"><a class="btn" href="#/cotizar">Cotizar ahora</a><a class="btn ghost" href="#/verificar">${ic("shield")}Verificar una póliza</a></div></div>
+    <form class="card quick" id="quick"><h3>¿Qué quieres asegurar?</h3>
+      <div class="qopts">${Object.entries(P).map(([k,p],i)=>`<label class="qo"><input type="radio" name="qp" value="${k}" ${i?"":"checked"}><span>${ic(p.ic)}${p.name}</span></label>`).join("")}</div>
+      <button class="btn full">Ver precios</button><p class="tiny" style="margin:10px 0 0">Sin compromiso y sin pedir tus datos para cotizar.</p></form>
+  </div></section>
+  <div class="wrap"><div class="trust">
+    <div class="card"><span class="ic">${ic("server")}</span><div><b>Aprobación central</b><span>Web y oficinas cierran cada venta en el mismo servidor central.</span></div></div>
+    <div class="card"><span class="ic teal">${ic("shield")}</span><div><b>Póliza verificable</b><span>Consulta en línea si una póliza es auténtica y está vigente.</span></div></div>
+    <div class="card"><span class="ic">${ic("lock")}</span><div><b>Datos protegidos</b><span>Tratamiento según la Ley 1581 de 2012 y conexión cifrada.</span></div></div>
+    <div class="card"><span class="ic gold">${ic("users")}</span><div><b>Defensor del consumidor</b><span>Un tercero independiente atiende tus reclamos.</span></div></div>
+  </div></div>
+  <section class="sec"><div class="wrap"><h2>Seguros de todo tipo</h2><p class="lead">Elige un seguro, ajusta los datos y compara tres planes con el precio final, IVA incluido cuando aplica.</p><div class="grid g4">${cards}<a class="card prod-card" href="#/canales" style="background:var(--navy);color:#fff;border-color:var(--navy)"><span class="ic">${ic("office")}</span><h3 style="margin-top:8px;color:#fff">¿Prefieres asesoría en persona?</h3><p style="color:#c9d6e6">Visita una de nuestras 5 oficinas. Un asesor cotiza contigo y te entrega el número de aprobación al cerrar la compra.</p><span class="from" style="color:#9cc3ef">Ver oficinas →</span></a></div></div></section>
+  <section class="sec alt"><div class="wrap"><h2>Un solo servidor central para todos los canales</h2><p class="lead">No importa dónde compres: la venta pasa por las mismas validaciones, se aprueba en el servidor central de la sede principal y queda registrada en un historial que no se puede alterar sin que se note.</p>${flowHTML()}</div></section>
+  <section class="sec"><div class="wrap"><h2>Así compras en línea</h2><p class="lead">Cuatro pasos, sin papeles.</p><div class="grid g4 how">
+    <div class="card"><h3>Cotiza</h3><p class="muted">Ajusta los datos y elige entre los planes Esencial, Plus y Total.</p></div>
+    <div class="card"><h3>Completa tus datos</h3><p class="muted">Tomador, beneficiarios y bien asegurado. Aceptas las condiciones de forma expresa.</p></div>
+    <div class="card"><h3>Paga</h3><p class="muted">PSE o tarjeta, en un solo pago o en 12 cuotas mensuales.</p></div>
+    <div class="card"><h3>Recibe tu aprobación</h3><p class="muted">El servidor central emite la póliza y su número de aprobación. Descárgala al instante.</p></div></div></div></section>
+  <section class="sec alt"><div class="wrap grid g2" style="align-items:center">
+    <div><h2>¿Te ofrecieron una póliza de Insurance Global?</h2><p class="lead">Antes de pagar o de aceptar un certificado, verifica que sea auténtico. Solo necesitas el número de póliza y el número de aprobación que aparecen en el certificado.</p><a href="#/verificar">Consejos para evitar fraudes →</a></div>
+    ${verifyForm("hv")}</div></section>
+  <section class="sec"><div class="wrap"><h2>Preguntas frecuentes</h2><div class="faq" style="max-width:860px">
+    <details><summary>¿Qué es el número de aprobación?</summary><p>Es el código único (APR-…) que genera el servidor central cuando aprueba una compra. Aparece en tu certificado y sirve para verificar la póliza. En oficina, el asesor lo confirma contigo antes de cerrar la venta.</p></details>
+    <details><summary>¿Es igual comprar en línea que en una oficina?</summary><p>Sí. Ambos canales usan las mismas tarifas, validaciones y el mismo servidor central. La diferencia es que en oficina un asesor te acompaña y puedes pagar en efectivo o con datáfono.</p></details>
+    <details><summary>¿Puedo cancelar mi seguro?</summary><p>Sí. Puedes revocar la póliza en cualquier momento (art. 1071 del Código de Comercio) y te devolvemos la prima no causada. Hazlo desde <a href="#/mis-polizas">Mis pólizas</a>.</p></details>
+    <details><summary>¿Qué hago si tengo un siniestro?</summary><p>Repórtalo en <a href="#/siniestros">Siniestros</a> o en la línea ${CO.tel}. Recibirás un radicado para hacer seguimiento.</p></details>
+  </div></div></section>`;
+}
+function flowHTML(){return `<div class="flow">
+  <div class="col"><div class="node">${ic("web")}Sitio web</div><div class="node">${ic("office")}5 oficinas</div><div class="node">${ic("phone")}Línea telefónica</div><div class="node">${ic("chat")}Agente IG (asistente virtual)</div><div class="node">${ic("handshake")}Aliados</div></div>
+  <div class="arrow">→</div>
+  <div class="node core">${ic("server")}<b>Servidor central · Sede principal Bogotá</b><small>Identidad y SARLAFT · Suscripción y tarifa · Autorización de pago · Emisión · Historial con huella de integridad</small></div>
+  <div class="arrow">→</div>
+  <div class="col"><div class="node out">${ic("key")}Número de aprobación</div><div class="node out">${ic("doc")}Póliza y certificado</div><div class="node out">${ic("shield")}Verificación pública</div></div></div>`}
+
+/* ============ Catálogo y cotización ============ */
+function vProducts(){
+  return pageH("Cotiza tu seguro","Elige qué quieres proteger. Ves el precio de los tres planes al instante.","Cotizar")+
+  `<div class="wrap"><div class="grid g3">${Object.entries(P).map(([k,p])=>{const pr=price(k,defaults(k),"esencial");return `<a class="card prod-card" href="#/cotizar/${k}"><span class="ic">${ic(p.ic)}</span><h3 style="margin-top:8px">Seguro de ${p.name.toLowerCase()}</h3><p class="muted">${p.tag}</p><span class="from">${p.monthly===false?"Desde "+money(pr.total)+" por viaje":"Desde "+money(pr.mensual)+" al mes"}</span></a>`}).join("")}</div></div>`;
+}
+function vQuote(pid){
+  const p=P[pid];if(!p)return vNotFound();
+  const q=store.get("q",null),same=q&&q.product===pid;
+  const v=same?{...defaults(pid),...q.params}:defaults(pid);let plan=same&&q.plan?q.plan:"plus";
+  after(()=>{
+    const f=$("#qf");
+    const paint=()=>{moneyHints(f);const vals=readParams(p,f);const bad=validParams(p,vals);$("#qerr").textContent=bad;
+      $$(".plan").forEach(el=>{const pr=bad?null:price(pid,vals,el.dataset.plan);el.querySelector(".p").textContent=pr?money(pr.total):"—";el.querySelector(".m").textContent=pr?(p.monthly===false?"Pago único, IVA incluido":`o 12 cuotas de ${money(pr.mensual)}`):""});
+      const pr=bad?null:price(pid,vals,plan);
+      $("#qsum").innerHTML=pr?`<div class="sumrow"><span>Plan</span><b>${planName(plan)}</b></div><div class="sumrow"><span>Prima neta</span><span>${money(pr.neta)}</span></div><div class="sumrow"><span>IVA (19%)</span><span>${p.iva?money(pr.iva):"No aplica"}</span></div><div class="sumrow tot"><span>Total ${p.monthly===false?"del viaje":"anual"}</span><span>${money(pr.total)}</span></div>`:`<p class="muted">Corrige los datos para ver el precio.</p>`;
+      $("#qbuy").disabled=!!bad;return vals};
+    f.oninput=paint;f.onsubmit=e=>e.preventDefault();
+    $$(".plan").forEach(el=>el.onclick=()=>{plan=el.dataset.plan;$$(".plan").forEach(x=>{x.classList.toggle("on",x===el);x.setAttribute("aria-pressed",x===el)});paint()});
+    paint();
+    $("#qbuy").onclick=()=>{const vals=paint();if(validParams(p,vals))return;store.set("q",{product:pid,params:vals,plan});location.hash="#/comprar"};
+  });
+  return pageH(`Seguro de ${p.name.toLowerCase()}`,p.tag,`<a href="#/cotizar">Cotizar</a> › ${p.name}`)+`
+  <div class="wrap layout2"><div>
+    <form class="card" id="qf"><h3>Datos para cotizar</h3><p class="muted" style="margin-top:0;font-size:14px">No necesitamos tus datos personales para darte el precio.</p>
+      <div class="fg">${p.fields.map(x=>fieldHTML(x,v[x.id])).join("")}</div><div class="errbox" id="qerr"></div></form>
+    <div class="plans" role="group" aria-label="Planes">${PLANS.map(([k,n])=>`<button type="button" class="plan ${k===plan?"on":""}" data-plan="${k}" aria-pressed="${k===plan}"><h4>${n}</h4><div class="p">—</div><div class="m"></div></button>`).join("")}</div>
+    <h3>Coberturas por plan</h3>${covTable(pid)}
+    <p class="tiny">Valores de referencia de este simulador. Las condiciones completas están en el clausulado del producto. Las exclusiones y deducibles se informan antes de pagar.</p>
+  </div>
+  <aside class="card side"><h3>Tu cotización</h3><div id="qsum"></div>
+    <button class="btn full" id="qbuy" style="margin-top:16px">Comprar en línea</button>
+    <a class="btn sec full" href="#/canales" style="margin-top:10px">${ic("office")}Comprar en una oficina</a>
+    <p class="tiny" style="margin-bottom:0">En ambos canales la compra se aprueba en el servidor central y recibe un número de aprobación.</p></aside></div>`;
+}
+
+/* ============ Compra en línea ============ */
+function extraHTML(pid){
+  const ex=P[pid].extra;
+  if(ex==="beneficiarios")return `<p class="muted" style="margin-top:0;font-size:14px">Indica hasta 3 beneficiarios. Los porcentajes deben sumar 100%.</p>${[0,1,2].map(i=>`<div class="fg fg3" style="margin-bottom:10px"><div><label class="l" for="b_n${i}">Beneficiario ${i+1}${i?" (opcional)":""}</label><input id="b_n${i}" name="b_n${i}" placeholder="Nombre completo"></div><div><label class="l" for="b_p${i}">Parentesco</label><select id="b_p${i}" name="b_p${i}">${["Cónyuge o compañero(a)","Hijo(a)","Padre o madre","Hermano(a)","Otro"].map(o=>`<option>${o}</option>`).join("")}</select></div><div><label class="l" for="b_pc${i}">Porcentaje</label><input id="b_pc${i}" name="b_pc${i}" type="number" min="1" max="100" value="${i?"":100}"></div></div>`).join("")}`;
+  return `<div class="fg">${ex.map(x=>fieldHTML(x)).join("")}</div>`;
+}
+function readExtra(pid,form){
+  const ex=P[pid].extra,o={};
+  if(ex==="beneficiarios"){const b=[];for(let i=0;i<3;i++){const n=form.elements["b_n"+i].value.trim(),pc=Number(form.elements["b_pc"+i].value);if(n){if(!(pc>0))return{err:`Escribe el porcentaje del beneficiario ${i+1}.`,el:form.elements["b_pc"+i]};b.push({nombre:n,parentesco:form.elements["b_p"+i].value,pct:pc})}}
+    if(!b.length)return{err:"Indica al menos un beneficiario.",el:form.elements.b_n0};
+    if(b.reduce((a,x)=>a+x.pct,0)!==100)return{err:"Los porcentajes de los beneficiarios deben sumar 100%.",el:form.elements.b_pc0};
+    return{o:{beneficiarios:b}}}
+  for(const x of ex){const val=form.elements[x.id].value.trim();
+    if(!val)return{err:`Completa “${x.label}”.`,el:form.elements[x.id]};
+    if(x.re&&!x.re.test(val))return{err:x.msg,el:form.elements[x.id]};
+    if(x.type==="date"&&val<isoDate(new Date()))return{err:"La fecha de salida no puede ser anterior a hoy.",el:form.elements[x.id]};
+    o[x.id]=x.id==="placa"?val.toUpperCase():val}
+  return{o};
+}
+const ACCEPTS=[
+ ["ac_cond",`Leí y acepto las <a href="#/legal/condiciones" target="_blank">condiciones generales</a>, el clausulado del producto, sus exclusiones y deducibles.`],
+ ["ac_decl","Declaro que la información que entrego es veraz y completa. Entiendo que la reticencia o inexactitud puede producir la nulidad del contrato (art. 1058 del Código de Comercio)."],
+ ["ac_datos",`Autorizo el tratamiento de mis datos personales según la <a href="#/legal/privacidad" target="_blank">política de privacidad</a> (Ley 1581 de 2012).`],
+ ["ac_fondos",`Declaro que mis recursos provienen de actividades lícitas (<a href="#/legal/sarlaft" target="_blank">SARLAFT</a>).`],
+ ["ac_firma","Acepto firmar este contrato de forma electrónica con validación por código enviado a mi celular (Ley 527 de 1999)."]
+];
+function vBuy(){
+  const q=store.get("q",null);if(!q||!P[q.product])return pageH("No hay una cotización activa","Primero elige un seguro y un plan.")+`<div class="wrap"><a class="btn" href="#/cotizar">Cotizar</a></div>`;
+  const p=P[q.product],monthlyOk=p.monthly!==false;
+  after(()=>{
+    const f=$("#bf"),box=$("#berr");
+    const sum=()=>{const fr=monthlyOk&&f.elements.freq.value==="mensual";const pr=price(q.product,q.params,q.plan);
+      $("#bsum").innerHTML=`<div class="sumrow"><span>Seguro</span><b>${p.name} · ${planName(q.plan)}</b></div><div class="sumrow"><span>Prima neta</span><span>${money(pr.neta)}</span></div><div class="sumrow"><span>IVA</span><span>${p.iva?money(pr.iva):"No aplica"}</span></div><div class="sumrow tot"><span>Total</span><span>${money(pr.total)}</span></div>${fr?`<div class="sumrow"><span>12 cuotas mensuales de</span><b>${money(pr.mensual)}</b></div><p class="tiny">La financiación en 12 cuotas tiene un recargo del 5% (${money(pr.mensual*12-pr.total)} en total). La primera cuota se cobra hoy.</p>`:""}`};
+    const payUI=()=>{const m=f.elements.pm.value;$("#pse").hidden=m!=="pse";$("#card").hidden=m==="pse";$("#cuotasW").hidden=m!=="credito";if(monthlyOk){const mens=f.elements.freq.value==="mensual";if(mens&&m==="pse"){f.elements.pm.value="credito";return payUI()}$$('input[name=pm][value=pse]',f)[0].disabled=mens}};
+    f.addEventListener("change",()=>{payUI();sum()});
+    f.elements.cnum.oninput=e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,19).replace(/(\d{4})(?=\d)/g,"$1 ")};
+    f.elements.cexp.oninput=e=>{let v=e.target.value.replace(/\D/g,"").slice(0,4);if(v.length>2)v=v.slice(0,2)+"/"+v.slice(2);e.target.value=v};
+    if(f.elements.start){f.elements.start.value=addDays(isoDate(new Date()),1);f.elements.start.min=isoDate(new Date())}
+    payUI();sum();
+    f.onsubmit=e=>{e.preventDefault();
+      const r=readClient(f);if(r.err)return showErr(box,r);
+      const ex=readExtra(q.product,f);if(ex.err)return showErr(box,ex);
+      const start=q.product==="viaje"?ex.o.salida:f.elements.start.value;
+      if(!start||start<isoDate(new Date()))return showErr(box,{err:"La fecha de inicio no puede ser anterior a hoy.",el:f.elements.start});
+      const m=f.elements.pm.value;const pay={method:m};
+      if(m==="pse"){pay.bank=f.elements.bank.value}
+      else{const num=f.elements.cnum.value.replace(/\D/g,"");
+        if(!luhn(num))return showErr(box,{err:"El número de tarjeta no es válido.",el:f.elements.cnum});
+        if(f.elements.cname.value.trim().length<4)return showErr(box,{err:"Escribe el nombre como aparece en la tarjeta.",el:f.elements.cname});
+        const mm=f.elements.cexp.value.match(/^(\d{2})\/(\d{2})$/);const now=new Date();
+        if(!mm||+mm[1]<1||+mm[1]>12||new Date(2000+ +mm[2],+mm[1],0)<new Date(now.getFullYear(),now.getMonth(),1))return showErr(box,{err:"La fecha de vencimiento no es válida o la tarjeta está vencida.",el:f.elements.cexp});
+        if(!/^\d{3,4}$/.test(f.elements.ccvv.value))return showErr(box,{err:"El código de seguridad debe tener 3 o 4 dígitos.",el:f.elements.ccvv});
+        pay.last4=num.slice(-4);pay.brand=/^4/.test(num)?"Visa":/^5[1-5]|^2[2-7]/.test(num)?"Mastercard":/^3[47]/.test(num)?"American Express":"Tarjeta";
+        pay.cuotas=m==="credito"?Number(f.elements.cuotas.value):1;pay.declined=num==="4000000000000002"}
+      for(const [id] of ACCEPTS)if(!f.elements[id].checked)return showErr(box,{err:"Debes aceptar todas las declaraciones y autorizaciones para continuar.",el:f.elements[id]});
+      showErr(box,{});
+      const pr=price(q.product,q.params,q.plan);
+      const id=newTx({channel:"web",product:q.product,plan:q.plan,params:q.params,extra:ex.o,client:r.c,start,premium:pr,freq:monthlyOk?f.elements.freq.value:"unico",pay,accepted:ACCEPTS.map(a=>a[0]),ua:"web"});
+      store.del("q");location.hash="#/proceso/"+id;
+    };
+  });
+  const card=`<div id="card" hidden><div class="fg"><div class="full"><label class="l" for="f_cnum">Número de tarjeta</label><input id="f_cnum" name="cnum" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></div><div class="full"><label class="l" for="f_cname">Nombre en la tarjeta</label><input id="f_cname" name="cname" autocomplete="cc-name"></div><div><label class="l" for="f_cexp">Vence (MM/AA)</label><input id="f_cexp" name="cexp" inputmode="numeric" placeholder="MM/AA" autocomplete="cc-exp"></div><div><label class="l" for="f_ccvv">Código de seguridad</label><input id="f_ccvv" name="ccvv" inputmode="numeric" maxlength="4" autocomplete="cc-csc"></div><div id="cuotasW"><label class="l" for="f_cuotas">Cuotas</label><select id="f_cuotas" name="cuotas">${Array.from({length:36},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join("")}</select></div></div><p class="tiny">${ic("lock").replace("<svg",'<svg style="width:14px;height:14px;vertical-align:-2px"')} Simulador: no escribas datos de una tarjeta real. Usa una tarjeta de prueba, por ejemplo 4111 1111 1111 1111.</p></div>`;
+  return pageH("Completa tu compra",`Seguro de ${p.name.toLowerCase()}, plan ${planName(q.plan)}. ${p.desc(q.params)}.`,`<a href="#/cotizar/${q.product}">Cotización</a> › Compra`)+`
+  <div class="wrap layout2"><form id="bf" novalidate>
+    <fieldset><legend>1. Tomador y asegurado</legend>${clientHTML()}</fieldset>
+    <fieldset><legend>2. ${P[q.product].extra==="beneficiarios"?"Beneficiarios":"Datos de lo que aseguras"}</legend>${extraHTML(q.product)}</fieldset>
+    ${q.product==="viaje"?"":`<fieldset><legend>3. Vigencia</legend><div class="fg"><div><label class="l" for="f_start">Fecha de inicio</label><input type="date" id="f_start" name="start"></div><div><label class="l">Duración</label><input value="1 año, con renovación que puedes cancelar" disabled></div></div></fieldset>`}
+    <fieldset><legend>${q.product==="viaje"?3:4}. Pago</legend>
+      ${monthlyOk?`<div class="paytabs"><label><input type="radio" name="freq" value="anual" checked><span>Pago anual</span></label><label><input type="radio" name="freq" value="mensual"><span>12 cuotas mensuales</span></label></div>`:""}
+      <div class="paytabs"><label><input type="radio" name="pm" value="pse" checked><span>PSE</span></label><label><input type="radio" name="pm" value="credito"><span>Tarjeta de crédito</span></label><label><input type="radio" name="pm" value="debito"><span>Tarjeta débito</span></label></div>
+      <div id="pse"><label class="l" for="f_bank">Banco</label><select id="f_bank" name="bank">${BANKS.map(b=>`<option>${b}</option>`).join("")}</select><p class="tiny">Te llevaríamos al portal de tu banco para autorizar el débito. En este simulador el pago se aprueba de inmediato.</p></div>${card}</fieldset>
+    <fieldset><legend>${q.product==="viaje"?4:5}. Declaraciones y autorizaciones</legend>${ACCEPTS.map(([id,t])=>`<label class="check"><input type="checkbox" name="${id}"><span>${t}</span></label>`).join("")}</fieldset>
+    <div class="errbox" id="berr" role="alert"></div>
+    <button class="btn" style="font-size:16px;padding:14px 26px">${ic("lock")}Pagar y enviar al servidor central</button>
+  </form>
+  <aside class="card side"><h3>Resumen</h3><div id="bsum"></div><hr style="border:0;border-top:1px solid var(--line);margin:16px 0"><p class="tiny" style="margin:0">Al pagar, tu solicitud viaja cifrada al servidor central de la sede principal, que valida tu identidad, confirma la tarifa y el pago, y emite la póliza con su número de aprobación.</p></aside></div>`;
+}
+
+/* ============ Procesamiento ============ */
+const stepsHTML=t=>`<ol class="steps">${STEPS.map((s,i)=>{const x=(t&&t.steps&&t.steps[i])||{};return `<li class="st ${x.st||""}" id="st${i}"><span class="dot"></span><div><b>${s}</b><small>${esc(x.msg||"")}</small></div></li>`}).join("")}</ol>`;
+function setStep(i,st,msg){const el=$("#st"+i);if(!el)return;el.className="st "+st;if(msg!=null)el.querySelector("small").textContent=msg}
+function runIfPending(id,onEnd){const t=getTx(id);if(t&&["nueva","procesando"].includes(t.status)&&!RUNNING.has(id)){CENTRAL.process(id,(i,st,msg)=>{if(i==="end"){if(location.hash.includes(id))onEnd();return}if(location.hash.includes(id))setStep(i,st,msg)})}}
+function vProcess(id){
+  const t=getTx(id);if(!t)return vNotFound();
+  after(()=>runIfPending(id,()=>{$("#pres").innerHTML=resultHTML(getTx(id))}));
+  return pageH("Procesando tu compra",`Transacción <span class="mono">${t.id}</span> · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)}`)+`
+  <div class="wrap layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(t)}</div><div id="pres">${["nueva","procesando"].includes(t.status)?`<div class="card"><p class="muted" style="margin:0">Estamos validando tu compra. No cierres esta página.</p></div>`:resultHTML(t)}</div></div>`;
+}
+function resultHTML(t){
+  if(t.status==="aprobada")return `<div class="card"><div class="okbox"><b>¡Listo! Tu póliza fue emitida.</b></div>
+    <p style="margin:16px 0 4px" class="muted">Número de póliza</p><div class="bignum">${t.policy}</div>
+    <p style="margin:12px 0 4px" class="muted">Número de aprobación</p><div class="bignum">${t.approval.code}</div>
+    <p class="tiny">Guarda estos dos números: sirven para verificar tu póliza. El servidor central generó tu certificado en PDF y un enlace de consulta, y los envió a ${esc(maskMail(t.client.email))}.</p>
+    ${certActions(t.policy,{cert:true})}<p style="margin:12px 0 0"><a href="#/verificar?p=${t.policy}&a=${t.approval.code}">${ic("shield").replace("<svg",'<svg style="width:16px;height:16px;vertical-align:-3px"')} Verificar esta póliza</a></p></div>`;
+  if(t.status==="revision")return `<div class="card"><div class="warnbox"><b>Tu solicitud está en revisión.</b><br>${esc((t.reasons||[]).join(" "))}</div><p>Un analista del servidor central la revisará en máximo 2 días hábiles. No te cobraremos hasta que se apruebe. Consulta el estado en <a href="#/mis-polizas">Mis pólizas</a> con tu documento.</p><p class="tiny">Transacción ${t.id}</p></div>`;
+  if(t.status==="rechazada")return `<div class="card"><div class="errbox" style="margin:0"><b>No pudimos completar la compra.</b><br>${esc(t.reason||"")}</div><p>Puedes intentar de nuevo con otro medio de pago.</p><a class="btn" href="#/cotizar/${t.product}">Volver a intentar</a></div>`;
+  if(t.status==="preaprobada")return `<div class="card"><div class="okbox"><b>Aprobación generada.</b> El asesor debe dar el aprobado para cerrar la venta.</div></div>`;
+  return `<div class="card">${badge(t.status)}</div>`;
+}
+
+/* ============ Certificado de póliza ============ */
+function vPolicy(no){
+  const t=findPolicy(no);if(!t)return pageH("Póliza no encontrada","Revisa el número e inténtalo de nuevo. Si te enviaron un enlace del certificado, ábrelo directamente: funciona en cualquier dispositivo.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`;
+  CURRENT_CERT=null;const d=certData(t);d.refund=t.refund;
+  after(()=>{const rb=$("#revoke");if(rb)rb.onclick=()=>{if(rb.dataset.c!=="1"){rb.dataset.c="1";rb.textContent="Confirmar revocación";$("#rvn").hidden=false;return}const r=CENTRAL.revoke(t.id,"Tomador (canal web)");toast("Póliza revocada. Devolución: "+money(r));router()}});
+  return certHTML(d,{revoke:t.status==="aprobada"});
+}
+
+/* ============ Verificación ============ */
+const verifyForm=id=>`<form class="card" id="${id}"><h3>${ic("shield").replace("<svg",'<svg style="width:20px;height:20px;vertical-align:-4px;color:var(--teal)"')} Verificar una póliza</h3><div class="fg"><div><label class="l" for="${id}_p">Número de póliza</label><input id="${id}_p" name="p" placeholder="IG-AUT-2026-000001" autocomplete="off"></div><div><label class="l" for="${id}_a">Número de aprobación</label><input id="${id}_a" name="a" placeholder="APR-20261119-000000" autocomplete="off"></div></div><button class="btn teal" style="margin-top:14px">Verificar</button><div class="vres" style="margin-top:14px" aria-live="polite"></div></form>`;
+function wireVerify(form){if(!form)return;form.onsubmit=e=>{e.preventDefault();const p=form.elements.p.value.trim().toUpperCase(),a=form.elements.a.value.trim().toUpperCase();const out=$(".vres",form);
+  if(!p||!a){out.innerHTML=`<div class="errbox">Escribe los dos números.</div>`;return}
+  const t=findPolicy(p);const n=store.get("verif",0)+1;store.set("verif",n);
+  if(!t||!t.approval||t.approval.code!==a){out.innerHTML=`<div class="errbox" style="margin:0"><b>No encontramos una póliza con esos datos.</b><br>Si alguien te vendió este documento, no pagues y repórtalo a ${CO.tel} o en <a href="#/atencion">Atención al cliente</a>.</div>`;return}
+  const vig=t.status==="aprobada"&&t.end>=isoDate(new Date())&&t.start<=isoDate(new Date()),fut=t.status==="aprobada"&&t.start>isoDate(new Date());
+  out.innerHTML=`<div class="${vig||fut?"okbox":"warnbox"}"><b>${vig?"Póliza auténtica y vigente.":fut?"Póliza auténtica; su vigencia empieza el "+fdate(t.start)+".":"Póliza auténtica, pero no vigente ("+STATUS[t.status][0].toLowerCase()+")."}</b><br>${P[t.product].name} · plan ${planName(t.plan)} · tomador ${esc(maskName(t.client))}<br>Vigencia: ${fdate(t.start)} a ${fdate(t.end)} · canal ${chName(t)}<br><span class="tiny">Huella ${t.fp}</span></div>`}}
+function vVerify(){
+  const qs=new URLSearchParams((location.hash.split("?")[1])||"");
+  after(()=>{const f=$("#vf");wireVerify(f);if(qs.get("p")){f.elements.p.value=qs.get("p");f.elements.a.value=qs.get("a")||"";f.requestSubmit()}});
+  return pageH("Verificar una póliza","Comprueba que una póliza es auténtica, que la aprobó nuestro servidor central y que está vigente. No mostramos datos personales completos.","Verificar")+`
+  <div class="wrap layout2"><div>${verifyForm("vf")}</div><aside class="card"><h3>Cómo evitar fraudes</h3><ul style="padding-left:18px;margin:0;font-size:14.5px">
+  <li>Toda póliza real tiene un número de aprobación APR-… emitido por el servidor central.</li><li>Nunca pagamos ni cobramos a cuentas de personas naturales.</li><li>Nuestros asesores te muestran el número de aprobación en pantalla antes de cerrar la venta.</li><li>No pedimos claves ni códigos de tu banco por teléfono, chat o WhatsApp.</li><li>Si dudas, llama a ${CO.tel} o escribe a ${CO.mail}.</li></ul></aside></div>`;
+}
+
+/* ============ Mis pólizas ============ */
+function vMine(){
+  after(()=>{$("#mf").onsubmit=e=>{e.preventDefault();const f=e.target;const doc=f.elements.doc.value.trim(),mail=f.elements.mail.value.trim().toLowerCase();
+    const list=Object.values(allTx()).filter(t=>t.client.doc===doc&&t.client.email.toLowerCase()===mail).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+    $("#mres").innerHTML=list.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Seguro</th><th>Póliza</th><th>Canal</th><th>Vigencia</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody>${list.map(t=>`<tr><td>${P[t.product].name} · ${planName(t.plan)}</td><td class="mono">${t.policy||"—"}</td><td>${chName(t)}</td><td>${t.end?fdate(t.start)+" – "+fdate(t.end):"—"}</td><td>${money(t.premium.total)}</td><td>${badge(t.status)}</td><td>${t.policy?`<a href="#/poliza/${t.policy}">Certificado</a>`:t.channel==="web"?`<a href="#/proceso/${t.id}">Detalle</a>`:""}</td></tr>`).join("")}</tbody></table></div>`:`<div class="warnbox">No encontramos pólizas con ese documento y correo.</div>`}});
+  return pageH("Mis pólizas","Consulta las pólizas que compraste en la web o en una oficina, descarga el certificado o revócalas.","Mis pólizas")+`
+  <div class="wrap"><form class="card" id="mf" style="max-width:720px"><div class="fg"><div><label class="l" for="m_doc">Número de documento</label><input id="m_doc" name="doc" required></div><div><label class="l" for="m_mail">Correo registrado</label><input id="m_mail" name="mail" type="email" required></div></div><button class="btn" style="margin-top:14px">Consultar</button><p class="tiny">En una aseguradora real este acceso pediría un código de un solo uso enviado a tu celular.</p></form><div id="mres" style="margin-top:20px"></div></div>`;
+}
+
+/* ============ Portal de asesores (oficinas) ============ */
+const seller=()=>store.get("seller",null);
+function vOffice(){
+  const s=seller();
+  if(!s){
+    after(()=>{const f=$("#lf");const fill=()=>{const o=officeById(f.elements.of.value);f.elements.as.innerHTML=o.sellers.map(x=>`<option>${x}</option>`).join("")};f.elements.of.onchange=fill;fill();
+      f.onsubmit=e=>{e.preventDefault();const s={office:f.elements.of.value,name:f.elements.as.value,code:"AS-"+f.elements.of.value+"-"+(officeById(f.elements.of.value).sellers.indexOf(f.elements.as.value)+1)};store.set("seller",s);audit("—",`Inicio de sesión del asesor ${s.name} en ${officeById(s.office).name}`,s.name);router()}});
+    return pageH("Portal de asesores","Venta asistida en oficina. Cada venta se envía al servidor central de la sede principal, que devuelve un número de aprobación. El asesor da el aprobado confirmando ese número y el valor cobrado.","Portal de asesores")+`
+    <div class="wrap grid g2"><form class="card" id="lf"><h3>Ingreso de asesor</h3><div class="fg"><div class="full"><label class="l" for="l_of">Oficina</label><select id="l_of" name="of">${OFFICES.map(o=>`<option value="${o.id}">${o.city} · ${o.name}</option>`).join("")}</select></div><div class="full"><label class="l" for="l_as">Asesor</label><select id="l_as" name="as"></select></div></div><button class="btn" style="margin-top:16px">Ingresar</button><p class="tiny">Ingreso simulado. En producción: usuario corporativo, segundo factor de autenticación y equipo registrado de la oficina.</p></form>
+    <div class="card"><h3>Cómo funciona el aprobado</h3>${stepsHTML(null).replace(/class="st "/g,'class="st done"')}<p class="tiny">Si el asesor escribe mal el número de aprobación o el valor 3 veces, la venta se bloquea y solo el servidor central puede desbloquearla.</p></div></div>`;
+  }
+  const tab=(location.hash.split("?")[1]||"").replace("t=","")||"nueva";
+  const o=officeById(s.office);
+  after(()=>{$("#logout").onclick=()=>{audit("—",`Cierre de sesión del asesor ${s.name}`,s.name);store.del("seller");router()};if(tab==="nueva")wireOfficeSale(s)});
+  const mine=Object.values(allTx()).filter(t=>t.channel==="oficina"&&t.office===s.office).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+  const pend=mine.filter(t=>["preaprobada","revision","bloqueada","procesando","nueva"].includes(t.status));
+  const rows=list=>list.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Transacción</th><th>Fecha</th><th>Asesor</th><th>Cliente</th><th>Seguro</th><th>Total</th><th>Estado</th></tr></thead><tbody>${list.map(t=>`<tr class="click" onclick="location.hash='#/oficina/venta/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${esc(t.seller)}</td><td>${esc(fullName(t.client))}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${money(t.premium.total)}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay ventas aquí.</p>`;
+  return `<div class="wrap" style="padding-top:28px"><div class="console-h" style="background:var(--navy-2)"><div><h1>${ic("office").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} ${o.name} · ${o.city}</h1><p>Asesor: <b>${esc(s.name)}</b> (${s.code}) · Conectado al servidor central de la sede principal</p></div><div class="row"><span class="live">Servidor central en línea</span><button class="btn sec sm" id="logout">Salir</button></div></div>
+  <nav class="tabs"><a href="#/oficina?t=nueva" class="${tab==="nueva"?"on":""}">Nueva venta</a><a href="#/oficina?t=pend" class="${tab==="pend"?"on":""}">Por cerrar (${pend.length})</a><a href="#/oficina?t=hist" class="${tab==="hist"?"on":""}">Historial de la oficina</a></nav>
+  ${tab==="pend"?rows(pend):tab==="hist"?rows(mine):officeSaleForm()}</div>`;
+}
+function officeSaleForm(){
+  return `<form id="of" class="layout2" novalidate><div>
+    <fieldset><legend>1. Seguro</legend><div class="fg"><div><label class="l" for="o_prod">Producto</label><select id="o_prod" name="prod">${Object.entries(P).map(([k,p])=>`<option value="${k}">${p.name}</option>`).join("")}</select></div><div><label class="l" for="o_plan">Plan</label><select id="o_plan" name="plan">${PLANS.map(([k,n])=>`<option value="${k}" ${k==="plus"?"selected":""}>${n}</option>`).join("")}</select></div></div><div id="o_params" style="margin-top:14px"></div></fieldset>
+    <fieldset><legend>2. Cliente</legend>${clientHTML()}</fieldset>
+    <fieldset><legend>3. Datos del riesgo</legend><div id="o_extra"></div><div id="o_startW" style="margin-top:14px"><label class="l" for="f_start">Inicio de vigencia</label><input type="date" id="f_start" name="start"></div></fieldset>
+    <fieldset><legend>4. Pago en oficina</legend><div class="paytabs"><label><input type="radio" name="pm" value="efectivo" checked><span>Efectivo en caja</span></label><label><input type="radio" name="pm" value="datafono"><span>Datáfono</span></label><label><input type="radio" name="pm" value="link"><span>Enlace PSE al cliente</span></label></div><div id="o_dat" hidden><label class="l" for="o_last4">Últimos 4 dígitos de la tarjeta (del voucher)</label><input id="o_last4" name="last4" inputmode="numeric" maxlength="4"></div></fieldset>
+    <fieldset><legend>5. Aceptación del cliente</legend><label class="check"><input type="checkbox" name="ok_cli"><span>El cliente leyó las condiciones, exclusiones y deducibles, declaró que la información es veraz, autorizó el tratamiento de datos y declaró el origen lícito de sus fondos. Firmó en la tableta de la oficina.</span></label><label class="check"><input type="checkbox" name="ok_id"><span>Verifiqué el documento original del cliente.</span></label></fieldset>
+    <div class="errbox" id="oerr" role="alert"></div><button class="btn">${ic("server")}Enviar al servidor central</button></div>
+    <aside class="card side"><h3>Valor a cobrar</h3><div id="osum"></div></aside></form>`;
+}
+function wireOfficeSale(s){
+  const f=$("#of"),box=$("#oerr");
+  const build=()=>{const pid=f.elements.prod.value,p=P[pid];$("#o_params").innerHTML=`<div class="fg">${p.fields.map(x=>fieldHTML(x)).join("")}</div>`;$("#o_extra").innerHTML=extraHTML(pid);$("#o_startW").hidden=pid==="viaje";calc()};
+  const calc=()=>{moneyHints(f);const pid=f.elements.prod.value,p=P[pid],v=readParams(p,f),bad=validParams(p,v);$("#osum").innerHTML=bad?`<p class="errbox">${esc(bad)}</p>`:(()=>{const pr=price(pid,v,f.elements.plan.value);return `<div class="sumrow"><span>${p.name} · ${planName(f.elements.plan.value)}</span></div><div class="sumrow"><span>Prima neta</span><span>${money(pr.neta)}</span></div><div class="sumrow"><span>IVA</span><span>${p.iva?money(pr.iva):"No aplica"}</span></div><div class="sumrow tot"><span>Total</span><span>${money(pr.total)}</span></div>`})();$("#o_dat").hidden=f.elements.pm.value!=="datafono"};
+  f.elements.prod.onchange=build;f.addEventListener("input",e=>{if(e.target.name!=="prod")calc()});f.addEventListener("change",e=>{if(e.target.name!=="prod")calc()});
+  f.elements.start.value=addDays(isoDate(new Date()),1);build();
+  f.onsubmit=e=>{e.preventDefault();const pid=f.elements.prod.value,p=P[pid],v=readParams(p,f),bad=validParams(p,v);
+    if(bad)return showErr(box,{err:bad});
+    const r=readClient(f);if(r.err)return showErr(box,r);
+    const ex=readExtra(pid,f);if(ex.err)return showErr(box,ex);
+    const start=pid==="viaje"?ex.o.salida:f.elements.start.value;if(!start||start<isoDate(new Date()))return showErr(box,{err:"La fecha de inicio no puede ser anterior a hoy.",el:f.elements.start});
+    const pay={method:f.elements.pm.value};if(pay.method==="datafono"){if(!/^\d{4}$/.test(f.elements.last4.value))return showErr(box,{err:"Escribe los últimos 4 dígitos de la tarjeta.",el:f.elements.last4});pay.last4=f.elements.last4.value}
+    if(!f.elements.ok_cli.checked||!f.elements.ok_id.checked)return showErr(box,{err:"Confirma la aceptación del cliente y la verificación del documento.",el:f.elements.ok_cli});
+    showErr(box,{});
+    const id=newTx({channel:"oficina",office:s.office,seller:s.name,sellerCode:s.code,product:pid,plan:f.elements.plan.value,params:v,extra:ex.o,client:r.c,start,premium:price(pid,v,f.elements.plan.value),freq:"anual",pay,accepted:["firma_tableta"]});
+    location.hash="#/oficina/venta/"+id};
+}
+function vOfficeSale(id){
+  const s=seller(),t=getTx(id);if(!s)return vOffice();if(!t||t.channel!=="oficina")return vNotFound();
+  const paint=()=>{const x=getTx(id);$("#ores").innerHTML=officeResult(x);const cf=$("#cf");if(cf)cf.onsubmit=e=>{e.preventDefault();const r=CENTRAL.officeClose(id,cf.elements.code.value,cf.elements.total.value,s.name);if(r.ok){toast("Venta cerrada. Póliza emitida.")}else toast(r.msg);paint()}};
+  after(()=>{paint();runIfPending(id,paint)});
+  return `<div class="wrap" style="padding-top:28px"><div class="crumbs"><a href="#/oficina">Portal de asesores</a> › Venta ${t.id}</div><h1 style="margin:0 0 6px">Venta ${t.id}</h1><p class="muted" style="margin:0 0 22px">${esc(fullName(t.client))} · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)} · ${payName(t.pay.method)} · Asesor ${esc(t.seller)}</p>
+  <div class="layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(t)}</div><div id="ores"></div></div></div>`;
+}
+function officeResult(t){
+  if(["nueva","procesando"].includes(t.status))return `<div class="card"><p class="muted" style="margin:0">Esperando respuesta del servidor central…</p></div>`;
+  if(t.status==="preaprobada")return `<form class="card" id="cf"><h3>Dar el aprobado</h3><p style="margin-top:0">El servidor central aprobó la venta. Muéstrale al cliente estos números y confírmalos para cerrarla.</p>
+    <p class="muted" style="margin:0">Número de aprobación emitido</p><div class="bignum">${t.approval.code}</div>
+    <p class="muted" style="margin:8px 0 0">Valor aprobado</p><div class="bignum">${money(t.premium.total)}</div>
+    <div class="fg" style="margin-top:14px"><div class="full"><label class="l" for="c_code">Escribe el número de aprobación</label><input id="c_code" name="code" class="mono" autocomplete="off" placeholder="APR-…"></div><div class="full"><label class="l" for="c_total">Valor cobrado al cliente</label><input id="c_total" name="total" inputmode="numeric" placeholder="Sin puntos"></div></div>
+    ${t.attempts?`<p class="errbox">Intentos fallidos: ${t.attempts} de 3.</p>`:""}<button class="btn teal" style="margin-top:14px">${ic("key")}Dar aprobado y cerrar la venta</button></form>`;
+  if(t.status==="aprobada")return `<div class="card"><div class="okbox"><b>Venta cerrada.</b> Póliza emitida por el servidor central.</div><p class="muted" style="margin:14px 0 0">Póliza</p><div class="bignum">${t.policy}</div><p class="muted" style="margin:8px 0 0">Aprobación</p><div class="bignum">${t.approval.code}</div><p class="tiny">El certificado en PDF y el enlace de consulta se enviaron a ${esc(maskMail(t.client.email))}.</p>${certActions(t.policy,{cert:true})}<p style="margin:12px 0 0"><a href="#/oficina">+ Nueva venta</a></p></div>`;
+  if(t.status==="revision")return `<div class="card"><div class="warnbox"><b>En revisión en el servidor central.</b><br>${esc((t.reasons||[]).join(" "))}</div><p>Cuando un analista la apruebe, aparecerá en “Por cerrar” con su número de aprobación.</p></div>`;
+  if(t.status==="bloqueada")return `<div class="card"><div class="errbox" style="margin:0"><b>Venta bloqueada.</b> Hubo 3 intentos fallidos de aprobado. Solicita el desbloqueo al servidor central; se emitirá un número de aprobación nuevo.</div></div>`;
+  if(t.status==="rechazada")return `<div class="card"><div class="errbox" style="margin:0"><b>Rechazada.</b> ${esc(t.reason||"")}</div></div>`;
+  return `<div class="card">${badge(t.status)}</div>`;
+}
+
+/* ============ Consola del servidor central ============ */
+function vCentral(){
+  const q=new URLSearchParams(location.hash.split("?")[1]||"");const tab=q.get("t")||"tx";
+  const txs=Object.values(allTx()).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
+  const em=txs.filter(t=>["aprobada","revocada"].includes(t.status));
+  const web=txs.filter(t=>t.channel==="web").length,off=txs.length-web;
+  const fin=txs.filter(t=>["aprobada","rechazada","revocada"].includes(t.status)),rate=fin.length?Math.round(100*fin.filter(t=>t.status!=="rechazada").length/fin.length):0;
+  const claims=store.get("claims",[]),pqrs=store.get("pqr",[]),mails=store.get("outbox",[]);
+  after(()=>{
+    const seed=$("#seed");if(seed)seed.onclick=async()=>{seed.disabled=true;await seedDemo();toast("Se crearon transacciones de ejemplo");router()};
+    const rs=$("#reset");if(rs)rs.onclick=()=>{if(rs.dataset.c!=="1"){rs.dataset.c="1";rs.textContent="Confirmar: borrar todo";return}["txs","audit","seq","claims","pqr","seller","q","verif","outbox"].forEach(k=>store.del(k));toast("Datos del simulador borrados");router()};
+    const fl=$("#flt");if(fl)fl.oninput=()=>{const c=fl.elements.c.value,s=fl.elements.s.value,x=fl.elements.x.value.trim().toLowerCase();$$("#txt tbody tr").forEach(r=>{r.hidden=!((!c||r.dataset.c===c)&&(!s||r.dataset.s===s)&&(!x||r.textContent.toLowerCase().includes(x)))})};
+    const va=$("#va");if(va)va.onclick=()=>{const r=verifyAudit();$("#vares").innerHTML=r.ok?`<div class="okbox">Integridad verificada: los ${r.n} registros encadenados están intactos.</div>`:`<div class="errbox">Se detectó una alteración en el registro #${r.at}.</div>`};
+    const tm=$("#tamper");if(tm)tm.onclick=()=>{const a=store.get("audit",[]);if(a.length<2)return toast("Aún no hay registros suficientes");a[Math.floor(a.length/2)].ev+=" (alterado)";store.set("audit",a);toast("Se alteró un registro intermedio. Verifica la integridad.")};
+  });
+  const tabs=`<nav class="tabs"><a href="#/central?t=tx" class="${tab==="tx"?"on":""}">Transacciones</a><a href="#/central?t=sin" class="${tab==="sin"?"on":""}">Siniestros (${claims.length})</a><a href="#/central?t=pqr" class="${tab==="pqr"?"on":""}">PQR (${pqrs.length})</a><a href="#/central?t=mail" class="${tab==="mail"?"on":""}">Correos (${mails.length})</a><a href="#/central?t=audit" class="${tab==="audit"?"on":""}">Historial e integridad</a></nav>`;
+  let body="";
+  if(tab==="tx")body=`<form class="filters" id="flt" onsubmit="return false"><select name="c" aria-label="Canal"><option value="">Todos los canales</option><option value="web">Web</option><option value="oficina">Oficinas</option></select><select name="s" aria-label="Estado"><option value="">Todos los estados</option>${Object.entries(STATUS).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("")}</select><input name="x" placeholder="Buscar transacción, póliza, aprobación…" aria-label="Buscar"></form>
+    ${txs.length?`<div class="tblwrap"><table class="tbl" id="txt"><thead><tr><th>Transacción</th><th>Fecha</th><th>Canal</th><th>Seguro</th><th>Cliente</th><th>Total</th><th>Póliza</th><th>Aprobación</th><th>Estado</th></tr></thead><tbody>${txs.map(t=>`<tr class="click" data-c="${t.channel}" data-s="${t.status}" onclick="location.hash='#/central/tx/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${chName(t)}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${maskName(t.client)} <span class="muted">${maskDoc(t.client.doc)}</span></td><td>${money(t.premium.total)}</td><td class="mono">${t.policy||"—"}</td><td class="mono">${t.approval?t.approval.code:"—"}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="card"><p style="margin-top:0">Aún no hay transacciones. Haz una compra en la web o una venta en el portal de asesores, o genera datos de ejemplo.</p><button class="btn" id="seed">Generar transacciones de ejemplo</button></div>`}`;
+  if(tab==="sin")body=claims.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Radicado</th><th>Fecha</th><th>Póliza</th><th>Tipo</th><th>Ciudad</th><th>Estado</th></tr></thead><tbody>${claims.slice().reverse().map(c=>`<tr><td class="mono">${c.id}</td><td>${fdt(c.at)}</td><td class="mono">${c.policy}</td><td>${esc(c.tipo)}</td><td>${esc(c.ciudad)}</td><td><span class="badge b-pre">Asignado a ajustador</span></td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay siniestros reportados.</p>`;
+  if(tab==="pqr")body=pqrs.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Radicado</th><th>Fecha</th><th>Tipo</th><th>Canal</th><th>Respuesta máxima</th><th>Estado</th></tr></thead><tbody>${pqrs.slice().reverse().map(c=>`<tr><td class="mono">${c.id}</td><td>${fdt(c.at)}</td><td>${esc(c.tipo)}</td><td>Web</td><td>${fdate(c.due)}</td><td><span class="badge b-rev">En trámite</span></td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay PQR radicadas.</p>`;
+  if(tab==="mail")body=mails.length?`<p class="muted" style="margin-top:0;font-size:14px">Al emitir cada póliza, el servidor central envía al tomador el certificado en PDF y el enlace de consulta. El envío lo hace la función de Azure <span class="mono">/api/send-policy</span> por SMTP con el buzón de GoDaddy configurado. Los correos de prueba (@ejemplo.com) y los datos de ejemplo no se envían de verdad.</p><div class="tblwrap"><table class="tbl"><thead><tr><th>Envío</th><th>Fecha</th><th>Para</th><th>Asunto</th><th>Adjunto</th><th>Estado</th><th></th></tr></thead><tbody>${mails.slice().reverse().map(m=>`<tr><td class="mono">${m.id}</td><td>${fdt(m.at)}</td><td>${esc(maskMail(m.to))}</td><td>${esc(m.subject)}</td><td><a href="#" data-act="pdf" data-pol="${m.policy}">Poliza-${m.policy}.pdf</a></td><td>${mailBadge(m)}</td><td>${m.status==="error"?`<button class="btn sec sm" data-act="retry" data-mail="${m.id}">Reintentar</button>`:`<a href="${esc(m.link)}">Abrir certificado</a>`}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">Aún no se han enviado certificados.</p>`;
+  if(tab==="audit"){const a=store.get("audit",[]);body=`<div class="grid g2" style="margin-bottom:18px"><div class="card"><h3>Integridad del historial</h3><p class="muted" style="margin-top:0;font-size:14px">Cada registro guarda una huella calculada con la huella del registro anterior. Si alguien modifica o borra un registro, la cadena deja de coincidir.</p><div class="row"><button class="btn teal sm" id="va">Verificar integridad</button><button class="btn sec sm" id="tamper">Simular alteración</button></div><div id="vares" style="margin-top:12px"></div></div><div class="card"><h3>Datos del simulador</h3><p class="muted" style="margin-top:0;font-size:14px">Todo se guarda en este navegador. Puedes generar ejemplos o empezar de cero.</p><div class="row"><button class="btn sec sm" id="seed">Generar ejemplos</button><button class="btn red sm" id="reset">Borrar todos los datos</button></div></div></div>
+    <div class="tblwrap"><table class="tbl"><thead><tr><th>#</th><th>Fecha</th><th>Transacción</th><th>Evento</th><th>Actor</th><th>Huella</th></tr></thead><tbody>${a.slice(-60).reverse().map(e=>`<tr><td>${e.n}</td><td>${fdt(e.at)}</td><td class="mono">${e.tx}</td><td style="white-space:normal;min-width:320px">${esc(e.ev)}</td><td>${esc(e.by)}</td><td class="mono">${e.h}</td></tr>`).join("")||`<tr><td colspan="6" class="muted">Sin registros.</td></tr>`}</tbody></table></div>`}
+  return `<div class="wrap" style="padding-top:28px"><div class="console-h"><div><h1>${ic("server").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} Servidor central · Sede principal Bogotá</h1><p>Consola interna simulada. Aquí se aprueban todas las ventas de la web y de las oficinas.</p></div><span class="live">En línea</span></div>
+  <div class="kpis"><div class="kpi"><b>${txs.length}</b><span>Transacciones</span></div><div class="kpi"><b>${web} / ${off}</b><span>Web / Oficinas</span></div><div class="kpi"><b>${em.length}</b><span>Pólizas emitidas</span></div><div class="kpi"><b>${money(em.reduce((a,t)=>a+t.premium.total,0))}</b><span>Primas emitidas</span></div><div class="kpi"><b>${txs.filter(t=>["revision","bloqueada"].includes(t.status)).length}</b><span>Requieren acción</span></div><div class="kpi"><b>${rate}%</b><span>Tasa de aprobación</span></div></div>
+  ${tabs}${body}</div>`;
+}
+const mailBadge=m=>{const k={enviado:["Enviado","b-ok"],simulado:["Simulado","b-gray"],error:["Error","b-bad"],pendiente:["En cola","b-pre"],enviando:["Enviando…","b-pre"]}[m.status||"simulado"]||["—","b-gray"];return `<span class="badge ${k[1]}" title="${esc(m.note||"")}">${k[0]}</span>${m.note?`<div class="tiny" style="white-space:normal;max-width:240px">${esc(m.note)}</div>`:""}`};
+function vCentralTx(id){
+  const t=getTx(id);if(!t)return vNotFound();
+  after(()=>{const b=(s,f)=>{const el=$(s);if(el)el.onclick=()=>{f();router()}};
+    b("#ap",()=>CENTRAL.approveReview(id));b("#ul",()=>CENTRAL.unlock(id));
+    const rj=$("#rj");if(rj)rj.onclick=()=>{const r=$("#rjr").value.trim();if(r.length<5){toast("Escribe el motivo del rechazo");return}CENTRAL.reject(id,r);router()}});
+  const actions=t.status==="revision"?`<div class="card" style="margin-top:18px"><h3>Revisión manual</h3><div class="warnbox">${esc((t.reasons||[]).join(" "))}</div><div class="row" style="margin-top:12px"><button class="btn teal sm" id="ap">Aprobar</button></div><label class="l" for="rjr" style="margin-top:14px">Motivo del rechazo</label><input id="rjr"><button class="btn red sm" id="rj" style="margin-top:8px">Rechazar</button></div>`
+    :t.status==="bloqueada"?`<div class="card" style="margin-top:18px"><h3>Venta bloqueada</h3><p>3 intentos fallidos de aprobado en oficina. Al desbloquear se anula el número de aprobación anterior y se emite uno nuevo.</p><button class="btn sm" id="ul">Desbloquear y emitir nueva aprobación</button></div>`:"";
+  return `<div class="wrap" style="padding-top:28px"><div class="crumbs"><a href="#/central">Servidor central</a> › ${t.id}</div><div class="row" style="justify-content:space-between"><h1 style="margin:0">${t.id}</h1>${badge(t.status)}</div>
+  <div class="layout2" style="margin-top:18px"><div><div class="card"><dl class="kv"><dt>Canal</dt><dd>${chName(t)}${t.seller?" · "+esc(t.seller)+" ("+t.sellerCode+")":""}</dd><dt>Seguro</dt><dd>${P[t.product].name} · ${planName(t.plan)}</dd><dt>Riesgo</dt><dd>${esc(P[t.product].desc(t.params))}</dd><dt>Cliente</dt><dd>${esc(maskName(t.client))} · ${esc(t.client.tipoDoc)} ${maskDoc(t.client.doc)}</dd><dt>Total</dt><dd>${money(t.premium.total)} · ${payName(t.pay.method)}${t.pay.last4?" •••• "+t.pay.last4:""}</dd><dt>Póliza</dt><dd class="mono">${t.policy?`<a href="#/poliza/${t.policy}">${t.policy}</a>`:"—"}</dd><dt>Aprobación</dt><dd class="mono">${t.approval?t.approval.code:"—"}</dd>${t.fp?`<dt>Huella</dt><dd class="mono">${t.fp}</dd>`:""}</dl></div>${actions}</div>
+  <div class="card"><h3>Pasos</h3>${stepsHTML(t)}</div></div>
+  <div class="card" style="margin-top:18px"><h3>Historial de la transacción</h3><ul class="loglist">${t.log.map(l=>`<li><time>${fdt(l.at)}</time><span>${esc(l.ev)} <span class="muted">· ${esc(l.by)}</span></span></li>`).join("")}</ul></div></div>`;
+}
+async function seedDemo(){
+  const people=[["Laura","Gómez Ruiz","1020304051"],["Andrés","Pérez Mora","79865432"],["Natalia","Suárez León","52987123"],["Jorge","Ramírez Díaz","80100000"],["Paula","Castro Niño","1098765432"],["Diego","Vargas Rey","1015432876"]];
+  const specs=[["web","auto","plus",{valor:92000000,modelo:2022,ciudad:"Bogotá",uso:"Particular"},{placa:"JKL482",marca:"Mazda 3"}],["oficina","vida","total",{edad:41,suma:300000000,fuma:"No"},{beneficiarios:[{nombre:"Sofía Pérez",parentesco:"Hijo(a)",pct:100}]}],["web","viaje","plus",{destino:"Europa (Schengen)",dias:20,viajeros:2,edad:38},{salida:addDays(isoDate(new Date()),10)}],["web","hogar","plus",{inmueble:420000000,contenido:60000000,tipo:"Apartamento",ciudad:"Medellín"},{dir_riesgo:"Cra 43A # 1-50"}],["oficina","auto","total",{valor:350000000,modelo:2025,ciudad:"Cali",uso:"Particular"},{placa:"XYZ123",marca:"BMW X3"}],["oficina","mascotas","plus",{tipo:"Perro",edad:4},{mascota:"Toby",raza:"Labrador"}]];
+  let i=0;for(const [ch,pid,plan,params,extra] of specs){const [n,a,doc]=people[i];const off=OFFICES[i%OFFICES.length];
+    const c={tipoDoc:"Cédula de ciudadanía",doc,nombres:n,apellidos:a,nacimiento:"1988-05-14",celular:"3001234567",email:n.toLowerCase()+"@ejemplo.com",ciudad:"Bogotá",direccion:"Calle 10 # 20-30"};
+    const id=newTx({channel:ch,office:ch==="oficina"?off.id:undefined,seller:ch==="oficina"?off.sellers[0]:undefined,sellerCode:ch==="oficina"?`AS-${off.id}-1`:undefined,product:pid,plan,params,extra,client:c,start:pid==="viaje"?extra.salida:addDays(isoDate(new Date()),1),premium:price(pid,params,plan),freq:"anual",pay:ch==="web"?{method:"pse",bank:"Bancolombia"}:{method:"efectivo"},accepted:["demo"],demo:true});
+    await CENTRAL.process(id,null,true);
+    if(ch==="oficina"&&getTx(id).status==="preaprobada"&&i!==5)CENTRAL.officeClose(id,getTx(id).approval.code,getTx(id).premium.total,off.sellers[0]);
+    i++}
+}
+
+/* ============ Siniestros ============ */
+function vClaim(){
+  after(()=>{const f=$("#sf"),box=$("#serr");f.elements.fecha.max=isoDate(new Date());f.onsubmit=e=>{e.preventDefault();
+    const t=findPolicy(f.elements.pol.value);
+    if(!t)return showErr(box,{err:"No encontramos esa póliza.",el:f.elements.pol});
+    if(t.client.doc!==f.elements.doc.value.trim())return showErr(box,{err:"El documento no coincide con el del tomador de la póliza.",el:f.elements.doc});
+    const d=f.elements.fecha.value;if(!d||d>isoDate(new Date()))return showErr(box,{err:"Escribe una fecha válida (no futura).",el:f.elements.fecha});
+    if(t.status!=="aprobada"||d<t.start||d>t.end)return showErr(box,{err:"La fecha del siniestro está fuera de la vigencia de la póliza o la póliza no está vigente.",el:f.elements.fecha});
+    if(f.elements.desc.value.trim().length<20)return showErr(box,{err:"Describe qué pasó (mínimo 20 caracteres).",el:f.elements.desc});
+    showErr(box,{});
+    const id=`SIN-${new Date().getFullYear()}-${pad(seq("sin"),6)}`;const c={id,at:new Date().toISOString(),policy:t.policy,tipo:f.elements.tipo.value,fecha:d,ciudad:f.elements.ciudad.value,desc:f.elements.desc.value.trim()};
+    const all=store.get("claims",[]);all.push(c);store.set("claims",all);upd(t.id,x=>logTx(x,`Siniestro ${id} reportado (${c.tipo})`,"Asegurado (web)"));
+    $("#sres").innerHTML=`<div class="okbox"><b>Siniestro radicado: <span class="mono">${id}</span></b><br>Un ajustador te contactará en máximo 2 días hábiles. Tras presentar los documentos que prueben la ocurrencia y la cuantía, el pago se hace dentro del mes siguiente (art. 1080 del Código de Comercio).</div>`;f.reset()}});
+  return pageH("Reportar un siniestro","Lamentamos lo ocurrido. Cuéntanos qué pasó y te asignamos un ajustador. Si hay heridos, llama primero a la línea 123.","Siniestros")+`
+  <div class="wrap layout2"><form class="card" id="sf" novalidate><div class="fg"><div><label class="l" for="s_pol">Número de póliza</label><input id="s_pol" name="pol" placeholder="IG-AUT-2026-000001"></div><div><label class="l" for="s_doc">Documento del tomador</label><input id="s_doc" name="doc"></div><div><label class="l" for="s_tipo">¿Qué pasó?</label><select id="s_tipo" name="tipo"><option>Choque o daño</option><option>Hurto</option><option>Incendio o daño por agua</option><option>Enfermedad o accidente</option><option>Fallecimiento</option><option>Pérdida de equipaje</option><option>Otro</option></select></div><div><label class="l" for="s_fecha">Fecha</label><input type="date" id="s_fecha" name="fecha"></div><div class="full"><label class="l" for="s_ciudad">Ciudad</label><select id="s_ciudad" name="ciudad">${CITIES.map(c=>`<option>${c}</option>`).join("")}</select></div><div class="full"><label class="l" for="s_desc">Descripción</label><textarea id="s_desc" name="desc" placeholder="Cuéntanos qué pasó, dónde y si hubo otras personas involucradas."></textarea></div></div><div class="errbox" id="serr"></div><button class="btn" style="margin-top:12px">Reportar siniestro</button><div id="sres" style="margin-top:14px"></div></form>
+  <aside class="card"><h3>Atención inmediata 24/7</h3><p style="margin-top:0">${ic("phone").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-3px"')} ${CO.tel}<br>${ic("whatsapp").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-3px"')} ${CO.wa}</p><h4>Documentos que te pediremos</h4><ul style="padding-left:18px;font-size:14.5px"><li>Documento de identidad</li><li>Denuncia (en caso de hurto)</li><li>Fotos y facturas del daño</li><li>Historia clínica (salud, vida o viaje)</li></ul></aside></div>`;
+}
+
+/* ============ Atención al cliente (PQR) ============ */
+function vCare(){
+  after(()=>{const f=$("#pf"),box=$("#perr");f.onsubmit=e=>{e.preventDefault();const g=n=>f.elements[n].value.trim();
+    if(g("nombre").length<3)return showErr(box,{err:"Escribe tu nombre.",el:f.elements.nombre});
+    if(!/^[A-Z0-9]{5,12}$/i.test(g("doc")))return showErr(box,{err:"Escribe un número de documento válido.",el:f.elements.doc});
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(g("email")))return showErr(box,{err:"Escribe un correo válido.",el:f.elements.email});
+    if(g("msg").length<20)return showErr(box,{err:"Cuéntanos tu caso (mínimo 20 caracteres).",el:f.elements.msg});
+    if(!f.elements.datos.checked)return showErr(box,{err:"Autoriza el tratamiento de datos para poder responderte.",el:f.elements.datos});
+    showErr(box,{});const id=`PQR-${new Date().getFullYear()}-${pad(seq("pqr"),6)}`;const due=addBizDays(new Date(),15);
+    const all=store.get("pqr",[]);all.push({id,at:new Date().toISOString(),tipo:g("tipo"),nombre:g("nombre"),doc:g("doc"),email:g("email"),poliza:g("poliza"),msg:g("msg"),due:due.toISOString()});store.set("pqr",all);audit("—",`PQR ${id} radicada (${g("tipo")})`,"Consumidor (web)");
+    $("#pres").innerHTML=`<div class="okbox"><b>Radicado: <span class="mono">${id}</span></b><br>Te responderemos a ${esc(g("email"))} a más tardar el ${fdate(due.toISOString())} (15 días hábiles).</div>`;f.reset()}});
+  return pageH("Atención al cliente","Peticiones, quejas, reclamos y sugerencias. Todas reciben un radicado y respuesta en máximo 15 días hábiles.","Atención")+`
+  <div class="wrap layout2"><form class="card" id="pf" novalidate><div class="fg"><div><label class="l" for="p_tipo">Tipo</label><select id="p_tipo" name="tipo"><option>Petición</option><option>Queja</option><option>Reclamo</option><option>Sugerencia</option><option>Felicitación</option></select></div><div><label class="l" for="p_pol">Póliza (opcional)</label><input id="p_pol" name="poliza"></div><div><label class="l" for="p_nom">Nombre completo</label><input id="p_nom" name="nombre"></div><div><label class="l" for="p_doc">Documento</label><input id="p_doc" name="doc"></div><div class="full"><label class="l" for="p_mail">Correo</label><input id="p_mail" name="email" type="email"></div><div class="full"><label class="l" for="p_msg">Tu caso</label><textarea id="p_msg" name="msg"></textarea></div></div><label class="check"><input type="checkbox" name="datos"><span>Autorizo el tratamiento de mis datos para atender esta solicitud (Ley 1581 de 2012).</span></label><div class="errbox" id="perr"></div><button class="btn">Radicar</button><div id="pres" style="margin-top:14px"></div></form>
+  <aside><div class="card"><h3>Defensor del Consumidor Financiero</h3><p style="margin-top:0;font-size:14.5px">Si no estás de acuerdo con nuestra respuesta, puedes acudir al Defensor, un tercero independiente que resuelve tu caso sin costo (Ley 1328 de 2009).</p><p style="font-size:14.5px">${CO.defensor.name}<br>${CO.defensor.mail}<br>${CO.defensor.tel}<br>${CO.defensor.addr}</p></div>
+  <div class="card" style="margin-top:16px"><h3>Superintendencia Financiera</h3><p style="margin-top:0;font-size:14.5px">También puedes presentar tu queja ante la Superintendencia Financiera de Colombia.</p><a href="https://www.superfinanciera.gov.co" target="_blank" rel="noopener">superfinanciera.gov.co →</a></div></aside></div>`;
+}
+
+/* ============ Canales ============ */
+function vChannels(){
+  return pageH("Canales de atención y venta","Compra, consulta y reporta donde te quede más fácil. Todos los canales llegan al mismo servidor central, con las mismas tarifas y validaciones.","Canales")+`
+  <div class="wrap"><div class="grid g3">
+   <div class="card"><span class="ic">${ic("web")}</span><h3 style="margin-top:10px">Sitio web · 24/7</h3><p class="muted">Cotiza, compra, descarga tu certificado, revoca, verifica pólizas y reporta siniestros.</p><a href="#/cotizar">Cotizar en línea →</a></div>
+   <div class="card"><span class="ic">${ic("office")}</span><h3 style="margin-top:10px">Oficinas</h3><p class="muted">Un asesor cotiza contigo. Al cerrar, confirma en pantalla el número de aprobación del servidor central.</p><a href="#oficinas">Ver oficinas →</a></div>
+   <div class="card"><span class="ic">${ic("phone")}</span><h3 style="margin-top:10px">Línea de atención</h3><p class="muted">${CO.tel} · ${CO.cel}. Siniestros y asistencia 24/7; ventas lun–sáb.</p></div>
+   <div class="card"><span class="ic teal">${ic("whatsapp")}</span><h3 style="margin-top:10px">WhatsApp</h3><p class="muted">${CO.wa}. Consultas, estado de siniestros y envío de documentos. Nunca te pediremos claves.</p></div>
+   <div class="card"><span class="ic">${ic("chat")}</span><h3 style="margin-top:10px">Agente IG</h3><p class="muted">Nuestro asistente virtual responde preguntas frecuentes y te lleva al trámite correcto. Ábrelo con el botón de la esquina.</p></div>
+   <div class="card"><span class="ic gold">${ic("handshake")}</span><h3 style="margin-top:10px">Aliados</h3><p class="muted">Concesionarios, inmobiliarias, agencias de viaje y veterinarias que venden nuestros seguros. Sus ventas también se aprueban en el servidor central.</p></div>
+  </div>
+  <div class="card" style="margin-top:22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap"><span class="ic">${ic("api")}</span><div style="flex:1;min-width:260px"><h3>Próximo canal: API para aliados</h3><p class="muted" style="margin:0">Conexión directa para que los aliados coticen y emitan desde sus propios sistemas, con las mismas validaciones del servidor central y credenciales por aliado.</p></div><span class="badge b-pre">En diseño</span></div>
+  <h2 style="margin-top:44px" id="oficinas">Oficinas</h2><p class="lead">Lleva tu documento de identidad original.</p>
+  <div class="grid g3 office-list">${OFFICES.map(o=>`<div class="card"><span class="ic">${ic("office")}</span><div><h3>${o.city}${o.central?' <span class="badge b-pre">Sede principal</span>':""}</h3><p style="margin:0" class="muted">${o.name}<br>${o.addr}<br>${o.hours}</p></div></div>`).join("")}</div>
+  <h2 style="margin-top:44px">Cómo se conectan</h2><p class="lead">El servidor central está en la sede principal de Bogotá. Las oficinas y la web le envían cada venta; él la valida, la aprueba y deja el registro.</p>${flowHTML()}</div>`;
+}
+
+/* ============ Legal ============ */
+const LEGAL={
+ condiciones:["Condiciones generales de uso y de compra",`<p>Este sitio es un <b>simulador académico</b>. Insurance Global es una compañía ficticia: no se celebran contratos de seguro reales ni se hacen cobros.</p>
+  <h2>1. Contrato de seguro</h2><p>El contrato se rige por el Código de Comercio (arts. 1036 y siguientes) y por el clausulado de cada producto. Se perfecciona con el consentimiento de las partes; la póliza y su certificado son prueba del contrato.</p>
+  <h2>2. Proceso de compra y aprobación</h2><p>Toda compra, en la web o en una oficina, se envía al servidor central de la sede principal. Allí se valida la identidad y las listas de control (SARLAFT), se confirma la tarifa y el pago, y se emite la póliza con un número de aprobación único. En oficina, el asesor da el aprobado confirmando ese número y el valor cobrado.</p>
+  <h2>3. Precio y pago</h2><p>El precio mostrado incluye IVA cuando aplica. Puedes pagar en un solo pago o en 12 cuotas mensuales con un recargo informado antes de pagar. El no pago de la prima puede producir la terminación automática del contrato (art. 1068 C. de Co.).</p>
+  <h2>4. Declaración del estado del riesgo</h2><p>Debes declarar con sinceridad los hechos que determinan el riesgo. La reticencia o inexactitud puede producir la nulidad relativa del contrato (art. 1058 C. de Co.).</p>
+  <h2>5. Revocación</h2><p>Puedes revocar la póliza en cualquier momento. Te devolvemos la parte de la prima no causada (art. 1071 C. de Co.).</p>
+  <h2>6. Siniestros</h2><p>Debes avisar el siniestro dentro de los 3 días siguientes a conocerlo (art. 1075 C. de Co.). Pagamos dentro del mes siguiente a la acreditación de la ocurrencia y la cuantía (art. 1080 C. de Co.).</p>`],
+ privacidad:["Política de tratamiento de datos personales",`<p>Responsable: ${CO.legal}. Contacto: ${CO.datos}.</p><h2>Finalidades</h2><ul><li>Cotizar, emitir y administrar pólizas.</li><li>Atender siniestros, PQR y solicitudes.</li><li>Cumplir obligaciones legales, incluido SARLAFT.</li><li>Enviarte información comercial, solo si lo autorizas.</li></ul><h2>Datos sensibles</h2><p>Los datos de salud se tratan solo para seguros de vida y salud, con autorización expresa, y no estás obligado a entregarlos fuera de esa finalidad.</p><h2>Tus derechos</h2><p>Conocer, actualizar, rectificar y suprimir tus datos, revocar la autorización y presentar quejas ante la Superintendencia de Industria y Comercio (Ley 1581 de 2012). Respondemos consultas en 10 días hábiles y reclamos en 15.</p><h2>Seguridad</h2><p>Mostramos los documentos enmascarados en las consolas internas, ciframos la comunicación con el servidor central y registramos cada acceso y cambio en un historial con huella de integridad.</p>`],
+ sarlaft:["SARLAFT",`<p>Aplicamos un sistema de administración del riesgo de lavado de activos y financiación del terrorismo. Cada venta se compara contra listas de control en el servidor central antes de emitirse. Las coincidencias pasan a revisión de cumplimiento y pueden no emitirse.</p><p class="muted">Simulador: los documentos terminados en 0000 producen una coincidencia de prueba.</p>`],
+ consumidor:["Derechos del consumidor financiero",`<p>Según la Ley 1328 de 2009 tienes derecho a:</p><ul><li>Recibir productos con estándares de seguridad y calidad.</li><li>Información cierta, suficiente, clara y oportuna sobre coberturas, exclusiones, precio y deducibles.</li><li>Un trato respetuoso y la atención de tus quejas.</li><li>Acudir al Defensor del Consumidor Financiero y a la Superintendencia Financiera de Colombia.</li></ul><p>Defensor: ${CO.defensor.name}, ${CO.defensor.mail}, ${CO.defensor.tel}.</p>`],
+ seguridad:["Cómo protegemos tu compra",`<ul><li><b>Aprobación central:</b> ninguna oficina ni el sitio web puede emitir una póliza por su cuenta; solo el servidor central de la sede principal.</li><li><b>Número de aprobación:</b> cada póliza tiene un código APR-… único, verificable en línea.</li><li><b>Doble confirmación en oficina:</b> el asesor debe escribir el número de aprobación y el valor cobrado; 3 errores bloquean la venta.</li><li><b>Historial encadenado:</b> cada evento queda registrado con una huella que depende del anterior; cualquier alteración se detecta.</li><li><b>Mínimo de datos:</b> no guardamos números completos de tarjeta, y las consolas muestran documentos enmascarados.</li></ul>`]
+};
+function vLegal(doc){const d=LEGAL[doc];if(!d)return vNotFound();
+  return pageH(d[0],"",`Legal › ${d[0]}`)+`<div class="wrap"><div class="layout2"><article class="card legal">${d[1]}</article><aside class="card"><h3>Documentos</h3>${Object.entries(LEGAL).map(([k,v])=>`<a href="#/legal/${k}" style="display:block;margin:8px 0;${k===doc?"font-weight:800":""}">${v[0]}</a>`).join("")}</aside></div></div>`}
+const vNotFound=()=>pageH("No encontramos esta página","Puede que el enlace esté mal escrito.")+`<div class="wrap"><a class="btn" href="#/">Ir al inicio</a></div>`;
+
+/* ============ Asistente virtual ============ */
+const BOT=[
+ [/hola|buen[oa]s|saludo/,"¡Hola! Soy Agente IG, el asistente virtual de Insurance Global. ¿Quieres cotizar, verificar una póliza o reportar un siniestro?"],
+ [/siniestro|accidente|choque|chocaron|robo|robaron|hurto|reclamar|incendio/,"Lamento lo ocurrido. Reporta el siniestro aquí: <a href='#/siniestros'>reportar siniestro</a>. Si es urgente, llama al "+CO.tel+"."],
+ [/verific|aut[eé]ntic|falsa|falso|fraude|estafa/,"Verifica cualquier póliza con su número y el número de aprobación: <a href='#/verificar'>verificar póliza</a>. Nunca te pediremos claves bancarias."],
+ [/aprobaci|aprobado|n[uú]mero/,"Cada compra recibe un número de aprobación (APR-…) del servidor central. Aparece en tu certificado y sirve para verificar la póliza."],
+ [/oficina|sede|direcci|presencial|asesor/,"Tenemos 5 oficinas: Bogotá, Medellín, Cali, Barranquilla y Bucaramanga. <a href='#/canales'>Ver direcciones y horarios</a>."],
+ [/revoc|cancel|retir|devoluci/,"Puedes revocar tu póliza cuando quieras (art. 1071 del Código de Comercio) y te devolvemos la prima no causada. Hazlo desde <a href='#/mis-polizas'>Mis pólizas</a>."],
+ [/pago|pse|tarjeta|cuota|efectivo/,"En la web pagas con PSE o tarjeta, en un pago o en 12 cuotas. En oficina también recibimos efectivo y datáfono."],
+ [/queja|reclamo|pqr|defensor|petici/,"Radica tu solicitud en <a href='#/atencion'>Atención al cliente</a>. Respondemos en máximo 15 días hábiles. También puedes acudir al Defensor del Consumidor Financiero."],
+ [/auto|carro|veh[ií]culo|moto/,"Cotiza tu seguro de autos aquí: <a href='#/cotizar/auto'>seguro de autos</a>."],
+ [/hogar|casa|apartamento/,"Cotiza tu seguro de hogar aquí: <a href='#/cotizar/hogar'>seguro de hogar</a>."],
+ [/vida/,"Cotiza tu seguro de vida aquí: <a href='#/cotizar/vida'>seguro de vida</a>."],
+ [/salud|m[eé]dic|cl[ií]nica/,"Cotiza tu seguro de salud aquí: <a href='#/cotizar/salud'>seguro de salud</a>."],
+ [/viaje|viajar|schengen|europa/,"Cotiza tu asistencia en viaje aquí: <a href='#/cotizar/viaje'>seguro de viajes</a>. Los tres planes cumplen el requisito Schengen."],
+ [/perro|gato|mascota/,"Cotiza el seguro de tu mascota aquí: <a href='#/cotizar/mascotas'>seguro de mascotas</a>."],
+ [/empresa|negocio|pyme|local/,"Cotiza el seguro para tu negocio aquí: <a href='#/cotizar/pyme'>seguro de empresas</a>."],
+ [/cotiz|precio|cu[aá]nto|valor|cuesta/,"Puedes cotizar en línea en menos de 2 minutos: <a href='#/cotizar'>elige tu seguro</a>."],
+ [/gracias/,"¡Con gusto! Si necesitas algo más, aquí estoy."]
+];
+function botReply(t){t=t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");for(const [re,a] of BOT){const r=new RegExp(re.source.normalize("NFD").replace(/[̀-ͯ]/g,""));if(r.test(t))return a}return "No estoy seguro de haber entendido. Puedo ayudarte a <a href='#/cotizar'>cotizar</a>, <a href='#/verificar'>verificar una póliza</a>, <a href='#/siniestros'>reportar un siniestro</a> o <a href='#/atencion'>radicar una PQR</a>. También puedes llamar al "+CO.tel+"."}
+function chatInit(){
+  const box=$("#chat"),msgs=$("#chatMsgs"),add=(h,who)=>{const d=document.createElement("div");d.className="msg "+who;if(who==="me")d.textContent=h;else d.innerHTML=h;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight};
+  const ask=q=>{add(q,"me");setTimeout(()=>add(botReply(q),"bot"),350)};
+  $("#chatFab").onclick=()=>{const o=box.classList.toggle("open");$("#chatFab").setAttribute("aria-expanded",o);if(o&&!msgs.children.length)add("¡Hola! Soy <b>Agente IG</b> 🤖, el asistente virtual de Insurance Global. Puedo ayudarte a cotizar, verificar una póliza, reportar un siniestro o encontrar una oficina. ¿En qué te ayudo?","bot");if(o)$("#chatIn").focus()};
+  $("#chatX").onclick=()=>{box.classList.remove("open");$("#chatFab").setAttribute("aria-expanded",false)};
+  $("#chatF").onsubmit=e=>{e.preventDefault();const v=$("#chatIn").value.trim();if(!v)return;$("#chatIn").value="";ask(v)};
+  $$("#chat .chips button").forEach(b=>b.onclick=()=>ask(b.textContent));
+  msgs.addEventListener("click",e=>{if(e.target.tagName==="A")setTimeout(()=>{if(window.innerWidth<700)box.classList.remove("open")},50)});
+}
+
+/* ============ Router ============ */
+const routes=[[/^$/,vHome],[/^cotizar$/,vProducts],[/^cotizar\/(\w+)$/,vQuote],[/^comprar$/,vBuy],[/^proceso\/([\w-]+)$/,vProcess],[/^poliza\/([\w-]+)$/,vPolicy],[/^verificar$/,vVerify],[/^mis-polizas$/,vMine],[/^siniestros$/,vClaim],[/^atencion$/,vCare],[/^canales$/,vChannels],[/^oficina$/,vOffice],[/^oficina\/venta\/([\w-]+)$/,vOfficeSale],[/^central$/,vCentral],[/^central\/tx\/([\w-]+)$/,vCentralTx],[/^legal\/(\w+)$/,vLegal],[/^c\/([\w-]+)$/,vCertLink]];
+let lastPath=null;
+function router(){
+  const raw=location.hash.replace(/^#\/?/,"");
+  if(/^[a-z]+$/i.test(raw)&&document.getElementById(raw)&&!routes.some(r=>r[0].test(raw))){document.getElementById(raw).scrollIntoView();return}
+  const h=decodeURIComponent(raw.split("?")[0]);AFTER=[];let html=null;
+  for(const [re,fn] of routes){const m=h.match(re);if(m){html=fn(...m.slice(1));break}}
+  $("#app").innerHTML=html??vNotFound();
+  AFTER.forEach(f=>f());AFTER=[];
+  if(h!==lastPath)window.scrollTo(0,0);lastPath=h;
+  const sec=h.split("/")[0];$$("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href").slice(2).split("/")[0]===sec&&sec!==""));
+  $("nav.main").classList.remove("open");
+  document.title=h===""?"Insurance Global · Seguros para todo lo que te importa":((($("#app h1")||{}).textContent||"").trim()+" · Insurance Global");
+}
+window.addEventListener("hashchange",router);
+document.addEventListener("DOMContentLoaded",()=>{
+  $("#menuBtn").onclick=()=>$("nav.main").classList.toggle("open");
+  chatInit();router();setTimeout(()=>{const o=store.get("outbox",[]);let ch=false;o.forEach(m=>{if(m.status==="enviando"){m.status="pendiente";ch=true}});if(ch)store.set("outbox",o);sendQueued()},800);
+});
+
+/* ============ Certificado: datos, enlace, PDF y correo ============ */
+const STATUS_TXT={aprobada:"Vigente",revocada:"Revocada",rechazada:"Rechazada",revision:"En revisión",preaprobada:"Pendiente",bloqueada:"Bloqueada"};
+function certExtraRows(t){
+  const p=P[t.product],ex=t.extra||{};
+  if(t.product==="vida")return [["Beneficiarios",(ex.beneficiarios||[]).map(b=>`${b.nombre} (${b.parentesco}, ${b.pct}%)`).join("; ")]];
+  return Object.entries(ex).map(([k,v])=>{const f=(Array.isArray(p.extra)?p.extra:[]).find(x=>x.id===k);return f?[f.label,k==="salida"?fdate(v):String(v)]:null}).filter(Boolean);
+}
+function certData(t){return{policy:t.policy,approval:t.approval.code,approvedAt:t.approvedAt,product:t.product,plan:t.plan,params:t.params,rows:certExtraRows(t),name:fullName(t.client),tipoDoc:t.client.tipoDoc,doc4:String(t.client.doc).slice(-4),start:t.start,end:t.end,premium:t.premium,freq:t.freq,pay:{method:t.pay.method,last4:t.pay.last4||"",bank:t.pay.bank||""},channel:chName(t),seller:t.seller||"",status:t.status,fp:t.fp,issuedBy:CO.domain}}
+const b64u={enc:s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""),dec:s=>decodeURIComponent(escape(atob(s.replace(/-/g,"+").replace(/_/g,"/"))))};
+function certToken(d){const o={...d};delete o.status;delete o.revokedAt;delete o.refund;const j=JSON.stringify(o);return b64u.enc(JSON.stringify({d:o,h:hash("IG-CERT|"+j)}))}
+function readToken(tok){try{const x=JSON.parse(b64u.dec(tok));if(!x||!x.d||!x.h)return{err:"bad"};return hash("IG-CERT|"+JSON.stringify(x.d))===x.h?{d:x.d}:{err:"tampered"}}catch(e){return{err:"bad"}}}
+const siteBase=()=>location.origin+location.pathname;
+const certUrl=d=>siteBase()+"#/c/"+certToken(d);
+let CURRENT_CERT=null;
+function certFor(pol){const t=findPolicy(pol);if(t)return certData(t);return CURRENT_CERT&&CURRENT_CERT.policy===pol?CURRENT_CERT:null}
+const maskMail=m=>m?m.replace(/^(.)(.*)(@.*)$/,(_,a,b,c)=>a+"•".repeat(Math.min(6,b.length))+c):"";
+function mailtoFor(d,to){
+  const url=certUrl(d);
+  const body=`Hola ${d.name.split(" ")[0]}:\n\nTu póliza de ${P[d.product].name.toLowerCase()} (plan ${planName(d.plan)}) fue emitida por Insurance Global.\n\nNúmero de póliza: ${d.policy}\nNúmero de aprobación: ${d.approval}\nVigencia: ${fdate(d.start)} a ${fdate(d.end)}\nTotal: ${money(d.premium.total)}\n\nConsulta tu certificado y descárgalo en PDF aquí:\n${url}\n\nTambién puedes verificar la póliza en ${siteBase()}#/verificar\n\nInsurance Global · ${CO.tel}\n(Simulador académico: no es un seguro real.)`;
+  return `mailto:${encodeURIComponent(to||"")}?subject=${encodeURIComponent("Tu póliza "+d.policy+" · Insurance Global")}&body=${encodeURIComponent(body)}`;
+}
+function queueMail(t,to,by){
+  const d=certData(t);const out=store.get("outbox",[]);
+  out.push({id:"MAIL-"+pad(seq("mail"),6),at:new Date().toISOString(),to:to||t.client.email,subject:"Tu póliza "+t.policy+" · Insurance Global",policy:t.policy,tx:t.id,demo:!!t.demo,status:"pendiente",link:certUrl(d)});
+  store.set("outbox",out);logTx(t,`Certificado PDF y enlace en cola de envío a ${maskMail(to||t.client.email)}`,by||"Servidor central");
+}
+/* ---------- Envío real por la función de Azure (/api/send-policy) ---------- */
+const FAKE_MAIL=/@(ejemplo|example|test|prueba)\.(com|co|org|net)$/i;
+const u8b64=u=>{let s="";for(let i=0;i<u.length;i+=32768)s+=String.fromCharCode.apply(null,u.subarray(i,i+32768));return btoa(s)};
+async function apiSend(d,to){
+  try{
+    const r=await fetch("/api/send-policy",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:certToken(d),to,pdf:u8b64(buildPdf(d))})});
+    let j={};try{j=await r.json()}catch(_){}
+    if(r.ok&&j.ok)return{status:"enviado",note:"Enviado por SMTP"};
+    if(r.status===404||r.status===405)return{status:"simulado",note:"El servicio de correo no está disponible en esta vista"};
+    if(r.status===503)return{status:"simulado",note:"Correo no configurado en Azure (faltan SMTP_USER y SMTP_PASS)"};
+    return{status:"error",note:j.error||("Error "+r.status)};
+  }catch(e){return{status:"simulado",note:"Sin conexión con el servicio de correo"}}
+}
+let SENDING=false;
+async function sendQueued(){
+  if(SENDING)return;SENDING=true;
+  try{
+    for(;;){
+      const out=store.get("outbox",[]);const m=out.find(x=>x.status==="pendiente");if(!m)break;
+      const setM=(st,note)=>{const o=store.get("outbox",[]);const x=o.find(y=>y.id===m.id);if(x){x.status=st;x.note=note;x.sentAt=new Date().toISOString()}store.set("outbox",o)};
+      setM("enviando","");
+      const t=findPolicy(m.policy);
+      let res;
+      if(!t)res={status:"error",note:"No se encontró la póliza"};
+      else if(m.demo||FAKE_MAIL.test(m.to))res={status:"simulado",note:"Correo de prueba: no se envía de verdad"};
+      else res=await apiSend(certData(t),m.to);
+      setM(res.status,res.note);
+      if(t)upd(t.id,x=>logTx(x,res.status==="enviado"?`Correo con el certificado PDF enviado a ${maskMail(m.to)}`:res.status==="simulado"?`Envío de correo simulado a ${maskMail(m.to)}: ${res.note}`:`Falló el envío del correo a ${maskMail(m.to)}: ${res.note}`,"Servicio de correo"));
+      if(res.status==="enviado")toast("Certificado enviado a "+maskMail(m.to));
+      if(location.hash.startsWith("#/central"))router();
+    }
+  }finally{SENDING=false}
+}
+function retryMail(id){const o=store.get("outbox",[]);const x=o.find(y=>y.id===id);if(x){x.status="pendiente";store.set("outbox",o);sendQueued()}}
+const certActions=(pol,opts={})=>`<div class="row noprint cert-actions">
+  <button class="btn sm" data-act="pdf" data-pol="${pol}">${ic("doc")}Descargar PDF</button>
+  <a class="btn sec sm" data-act="mail" data-pol="${pol}" href="#">${ic("chat")}Enviar por correo</a>
+  <button class="btn sec sm" data-act="copy" data-pol="${pol}">${ic("web")}Copiar enlace</button>
+  ${opts.print?`<button class="btn sec sm" data-act="print">${ic("print")}Imprimir</button>`:""}${opts.cert?`<a class="btn sec sm" href="#/poliza/${pol}">Ver certificado</a>`:""}</div>`;
+async function copyText(s){try{await navigator.clipboard.writeText(s);return true}catch(e){const ta=document.createElement("textarea");ta.value=s;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand("copy")}catch(_){}ta.remove();return ok}}
+document.addEventListener("click",async e=>{
+  const b=e.target.closest("[data-act]");if(!b)return;const act=b.dataset.act;
+  if(act==="print"){window.print();return}
+  const d=certFor(b.dataset.pol);if(!d)return;
+  if(act==="pdf"){e.preventDefault();downloadPdf(d);return}
+  if(act==="copy"){e.preventDefault();const ok=await copyText(certUrl(d));toast(ok?"Enlace copiado. Ábrelo desde cualquier dispositivo.":"No se pudo copiar; usa el enlace que aparece en la página.");return}
+  if(act==="mail"){e.preventDefault();const box=$("#mailbox");if(box){box.hidden=false;const t=findPolicy(d.policy);const i=$("#mailto");if(t&&!i.value)i.value=t.client.email;i.focus();return}const t=findPolicy(d.policy);if(t){upd(t.id,x=>queueMail(x,x.client.email,"Usuario"));sendQueued();toast("Enviando el certificado…")}else window.location.href=mailtoFor(d,"");return}
+  if(act==="mail-send"){e.preventDefault();const to=$("#mailto").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(to)){toast("Escribe un correo válido");return}
+    b.disabled=true;b.textContent="Enviando…";const t=findPolicy(d.policy);let res;
+    if(t){upd(t.id,x=>queueMail(x,to,"Usuario"));await sendQueued();const m=store.get("outbox",[]).filter(x=>x.policy===d.policy).pop();res=m?{status:m.status,note:m.note}:{status:"error",note:""}}
+    else res=FAKE_MAIL.test(to)?{status:"simulado",note:"Correo de prueba: no se envía de verdad"}:await apiSend(d,to);
+    b.disabled=false;b.textContent="Enviar";
+    $("#mailres").innerHTML=res.status==="enviado"?`<div class="okbox">Listo: enviamos el certificado en PDF a ${esc(maskMail(to))}.</div>`:res.status==="simulado"?`<div class="warnbox">${esc(res.note)}. <a href="${esc(mailtoFor(d,to))}">Abrir en mi programa de correo</a></div>`:`<div class="errbox" style="margin:0">${esc(res.note)}. <a href="${esc(mailtoFor(d,to))}">Abrir en mi programa de correo</a></div>`;return}
+  if(act==="retry"){e.preventDefault();retryMail(b.dataset.mail);toast("Reintentando el envío…");return}
+});
+
+/* ---------- Vista del certificado (local o por enlace) ---------- */
+function certHTML(d,opts={}){
+  const p=P[d.product],url=certUrl(d);
+  const rows=(d.rows||[]).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
+  return `<div class="wrap" style="padding-top:28px">
+  ${opts.notice||""}
+  <div class="row noprint" style="justify-content:space-between;margin-bottom:16px">${opts.back||`<a href="#/mis-polizas">← Mis pólizas</a>`}<div class="row">${certActions(d.policy,{print:true})}${opts.revoke?`<button class="btn red sm" id="revoke">Revocar póliza</button>`:""}</div></div>
+  <p class="warnbox noprint" id="rvn" hidden>Al revocar, la póliza termina hoy y te devolvemos la prima no causada (art. 1071 del Código de Comercio). Esta acción no se puede deshacer.</p>
+  <article class="cert"><div class="cert-h"><div class="brand">${LOGO}<span>Insurance Global<small>Certificado individual de seguro</small></span></div><div style="text-align:right">${badge(d.status||"aprobada")}<div class="bignum" style="font-size:18px;margin-top:8px">${d.policy}</div></div></div>
+  <div class="grid g2"><dl class="kv"><dt>Seguro</dt><dd>${p.name} · Plan ${planName(d.plan)}</dd><dt>Vigencia</dt><dd>${fdate(d.start)} a ${fdate(d.end)}</dd><dt>Tomador y asegurado</dt><dd>${esc(d.name)}<br><span class="muted">${esc(d.tipoDoc)} •••• ${esc(d.doc4)}</span></dd><dt>Riesgo asegurado</dt><dd>${esc(p.desc(d.params))}</dd>${rows}</dl>
+  <dl class="kv"><dt>Prima neta</dt><dd>${money(d.premium.neta)}</dd><dt>IVA</dt><dd>${p.iva?money(d.premium.iva):"No aplica"}</dd><dt>Total</dt><dd>${money(d.premium.total)}${d.freq==="mensual"?` <span class="muted">(12 cuotas de ${money(d.premium.mensual)})</span>`:""}</dd><dt>Medio de pago</dt><dd>${payName(d.pay.method)}${d.pay.last4?" •••• "+d.pay.last4:""}${d.pay.bank?" · "+esc(d.pay.bank):""}</dd><dt>Canal de venta</dt><dd>${esc(d.channel)}${d.seller?" · Asesor: "+esc(d.seller):""}</dd>${d.status==="revocada"&&d.refund!=null?`<dt>Revocada</dt><dd>Devolución ${money(d.refund)}</dd>`:""}</dl></div>
+  <h3 style="margin-top:24px">Coberturas</h3>${covTable(d.product,d.plan)}
+  <div class="seal-row"><div class="seal"><b>Aprobado por el servidor central de Insurance Global</b><br>Número de aprobación <span class="mono"><b>${d.approval}</b></span> · ${fdt(d.approvedAt)}<br>Huella del documento <span class="mono">${d.fp}</span></div><div class="qrbox">${qrSVG(url)}<small>Escanea para ver este certificado en línea</small></div></div>
+  <div class="linkbox noprint"><label class="l" for="certlink">Enlace permanente de este certificado</label><div class="row" style="flex-wrap:nowrap"><input id="certlink" readonly value="${esc(url)}" onclick="this.select()"><button class="btn sec sm" data-act="copy" data-pol="${d.policy}">Copiar</button></div><p class="tiny" style="margin:6px 0 0">Funciona en cualquier navegador y dispositivo: el certificado viaja dentro del enlace con un sello que detecta si alguien lo modifica.</p>
+  <div id="mailbox" hidden style="margin-top:14px"><label class="l" for="mailto">Enviar el certificado en PDF a</label><div class="row" style="flex-wrap:nowrap"><input id="mailto" type="email" placeholder="correo@dominio.com"><button class="btn sm" data-act="mail-send" data-pol="${d.policy}">Enviar</button></div><div id="mailres" style="margin-top:10px"></div></div></div>
+  <p class="tiny" style="margin-top:18px">Documento generado por un simulador académico; no constituye un contrato de seguro real. Puedes revocar la póliza en cualquier momento (art. 1071 C. de Co.). Para quejas: ${CO.defensor.name}, ${CO.defensor.mail}.</p></article></div>`;
+}
+function vCertLink(tok){
+  const r=readToken(tok);
+  if(r.err)return pageH(r.err==="tampered"?"Este certificado fue modificado":"Enlace de certificado no válido",r.err==="tampered"?"El contenido del enlace no coincide con su sello. No confíes en este documento y repórtalo a "+CO.tel+".":"El enlace está incompleto o dañado. Pide que te lo envíen de nuevo.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`;
+  const d={...r.d};const local=findPolicy(d.policy);if(local){d.status=local.status;d.refund=local.refund}else d.status="aprobada";
+  CURRENT_CERT=d;
+  const notice=`<div class="okbox noprint" style="margin-bottom:16px">${ic("shield").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-4px"')} <b>Certificado íntegro.</b> El sello del enlace coincide: este documento no fue alterado desde que lo emitió el servidor central.${local?"":" El estado mostrado corresponde al momento de la emisión."}</div>`;
+  return certHTML(d,{notice,back:`<a href="#/verificar">← Verificar otra póliza</a>`});
+}
+
+/* ---------- QR ---------- */
+function qrMatrix(text){const q=qrcode(0,"L");q.addData(text);q.make();const n=q.getModuleCount(),m=[];for(let r=0;r<n;r++){m.push([]);for(let c=0;c<n;c++)m[r].push(q.isDark(r,c))}return m}
+function qrSVG(text){const m=qrMatrix(text),n=m.length;let d="";m.forEach((row,r)=>row.forEach((v,c)=>{if(v)d+=`M${c+4} ${r+4}h1v1h-1z`}));return `<svg viewBox="0 0 ${n+8} ${n+8}" role="img" aria-label="Código QR del certificado"><rect width="${n+8}" height="${n+8}" fill="#fff"/><path d="${d}" fill="#0e2a47"/></svg>`}
+
+/* ---------- PDF (generador propio, sin librerías) ---------- */
+const HW=[278,278,355,556,556,889,667,191,333,333,389,584,278,333,278,278,556,556,556,556,556,556,556,556,556,556,278,278,584,584,584,556,1015,667,667,722,722,667,611,778,722,278,500,667,556,833,722,778,667,778,722,667,611,722,667,944,667,667,611,278,278,278,469,556,333,556,556,500,556,556,278,556,556,222,222,500,222,833,556,556,556,556,333,500,278,556,500,722,500,500,500,334,260,334,584];
+const W1252={"€":128,"‚":130,"„":132,"…":133,"‘":145,"’":146,"“":147,"”":148,"•":149,"–":150,"—":151};
+function pdfStr(s){s=String(s).replace(/✓/g,"Sí").replace(/→/g,"->").normalize("NFC");let o="";for(const ch of s){const c=ch.charCodeAt(0);let b=W1252[ch]||(c<256?c:63);const x=String.fromCharCode(b);o+=x==="("||x===")"||x==="\\"?"\\"+x:x}return o}
+function txtW(s,size,bold,mono){if(mono)return String(s).length*.6*size;let w=0;for(const ch of String(s).normalize("NFD").replace(/[̀-ͯ]/g,"")){const c=ch.charCodeAt(0);w+=(c>=32&&c<=126?HW[c-32]:556)}return w/1000*size*(bold?1.07:1)}
+function wrapTxt(s,maxW,size,bold){const words=String(s).split(/\s+/);const lines=[];let cur="";for(const w of words){const t=cur?cur+" "+w:w;if(txtW(t,size,bold)>maxW&&cur){lines.push(cur);cur=w}else cur=t}if(cur)lines.push(cur);return lines}
+function buildPdf(d){
+  const H=842,Wd=595,M=40;let c="";const annots=[];
+  const rgb=h=>{const n=parseInt(h.slice(1),16);return[(n>>16)/255,(n>>8&255)/255,(n&255)/255].map(v=>v.toFixed(3)).join(" ")};
+  const rect=(x,y,w,h,fill,stroke,lw=1)=>{c+=`${fill?rgb(fill)+" rg ":""}${stroke?rgb(stroke)+" RG "+lw+" w ":""}${x.toFixed(2)} ${(H-y-h).toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re ${fill&&stroke?"B":fill?"f":"S"}\n`};
+  const line=(x1,y1,x2,y2,col,lw=.8)=>{c+=`${rgb(col)} RG ${lw} w ${x1} ${H-y1} m ${x2} ${H-y2} l S\n`};
+  const text=(x,y,s,o={})=>{const size=o.size||10,f=o.mono?"F3":o.bold?"F2":"F1";let xx=x;if(o.align==="right")xx=x-txtW(s,size,o.bold,o.mono);if(o.align==="center")xx=x-txtW(s,size,o.bold,o.mono)/2;c+=`BT /${f} ${size} Tf ${rgb(o.color||"#14213d")} rg ${xx.toFixed(2)} ${(H-y).toFixed(2)} Td (${pdfStr(s)}) Tj ET\n`};
+  const p=P[d.product],url=certUrl(d);
+  // Encabezado
+  rect(0,0,Wd,92,"#0e2a47");rect(0,92,Wd,4,"#c99a2e");
+  const sx=M,sy=20;c+=`1 1 1 rg ${sx+22} ${H-sy} m ${sx+44} ${H-sy-8} l ${sx+44} ${H-sy-28} l ${sx+44} ${H-sy-42} ${sx+34} ${H-sy-50} ${sx+22} ${H-sy-54} c ${sx+10} ${H-sy-50} ${sx} ${H-sy-42} ${sx} ${H-sy-28} c ${sx} ${H-sy-8} l h f\n`;
+  const cx=sx+22,cy=H-sy-27,r=10,k=r*.5523;c+=`${rgb("#0e2a47")} RG 1.6 w ${cx+r} ${cy} m ${cx+r} ${cy+k} ${cx+k} ${cy+r} ${cx} ${cy+r} c ${cx-k} ${cy+r} ${cx-r} ${cy+k} ${cx-r} ${cy} c ${cx-r} ${cy-k} ${cx-k} ${cy-r} ${cx} ${cy-r} c ${cx+k} ${cy-r} ${cx+r} ${cy-k} ${cx+r} ${cy} c S ${cx-r} ${cy} m ${cx+r} ${cy} l S ${cx} ${cy+r} m ${cx} ${cy-r} l S\n`;
+  text(M+58,44,"Insurance Global",{size:20,bold:true,color:"#ffffff"});
+  text(M+58,62,"CERTIFICADO INDIVIDUAL DE SEGURO",{size:8.5,color:"#c9d6e6"});
+  text(Wd-M,38,"Póliza",{size:9,color:"#c9d6e6",align:"right"});
+  text(Wd-M,58,d.policy,{size:15,mono:true,color:"#ffffff",align:"right"});
+  const st=STATUS_TXT[d.status||"aprobada"]||"Vigente";const sw=txtW(st,8.5,true)+16;rect(Wd-M-sw,66,sw,15,d.status==="revocada"?"#eef1f5":"#e2f4f1");text(Wd-M-sw/2,76.5,st,{size:8.5,bold:true,color:d.status==="revocada"?"#5b6b82":"#0f8f7e",align:"center"});
+  rect(0,96,Wd,20,"#fbf3e0");text(Wd/2,109.5,"Documento generado por un simulador académico: Insurance Global es una compañía ficticia y este certificado no es un seguro real.",{size:7.5,color:"#6b4e00",align:"center"});
+  // Datos
+  let y=146;text(M,y,"Datos de la póliza",{size:12,bold:true,color:"#0e2a47"});line(M,y+7,Wd-M,y+7,"#dde3ec");y+=26;
+  const colW=245;
+  const kv=(x,y0,items)=>{let yy=y0;items.forEach(([k,v])=>{text(x,yy,k,{size:7.5,color:"#5b6b82"});yy+=12;wrapTxt(v,colW,9.5,true).forEach(l=>{text(x,yy,l,{size:9.5,bold:true});yy+=12.5});yy+=8});return yy};
+  const left=[["Seguro",`${p.name} · Plan ${planName(d.plan)}`],["Vigencia",`${fdate(d.start)} a ${fdate(d.end)}`],["Tomador y asegurado",`${d.name} · ${d.tipoDoc} •••• ${d.doc4}`],["Riesgo asegurado",p.desc(d.params)],...(d.rows||[])];
+  const right=[["Prima neta",money(d.premium.neta)],["IVA",p.iva?money(d.premium.iva):"No aplica"],["Total",money(d.premium.total)+(d.freq==="mensual"?` (12 cuotas de ${money(d.premium.mensual)})`:"")],["Medio de pago",payName(d.pay.method)+(d.pay.last4?" •••• "+d.pay.last4:"")+(d.pay.bank?" · "+d.pay.bank:"")],["Canal de venta",d.channel+(d.seller?" · Asesor: "+d.seller:"")],["Fecha de emisión",fdt(d.approvedAt)]];
+  y=Math.max(kv(M,y,left),kv(M+275,y,right))+6;
+  // Coberturas
+  text(M,y,"Coberturas · Plan "+planName(d.plan),{size:12,bold:true,color:"#0e2a47"});y+=12;
+  rect(M,y,Wd-2*M,20,"#f0f3f8");text(M+10,y+13.5,"COBERTURA",{size:7.5,bold:true,color:"#5b6b82"});text(Wd-M-10,y+13.5,"VALOR / INCLUIDA",{size:7.5,bold:true,color:"#5b6b82",align:"right"});y+=20;
+  const pi=PLANS.findIndex(x=>x[0]===d.plan)+1;
+  p.cov.forEach(row=>{const v=row[pi];text(M+10,y+14,row[0],{size:9});text(Wd-M-10,y+14,v==="✓"?"Incluida":v==="—"?"No incluida":v,{size:9,bold:v!=="—",color:v==="✓"?"#0f8f7e":v==="—"?"#8a96a8":"#14213d",align:"right"});line(M,y+21,Wd-M,y+21,"#e6eaf1",.6);y+=21});
+  y+=18;
+  // Sello de aprobación + QR
+  const bh=128;rect(M,y,Wd-2*M,bh,"#e2f4f1","#0f8f7e",1.2);
+  text(M+16,y+24,"Aprobado por el servidor central de Insurance Global",{size:10.5,bold:true,color:"#0b6b5f"});
+  text(M+16,y+44,"Número de aprobación",{size:7.5,color:"#3f6f68"});text(M+16,y+60,d.approval,{size:14,mono:true,color:"#0e2a47"});
+  text(M+16,y+80,"Huella del documento",{size:7.5,color:"#3f6f68"});text(M+16,y+94,d.fp,{size:10,mono:true,color:"#0e2a47"});
+  text(M+16,y+114,"Verifica en "+(siteBase()+"#/verificar").replace(/^https?:\/\//,""),{size:8,color:"#3f6f68"});
+  const m=qrMatrix(url),n=m.length,qs=112,ms=qs/(n+2),qx=Wd-M-qs-10,qy=y+8;rect(qx,qy,qs,qs,"#ffffff");
+  c+=rgb("#0e2a47")+" rg\n";m.forEach((row,r)=>row.forEach((v,col)=>{if(v)c+=`${(qx+ms*(col+1)).toFixed(2)} ${(H-qy-ms*(r+2)).toFixed(2)} ${(ms+.05).toFixed(2)} ${(ms+.05).toFixed(2)} re\n`}));c+="f\n";
+  text(qx-12,y+bh-14,"Escanea para ver el certificado en línea",{size:7,color:"#3f6f68",align:"right"});
+  y+=bh+18;
+  text(M,y,"Consulta en línea:",{size:8.5,bold:true});const lt="Abrir este certificado en "+location.host;text(M+80,y,lt,{size:8.5,color:"#1f5fbf"});line(M+80,y+2,M+80+txtW(lt,8.5),y+2,"#1f5fbf",.5);annots.push([M+80,H-y-3,M+80+txtW(lt,8.5),H-y+9,url]);
+  // Pie
+  const foot=[`Revocación: puedes terminar el seguro en cualquier momento y te devolvemos la prima no causada (art. 1071 C. de Co.). Siniestros: ${CO.tel}, 24/7.`,`Quejas: ${CO.defensor.name} · ${CO.defensor.mail} · Superintendencia Financiera de Colombia.`,`Generado el ${fdt(new Date().toISOString())} · ${CO.legal} · NIT ${CO.nit}`];
+  let fy=H-58;line(M,fy-12,Wd-M,fy-12,"#dde3ec");foot.forEach(f=>{wrapTxt(f,Wd-2*M,7.2).forEach(l=>{text(M,fy,l,{size:7.2,color:"#5b6b82"});fy+=10})});
+  // Ensamblado
+  const objs=[];const add=s=>{objs.push(s);return objs.length};
+  const cat=add(""),pages=add(""),page=add(""),cont=add(`<< /Length ${c.length} >>\nstream\n${c}endstream`);
+  const f1=add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>"),f2=add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"),f3=add("<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>");
+  const an=annots.map(a=>add(`<< /Type /Annot /Subtype /Link /Rect [${a.slice(0,4).map(v=>v.toFixed(1)).join(" ")}] /Border [0 0 0] /A << /S /URI /URI (${pdfStr(a[4])}) >> >>`));
+  const info=add(`<< /Title (${pdfStr("Póliza "+d.policy+" · Insurance Global")}) /Author (Insurance Global - simulador) /Subject (${pdfStr("Certificado individual de seguro "+d.approval)}) /Producer (Insurance Global) >>`);
+  objs[cat-1]=`<< /Type /Catalog /Pages ${pages} 0 R >>`;objs[pages-1]=`<< /Type /Pages /Kids [${page} 0 R] /Count 1 >>`;
+  objs[page-1]=`<< /Type /Page /Parent ${pages} 0 R /MediaBox [0 0 ${Wd} ${H}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R /F3 ${f3} 0 R >> >> /Contents ${cont} 0 R${an.length?` /Annots [${an.map(i=>i+" 0 R").join(" ")}]`:""} >>`;
+  let out="%PDF-1.4\n%\xE2\xE3\xCF\xD3\n";const offs=[];objs.forEach((o,i)=>{offs.push(out.length);out+=`${i+1} 0 obj\n${o}\nendobj\n`});
+  const xref=out.length;out+=`xref\n0 ${objs.length+1}\n0000000000 65535 f \n`+offs.map(o=>String(o).padStart(10,"0")+" 00000 n \n").join("")+`trailer\n<< /Size ${objs.length+1} /Root ${cat} 0 R /Info ${info} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  const bytes=new Uint8Array(out.length);for(let i=0;i<out.length;i++)bytes[i]=out.charCodeAt(i)&255;return bytes;
+}
+function downloadPdf(d){
+  const blob=new Blob([buildPdf(d)],{type:"application/pdf"});const u=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=u;a.download=`Poliza-${d.policy}.pdf`;document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(u),60000);toast("PDF generado: Poliza-"+d.policy+".pdf");
+}
+
+
+</script>
+</body>
+</html>
