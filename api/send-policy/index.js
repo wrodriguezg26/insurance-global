@@ -11,6 +11,8 @@
  *   MAIL_FROM_NAME  nombre del remitente; por defecto "Insurance Global"
  *   MAIL_BCC    copia oculta opcional para archivo de la compañía
  *   SITE_URL    https://seguros.t-shits.co (para armar el enlace del certificado)
+ *   (POST con type:"benefit" envía la confirmación de un beneficio activado)
+ *   MAIL_DRYRUN 1 = modo de pruebas de seguridad: valida todo pero NO envía correos
  */
 const tls = require("tls");
 const net = require("net");
@@ -154,12 +156,50 @@ function buildMessage({fromName,from,to,bcc,d,link,pdf}){
   ].join("\r\n");
 }
 
+
+/* ---------- Correo de beneficio ---------- */
+const BEN={
+ cursos:{n:"Cursos online con certificación",k:"code",use:"Usa este código en la plataforma de cursos aliada para inscribirte sin costo."},
+ coworking:{n:"Coworking",k:"reserve"},
+ legal:{n:"Asesoría legal",k:"request"},
+ medico:{n:"Orientación médica 24/7",k:"request"},
+ bienestar:{n:"Bienestar y gimnasio",k:"code",use:"Presenta este código en los establecimientos aliados para recibir el descuento."},
+ vehiculo:{n:"Descuentos para tu carro",k:"code",use:"Presenta este código en los talleres y centros de diagnóstico aliados."},
+ hogar:{n:"Expertos para tu hogar",k:"code",use:"Menciona este código al pedir la cotización al proveedor aliado."},
+ viajero:{n:"Viajero frecuente",k:"code",use:"Presenta este código en las salas y agencias aliadas."},
+ mascota:{n:"Club de mascotas",k:"code",use:"Presenta este código en los establecimientos aliados."},
+ empresa:{n:"Capacitación para tu equipo",k:"request"}
+};
+const PB={auto:["legal","vehiculo","cursos"],hogar:["legal","hogar","coworking"],vida:["medico","legal","cursos"],salud:["medico","bienestar","cursos"],viaje:["viajero","medico","cursos"],mascotas:["mascota","legal","cursos"],pyme:["coworking","legal","empresa","cursos"]};
+const CITIES=["Bogotá","Medellín","Cali","Barranquilla","Bucaramanga"],SLOTS=["Mañana","Tarde","Día completo"],CANALES=["Teléfono","Videollamada","Correo"];
+function checkBenefit(d,x){
+  if(!x||typeof x!=="object")return "Beneficio no válido.";
+  const def=BEN[x.key];if(!def||!(PB[d.product]||[]).includes(x.key))return "Ese beneficio no corresponde a la póliza.";
+  const code=String(x.code||"");
+  if(def.k==="code"?!/^[A-Z]{3}-\d{4}-\d{4}$/.test(code):!/^BEN-[A-Z]{3}-\d{4}-\d{6}$/.test(code))return "Código de beneficio no válido.";
+  if(def.k==="reserve"){const t=x.detail||{};if(!CITIES.includes(t.ciudad)||!SLOTS.includes(t.jornada)||!/^\d{4}-\d{2}-\d{2}$/.test(String(t.fecha||""))||t.fecha<d.start||t.fecha>d.end)return "Reserva no válida.";}
+  if(def.k==="request"){const t=x.detail||{};if(!CANALES.includes(t.canal)||typeof t.tema!=="string"||t.tema.length>60||typeof t.nota!=="string"||t.nota.length>400)return "Solicitud no válida.";}
+  return "";
+}
+function buildBenefitMessage({fromName,from,to,d,x,link}){
+  const def=BEN[x.key],first=String(d.name||"").split(" ")[0]||"cliente",t=x.detail||{};
+  const subject=def.k==="code"?`Tu beneficio ${def.n} está activo · Insurance Global`:def.k==="reserve"?`Reserva de coworking ${x.code} · Insurance Global`:`Recibimos tu solicitud ${x.code} · Insurance Global`;
+  const rows=def.k==="code"?[["Beneficio",def.n],["Código",x.code],["Cómo usarlo",def.use]]:def.k==="reserve"?[["Reserva",x.code],["Ciudad",t.ciudad],["Fecha",fmtDate(t.fecha)],["Jornada",t.jornada],["Siguiente paso","Te enviaremos la dirección del espacio antes de la fecha."]]:[["Solicitud",x.code],["Servicio",def.n],["Tema",t.tema],["Contacto por",t.canal],["Tu mensaje",t.nota||"—"],["Siguiente paso","Te contactaremos en máximo 24 horas hábiles."]];
+  rows.push(["Póliza",d.policy]);
+  const intro=def.k==="code"?`Activaste el beneficio ${def.n} de tu seguro.`:def.k==="reserve"?"Tu reserva de coworking quedó confirmada.":`Recibimos tu solicitud de ${def.n.toLowerCase()}.`;
+  const text=`Hola ${first}:\n\n${intro}\n\n${rows.map(r=>r[0]+": "+r[1]).join("\n")}\n\nConsulta tu póliza y tus beneficios aquí:\n${link}\n\nLos beneficios son servicios de aliados y no hacen parte de las coberturas de la póliza.\n\nInsurance Global\n(Simulador académico: Insurance Global es una compañía ficticia.)`;
+  const html=`<!doctype html><html><body style="margin:0;background:#f5f7fb;font-family:Arial,Helvetica,sans-serif;color:#14213d"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fb;padding:24px 0"><tr><td align="center"><table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #dde3ec;border-radius:12px;overflow:hidden"><tr><td style="background:#0e2a47;padding:22px 28px;color:#ffffff"><b style="font-size:20px">Insurance Global</b><br><span style="font-size:12px;color:#c9d6e6">Beneficios de tu seguro</span></td></tr><tr><td style="padding:26px 28px;font-size:15px;line-height:1.55"><p>Hola ${escHtml(first)}:</p><p>${escHtml(intro)}</p><table cellpadding="6" cellspacing="0" style="font-size:14px;background:#e2f4f1;border-radius:8px;width:100%">${rows.map(r=>`<tr><td style="color:#3f6f68;vertical-align:top;width:130px">${escHtml(r[0])}</td><td><b>${escHtml(r[1])}</b></td></tr>`).join("")}</table><p style="text-align:center;margin-top:22px"><a href="${escHtml(link)}" style="display:inline-block;background:#1f5fbf;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold">Ver mi póliza y beneficios</a></p><p style="font-size:13px;color:#5b6b82">Los beneficios son servicios de aliados y no hacen parte de las coberturas de la póliza.</p></td></tr><tr><td style="background:#fbf3e0;color:#6b4e00;font-size:11px;padding:10px 28px">Simulador académico: Insurance Global es una compañía ficticia; aliados, códigos y reservas son ficticios.</td></tr></table></td></tr></table></body></html>`;
+  const b2="alt_"+crypto.randomBytes(8).toString("hex"),domain=(from.split("@")[1]||"localhost");
+  return [`From: ${encHeader(fromName)} <${from}>`,`To: <${to}>`,`Subject: ${encHeader(subject)}`,`Date: ${new Date().toUTCString()}`,`Message-ID: <${crypto.randomUUID()}@${domain}>`,`MIME-Version: 1.0`,`Content-Type: multipart/alternative; boundary="${b2}"`,``,`--${b2}`,`Content-Type: text/plain; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(text),`--${b2}`,`Content-Type: text/html; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(html),`--${b2}--`,``].join("\r\n");
+}
+
 /* ---------- Función HTTP ---------- */
 module.exports=async function(context,req){
   const json=(status,body)=>{context.res={status,headers:{"Content-Type":"application/json","Cache-Control":"no-store"},body}};
   const cfg={host:process.env.SMTP_HOST||"smtpout.secureserver.net",port:Number(process.env.SMTP_PORT||465),user:process.env.SMTP_USER,pass:process.env.SMTP_PASS};
-  if(req.method==="GET"){json(200,{ok:true,configured:!!(cfg.user&&cfg.pass)});return}
-  if(!cfg.user||!cfg.pass){json(503,{ok:false,error:"El correo no está configurado (faltan SMTP_USER y SMTP_PASS)."});return}
+  const dry=process.env.MAIL_DRYRUN==="1";
+  if(req.method==="GET"){json(200,{ok:true,configured:!!(cfg.user&&cfg.pass),dryRun:dry});return}
+  if(!dry&&(!cfg.user||!cfg.pass)){json(503,{ok:false,error:"El correo no está configurado (faltan SMTP_USER y SMTP_PASS)."});return}
   const ip=String(req.headers["x-forwarded-for"]||req.headers["x-client-ip"]||"anon").split(",")[0].trim();
   if(limited(ip)){json(429,{ok:false,error:"Demasiados envíos seguidos. Intenta en unos minutos."});return}
   const b=req.body||{};
@@ -167,14 +207,20 @@ module.exports=async function(context,req){
   if(!d||!d.policy||!d.approval){json(400,{ok:false,error:"Certificado no válido o modificado."});return}
   const to=String(b.to||"").trim();
   if(to.length>120||!/^[^\s@<>"',;]+@[^\s@<>"',;]+\.[a-z]{2,}$/i.test(to)){json(400,{ok:false,error:"Correo del destinatario no válido."});return}
-  let pdf;
-  try{pdf=Buffer.from(String(b.pdf||""),"base64")}catch(e){pdf=null}
-  if(!pdf||pdf.length<500||pdf.length>500*1024||pdf.slice(0,5).toString()!=="%PDF-"){json(400,{ok:false,error:"El PDF adjunto no es válido."});return}
-  const from=process.env.MAIL_FROM||cfg.user;
+  const isBen=b.type==="benefit";
+  let pdf=null;
+  if(isBen){const err=checkBenefit(d,b.benefit);if(err){json(400,{ok:false,error:err});return}}
+  else{
+    try{pdf=Buffer.from(String(b.pdf||""),"base64")}catch(e){pdf=null}
+    if(!pdf||pdf.length<500||pdf.length>500*1024||pdf.slice(0,5).toString()!=="%PDF-"){json(400,{ok:false,error:"El PDF adjunto no es válido."});return}
+  }
+  const from=process.env.MAIL_FROM||cfg.user||"seguros@t-shits.co";
   const site=(process.env.SITE_URL||"https://seguros.t-shits.co").replace(/\/+$/,"");
   const link=`${site}/#/c/${b.token}`;
   const bcc=(process.env.MAIL_BCC||"").trim();
-  const data=buildMessage({fromName:process.env.MAIL_FROM_NAME||"Insurance Global",from,to,bcc,d,link,pdf});
+  const fromName=process.env.MAIL_FROM_NAME||"Insurance Global";
+  const data=isBen?buildBenefitMessage({fromName,from,to,d,x:b.benefit,link}):buildMessage({fromName,from,to,bcc,d,link,pdf});
+  if(dry){context.log(`MAIL_DRYRUN: póliza ${d.policy} validada, correo NO enviado`);json(200,{ok:true,dryRun:true,policy:d.policy,bytes:data.length});return}
   try{
     const r=await smtpSend({...cfg,from,rcpts:bcc?[to,bcc]:[to],data});
     context.log(`Póliza ${d.policy} enviada a ${to.replace(/^(.).*(@.*)$/,"$1***$2")}`);
@@ -184,4 +230,4 @@ module.exports=async function(context,req){
     json(502,{ok:false,error:"No se pudo enviar el correo: "+e.message});
   }
 };
-module.exports._test={readToken,buildMessage,smtpSend};
+module.exports._test={readToken,buildMessage,buildBenefitMessage,checkBenefit,smtpSend};

@@ -73,6 +73,10 @@ La carpeta trae el sitio (`index.html`) y la función de correo (`api/`). El pla
    ```
    No ejecutes el comando desde dentro de la carpeta `insurance-global`.
 
+## Beneficios por seguro
+
+Cada seguro incluye beneficios sin costo mientras la póliza esté vigente: cursos online con certificación, coworking, asesoría legal y otros según el producto (página `#/beneficios`). Se activan desde el certificado de la póliza: los de tipo código se activan al instante, el coworking se reserva por ciudad, fecha y jornada, y las asesorías se radican con un número. Todo queda registrado en *Servidor central → Beneficios* y en el historial de la póliza, y el cliente recibe un correo de confirmación (función `/api/send-policy` con `type: "benefit"`; la copia `MAIL_BCC` le llega a la compañía para atender las solicitudes).
+
 ## Repositorio en GitHub y publicación automática
 
 El repositorio trae el flujo `.github/workflows/azure-static-web-apps.yml`. Cada vez que se sube un cambio a la rama `main`, GitHub publica el sitio y la función en Azure.
