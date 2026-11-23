@@ -1,0 +1,22 @@
+# /etc/systemd/system/insurance-global-api.service
+[Unit]
+Description=Insurance Global - API de correo
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=insurance
+Group=insurance
+WorkingDirectory=/opt/insurance-global
+EnvironmentFile=/etc/insurance-global.env
+ExecStart=/usr/bin/node /opt/insurance-global/deploy/vm/server.js
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadOnlyPaths=/opt/insurance-global
+
+[Install]
+WantedBy=multi-user.target

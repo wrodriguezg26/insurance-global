@@ -239,12 +239,20 @@ footer .brand svg>path:first-child{fill:#1f5fbf}
 @media (max-width:640px){.seal-row{grid-template-columns:1fr}}
 @media print{.seal-row{grid-template-columns:1fr 130px}}
 .ben-card{display:flex;flex-direction:column;gap:4px}.ben-card p{margin:0;font-size:14.5px}.ben-card h3{margin-bottom:2px}.ben-form{margin-top:10px;border-top:1px solid var(--line);padding-top:12px}.ben-form .fg{gap:10px}
+.ben-cta{margin-top:auto;padding-top:12px}
+[hidden]{display:none!important}.ben-form .fg{grid-template-columns:1fr}
+.pg-wrap{position:fixed;inset:0;background:rgba(14,42,71,.45);display:grid;place-items:center;z-index:80;padding:20px}.pg-box{position:relative;background:#fff;border-radius:16px;padding:26px;max-width:520px;width:100%;box-shadow:0 24px 60px rgba(14,42,71,.3)}.pg-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:24px;cursor:pointer;color:var(--muted)}
+.pg-box .row{align-items:flex-start}.pg-box .row .btn{flex:0 0 auto;height:auto}
+.btn.sec{padding:12px 20px}.btn.sec.sm{padding:8px 14px}
+
+.users-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}@media(max-width:900px){.users-grid{grid-template-columns:1fr}}
+#acct a{margin-left:16px}
 
 </style>
 </head>
 <body>
 <div class="demo">Sitio académico simulado: Insurance Global es una compañía ficticia. No se venden seguros reales ni se procesan pagos.</div>
-<div class="util"><div class="wrap"><span>Línea de atención (601) 000 0000 · Siniestros 24/7</span><div><a href="#/mis-polizas">Mis pólizas</a><a href="#/oficina">Portal de asesores</a><a href="#/central">Servidor central</a></div></div></div>
+<div class="util"><div class="wrap"><span>Línea de atención (601) 000 0000 · Siniestros 24/7</span><div id="acct"><a href="#/ingresar">Ingresar</a></div></div></div>
 <header class="top"><div class="wrap">
   <a class="brand" href="#/" aria-label="Insurance Global, inicio"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5l18 6.4v13.6C42 34 34.2 41.8 24 45.5 13.8 41.8 6 34 6 22.5V8.9z" fill="#0e2a47"/><path d="M24 2.5l18 6.4v4.2" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="23" r="10.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13.5 23h21M24 12.5c4.2 4.4 4.2 16.6 0 21M24 12.5c-4.2 4.4-4.2 16.6 0 21" fill="none" stroke="#fff" stroke-width="1.6"/></svg><span>Insurance Global<small>Compañía de seguros</small></span></a>
   <button class="menu-btn" id="menuBtn" aria-label="Menú">☰</button>
@@ -255,7 +263,7 @@ footer .brand svg>path:first-child{fill:#1f5fbf}
 <footer><div class="wrap"><div class="cols">
   <div><a class="brand" href="#/"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2.5l18 6.4v13.6C42 34 34.2 41.8 24 45.5 13.8 41.8 6 34 6 22.5V8.9z" fill="#0e2a47"/><path d="M24 2.5l18 6.4v4.2" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="23" r="10.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13.5 23h21M24 12.5c4.2 4.4 4.2 16.6 0 21M24 12.5c-4.2 4.4-4.2 16.6 0 21" fill="none" stroke="#fff" stroke-width="1.6"/></svg><span>Insurance Global</span></a><p style="margin-top:12px">Seguros para personas y empresas. Todas las ventas, en la web y en oficinas, se aprueban en nuestro servidor central.</p><p>(601) 000 0000 · seguros@t-shits.co</p></div>
   <div><h4>Seguros</h4><a href="#/cotizar/auto">Autos</a><a href="#/cotizar/hogar">Hogar</a><a href="#/cotizar/vida">Vida</a><a href="#/cotizar/salud">Salud</a><a href="#/cotizar/viaje">Viajes</a><a href="#/cotizar/mascotas">Mascotas</a><a href="#/cotizar/pyme">Empresas</a></div>
-  <div><h4>Clientes</h4><a href="#/mis-polizas">Mis pólizas</a><a href="#/beneficios">Beneficios</a><a href="#/verificar">Verificar póliza</a><a href="#/siniestros">Reportar siniestro</a><a href="#/atencion">Peticiones, quejas y reclamos</a><a href="#/canales">Oficinas y canales</a></div>
+  <div><h4>Clientes</h4><a href="#/mis-polizas">Mis pólizas</a><a href="#/ingresar">Ingresar o crear cuenta</a><a href="#/beneficios">Beneficios</a><a href="#/verificar">Verificar póliza</a><a href="#/siniestros">Reportar siniestro</a><a href="#/atencion">Peticiones, quejas y reclamos</a><a href="#/canales">Oficinas y canales</a></div>
   <div><h4>Legal</h4><a href="#/legal/condiciones">Condiciones generales</a><a href="#/legal/privacidad">Tratamiento de datos</a><a href="#/legal/consumidor">Derechos del consumidor financiero</a><a href="#/legal/sarlaft">SARLAFT</a><a href="#/legal/beneficios">Condiciones de los beneficios</a><a href="#/legal/seguridad">Cómo protegemos tu compra</a><a href="https://www.superfinanciera.gov.co" target="_blank" rel="noopener">Superintendencia Financiera ↗</a></div>
 </div><div class="foot-b"><span>© 2026 Insurance Global Compañía de Seguros S.A. (ficticia) · NIT 900.000.000-0 (simulado)</span><span>Simulador académico · Desplegado en Azure Static Web Apps</span></div></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
@@ -284,7 +292,6 @@ const fdt=s=>new Date(s).toLocaleString("es-CO",{day:"2-digit",month:"short",yea
 const addDays=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return isoDate(d)};
 const addYear=s=>{const d=new Date(s+"T12:00:00");d.setFullYear(d.getFullYear()+1);return isoDate(d)};
 function addBizDays(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);const w=d.getDay();if(w&&w<6)n--}return d}
-function seq(k){const c=store.get("seq",{});c[k]=(c[k]||0)+1;store.set("seq",c);return c[k]}
 function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),2800)}
 function luhn(n){n=String(n).replace(/\D/g,"");if(n.length<13||n.length>19)return false;let s=0,alt=false;for(let i=n.length-1;i>=0;i--){let d=+n[i];if(alt){d*=2;if(d>9)d-=9}s+=d;alt=!alt}return s%10===0}
 function hash(str){let h1=0xdeadbeef,h2=0x41c6ce57;for(let i=0;i<str.length;i++){const c=str.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return(4294967296*(2097151&h2)+(h1>>>0)).toString(16).toUpperCase().padStart(14,"0")}
@@ -415,86 +422,45 @@ const STEPS=["Recepción en el servidor central","Identidad y listas de control 
 const STATUS={nueva:["Recibida","b-gray"],procesando:["Procesando","b-pre"],revision:["En revisión","b-rev"],preaprobada:["Pendiente de aprobado del asesor","b-pre"],aprobada:["Emitida","b-ok"],rechazada:["Rechazada","b-bad"],bloqueada:["Bloqueada","b-bad"],revocada:["Revocada","b-gray"]};
 const badge=s=>`<span class="badge ${(STATUS[s]||["",""])[1]}">${(STATUS[s]||[s])[0]}</span>`;
 const chName=t=>t.channel==="web"?"Web":"Oficina "+(officeById(t.office)||{}).city;
-const allTx=()=>store.get("txs",{});
-const getTx=id=>allTx()[id];
-function upd(id,fn){const all=allTx();const t=all[id];if(!t)return null;fn(t);all[id]=t;store.set("txs",all);return t}
-function audit(tx,ev,by){const a=store.get("audit",[]);const prev=a.length?a[a.length-1].h:"GENESIS";const e={n:a.length+1,at:new Date().toISOString(),tx,ev,by};e.h=hash(prev+"|"+JSON.stringify(e));a.push(e);store.set("audit",a)}
-function verifyAudit(){const a=store.get("audit",[]);let prev="GENESIS";for(const e of a){const {h,...r}=e;if(hash(prev+"|"+JSON.stringify(r))!==h)return{ok:false,at:e.n,n:a.length};prev=h}return{ok:true,n:a.length}}
-function logTx(t,ev,by){t.log.push({at:new Date().toISOString(),ev,by});audit(t.id,ev,by)}
-function newTx(o){
-  const id="TX-"+pad(seq("tx"),6);
-  const tx={id,createdAt:new Date().toISOString(),status:"nueva",log:[],steps:[],attempts:0,...o};
-  const all=allTx();all[id]=tx;store.set("txs",all);
-  upd(id,t=>logTx(t,t.channel==="web"?"Solicitud de compra recibida desde el canal web":`Venta registrada en ${officeById(t.office).name} por ${t.seller}`,t.channel==="web"?"Cliente (web)":t.seller));
-  return id;
+/* ============ Datos: todo viene del servidor central (API /api/v1 + Azure SQL) ============ */
+const CACHE={tx:{},pol:{}};
+function cacheTx(t){if(!t||!t.id)return t;CACHE.tx[t.id]=t;if(t.policy)CACHE.pol[String(t.policy).toUpperCase()]=t;return t}
+const getTx=id=>CACHE.tx[id];
+const findPolicy=no=>CACHE.pol[String(no||"").trim().toUpperCase()];
+let ME=null;
+const ROLE_NAME={admin:"Administrador",asesor:"Asesor",cliente:"Cliente"};
+async function api(path,opt={}){
+  const method=opt.method||(opt.body?"POST":"GET");let url="/api/v1/"+path;
+  if(opt.query)url+="?"+new URLSearchParams(opt.query).toString();
+  for(let attempt=0;;attempt++){
+    let r,j={};
+    try{r=await fetch(url,{method,credentials:"same-origin",cache:"no-store",headers:{"Content-Type":"application/json","X-IG":"1"},body:method==="POST"?JSON.stringify(opt.body||{}):undefined})}
+    catch(e){throw Object.assign(new Error("No hay conexión con el servidor central. Revisa tu internet e intenta de nuevo."),{status:0})}
+    try{j=await r.json()}catch(e){j={ok:false,error:r.status===404?"El servicio no está disponible en esta vista.":"Respuesta no válida del servidor ("+r.status+")."}}
+    if(r.status===503&&j.code==="db"&&attempt<5){if(!attempt)toast("Activando la base de datos del servidor central… espera unos segundos.");await sleep(9000);continue}
+    if(!r.ok||!j.ok){if(r.status===401&&path!=="auth/login"){ME=null;paintAcct()}throw Object.assign(new Error(j.error||("Error "+r.status)),{status:r.status,code:j.code})}
+    if(j.tx)cacheTx(j.tx);
+    return j;
+  }
 }
-const newApproval=()=>({code:"APR-"+compact(new Date())+"-"+digits(6),at:new Date().toISOString()});
-function fingerprint(t){return hash([t.policy,t.approval&&t.approval.code,t.premium.total,t.client.doc,t.start].join("|"))}
-function emit(t,by){
-  t.approval=t.approval||newApproval();
-  t.policy=`IG-${P[t.product].code}-${new Date().getFullYear()}-${pad(seq("pol_"+t.product),6)}`;
-  t.status="aprobada";t.approvedAt=new Date().toISOString();
-  t.end=t.product==="viaje"?addDays(t.start,t.params.dias):addYear(t.start);
-  t.fp=fingerprint(t);
-  logTx(t,`Póliza ${t.policy} emitida con número de aprobación ${t.approval.code}`,by);
-  queueMail(t);
+async function loadMe(){try{const j=await api("auth/me");ME=j.user}catch(e){ME=null}paintAcct();return ME}
+function paintAcct(){
+  const el=document.getElementById("acct");if(!el)return;
+  if(!ME){el.innerHTML=`<a href="#/ingresar">Ingresar</a><a href="#/registro">Crear cuenta</a>`;}
+  else el.innerHTML=`${ME.role==="cliente"?`<a href="#/mis-polizas">Mis pólizas</a>`:""}${ME.role!=="cliente"?`<a href="#/oficina">Portal de asesores</a>`:""}${ME.role==="admin"?`<a href="#/central">Servidor central</a>`:""}<a href="#/cuenta" title="${esc(ME.email)}">${ic("users").replace("<svg",'<svg style="width:14px;height:14px;vertical-align:-2px"')} ${esc(ME.name.split(" ")[0])} · ${ROLE_NAME[ME.role]}</a><a href="#" id="acctOut">Salir</a>`;
+  const o=document.getElementById("acctOut");if(o)o.onclick=async e=>{e.preventDefault();try{await api("auth/logout",{method:"POST"})}catch(_){}ME=null;CACHE.tx={};CACHE.pol={};paintAcct();toast("Sesión cerrada");location.hash="#/"};
 }
-function preapprove(t){
-  t.approval=newApproval();t.status="preaprobada";t.attempts=0;
-  logTx(t,`Número de aprobación ${t.approval.code} generado; pendiente del aprobado del asesor`,"Servidor central");
+/* Exige sesión (y rol). Devuelve una vista de ingreso o null si puede continuar. */
+function gate(roles,why){
+  if(!ME)return pageH("Ingresa para continuar",why||"Esta sección requiere iniciar sesión.")+`<div class="wrap"><div class="row"><a class="btn" href="#/ingresar?next=${encodeURIComponent(location.hash.slice(1))}">Ingresar</a><a class="btn sec" href="#/registro?next=${encodeURIComponent(location.hash.slice(1))}">Crear cuenta de cliente</a></div></div>`;
+  if(ME.mustChange)return pageH("Cambia tu contraseña","Tu contraseña es temporal. Cámbiala para continuar.")+`<div class="wrap"><a class="btn" href="#/cuenta">Cambiar contraseña</a></div>`;
+  if(roles&&!roles.includes(ME.role))return pageH("Sin permiso","Tu usuario ("+ROLE_NAME[ME.role]+") no tiene acceso a esta sección.")+`<div class="wrap"><a class="btn" href="#/">Ir al inicio</a></div>`;
+  return null;
 }
-const RUNNING=new Set();
-const CENTRAL={
-  async process(id,on,fast){
-    if(RUNNING.has(id))return;const t0=getTx(id);if(!t0||!["nueva","procesando"].includes(t0.status))return;
-    RUNNING.add(id);const wait=ms=>fast?Promise.resolve():sleep(ms);
-    const mark=(i,st,msg)=>{upd(id,t=>{t.steps[i]={st,msg}});on&&on(i,st,msg)};
-    upd(id,t=>{t.status="procesando";t.steps=[];logTx(t,"Transacción recibida por el servidor central ("+chName(t)+")","Servidor central")});
-    mark(0,"run");await wait(550);mark(0,"done","Transacción "+id+" registrada");
-    mark(1,"run");await wait(700);
-    const t=getTx(id);const reasons=[];
-    if(/0000$/.test(t.client.doc))reasons.push("Coincidencia parcial en listas de control (SARLAFT): requiere revisión de cumplimiento.");
-    mark(1,reasons.length?"warn":"done",reasons.length?"Requiere revisión de cumplimiento":"Identidad validada, sin alertas");
-    mark(2,"run");await wait(650);
-    const r=P[t.product].review(t.params);if(r)reasons.push(r);
-    mark(2,r?"warn":"done",r?"Requiere suscripción manual":"Tarifa confirmada: "+money(t.premium.total));
-    mark(3,"run");await wait(800);
-    if(t.pay.declined){
-      upd(id,x=>{x.status="rechazada";x.reason="La entidad emisora rechazó el pago. No se realizó ningún cobro.";logTx(x,"Pago rechazado por la entidad emisora","Servidor central")});
-      mark(3,"fail","Pago rechazado por la entidad emisora");mark(4,"skip","No se emitió la póliza");RUNNING.delete(id);on&&on("end");return;
-    }
-    mark(3,"done",payMsg(t));
-    mark(4,"run");await wait(650);
-    if(reasons.length){
-      upd(id,x=>{x.status="revision";x.reasons=reasons;logTx(x,"Enviada a revisión manual: "+reasons.join(" "),"Servidor central")});
-      mark(4,"warn","En revisión manual en el servidor central");
-    }else if(t.channel==="web"){
-      upd(id,x=>emit(x,"Servidor central"));mark(4,"done","Póliza emitida");
-    }else{
-      upd(id,x=>preapprove(x));mark(4,"done","Número de aprobación generado: falta el aprobado del asesor");
-    }
-    RUNNING.delete(id);on&&on("end");sendQueued();
-  },
-  officeClose(id,code,total,seller){
-    let res={ok:false};
-    upd(id,t=>{
-      if(t.status!=="preaprobada"){res.msg="Esta venta no está pendiente de aprobado.";return}
-      const okCode=code.trim().toUpperCase()===t.approval.code, okTotal=Number(String(total).replace(/\D/g,""))===t.premium.total;
-      if(okCode&&okTotal){emit(t,seller+" (aprobado dado en oficina)");res={ok:true};setTimeout(sendQueued,0);return}
-      t.attempts++;logTx(t,`Intento de aprobado fallido (${!okCode?"número de aprobación":"valor"} no coincide). Intento ${t.attempts} de 3`,seller);
-      if(t.attempts>=3){t.status="bloqueada";logTx(t,"Venta bloqueada por 3 intentos fallidos. Requiere desbloqueo en el servidor central","Servidor central");res.msg="Venta bloqueada por seguridad tras 3 intentos. El servidor central debe desbloquearla."}
-      else res.msg=(!okCode?"El número de aprobación no coincide con el emitido por el servidor central.":"El valor cobrado no coincide con el valor aprobado.")+` Intento ${t.attempts} de 3.`;
-    });
-    return res;
-  },
-  approveReview(id,by="Analista de suscripción"){upd(id,t=>{if(t.status!=="revision")return;logTx(t,"Revisión manual aprobada",by);if(t.channel==="web")emit(t,"Servidor central");else preapprove(t)});setTimeout(sendQueued,0)},
-  reject(id,reason,by="Analista de suscripción"){upd(id,t=>{t.status="rechazada";t.reason=reason;logTx(t,"Solicitud rechazada: "+reason,by)})},
-  unlock(id,by="Supervisor central"){upd(id,t=>{if(t.status!=="bloqueada")return;logTx(t,"Venta desbloqueada; el número de aprobación anterior quedó anulado",by);preapprove(t)})},
-  revoke(id,by){let refund=0;upd(id,t=>{if(t.status!=="aprobada")return;const s=new Date(t.start+"T00:00:00"),e=new Date(t.end+"T00:00:00"),n=new Date();const total=(e-s),left=Math.max(0,Math.min(total,e-Math.max(n,s)));refund=Math.round(t.premium.total*left/total);t.status="revocada";t.refund=refund;t.revokedAt=new Date().toISOString();logTx(t,`Póliza revocada por el tomador (art. 1071 C. de Co.). Devolución de prima no causada: ${money(refund)}`,by)});return refund}
-};
+const errView=e=>e&&e.status===401?gate():pageH(e&&e.status===404?"No encontrado":"No pudimos cargar esta página",esc(e&&e.message||"Error"))+`<div class="wrap"><button class="btn sec" onclick="router()">Reintentar</button></div>`;
 function payMsg(t){const p=t.pay;return{pse:"Pago aprobado por PSE ("+p.bank+")",credito:`Tarjeta de crédito •••• ${p.last4} autorizada${p.cuotas>1?" a "+p.cuotas+" cuotas":""}`,debito:`Tarjeta débito •••• ${p.last4} autorizada`,efectivo:"Pago en efectivo registrado en caja",datafono:`Datáfono: tarjeta •••• ${p.last4} autorizada`,link:"Enlace de pago PSE pagado por el cliente"}[p.method]||"Pago autorizado"}
 const payName=m=>({pse:"PSE",credito:"Tarjeta de crédito",debito:"Tarjeta débito",efectivo:"Efectivo en caja",datafono:"Datáfono",link:"Enlace PSE"}[m]||m);
-const findPolicy=no=>Object.values(allTx()).find(t=>t.policy&&t.policy.toUpperCase()===String(no).trim().toUpperCase());
+
 
 /*! QR Code Generator for JavaScript · Copyright (c) 2009 Kazuhiko Arase · MIT license */
 var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],f={},c=function(t,r){o=function(t){for(var r=new Array(t),e=0;e<t;e+=1){r[e]=new Array(t);for(var n=0;n<t;n+=1)r[e][n]=null}return r}(i=4*e+17),l(0,0),l(i-7,0),l(0,i-7),s(),h(),d(t,r),e>=7&&v(t),null==a&&(a=p(e,n,u)),w(a,r)},l=function(t,r){for(var e=-1;e<=7;e+=1)if(!(t+e<=-1||i<=t+e))for(var n=-1;n<=7;n+=1)r+n<=-1||i<=r+n||(o[t+e][r+n]=0<=e&&e<=6&&(0==n||6==n)||0<=n&&n<=6&&(0==e||6==e)||2<=e&&e<=4&&2<=n&&n<=4)},h=function(){for(var t=8;t<i-8;t+=1)null==o[t][6]&&(o[t][6]=t%2==0);for(var r=8;r<i-8;r+=1)null==o[6][r]&&(o[6][r]=r%2==0)},s=function(){for(var t=B.getPatternPosition(e),r=0;r<t.length;r+=1)for(var n=0;n<t.length;n+=1){var i=t[r],a=t[n];if(null==o[i][a])for(var u=-2;u<=2;u+=1)for(var f=-2;f<=2;f+=1)o[i+u][a+f]=-2==u||2==u||-2==f||2==f||0==u&&0==f}},v=function(t){for(var r=B.getBCHTypeNumber(e),n=0;n<18;n+=1){var a=!t&&1==(r>>n&1);o[Math.floor(n/3)][n%3+i-8-3]=a}for(n=0;n<18;n+=1){a=!t&&1==(r>>n&1);o[n%3+i-8-3][Math.floor(n/3)]=a}},d=function(t,r){for(var e=n<<3|r,a=B.getBCHTypeInfo(e),u=0;u<15;u+=1){var f=!t&&1==(a>>u&1);u<6?o[u][8]=f:u<8?o[u+1][8]=f:o[i-15+u][8]=f}for(u=0;u<15;u+=1){f=!t&&1==(a>>u&1);u<8?o[8][i-u-1]=f:u<9?o[8][15-u-1+1]=f:o[8][15-u-1]=f}o[i-8][8]=!t},w=function(t,r){for(var e=-1,n=i-1,a=7,u=0,f=B.getMaskFunction(r),c=i-1;c>0;c-=2)for(6==c&&(c-=1);;){for(var g=0;g<2;g+=1)if(null==o[n][c-g]){var l=!1;u<t.length&&(l=1==(t[u]>>>a&1)),f(n,c-g)&&(l=!l),o[n][c-g]=l,-1==(a-=1)&&(u+=1,a=7)}if((n+=e)<0||i<=n){n-=e,e=-e;break}}},p=function(t,r,e){for(var n=A.getRSBlocks(t,r),o=b(),i=0;i<e.length;i+=1){var a=e[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var u=0;for(i=0;i<n.length;i+=1)u+=n[i].dataCount;if(o.getLengthInBits()>8*u)throw"code length overflow. ("+o.getLengthInBits()+">"+8*u+")";for(o.getLengthInBits()+4<=8*u&&o.put(0,4);o.getLengthInBits()%8!=0;)o.putBit(!1);for(;!(o.getLengthInBits()>=8*u||(o.put(236,8),o.getLengthInBits()>=8*u));)o.put(17,8);return function(t,r){for(var e=0,n=0,o=0,i=new Array(r.length),a=new Array(r.length),u=0;u<r.length;u+=1){var f=r[u].dataCount,c=r[u].totalCount-f;n=Math.max(n,f),o=Math.max(o,c),i[u]=new Array(f);for(var g=0;g<i[u].length;g+=1)i[u][g]=255&t.getBuffer()[g+e];e+=f;var l=B.getErrorCorrectPolynomial(c),h=k(i[u],l.getLength()-1).mod(l);for(a[u]=new Array(l.getLength()-1),g=0;g<a[u].length;g+=1){var s=g+h.getLength()-a[u].length;a[u][g]=s>=0?h.getAt(s):0}}var v=0;for(g=0;g<r.length;g+=1)v+=r[g].totalCount;var d=new Array(v),w=0;for(g=0;g<n;g+=1)for(u=0;u<r.length;u+=1)g<i[u].length&&(d[w]=i[u][g],w+=1);for(g=0;g<o;g+=1)for(u=0;u<r.length;u+=1)g<a[u].length&&(d[w]=a[u][g],w+=1);return d}(o,n)};f.addData=function(t,r){var e=null;switch(r=r||"Byte"){case"Numeric":e=M(t);break;case"Alphanumeric":e=x(t);break;case"Byte":e=m(t);break;case"Kanji":e=L(t);break;default:throw"mode:"+r}u.push(e),a=null},f.isDark=function(t,r){if(t<0||i<=t||r<0||i<=r)throw t+","+r;return o[t][r]},f.getModuleCount=function(){return i},f.make=function(){if(e<1){for(var t=1;t<40;t++){for(var r=A.getRSBlocks(t,n),o=b(),i=0;i<u.length;i++){var a=u[i];o.put(a.getMode(),4),o.put(a.getLength(),B.getLengthInBits(a.getMode(),t)),a.write(o)}var g=0;for(i=0;i<r.length;i++)g+=r[i].dataCount;if(o.getLengthInBits()<=8*g)break}e=t}c(!1,function(){for(var t=0,r=0,e=0;e<8;e+=1){c(!0,e);var n=B.getLostPoint(f);(0==e||t>n)&&(t=n,r=e)}return r}())},f.createTableTag=function(t,r){t=t||2;var e="";e+='<table style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: "+(r=void 0===r?4*t:r)+"px;",e+='">',e+="<tbody>";for(var n=0;n<f.getModuleCount();n+=1){e+="<tr>";for(var o=0;o<f.getModuleCount();o+=1)e+='<td style="',e+=" border-width: 0px; border-style: none;",e+=" border-collapse: collapse;",e+=" padding: 0px; margin: 0px;",e+=" width: "+t+"px;",e+=" height: "+t+"px;",e+=" background-color: ",e+=f.isDark(n,o)?"#000000":"#ffffff",e+=";",e+='"/>';e+="</tr>"}return e+="</tbody>",e+="</table>"},f.createSvgTag=function(t,r,e,n){var o={};"object"==typeof arguments[0]&&(t=(o=arguments[0]).cellSize,r=o.margin,e=o.alt,n=o.title),t=t||2,r=void 0===r?4*t:r,(e="string"==typeof e?{text:e}:e||{}).text=e.text||null,e.id=e.text?e.id||"qrcode-description":null,(n="string"==typeof n?{text:n}:n||{}).text=n.text||null,n.id=n.text?n.id||"qrcode-title":null;var i,a,u,c,g=f.getModuleCount()*t+2*r,l="";for(c="l"+t+",0 0,"+t+" -"+t+",0 0,-"+t+"z ",l+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',l+=o.scalable?"":' width="'+g+'px" height="'+g+'px"',l+=' viewBox="0 0 '+g+" "+g+'" ',l+=' preserveAspectRatio="xMinYMin meet"',l+=n.text||e.text?' role="img" aria-labelledby="'+y([n.id,e.id].join(" ").trim())+'"':"",l+=">",l+=n.text?'<title id="'+y(n.id)+'">'+y(n.text)+"</title>":"",l+=e.text?'<description id="'+y(e.id)+'">'+y(e.text)+"</description>":"",l+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',l+='<path d="',a=0;a<f.getModuleCount();a+=1)for(u=a*t+r,i=0;i<f.getModuleCount();i+=1)f.isDark(a,i)&&(l+="M"+(i*t+r)+","+u+c);return l+='" stroke="transparent" fill="black"/>',l+="</svg>"},f.createDataURL=function(t,r){t=t||2,r=void 0===r?4*t:r;var e=f.getModuleCount()*t+2*r,n=r,o=e-r;return I(e,e,function(r,e){if(n<=r&&r<o&&n<=e&&e<o){var i=Math.floor((r-n)/t),a=Math.floor((e-n)/t);return f.isDark(a,i)?0:1}return 1})},f.createImgTag=function(t,r,e){t=t||2,r=void 0===r?4*t:r;var n=f.getModuleCount()*t+2*r,o="";return o+="<img",o+=' src="',o+=f.createDataURL(t,r),o+='"',o+=' width="',o+=n,o+='"',o+=' height="',o+=n,o+='"',e&&(o+=' alt="',o+=y(e),o+='"'),o+="/>"};var y=function(t){for(var r="",e=0;e<t.length;e+=1){var n=t.charAt(e);switch(n){case"<":r+="&lt;";break;case">":r+="&gt;";break;case"&":r+="&amp;";break;case'"':r+="&quot;";break;default:r+=n}}return r};return f.createASCII=function(t,r){if((t=t||1)<2)return function(t){t=void 0===t?2:t;var r,e,n,o,i,a=1*f.getModuleCount()+2*t,u=t,c=a-t,g={"██":"█","█ ":"▀"," █":"▄","  ":" "},l={"██":"▀","█ ":"▀"," █":" ","  ":" "},h="";for(r=0;r<a;r+=2){for(n=Math.floor((r-u)/1),o=Math.floor((r+1-u)/1),e=0;e<a;e+=1)i="█",u<=e&&e<c&&u<=r&&r<c&&f.isDark(n,Math.floor((e-u)/1))&&(i=" "),u<=e&&e<c&&u<=r+1&&r+1<c&&f.isDark(o,Math.floor((e-u)/1))?i+=" ":i+="█",h+=t<1&&r+1>=c?l[i]:g[i];h+="\n"}return a%2&&t>0?h.substring(0,h.length-a-1)+Array(a+1).join("▀"):h.substring(0,h.length-1)}(r);t-=1,r=void 0===r?2*t:r;var e,n,o,i,a=f.getModuleCount()*t+2*r,u=r,c=a-r,g=Array(t+1).join("██"),l=Array(t+1).join("  "),h="",s="";for(e=0;e<a;e+=1){for(o=Math.floor((e-u)/t),s="",n=0;n<a;n+=1)i=1,u<=n&&n<c&&u<=e&&e<c&&f.isDark(o,Math.floor((n-u)/t))&&(i=0),s+=i?g:l;for(o=0;o<t;o+=1)h+=s+"\n"}return h.substring(0,h.length-1)},f.renderTo2dContext=function(t,r){r=r||2;for(var e=f.getModuleCount(),n=0;n<e;n++)for(var o=0;o<e;o++)t.fillStyle=f.isDark(n,o)?"black":"white",t.fillRect(n*r,o*r,r,r)},f};t.stringToBytes=(t.stringToBytesFuncs={default:function(t){for(var r=[],e=0;e<t.length;e+=1){var n=t.charCodeAt(e);r.push(255&n)}return r}}).default,t.createStringToBytes=function(t,r){var e=function(){for(var e=S(t),n=function(){var t=e.read();if(-1==t)throw"eof";return t},o=0,i={};;){var a=e.read();if(-1==a)break;var u=n(),f=n()<<8|n();i[String.fromCharCode(a<<8|u)]=f,o+=1}if(o!=r)throw o+" != "+r;return i}(),n="?".charCodeAt(0);return function(t){for(var r=[],o=0;o<t.length;o+=1){var i=t.charCodeAt(o);if(i<128)r.push(i);else{var a=e[t.charAt(o)];"number"==typeof a?(255&a)==a?r.push(a):(r.push(a>>>8),r.push(255&a)):r.push(n)}}return r}};var r,e,n,o,i,a=1,u=2,f=4,c=8,g={L:1,M:0,Q:3,H:2},l=0,h=1,s=2,v=3,d=4,w=5,p=6,y=7,B=(r=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],e=1335,n=7973,i=function(t){for(var r=0;0!=t;)r+=1,t>>>=1;return r},(o={}).getBCHTypeInfo=function(t){for(var r=t<<10;i(r)-i(e)>=0;)r^=e<<i(r)-i(e);return 21522^(t<<10|r)},o.getBCHTypeNumber=function(t){for(var r=t<<12;i(r)-i(n)>=0;)r^=n<<i(r)-i(n);return t<<12|r},o.getPatternPosition=function(t){return r[t-1]},o.getMaskFunction=function(t){switch(t){case l:return function(t,r){return(t+r)%2==0};case h:return function(t,r){return t%2==0};case s:return function(t,r){return r%3==0};case v:return function(t,r){return(t+r)%3==0};case d:return function(t,r){return(Math.floor(t/2)+Math.floor(r/3))%2==0};case w:return function(t,r){return t*r%2+t*r%3==0};case p:return function(t,r){return(t*r%2+t*r%3)%2==0};case y:return function(t,r){return(t*r%3+(t+r)%2)%2==0};default:throw"bad maskPattern:"+t}},o.getErrorCorrectPolynomial=function(t){for(var r=k([1],0),e=0;e<t;e+=1)r=r.multiply(k([1,C.gexp(e)],0));return r},o.getLengthInBits=function(t,r){if(1<=r&&r<10)switch(t){case a:return 10;case u:return 9;case f:case c:return 8;default:throw"mode:"+t}else if(r<27)switch(t){case a:return 12;case u:return 11;case f:return 16;case c:return 10;default:throw"mode:"+t}else{if(!(r<41))throw"type:"+r;switch(t){case a:return 14;case u:return 13;case f:return 16;case c:return 12;default:throw"mode:"+t}}},o.getLostPoint=function(t){for(var r=t.getModuleCount(),e=0,n=0;n<r;n+=1)for(var o=0;o<r;o+=1){for(var i=0,a=t.isDark(n,o),u=-1;u<=1;u+=1)if(!(n+u<0||r<=n+u))for(var f=-1;f<=1;f+=1)o+f<0||r<=o+f||0==u&&0==f||a==t.isDark(n+u,o+f)&&(i+=1);i>5&&(e+=3+i-5)}for(n=0;n<r-1;n+=1)for(o=0;o<r-1;o+=1){var c=0;t.isDark(n,o)&&(c+=1),t.isDark(n+1,o)&&(c+=1),t.isDark(n,o+1)&&(c+=1),t.isDark(n+1,o+1)&&(c+=1),0!=c&&4!=c||(e+=3)}for(n=0;n<r;n+=1)for(o=0;o<r-6;o+=1)t.isDark(n,o)&&!t.isDark(n,o+1)&&t.isDark(n,o+2)&&t.isDark(n,o+3)&&t.isDark(n,o+4)&&!t.isDark(n,o+5)&&t.isDark(n,o+6)&&(e+=40);for(o=0;o<r;o+=1)for(n=0;n<r-6;n+=1)t.isDark(n,o)&&!t.isDark(n+1,o)&&t.isDark(n+2,o)&&t.isDark(n+3,o)&&t.isDark(n+4,o)&&!t.isDark(n+5,o)&&t.isDark(n+6,o)&&(e+=40);var g=0;for(o=0;o<r;o+=1)for(n=0;n<r;n+=1)t.isDark(n,o)&&(g+=1);return e+=Math.abs(100*g/r/r-50)/5*10},o),C=function(){for(var t=new Array(256),r=new Array(256),e=0;e<8;e+=1)t[e]=1<<e;for(e=8;e<256;e+=1)t[e]=t[e-4]^t[e-5]^t[e-6]^t[e-8];for(e=0;e<255;e+=1)r[t[e]]=e;var n={glog:function(t){if(t<1)throw"glog("+t+")";return r[t]},gexp:function(r){for(;r<0;)r+=255;for(;r>=256;)r-=255;return t[r]}};return n}();function k(t,r){if(void 0===t.length)throw t.length+"/"+r;var e=function(){for(var e=0;e<t.length&&0==t[e];)e+=1;for(var n=new Array(t.length-e+r),o=0;o<t.length-e;o+=1)n[o]=t[o+e];return n}(),n={getAt:function(t){return e[t]},getLength:function(){return e.length},multiply:function(t){for(var r=new Array(n.getLength()+t.getLength()-1),e=0;e<n.getLength();e+=1)for(var o=0;o<t.getLength();o+=1)r[e+o]^=C.gexp(C.glog(n.getAt(e))+C.glog(t.getAt(o)));return k(r,0)},mod:function(t){if(n.getLength()-t.getLength()<0)return n;for(var r=C.glog(n.getAt(0))-C.glog(t.getAt(0)),e=new Array(n.getLength()),o=0;o<n.getLength();o+=1)e[o]=n.getAt(o);for(o=0;o<t.getLength();o+=1)e[o]^=C.gexp(C.glog(t.getAt(o))+r);return k(e,0).mod(t)}};return n}var A=function(){var t=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],r=function(t,r){var e={};return e.totalCount=t,e.dataCount=r,e},e={};return e.getRSBlocks=function(e,n){var o=function(r,e){switch(e){case g.L:return t[4*(r-1)+0];case g.M:return t[4*(r-1)+1];case g.Q:return t[4*(r-1)+2];case g.H:return t[4*(r-1)+3];default:return}}(e,n);if(void 0===o)throw"bad rs block @ typeNumber:"+e+"/errorCorrectionLevel:"+n;for(var i=o.length/3,a=[],u=0;u<i;u+=1)for(var f=o[3*u+0],c=o[3*u+1],l=o[3*u+2],h=0;h<f;h+=1)a.push(r(c,l));return a},e}(),b=function(){var t=[],r=0,e={getBuffer:function(){return t},getAt:function(r){var e=Math.floor(r/8);return 1==(t[e]>>>7-r%8&1)},put:function(t,r){for(var n=0;n<r;n+=1)e.putBit(1==(t>>>r-n-1&1))},getLengthInBits:function(){return r},putBit:function(e){var n=Math.floor(r/8);t.length<=n&&t.push(0),e&&(t[n]|=128>>>r%8),r+=1}};return e},M=function(t){var r=a,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+2<r.length;)t.put(o(r.substring(n,n+3)),10),n+=3;n<r.length&&(r.length-n==1?t.put(o(r.substring(n,n+1)),4):r.length-n==2&&t.put(o(r.substring(n,n+2)),7))}},o=function(t){for(var r=0,e=0;e<t.length;e+=1)r=10*r+i(t.charAt(e));return r},i=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+t};return n},x=function(t){var r=u,e=t,n={getMode:function(){return r},getLength:function(t){return e.length},write:function(t){for(var r=e,n=0;n+1<r.length;)t.put(45*o(r.charAt(n))+o(r.charAt(n+1)),11),n+=2;n<r.length&&t.put(o(r.charAt(n)),6)}},o=function(t){if("0"<=t&&t<="9")return t.charCodeAt(0)-"0".charCodeAt(0);if("A"<=t&&t<="Z")return t.charCodeAt(0)-"A".charCodeAt(0)+10;switch(t){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+t}};return n},m=function(r){var e=f,n=t.stringToBytes(r),o={getMode:function(){return e},getLength:function(t){return n.length},write:function(t){for(var r=0;r<n.length;r+=1)t.put(n[r],8)}};return o},L=function(r){var e=c,n=t.stringToBytesFuncs.SJIS;if(!n)throw"sjis not supported.";!function(){var t=n("友");if(2!=t.length||38726!=(t[0]<<8|t[1]))throw"sjis not supported."}();var o=n(r),i={getMode:function(){return e},getLength:function(t){return~~(o.length/2)},write:function(t){for(var r=o,e=0;e+1<r.length;){var n=(255&r[e])<<8|255&r[e+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(e+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),t.put(n,13),e+=2}if(e<r.length)throw"illegal char at "+(e+1)}};return i},D=function(){var t=[],r={writeByte:function(r){t.push(255&r)},writeShort:function(t){r.writeByte(t),r.writeByte(t>>>8)},writeBytes:function(t,e,n){e=e||0,n=n||t.length;for(var o=0;o<n;o+=1)r.writeByte(t[o+e])},writeString:function(t){for(var e=0;e<t.length;e+=1)r.writeByte(t.charCodeAt(e))},toByteArray:function(){return t},toString:function(){var r="";r+="[";for(var e=0;e<t.length;e+=1)e>0&&(r+=","),r+=t[e];return r+="]"}};return r},S=function(t){var r=t,e=0,n=0,o=0,i={read:function(){for(;o<8;){if(e>=r.length){if(0==o)return-1;throw"unexpected end of file./"+o}var t=r.charAt(e);if(e+=1,"="==t)return o=0,-1;t.match(/^\s$/)||(n=n<<6|a(t.charCodeAt(0)),o+=6)}var i=n>>>o-8&255;return o-=8,i}},a=function(t){if(65<=t&&t<=90)return t-65;if(97<=t&&t<=122)return t-97+26;if(48<=t&&t<=57)return t-48+52;if(43==t)return 62;if(47==t)return 63;throw"c:"+t};return i},I=function(t,r,e){for(var n=function(t,r){var e=t,n=r,o=new Array(t*r),i={setPixel:function(t,r,n){o[r*e+t]=n},write:function(t){t.writeString("GIF87a"),t.writeShort(e),t.writeShort(n),t.writeByte(128),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(0),t.writeByte(255),t.writeByte(255),t.writeByte(255),t.writeString(","),t.writeShort(0),t.writeShort(0),t.writeShort(e),t.writeShort(n),t.writeByte(0);var r=a(2);t.writeByte(2);for(var o=0;r.length-o>255;)t.writeByte(255),t.writeBytes(r,o,255),o+=255;t.writeByte(r.length-o),t.writeBytes(r,o,r.length-o),t.writeByte(0),t.writeString(";")}},a=function(t){for(var r=1<<t,e=1+(1<<t),n=t+1,i=u(),a=0;a<r;a+=1)i.add(String.fromCharCode(a));i.add(String.fromCharCode(r)),i.add(String.fromCharCode(e));var f,c,g,l=D(),h=(f=l,c=0,g=0,{write:function(t,r){if(t>>>r!=0)throw"length over";for(;c+r>=8;)f.writeByte(255&(t<<c|g)),r-=8-c,t>>>=8-c,g=0,c=0;g|=t<<c,c+=r},flush:function(){c>0&&f.writeByte(g)}});h.write(r,n);var s=0,v=String.fromCharCode(o[s]);for(s+=1;s<o.length;){var d=String.fromCharCode(o[s]);s+=1,i.contains(v+d)?v+=d:(h.write(i.indexOf(v),n),i.size()<4095&&(i.size()==1<<n&&(n+=1),i.add(v+d)),v=d)}return h.write(i.indexOf(v),n),h.write(e,n),h.flush(),l.toByteArray()},u=function(){var t={},r=0,e={add:function(n){if(e.contains(n))throw"dup key:"+n;t[n]=r,r+=1},size:function(){return r},indexOf:function(r){return t[r]},contains:function(r){return void 0!==t[r]}};return e};return i}(t,r),o=0;o<r;o+=1)for(var i=0;i<t;i+=1)n.setPixel(i,o,e(i,o));var a=D();n.write(a);for(var u=function(){var t=0,r=0,e=0,n="",o={},i=function(t){n+=String.fromCharCode(a(63&t))},a=function(t){if(t<0);else{if(t<26)return 65+t;if(t<52)return t-26+97;if(t<62)return t-52+48;if(62==t)return 43;if(63==t)return 47}throw"n:"+t};return o.writeByte=function(n){for(t=t<<8|255&n,r+=8,e+=1;r>=6;)i(t>>>r-6),r-=6},o.flush=function(){if(r>0&&(i(t<<6-r),t=0,r=0),e%3!=0)for(var o=3-e%3,a=0;a<o;a+=1)n+="="},o.toString=function(){return n},o}(),f=a.toByteArray(),c=0;c<f.length;c+=1)u.writeByte(f[c]);return u.flush(),"data:image/gif;base64,"+u};return t}();qrcode.stringToBytesFuncs["UTF-8"]=function(t){return function(t){for(var r=[],e=0;e<t.length;e++){var n=t.charCodeAt(e);n<128?r.push(n):n<2048?r.push(192|n>>6,128|63&n):n<55296||n>=57344?r.push(224|n>>12,128|n>>6&63,128|63&n):(e++,n=65536+((1023&n)<<10|1023&t.charCodeAt(e)),r.push(240|n>>18,128|n>>12&63,128|n>>6&63,128|63&n))}return r}(t)},function(t){"function"==typeof define&&define.amd?define([],t):"object"==typeof exports&&(module.exports=t())}(function(){return qrcode});
@@ -511,7 +477,8 @@ function inputHTML(f,val){
 }
 const fieldHTML=(f,val,cls="")=>`<div class="${cls}"><label class="l" for="f_${f.id}">${esc(f.label)}</label>${inputHTML(f,val)}${f.type==="money"?`<div class="hint" data-money="${f.id}"></div>`:""}</div>`;
 function moneyHints(form){$$("[data-money]",form).forEach(h=>{const el=form.elements[h.dataset.money];const n=Number(el.value);h.textContent=Number.isFinite(n)&&el.value!==""?money(n):""})}
-function readParams(p,form){const o={};p.fields.forEach(f=>{const el=form.elements[f.id];o[f.id]=f.type==="select"?el.value:(el.value===""?NaN:Number(el.value))});return o}
+const fel=(form,n,last)=>{const e=form.elements[n];return e&&e.length!=null&&!e.tagName?e[last?e.length-1:0]:e};
+function readParams(p,form){const o={};p.fields.forEach(f=>{const el=fel(form,f.id);o[f.id]=f.type==="select"?el.value:(el.value===""?NaN:Number(el.value))});return o}
 const CLIENT_F=[
  {id:"tipoDoc",label:"Tipo de documento",type:"select",opts:["Cédula de ciudadanía","Cédula de extranjería","Pasaporte"],def:"Cédula de ciudadanía"},
  {id:"doc",label:"Número de documento",ph:"Sin puntos"},
@@ -525,7 +492,7 @@ const CLIENT_F=[
 ];
 const clientHTML=c=>`<div class="fg">${CLIENT_F.map(f=>fieldHTML(f,c?c[f.id]:undefined,f.id==="direccion"?"full":"")).join("")}</div>`;
 function readClient(form){
-  const c={};CLIENT_F.forEach(f=>c[f.id]=form.elements[f.id].value.trim());
+  const c={};CLIENT_F.forEach(f=>c[f.id]=fel(form,f.id,true).value.trim());
   const bad=(id,msg)=>({c,err:msg,el:form.elements[id]});
   if(c.tipoDoc==="Pasaporte"?!/^[A-Z0-9]{5,12}$/i.test(c.doc):!/^\d{5,12}$/.test(c.doc))return bad("doc","Escribe un número de documento válido (solo números, 5 a 12 dígitos).");
   if(c.nombres.length<2)return bad("nombres","Escribe tus nombres.");
@@ -563,7 +530,7 @@ function vHome(){
     <div class="card"><span class="ic gold">${ic("users")}</span><div><b>Defensor del consumidor</b><span>Un tercero independiente atiende tus reclamos.</span></div></div>
   </div></div>
   <section class="sec"><div class="wrap"><h2>Seguros de todo tipo</h2><p class="lead">Elige un seguro, ajusta los datos y compara tres planes con el precio final, IVA incluido cuando aplica.</p><div class="grid g4">${cards}<a class="card prod-card" href="#/canales" style="background:var(--navy);color:#fff;border-color:var(--navy)"><span class="ic">${ic("office")}</span><h3 style="margin-top:8px;color:#fff">¿Prefieres asesoría en persona?</h3><p style="color:#c9d6e6">Visita una de nuestras 5 oficinas. Un asesor cotiza contigo y te entrega el número de aprobación al cerrar la compra.</p><span class="from" style="color:#9cc3ef">Ver oficinas →</span></a></div></div></section>
-  <section class="sec alt"><div class="wrap"><h2>Beneficios pensados para ti por tener tu seguro</h2><p class="lead">Además de las coberturas, cada seguro incluye beneficios sin costo adicional mientras tu póliza esté vigente.</p><div class="grid g3 ben-grid">${["cursos","coworking","legal"].map(b=>benCard(b)).join("")}</div><p style="margin:18px 0 0"><a href="#/beneficios">Ver los beneficios de cada seguro →</a></p></div></section>
+  <section class="sec alt"><div class="wrap"><h2>Beneficios pensados para ti por tener tu seguro</h2><p class="lead">Además de las coberturas, cada seguro incluye beneficios sin costo adicional mientras tu póliza esté vigente.</p><div class="grid g3 ben-grid">${["cursos","coworking","legal"].map(b=>benCard(b,"",true)).join("")}</div><p style="margin:18px 0 0"><a href="#/beneficios">Ver los beneficios de cada seguro →</a></p></div></section>
   <section class="sec"><div class="wrap"><h2>Un solo servidor central para todos los canales</h2><p class="lead">No importa dónde compres: la venta pasa por las mismas validaciones, se aprueba en el servidor central de la sede principal y queda registrada en un historial que no se puede alterar sin que se note.</p>${flowHTML()}</div></section>
   <section class="sec"><div class="wrap"><h2>Así compras en línea</h2><p class="lead">Cuatro pasos, sin papeles.</p><div class="grid g4 how">
     <div class="card"><h3>Cotiza</h3><p class="muted">Ajusta los datos y elige entre los planes Esencial, Plus y Total.</p></div>
@@ -606,7 +573,7 @@ function vQuote(pid){
     f.oninput=paint;f.onsubmit=e=>e.preventDefault();
     $$(".plan").forEach(el=>el.onclick=()=>{plan=el.dataset.plan;$$(".plan").forEach(x=>{x.classList.toggle("on",x===el);x.setAttribute("aria-pressed",x===el)});paint()});
     paint();
-    $("#qbuy").onclick=()=>{const vals=paint();if(validParams(p,vals))return;store.set("q",{product:pid,params:vals,plan});location.hash="#/comprar"};
+    $("#qbuy").onclick=()=>{const vals=paint();if(validParams(p,vals))return;store.set("q",{product:pid,params:vals,plan});location.hash=ME&&ME.role==="cliente"?"#/comprar":"#/ingresar?next=%2Fcomprar&why=buy"};
   });
   return pageH(`Seguro de ${p.name.toLowerCase()}`,p.tag,`<a href="#/cotizar">Cotizar</a> › ${p.name}`)+`
   <div class="wrap layout2"><div>
@@ -619,7 +586,7 @@ function vQuote(pid){
   <aside class="card side"><h3>Tu cotización</h3><div id="qsum"></div>
     <button class="btn full" id="qbuy" style="margin-top:16px">Comprar en línea</button>
     <a class="btn sec full" href="#/canales" style="margin-top:10px">${ic("office")}Comprar en una oficina</a>
-    <p class="tiny" style="margin-bottom:0">En ambos canales la compra se aprueba en el servidor central y recibe un número de aprobación.</p></aside></div>`;
+    <p class="tiny" style="margin-bottom:0">Para comprar en línea necesitas una cuenta de cliente (te pedimos ingresar o crearla en el siguiente paso). En ambos canales la compra se aprueba en el servidor central.</p></aside></div>`;
 }
 
 /* ============ Compra en línea ============ */
@@ -649,6 +616,7 @@ const ACCEPTS=[
  ["ac_firma","Acepto firmar este contrato de forma electrónica con validación por código enviado a mi celular (Ley 527 de 1999)."]
 ];
 function vBuy(){
+  const g=gate(["cliente"],"Para comprar en línea ingresa con tu cuenta de cliente. Así tus pólizas quedan protegidas y solo tú puedes verlas.");if(g)return g;
   const q=store.get("q",null);if(!q||!P[q.product])return pageH("No hay una cotización activa","Primero elige un seguro y un plan.")+`<div class="wrap"><a class="btn" href="#/cotizar">Cotizar</a></div>`;
   const p=P[q.product],monthlyOk=p.monthly!==false;
   after(()=>{
@@ -659,10 +627,11 @@ function vBuy(){
     f.addEventListener("change",()=>{payUI();sum()});
     f.elements.cnum.oninput=e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,19).replace(/(\d{4})(?=\d)/g,"$1 ")};
     f.elements.cexp.oninput=e=>{let v=e.target.value.replace(/\D/g,"").slice(0,4);if(v.length>2)v=v.slice(0,2)+"/"+v.slice(2);e.target.value=v};
+    const nm=ME.name.split(" ");f.elements.email.value=ME.email;f.elements.email.readOnly=true;f.elements.doc.value=ME.doc||"";f.elements.doc.readOnly=true;f.elements.tipoDoc.value=ME.docType||"Cédula de ciudadanía";f.elements.tipoDoc.disabled=true;if(ME.phone)f.elements.celular.value=ME.phone;if(!f.elements.nombres.value){f.elements.nombres.value=nm.slice(0,Math.ceil(nm.length/2)).join(" ");f.elements.apellidos.value=nm.slice(Math.ceil(nm.length/2)).join(" ")}
     if(f.elements.start){f.elements.start.value=addDays(isoDate(new Date()),1);f.elements.start.min=isoDate(new Date())}
     payUI();sum();
     f.onsubmit=e=>{e.preventDefault();
-      const r=readClient(f);if(r.err)return showErr(box,r);
+      f.elements.tipoDoc.disabled=false;const r=readClient(f);f.elements.tipoDoc.disabled=true;if(r.err)return showErr(box,r);
       const ex=readExtra(q.product,f);if(ex.err)return showErr(box,ex);
       const start=q.product==="viaje"?ex.o.salida:f.elements.start.value;
       if(!start||start<isoDate(new Date()))return showErr(box,{err:"La fecha de inicio no puede ser anterior a hoy.",el:f.elements.start});
@@ -675,12 +644,12 @@ function vBuy(){
         if(!mm||+mm[1]<1||+mm[1]>12||new Date(2000+ +mm[2],+mm[1],0)<new Date(now.getFullYear(),now.getMonth(),1))return showErr(box,{err:"La fecha de vencimiento no es válida o la tarjeta está vencida.",el:f.elements.cexp});
         if(!/^\d{3,4}$/.test(f.elements.ccvv.value))return showErr(box,{err:"El código de seguridad debe tener 3 o 4 dígitos.",el:f.elements.ccvv});
         pay.last4=num.slice(-4);pay.brand=/^4/.test(num)?"Visa":/^5[1-5]|^2[2-7]/.test(num)?"Mastercard":/^3[47]/.test(num)?"American Express":"Tarjeta";
-        pay.cuotas=m==="credito"?Number(f.elements.cuotas.value):1;pay.declined=num==="4000000000000002"}
+        pay.cuotas=m==="credito"?Number(f.elements.cuotas.value):1;pay.testDecline=num==="4000000000000002"}
       for(const [id] of ACCEPTS)if(!f.elements[id].checked)return showErr(box,{err:"Debes aceptar todas las declaraciones y autorizaciones para continuar.",el:f.elements[id]});
-      showErr(box,{});
-      const pr=price(q.product,q.params,q.plan);
-      const id=newTx({channel:"web",product:q.product,plan:q.plan,params:q.params,extra:ex.o,client:r.c,start,premium:pr,freq:monthlyOk?f.elements.freq.value:"unico",pay,accepted:ACCEPTS.map(a=>a[0]),ua:"web"});
-      store.del("q");location.hash="#/proceso/"+id;
+      showErr(box,{});const sb=e.submitter||f.querySelector("button:not([type=button])");sb.disabled=true;sb.dataset.t=sb.innerHTML;sb.innerHTML="Enviando al servidor central…";
+      api("tx/web",{method:"POST",body:{product:q.product,plan:q.plan,params:q.params,extra:ex.o,client:r.c,start,freq:monthlyOk?f.elements.freq.value:"unico",pay,accepted:ACCEPTS.map(a=>a[0])}})
+        .then(j=>{store.del("q");FRESH.add(j.tx.id);location.hash="#/proceso/"+j.tx.id})
+        .catch(err=>{sb.disabled=false;sb.innerHTML=sb.dataset.t;showErr(box,{err:err.message})});
     };
   });
   const card=`<div id="card" hidden><div class="fg"><div class="full"><label class="l" for="f_cnum">Número de tarjeta</label><input id="f_cnum" name="cnum" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></div><div class="full"><label class="l" for="f_cname">Nombre en la tarjeta</label><input id="f_cname" name="cname" autocomplete="cc-name"></div><div><label class="l" for="f_cexp">Vence (MM/AA)</label><input id="f_cexp" name="cexp" inputmode="numeric" placeholder="MM/AA" autocomplete="cc-exp"></div><div><label class="l" for="f_ccvv">Código de seguridad</label><input id="f_ccvv" name="ccvv" inputmode="numeric" maxlength="4" autocomplete="cc-csc"></div><div id="cuotasW"><label class="l" for="f_cuotas">Cuotas</label><select id="f_cuotas" name="cuotas">${Array.from({length:36},(_,i)=>`<option value="${i+1}">${i+1}</option>`).join("")}</select></div></div><p class="tiny">${ic("lock").replace("<svg",'<svg style="width:14px;height:14px;vertical-align:-2px"')} Simulador: no escribas datos de una tarjeta real. Usa una tarjeta de prueba, por ejemplo 4111 1111 1111 1111.</p></div>`;
@@ -701,43 +670,60 @@ function vBuy(){
 }
 
 /* ============ Procesamiento ============ */
+const FRESH=new Set();
 const stepsHTML=t=>`<ol class="steps">${STEPS.map((s,i)=>{const x=(t&&t.steps&&t.steps[i])||{};return `<li class="st ${x.st||""}" id="st${i}"><span class="dot"></span><div><b>${s}</b><small>${esc(x.msg||"")}</small></div></li>`}).join("")}</ol>`;
 function setStep(i,st,msg){const el=$("#st"+i);if(!el)return;el.className="st "+st;if(msg!=null)el.querySelector("small").textContent=msg}
-function runIfPending(id,onEnd){const t=getTx(id);if(t&&["nueva","procesando"].includes(t.status)&&!RUNNING.has(id)){CENTRAL.process(id,(i,st,msg)=>{if(i==="end"){if(location.hash.includes(id))onEnd();return}if(location.hash.includes(id))setStep(i,st,msg)})}}
-function vProcess(id){
-  const t=getTx(id);if(!t)return vNotFound();
-  after(()=>runIfPending(id,()=>{$("#pres").innerHTML=resultHTML(getTx(id))}));
-  return pageH("Procesando tu compra",`Transacción <span class="mono">${t.id}</span> · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)}`)+`
-  <div class="wrap layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(t)}</div><div id="pres">${["nueva","procesando"].includes(t.status)?`<div class="card"><p class="muted" style="margin:0">Estamos validando tu compra. No cierres esta página.</p></div>`:resultHTML(t)}</div></div>`;
+/* El servidor central ya procesó la transacción; aquí solo se muestran sus pasos en orden. */
+async function playSteps(t,id,onEnd){
+  const fresh=FRESH.has(id);FRESH.delete(id);
+  if(fresh){for(let i=0;i<STEPS.length;i++){if(!location.hash.includes(id))return;setStep(i,"run","");await sleep(420);const x=(t.steps||[])[i]||{st:"skip",msg:""};setStep(i,x.st,x.msg)}}
+  if(location.hash.includes(id))onEnd(fresh);
+}
+async function vProcess(id){
+  let t;try{t=getTx(id)||(await api("tx/"+id)).tx}catch(e){return ()=>errView(e)}
+  return ()=>{
+    const fresh=FRESH.has(id);
+    after(()=>playSteps(t,id,async first=>{$("#pres").innerHTML=resultHTML(t);if(first&&t.status==="aprobada"){const m=await mailPolicy(t,true);const n=$("#mailnote");if(n)n.innerHTML=m.status==="enviado"?`Te enviamos el certificado en PDF a <b>${esc(m.to)}</b>.`:m.status==="simulado"?`Envío de correo simulado (${esc(m.note)}).`:`No pudimos enviar el correo (${esc(m.note)}). Usa “Enviar por correo” para reintentar.`}}));
+    return pageH("Procesando tu compra",`Transacción <span class="mono">${t.id}</span> · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)}`)+`
+  <div class="wrap layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(fresh?null:t)}</div><div id="pres"><div class="card"><p class="muted" style="margin:0">Estamos validando tu compra en el servidor central. No cierres esta página.</p></div></div></div>`;
+  };
 }
 function resultHTML(t){
   if(t.status==="aprobada")return `<div class="card"><div class="okbox"><b>¡Listo! Tu póliza fue emitida.</b></div>
     <p style="margin:16px 0 4px" class="muted">Número de póliza</p><div class="bignum">${t.policy}</div>
     <p style="margin:12px 0 4px" class="muted">Número de aprobación</p><div class="bignum">${t.approval.code}</div>
-    <p class="tiny">Guarda estos dos números: sirven para verificar tu póliza. El servidor central generó tu certificado en PDF y un enlace de consulta, y los envió a ${esc(maskMail(t.client.email))}.</p>
+    <p class="tiny">Guarda estos dos números: sirven para verificar tu póliza. <span id="mailnote">Estamos enviando el certificado en PDF a ${esc(maskMail(t.client.email))}…</span></p>
     ${certActions(t.policy,{cert:true})}<p style="margin:12px 0 0"><a href="#/poliza/${t.policy}">Activar los beneficios de tu seguro →</a></p><p style="margin:8px 0 0"><a href="#/verificar?p=${t.policy}&a=${t.approval.code}">${ic("shield").replace("<svg",'<svg style="width:16px;height:16px;vertical-align:-3px"')} Verificar esta póliza</a></p></div>`;
-  if(t.status==="revision")return `<div class="card"><div class="warnbox"><b>Tu solicitud está en revisión.</b><br>${esc((t.reasons||[]).join(" "))}</div><p>Un analista del servidor central la revisará en máximo 2 días hábiles. No te cobraremos hasta que se apruebe. Consulta el estado en <a href="#/mis-polizas">Mis pólizas</a> con tu documento.</p><p class="tiny">Transacción ${t.id}</p></div>`;
+  if(t.status==="revision")return `<div class="card"><div class="warnbox"><b>Tu solicitud está en revisión.</b><br>${esc((t.reasons||[]).join(" "))}</div><p>Un analista del servidor central la revisará en máximo 2 días hábiles. No te cobraremos hasta que se apruebe. Consulta el estado en <a href="#/mis-polizas">Mis pólizas</a>.</p><p class="tiny">Transacción ${t.id}</p></div>`;
   if(t.status==="rechazada")return `<div class="card"><div class="errbox" style="margin:0"><b>No pudimos completar la compra.</b><br>${esc(t.reason||"")}</div><p>Puedes intentar de nuevo con otro medio de pago.</p><a class="btn" href="#/cotizar/${t.product}">Volver a intentar</a></div>`;
+  if(t.status==="revocada")return `<div class="card"><div class="warnbox"><b>Póliza revocada.</b> Devolución: ${money(t.refund||0)}</div><a href="#/poliza/${t.policy}">Ver certificado</a></div>`;
   if(t.status==="preaprobada")return `<div class="card"><div class="okbox"><b>Aprobación generada.</b> El asesor debe dar el aprobado para cerrar la venta.</div></div>`;
   return `<div class="card">${badge(t.status)}</div>`;
 }
 
-/* ============ Certificado de póliza ============ */
-function vPolicy(no){
-  const t=findPolicy(no);if(!t)return pageH("Póliza no encontrada","Revisa el número e inténtalo de nuevo. Si te enviaron un enlace del certificado, ábrelo directamente: funciona en cualquier dispositivo.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`;
-  CURRENT_CERT=null;const d=certData(t);d.refund=t.refund;
-  after(()=>{const rb=$("#revoke");if(rb)rb.onclick=()=>{if(rb.dataset.c!=="1"){rb.dataset.c="1";rb.textContent="Confirmar revocación";$("#rvn").hidden=false;return}const r=CENTRAL.revoke(t.id,"Tomador (canal web)");toast("Póliza revocada. Devolución: "+money(r));router()}});
-  return certHTML(d,{revoke:t.status==="aprobada"});
+/* ============ Certificado de póliza (dueño, asesor de la oficina o administrador) ============ */
+async function vPolicy(no){
+  const g=gate(null,"El certificado completo solo lo ve el tomador con su cuenta. Si te compartieron la póliza, usa el enlace público del certificado o verifícala.");if(g)return g;
+  let t;try{t=(await api("policy/"+encodeURIComponent(no))).tx}catch(e){return ()=>e.status===404?pageH("Póliza no encontrada","No encontramos esta póliza en tu cuenta. Revisa el número, o verifícala con el número de aprobación.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`:errView(e)}
+  return ()=>{
+    CURRENT_CERT=null;const d=certData(t);d.refund=t.refund;
+    const wantB=new URLSearchParams(location.hash.split("?")[1]||"").get("b");
+    after(()=>{if(wantB)setTimeout(()=>{const s=document.getElementById("beneficios");if(s)s.scrollIntoView({behavior:"smooth",block:"start"});const btn=document.querySelector(`[data-act=ben-open][data-ben="${wantB}"]`);if(btn&&BENEFITS[wantB]&&BENEFITS[wantB].kind!=="code")btn.click();else if(btn)btn.focus()},200);
+      const rb=$("#revoke");if(rb)rb.onclick=async()=>{if(rb.dataset.c!=="1"){rb.dataset.c="1";rb.textContent="Confirmar revocación";$("#rvn").hidden=false;return}rb.disabled=true;try{const j=await api("policy/"+t.policy+"/revoke",{method:"POST"});toast("Póliza revocada. Devolución: "+money(j.refund));router()}catch(e){toast(e.message);rb.disabled=false}}});
+    return certHTML(d,{revoke:t.status==="aprobada"&&ME&&["cliente","admin"].includes(ME.role)});
+  };
 }
 
 /* ============ Verificación ============ */
 const verifyForm=id=>`<form class="card" id="${id}"><h3>${ic("shield").replace("<svg",'<svg style="width:20px;height:20px;vertical-align:-4px;color:var(--teal)"')} Verificar una póliza</h3><div class="fg"><div><label class="l" for="${id}_p">Número de póliza</label><input id="${id}_p" name="p" placeholder="IG-AUT-2026-000001" autocomplete="off"></div><div><label class="l" for="${id}_a">Número de aprobación</label><input id="${id}_a" name="a" placeholder="APR-20261119-000000" autocomplete="off"></div></div><button class="btn teal" style="margin-top:14px">Verificar</button><div class="vres" style="margin-top:14px" aria-live="polite"></div></form>`;
-function wireVerify(form){if(!form)return;form.onsubmit=e=>{e.preventDefault();const p=form.elements.p.value.trim().toUpperCase(),a=form.elements.a.value.trim().toUpperCase();const out=$(".vres",form);
+function wireVerify(form){if(!form)return;form.onsubmit=async e=>{e.preventDefault();const p=form.elements.p.value.trim().toUpperCase(),a=form.elements.a.value.trim().toUpperCase();const out=$(".vres",form);
   if(!p||!a){out.innerHTML=`<div class="errbox">Escribe los dos números.</div>`;return}
-  const t=findPolicy(p);const n=store.get("verif",0)+1;store.set("verif",n);
-  if(!t||!t.approval||t.approval.code!==a){out.innerHTML=`<div class="errbox" style="margin:0"><b>No encontramos una póliza con esos datos.</b><br>Si alguien te vendió este documento, no pagues y repórtalo a ${CO.tel} o en <a href="#/atencion">Atención al cliente</a>.</div>`;return}
-  const vig=t.status==="aprobada"&&t.end>=isoDate(new Date())&&t.start<=isoDate(new Date()),fut=t.status==="aprobada"&&t.start>isoDate(new Date());
-  out.innerHTML=`<div class="${vig||fut?"okbox":"warnbox"}"><b>${vig?"Póliza auténtica y vigente.":fut?"Póliza auténtica; su vigencia empieza el "+fdate(t.start)+".":"Póliza auténtica, pero no vigente ("+STATUS[t.status][0].toLowerCase()+")."}</b><br>${P[t.product].name} · plan ${planName(t.plan)} · tomador ${esc(maskName(t.client))}<br>Vigencia: ${fdate(t.start)} a ${fdate(t.end)} · canal ${chName(t)}<br><span class="tiny">Huella ${t.fp}</span></div>`}}
+  out.innerHTML=`<p class="muted">Consultando el servidor central…</p>`;
+  let j;try{j=await api("public/verify",{query:{p,a}})}catch(err){out.innerHTML=`<div class="errbox" style="margin:0">${esc(err.message)}</div>`;return}
+  if(!j.found){out.innerHTML=`<div class="errbox" style="margin:0"><b>No encontramos una póliza con esos datos.</b><br>Si alguien te vendió este documento, no pagues y repórtalo a ${CO.tel} o en <a href="#/atencion">Atención al cliente</a>.</div>`;return}
+  const t=j.cert,today=isoDate(new Date());
+  const vig=t.status==="aprobada"&&t.end>=today&&t.start<=today,fut=t.status==="aprobada"&&t.start>today;
+  out.innerHTML=`<div class="${vig||fut?"okbox":"warnbox"}"><b>${vig?"Póliza auténtica y vigente.":fut?"Póliza auténtica; su vigencia empieza el "+fdate(t.start)+".":"Póliza auténtica, pero no vigente ("+STATUS[t.status][0].toLowerCase()+")."}</b><br>${P[t.product].name} · plan ${planName(t.plan)} · tomador ${esc(maskName(t.client))}<br>Vigencia: ${fdate(t.start)} a ${fdate(t.end)} · canal ${chName(t)}<br><span class="tiny">Huella ${esc(t.fp)} · <a href="#/certificado/${esc(t.policy)}/${esc(t.approval.code)}">Ver certificado público</a></span></div>`}}
 function vVerify(){
   const qs=new URLSearchParams((location.hash.split("?")[1])||"");
   after(()=>{const f=$("#vf");wireVerify(f);if(qs.get("p")){f.elements.p.value=qs.get("p");f.elements.a.value=qs.get("a")||"";f.requestSubmit()}});
@@ -747,38 +733,32 @@ function vVerify(){
 }
 
 /* ============ Mis pólizas ============ */
-function vMine(){
-  after(()=>{$("#mf").onsubmit=e=>{e.preventDefault();const f=e.target;const doc=f.elements.doc.value.trim(),mail=f.elements.mail.value.trim().toLowerCase();
-    const list=Object.values(allTx()).filter(t=>t.client.doc===doc&&t.client.email.toLowerCase()===mail).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
-    $("#mres").innerHTML=list.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Seguro</th><th>Póliza</th><th>Canal</th><th>Vigencia</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody>${list.map(t=>`<tr><td>${P[t.product].name} · ${planName(t.plan)}</td><td class="mono">${t.policy||"—"}</td><td>${chName(t)}</td><td>${t.end?fdate(t.start)+" – "+fdate(t.end):"—"}</td><td>${money(t.premium.total)}</td><td>${badge(t.status)}</td><td>${t.policy?`<a href="#/poliza/${t.policy}">Certificado</a>`:t.channel==="web"?`<a href="#/proceso/${t.id}">Detalle</a>`:""}</td></tr>`).join("")}</tbody></table></div>`:`<div class="warnbox">No encontramos pólizas con ese documento y correo.</div>`}});
-  return pageH("Mis pólizas","Consulta las pólizas que compraste en la web o en una oficina, descarga el certificado o revócalas.","Mis pólizas")+`
-  <div class="wrap"><form class="card" id="mf" style="max-width:720px"><div class="fg"><div><label class="l" for="m_doc">Número de documento</label><input id="m_doc" name="doc" required></div><div><label class="l" for="m_mail">Correo registrado</label><input id="m_mail" name="mail" type="email" required></div></div><button class="btn" style="margin-top:14px">Consultar</button><p class="tiny">En una aseguradora real este acceso pediría un código de un solo uso enviado a tu celular.</p></form><div id="mres" style="margin-top:20px"></div></div>`;
+async function vMine(){
+  const g=gate(["cliente"],"Ingresa con tu cuenta de cliente para ver tus pólizas. Si compraste en una oficina, crea la cuenta con el mismo documento y correo que diste al asesor.");if(g)return g;
+  let list;try{list=(await api("my/policies")).list}catch(e){return ()=>errView(e)}
+  return ()=>pageH("Mis pólizas",`Hola, ${esc(ME.name.split(" ")[0])}. Aquí están las pólizas compradas con tu documento en la web o en una oficina.`,"Mis pólizas")+`
+  <div class="wrap">${list.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Seguro</th><th>Póliza</th><th>Canal</th><th>Vigencia</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody>${list.map(t=>`<tr><td>${P[t.product].name} · ${planName(t.plan)}</td><td class="mono">${t.policy||"—"}</td><td>${chName(t)}</td><td>${t.end?fdate(t.start)+" – "+fdate(t.end):"—"}</td><td>${money(t.total)}</td><td>${badge(t.status)}</td><td>${t.policy?`<a href="#/poliza/${t.policy}">Certificado y beneficios</a>`:`<a href="#/proceso/${t.id}">Detalle</a>`}</td></tr>`).join("")}</tbody></table></div>`:`<div class="card"><p style="margin-top:0">Aún no tienes pólizas.</p><a class="btn" href="#/cotizar">Cotizar un seguro</a></div>`}
+  <p class="tiny" style="margin-top:16px">Tu sesión es privada: solo tú (y el servidor central) pueden ver estas pólizas. Cierra sesión si usas un equipo compartido.</p></div>`;
 }
 
 /* ============ Portal de asesores (oficinas) ============ */
-const seller=()=>store.get("seller",null);
-function vOffice(){
-  const s=seller();
-  if(!s){
-    after(()=>{const f=$("#lf");const fill=()=>{const o=officeById(f.elements.of.value);f.elements.as.innerHTML=o.sellers.map(x=>`<option>${x}</option>`).join("")};f.elements.of.onchange=fill;fill();
-      f.onsubmit=e=>{e.preventDefault();const s={office:f.elements.of.value,name:f.elements.as.value,code:"AS-"+f.elements.of.value+"-"+(officeById(f.elements.of.value).sellers.indexOf(f.elements.as.value)+1)};store.set("seller",s);audit("—",`Inicio de sesión del asesor ${s.name} en ${officeById(s.office).name}`,s.name);router()}});
-    return pageH("Portal de asesores","Venta asistida en oficina. Cada venta se envía al servidor central de la sede principal, que devuelve un número de aprobación. El asesor da el aprobado confirmando ese número y el valor cobrado.","Portal de asesores")+`
-    <div class="wrap grid g2"><form class="card" id="lf"><h3>Ingreso de asesor</h3><div class="fg"><div class="full"><label class="l" for="l_of">Oficina</label><select id="l_of" name="of">${OFFICES.map(o=>`<option value="${o.id}">${o.city} · ${o.name}</option>`).join("")}</select></div><div class="full"><label class="l" for="l_as">Asesor</label><select id="l_as" name="as"></select></div></div><button class="btn" style="margin-top:16px">Ingresar</button><p class="tiny">Ingreso simulado. En producción: usuario corporativo, segundo factor de autenticación y equipo registrado de la oficina.</p></form>
-    <div class="card"><h3>Cómo funciona el aprobado</h3>${stepsHTML(null).replace(/class="st "/g,'class="st done"')}<p class="tiny">Si el asesor escribe mal el número de aprobación o el valor 3 veces, la venta se bloquea y solo el servidor central puede desbloquearla.</p></div></div>`;
-  }
-  const tab=(location.hash.split("?")[1]||"").replace("t=","")||"nueva";
-  const o=officeById(s.office);
-  after(()=>{$("#logout").onclick=()=>{audit("—",`Cierre de sesión del asesor ${s.name}`,s.name);store.del("seller");router()};if(tab==="nueva")wireOfficeSale(s)});
-  const mine=Object.values(allTx()).filter(t=>t.channel==="oficina"&&t.office===s.office).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
-  const pend=mine.filter(t=>["preaprobada","revision","bloqueada","procesando","nueva"].includes(t.status));
-  const rows=list=>list.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Transacción</th><th>Fecha</th><th>Asesor</th><th>Cliente</th><th>Seguro</th><th>Total</th><th>Estado</th></tr></thead><tbody>${list.map(t=>`<tr class="click" onclick="location.hash='#/oficina/venta/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${esc(t.seller)}</td><td>${esc(fullName(t.client))}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${money(t.premium.total)}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay ventas aquí.</p>`;
-  return `<div class="wrap" style="padding-top:28px"><div class="console-h" style="background:var(--navy-2)"><div><h1>${ic("office").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} ${o.name} · ${o.city}</h1><p>Asesor: <b>${esc(s.name)}</b> (${s.code}) · Conectado al servidor central de la sede principal</p></div><div class="row"><span class="live">Servidor central en línea</span><button class="btn sec sm" id="logout">Salir</button></div></div>
-  <nav class="tabs"><a href="#/oficina?t=nueva" class="${tab==="nueva"?"on":""}">Nueva venta</a><a href="#/oficina?t=pend" class="${tab==="pend"?"on":""}">Por cerrar (${pend.length})</a><a href="#/oficina?t=hist" class="${tab==="hist"?"on":""}">Historial de la oficina</a></nav>
-  ${tab==="pend"?rows(pend):tab==="hist"?rows(mine):officeSaleForm()}</div>`;
+async function vOffice(){
+  const g=gate(["asesor","admin"],"Portal exclusivo para asesores de oficina y administradores. Ingresa con el usuario que te asignó el administrador.");if(g)return g;
+  let list;try{list=(await api("office/tx")).list}catch(e){return ()=>errView(e)}
+  return ()=>{
+    const tab=(location.hash.split("?")[1]||"").replace("t=","")||"nueva";
+    const o=ME.office?officeById(ME.office):null;
+    after(()=>{if(tab==="nueva")wireOfficeSale()});
+    const pend=list.filter(t=>["preaprobada","revision","bloqueada","procesando"].includes(t.status));
+    const rows=l=>l.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Transacción</th><th>Fecha</th><th>Oficina</th><th>Asesor</th><th>Cliente</th><th>Seguro</th><th>Total</th><th>Estado</th></tr></thead><tbody>${l.map(t=>`<tr class="click" onclick="location.hash='#/oficina/venta/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${esc((officeById(t.office)||{}).city||"")}</td><td>${esc(t.seller||"")}</td><td>${esc(t.client)}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${money(t.total)}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay ventas aquí.</p>`;
+    return `<div class="wrap" style="padding-top:28px"><div class="console-h" style="background:var(--navy-2)"><div><h1>${ic("office").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} ${o?esc(o.name)+" · "+esc(o.city):"Todas las oficinas"}</h1><p>${ROLE_NAME[ME.role]}: <b>${esc(ME.name)}</b> (${esc(ME.email)}) · Conectado al servidor central de la sede principal</p></div><div class="row"><span class="live">Servidor central en línea</span></div></div>
+  <nav class="tabs"><a href="#/oficina?t=nueva" class="${tab==="nueva"?"on":""}">Nueva venta</a><a href="#/oficina?t=pend" class="${tab==="pend"?"on":""}">Por cerrar (${pend.length})</a><a href="#/oficina?t=hist" class="${tab==="hist"?"on":""}">Historial${o?" de la oficina":""}</a></nav>
+  ${tab==="pend"?rows(pend):tab==="hist"?rows(list):officeSaleForm()}</div>`;
+  };
 }
 function officeSaleForm(){
   return `<form id="of" class="layout2" novalidate><div>
-    <fieldset><legend>1. Seguro</legend><div class="fg"><div><label class="l" for="o_prod">Producto</label><select id="o_prod" name="prod">${Object.entries(P).map(([k,p])=>`<option value="${k}">${p.name}</option>`).join("")}</select></div><div><label class="l" for="o_plan">Plan</label><select id="o_plan" name="plan">${PLANS.map(([k,n])=>`<option value="${k}" ${k==="plus"?"selected":""}>${n}</option>`).join("")}</select></div></div><div id="o_params" style="margin-top:14px"></div></fieldset>
+    <fieldset><legend>1. Seguro</legend><div class="fg">${ME&&ME.role==="admin"?`<div class="full"><label class="l" for="o_off">Oficina de la venta</label><select id="o_off" name="off">${OFFICES.map(o=>`<option value="${o.id}">${o.city} · ${o.name}</option>`).join("")}</select></div>`:""}<div><label class="l" for="o_prod">Producto</label><select id="o_prod" name="prod">${Object.entries(P).map(([k,p])=>`<option value="${k}">${p.name}</option>`).join("")}</select></div><div><label class="l" for="o_plan">Plan</label><select id="o_plan" name="plan">${PLANS.map(([k,n])=>`<option value="${k}" ${k==="plus"?"selected":""}>${n}</option>`).join("")}</select></div></div><div id="o_params" style="margin-top:14px"></div></fieldset>
     <fieldset><legend>2. Cliente</legend>${clientHTML()}</fieldset>
     <fieldset><legend>3. Datos del riesgo</legend><div id="o_extra"></div><div id="o_startW" style="margin-top:14px"><label class="l" for="f_start">Inicio de vigencia</label><input type="date" id="f_start" name="start"></div></fieldset>
     <fieldset><legend>4. Pago en oficina</legend><div class="paytabs"><label><input type="radio" name="pm" value="efectivo" checked><span>Efectivo en caja</span></label><label><input type="radio" name="pm" value="datafono"><span>Datáfono</span></label><label><input type="radio" name="pm" value="link"><span>Enlace PSE al cliente</span></label></div><div id="o_dat" hidden><label class="l" for="o_last4">Últimos 4 dígitos de la tarjeta (del voucher)</label><input id="o_last4" name="last4" inputmode="numeric" maxlength="4"></div></fieldset>
@@ -786,7 +766,7 @@ function officeSaleForm(){
     <div class="errbox" id="oerr" role="alert"></div><button class="btn">${ic("server")}Enviar al servidor central</button></div>
     <aside class="card side"><h3>Valor a cobrar</h3><div id="osum"></div></aside></form>`;
 }
-function wireOfficeSale(s){
+function wireOfficeSale(){
   const f=$("#of"),box=$("#oerr");
   const build=()=>{const pid=f.elements.prod.value,p=P[pid];$("#o_params").innerHTML=`<div class="fg">${p.fields.map(x=>fieldHTML(x)).join("")}</div>`;$("#o_extra").innerHTML=extraHTML(pid);$("#o_startW").hidden=pid==="viaje";calc()};
   const calc=()=>{moneyHints(f);const pid=f.elements.prod.value,p=P[pid],v=readParams(p,f),bad=validParams(p,v);$("#osum").innerHTML=bad?`<p class="errbox">${esc(bad)}</p>`:(()=>{const pr=price(pid,v,f.elements.plan.value);return `<div class="sumrow"><span>${p.name} · ${planName(f.elements.plan.value)}</span></div><div class="sumrow"><span>Prima neta</span><span>${money(pr.neta)}</span></div><div class="sumrow"><span>IVA</span><span>${p.iva?money(pr.iva):"No aplica"}</span></div><div class="sumrow tot"><span>Total</span><span>${money(pr.total)}</span></div>`})();$("#o_dat").hidden=f.elements.pm.value!=="datafono"};
@@ -799,16 +779,25 @@ function wireOfficeSale(s){
     const start=pid==="viaje"?ex.o.salida:f.elements.start.value;if(!start||start<isoDate(new Date()))return showErr(box,{err:"La fecha de inicio no puede ser anterior a hoy.",el:f.elements.start});
     const pay={method:f.elements.pm.value};if(pay.method==="datafono"){if(!/^\d{4}$/.test(f.elements.last4.value))return showErr(box,{err:"Escribe los últimos 4 dígitos de la tarjeta.",el:f.elements.last4});pay.last4=f.elements.last4.value}
     if(!f.elements.ok_cli.checked||!f.elements.ok_id.checked)return showErr(box,{err:"Confirma la aceptación del cliente y la verificación del documento.",el:f.elements.ok_cli});
-    showErr(box,{});
-    const id=newTx({channel:"oficina",office:s.office,seller:s.name,sellerCode:s.code,product:pid,plan:f.elements.plan.value,params:v,extra:ex.o,client:r.c,start,premium:price(pid,v,f.elements.plan.value),freq:"anual",pay,accepted:["firma_tableta"]});
-    location.hash="#/oficina/venta/"+id};
+    showErr(box,{});const sb=e.submitter||f.querySelector("button:not([type=button])");sb.disabled=true;
+    api("office/tx",{method:"POST",body:{office:f.elements.off?f.elements.off.value:undefined,product:pid,plan:f.elements.plan.value,params:v,extra:ex.o,client:r.c,start,pay,okCliente:true,okDocumento:true}})
+      .then(j=>{FRESH.add(j.tx.id);location.hash="#/oficina/venta/"+j.tx.id}).catch(err=>{sb.disabled=false;showErr(box,{err:err.message})})};
 }
-function vOfficeSale(id){
-  const s=seller(),t=getTx(id);if(!s)return vOffice();if(!t||t.channel!=="oficina")return vNotFound();
-  const paint=()=>{const x=getTx(id);$("#ores").innerHTML=officeResult(x);const cf=$("#cf");if(cf)cf.onsubmit=e=>{e.preventDefault();const r=CENTRAL.officeClose(id,cf.elements.code.value,cf.elements.total.value,s.name);if(r.ok){toast("Venta cerrada. Póliza emitida.")}else toast(r.msg);paint()}};
-  after(()=>{paint();runIfPending(id,paint)});
-  return `<div class="wrap" style="padding-top:28px"><div class="crumbs"><a href="#/oficina">Portal de asesores</a> › Venta ${t.id}</div><h1 style="margin:0 0 6px">Venta ${t.id}</h1><p class="muted" style="margin:0 0 22px">${esc(fullName(t.client))} · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)} · ${payName(t.pay.method)} · Asesor ${esc(t.seller)}</p>
-  <div class="layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(t)}</div><div id="ores"></div></div></div>`;
+async function vOfficeSale(id){
+  const g=gate(["asesor","admin"]);if(g)return g;
+  let t;try{t=(await api("tx/"+id)).tx}catch(e){return ()=>errView(e)}
+  if(t.channel!=="oficina")return ()=>vNotFound();
+  return ()=>{
+    const fresh=FRESH.has(id);
+    const paint=x=>{$("#ores").innerHTML=officeResult(x);const cf=$("#cf");if(cf)cf.onsubmit=async e=>{e.preventDefault();const sb=cf.querySelector("button");sb.disabled=true;
+      try{const j=await api("tx/"+id+"/close",{method:"POST",body:{code:cf.elements.code.value,total:cf.elements.total.value}});
+        if(j.closed){toast("Venta cerrada. Póliza emitida.");paint(j.tx);const m=await mailPolicy(j.tx,true);const n=$("#omail");if(n)n.textContent=m.status==="enviado"?"Certificado en PDF enviado a "+m.to+".":"Correo: "+(m.note||m.status)+"."}
+        else{toast(j.msg);paint(j.tx)}}
+      catch(err){toast(err.message);sb.disabled=false}}};
+    after(()=>playSteps(t,id,()=>paint(t)));
+    return `<div class="wrap" style="padding-top:28px"><div class="crumbs"><a href="#/oficina">Portal de asesores</a> › Venta ${t.id}</div><h1 style="margin:0 0 6px">Venta ${t.id}</h1><p class="muted" style="margin:0 0 22px">${esc(fullName(t.client))} · ${P[t.product].name} ${planName(t.plan)} · ${money(t.premium.total)} · ${payName(t.pay.method)} · Asesor ${esc(t.seller||"")}</p>
+  <div class="layout2"><div class="card"><h3>Servidor central</h3>${stepsHTML(fresh?null:t)}</div><div id="ores"><div class="card"><p class="muted" style="margin:0">Esperando respuesta del servidor central…</p></div></div></div></div>`;
+  };
 }
 function officeResult(t){
   if(["nueva","procesando"].includes(t.status))return `<div class="card"><p class="muted" style="margin:0">Esperando respuesta del servidor central…</p></div>`;
@@ -817,82 +806,82 @@ function officeResult(t){
     <p class="muted" style="margin:8px 0 0">Valor aprobado</p><div class="bignum">${money(t.premium.total)}</div>
     <div class="fg" style="margin-top:14px"><div class="full"><label class="l" for="c_code">Escribe el número de aprobación</label><input id="c_code" name="code" class="mono" autocomplete="off" placeholder="APR-…"></div><div class="full"><label class="l" for="c_total">Valor cobrado al cliente</label><input id="c_total" name="total" inputmode="numeric" placeholder="Sin puntos"></div></div>
     ${t.attempts?`<p class="errbox">Intentos fallidos: ${t.attempts} de 3.</p>`:""}<button class="btn teal" style="margin-top:14px">${ic("key")}Dar aprobado y cerrar la venta</button></form>`;
-  if(t.status==="aprobada")return `<div class="card"><div class="okbox"><b>Venta cerrada.</b> Póliza emitida por el servidor central.</div><p class="muted" style="margin:14px 0 0">Póliza</p><div class="bignum">${t.policy}</div><p class="muted" style="margin:8px 0 0">Aprobación</p><div class="bignum">${t.approval.code}</div><p class="tiny">El certificado en PDF y el enlace de consulta se enviaron a ${esc(maskMail(t.client.email))}.</p>${certActions(t.policy,{cert:true})}<p style="margin:12px 0 0"><a href="#/oficina">+ Nueva venta</a></p></div>`;
+  if(t.status==="aprobada")return `<div class="card"><div class="okbox"><b>Venta cerrada.</b> Póliza emitida por el servidor central.</div><p class="muted" style="margin:14px 0 0">Póliza</p><div class="bignum">${t.policy}</div><p class="muted" style="margin:8px 0 0">Aprobación</p><div class="bignum">${t.approval.code}</div><p class="tiny" id="omail"></p><p class="tiny">El certificado en PDF se envía solo al correo registrado del cliente (${esc(maskMail(t.client.email))}).</p>${certActions(t.policy,{cert:true})}<p style="margin:12px 0 0"><a href="#/oficina">+ Nueva venta</a></p></div>`;
   if(t.status==="revision")return `<div class="card"><div class="warnbox"><b>En revisión en el servidor central.</b><br>${esc((t.reasons||[]).join(" "))}</div><p>Cuando un analista la apruebe, aparecerá en “Por cerrar” con su número de aprobación.</p></div>`;
   if(t.status==="bloqueada")return `<div class="card"><div class="errbox" style="margin:0"><b>Venta bloqueada.</b> Hubo 3 intentos fallidos de aprobado. Solicita el desbloqueo al servidor central; se emitirá un número de aprobación nuevo.</div></div>`;
   if(t.status==="rechazada")return `<div class="card"><div class="errbox" style="margin:0"><b>Rechazada.</b> ${esc(t.reason||"")}</div></div>`;
   return `<div class="card">${badge(t.status)}</div>`;
 }
 
-/* ============ Consola del servidor central ============ */
-function vCentral(){
+/* ============ Consola del servidor central (solo administradores) ============ */
+async function vCentral(){
+  const g=gate(["admin"],"La consola del servidor central es exclusiva de administradores.");if(g)return g;
   const q=new URLSearchParams(location.hash.split("?")[1]||"");const tab=q.get("t")||"tx";
-  const txs=Object.values(allTx()).sort((a,b)=>b.createdAt.localeCompare(a.createdAt));
-  const em=txs.filter(t=>["aprobada","revocada"].includes(t.status));
-  const web=txs.filter(t=>t.channel==="web").length,off=txs.length-web;
-  const fin=txs.filter(t=>["aprobada","rechazada","revocada"].includes(t.status)),rate=fin.length?Math.round(100*fin.filter(t=>t.status!=="rechazada").length/fin.length):0;
-  const claims=store.get("claims",[]),pqrs=store.get("pqr",[]),mails=store.get("outbox",[]),bens=store.get("ben",[]);
+  const ep={tx:"admin/tx",sin:"admin/claims",pqr:"admin/pqr",ben:"admin/benefits",mail:"admin/mail",audit:"admin/audit",users:"admin/users"}[tab]||"admin/tx";
+  let S,L;try{[S,L]=await Promise.all([api("admin/summary"),api(ep)]);L=L.list}catch(e){return ()=>errView(e)}
+  return ()=>{
+  const k=S.k,n=S.counts;
   after(()=>{
-    const seed=$("#seed");if(seed)seed.onclick=async()=>{seed.disabled=true;await seedDemo();toast("Se crearon transacciones de ejemplo");router()};
-    const rs=$("#reset");if(rs)rs.onclick=()=>{if(rs.dataset.c!=="1"){rs.dataset.c="1";rs.textContent="Confirmar: borrar todo";return}["txs","audit","seq","claims","pqr","seller","q","verif","outbox","ben"].forEach(k=>store.del(k));toast("Datos del simulador borrados");router()};
+    $$("[data-seed]").forEach(b=>b.onclick=async()=>{b.disabled=true;try{await api("admin/seed",{method:"POST"});toast("Se crearon transacciones de ejemplo");router()}catch(e){toast(e.message);b.disabled=false}});
     const fl=$("#flt");if(fl)fl.oninput=()=>{const c=fl.elements.c.value,s=fl.elements.s.value,x=fl.elements.x.value.trim().toLowerCase();$$("#txt tbody tr").forEach(r=>{r.hidden=!((!c||r.dataset.c===c)&&(!s||r.dataset.s===s)&&(!x||r.textContent.toLowerCase().includes(x)))})};
-    const va=$("#va");if(va)va.onclick=()=>{const r=verifyAudit();$("#vares").innerHTML=r.ok?`<div class="okbox">Integridad verificada: los ${r.n} registros encadenados están intactos.</div>`:`<div class="errbox">Se detectó una alteración en el registro #${r.at}.</div>`};
-    const tm=$("#tamper");if(tm)tm.onclick=()=>{const a=store.get("audit",[]);if(a.length<2)return toast("Aún no hay registros suficientes");a[Math.floor(a.length/2)].ev+=" (alterado)";store.set("audit",a);toast("Se alteró un registro intermedio. Verifica la integridad.")};
+    const va=$("#va");if(va)va.onclick=async()=>{va.disabled=true;try{const r=(await api("admin/audit/verify",{method:"POST"}));$("#vares").innerHTML=r.intact?`<div class="okbox">Integridad verificada: los ${r.n} registros encadenados en la base de datos están intactos.</div>`:`<div class="errbox">Se detectó una alteración en el registro #${r.at} de ${r.n}.</div>`}catch(e){toast(e.message)}va.disabled=false};
+    $$("[data-retry]").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const t=(await api("policy/"+b.dataset.pol)).tx;const m=b.dataset.ben?await mailBenefit(t,b.dataset.key,{...(t.benefits[b.dataset.key]||[]).find(r=>r.code===b.dataset.ben)},true):await mailPolicy(t,true);toast("Resultado: "+m.status+(m.note?" · "+m.note:""));router()}catch(e){toast(e.message);b.disabled=false}});
+    const uf=$("#uf");if(uf){const sync=()=>{uf.elements.office.disabled=uf.elements.role.value!=="asesor"};uf.elements.role.onchange=sync;sync();
+      uf.onsubmit=async e=>{e.preventDefault();const box=$("#uerr");try{await api("admin/users",{method:"POST",body:{name:uf.elements.name.value,email:uf.elements.email.value,role:uf.elements.role.value,office:uf.elements.office.value,password:uf.elements.password.value}});toast("Usuario creado. Debe cambiar la contraseña temporal al ingresar.");router()}catch(err){box.textContent=err.message}}}
+    $$("[data-u]").forEach(b=>b.onclick=async()=>{const body={};if(b.dataset.op==="toggle")body.active=b.dataset.v==="1";if(b.dataset.op==="unlock")body.unlock=true;if(b.dataset.op==="reset"){const p=prompt("Contraseña temporal nueva (mínimo 10 caracteres, letras y números):");if(!p)return;body.password=p}
+      try{await api("admin/users/"+b.dataset.u,{method:"POST",body});toast("Usuario actualizado");router()}catch(e){toast(e.message)}});
   });
-  const tabs=`<nav class="tabs"><a href="#/central?t=tx" class="${tab==="tx"?"on":""}">Transacciones</a><a href="#/central?t=sin" class="${tab==="sin"?"on":""}">Siniestros (${claims.length})</a><a href="#/central?t=pqr" class="${tab==="pqr"?"on":""}">PQR (${pqrs.length})</a><a href="#/central?t=ben" class="${tab==="ben"?"on":""}">Beneficios (${bens.length})</a><a href="#/central?t=mail" class="${tab==="mail"?"on":""}">Correos (${mails.length})</a><a href="#/central?t=audit" class="${tab==="audit"?"on":""}">Historial e integridad</a></nav>`;
+  const T=(head,rows,empty)=>rows.length?`<div class="tblwrap"><table class="tbl"><thead><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table></div>`:`<p class="muted">${empty}</p>`;
+  const tabs=`<nav class="tabs">${[["tx","Transacciones",k.tx],["sin","Siniestros",n.claims],["pqr","PQR",n.pqr],["ben","Beneficios",n.benefits],["mail","Correos",n.mail],["audit","Auditoría",null],["users","Usuarios",null]].map(([id,l,c])=>`<a href="#/central?t=${id}" class="${tab===id?"on":""}">${l}${c!=null?` (${c})`:""}</a>`).join("")}</nav>`;
   let body="";
   if(tab==="tx")body=`<form class="filters" id="flt" onsubmit="return false"><select name="c" aria-label="Canal"><option value="">Todos los canales</option><option value="web">Web</option><option value="oficina">Oficinas</option></select><select name="s" aria-label="Estado"><option value="">Todos los estados</option>${Object.entries(STATUS).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("")}</select><input name="x" placeholder="Buscar transacción, póliza, aprobación…" aria-label="Buscar"></form>
-    ${txs.length?`<div class="tblwrap"><table class="tbl" id="txt"><thead><tr><th>Transacción</th><th>Fecha</th><th>Canal</th><th>Seguro</th><th>Cliente</th><th>Total</th><th>Póliza</th><th>Aprobación</th><th>Estado</th></tr></thead><tbody>${txs.map(t=>`<tr class="click" data-c="${t.channel}" data-s="${t.status}" onclick="location.hash='#/central/tx/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${chName(t)}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${maskName(t.client)} <span class="muted">${maskDoc(t.client.doc)}</span></td><td>${money(t.premium.total)}</td><td class="mono">${t.policy||"—"}</td><td class="mono">${t.approval?t.approval.code:"—"}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="card"><p style="margin-top:0">Aún no hay transacciones. Haz una compra en la web o una venta en el portal de asesores, o genera datos de ejemplo.</p><button class="btn" id="seed">Generar transacciones de ejemplo</button></div>`}`;
-  if(tab==="sin")body=claims.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Radicado</th><th>Fecha</th><th>Póliza</th><th>Tipo</th><th>Ciudad</th><th>Estado</th></tr></thead><tbody>${claims.slice().reverse().map(c=>`<tr><td class="mono">${c.id}</td><td>${fdt(c.at)}</td><td class="mono">${c.policy}</td><td>${esc(c.tipo)}</td><td>${esc(c.ciudad)}</td><td><span class="badge b-pre">Asignado a ajustador</span></td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay siniestros reportados.</p>`;
-  if(tab==="pqr")body=pqrs.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Radicado</th><th>Fecha</th><th>Tipo</th><th>Canal</th><th>Respuesta máxima</th><th>Estado</th></tr></thead><tbody>${pqrs.slice().reverse().map(c=>`<tr><td class="mono">${c.id}</td><td>${fdt(c.at)}</td><td>${esc(c.tipo)}</td><td>Web</td><td>${fdate(c.due)}</td><td><span class="badge b-rev">En trámite</span></td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">No hay PQR radicadas.</p>`;
-  if(tab==="ben")body=bens.length?`<div class="tblwrap"><table class="tbl"><thead><tr><th>Código</th><th>Fecha</th><th>Póliza</th><th>Cliente</th><th>Beneficio</th><th>Detalle</th></tr></thead><tbody>${bens.slice().reverse().map(x=>`<tr><td class="mono">${esc(x.id)}</td><td>${fdt(x.at)}</td><td class="mono"><a href="#/poliza/${x.policy}">${x.policy}</a></td><td>${esc(x.client)}</td><td>${esc(BENEFITS[x.benefit].name)}</td><td style="white-space:normal">${x.detail?esc(x.detail.ciudad?`${x.detail.ciudad} · ${fdate(x.detail.fecha)} · ${x.detail.jornada}`:`${x.detail.tema} · ${x.detail.canal}`):"Código de descuento o acceso"}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">Aún no se han activado beneficios.</p>`;
-  if(tab==="mail")body=mails.length?`<p class="muted" style="margin-top:0;font-size:14px">Al emitir cada póliza, el servidor central envía al tomador el certificado en PDF y el enlace de consulta. El envío lo hace la función de Azure <span class="mono">/api/send-policy</span> por SMTP con el buzón de GoDaddy configurado. Los correos de prueba (@ejemplo.com) y los datos de ejemplo no se envían de verdad.</p><div class="tblwrap"><table class="tbl"><thead><tr><th>Envío</th><th>Fecha</th><th>Para</th><th>Asunto</th><th>Adjunto</th><th>Estado</th><th></th></tr></thead><tbody>${mails.slice().reverse().map(m=>`<tr><td class="mono">${m.id}</td><td>${fdt(m.at)}</td><td>${esc(maskMail(m.to))}</td><td>${esc(m.subject)}</td><td>${m.kind==="benefit"?`<span class="muted">Confirmación de beneficio</span>`:`<a href="#" data-act="pdf" data-pol="${m.policy}">Poliza-${m.policy}.pdf</a>`}</td><td>${mailBadge(m)}</td><td>${m.status==="error"?`<button class="btn sec sm" data-act="retry" data-mail="${m.id}">Reintentar</button>`:`<a href="${esc(m.link)}">Abrir certificado</a>`}</td></tr>`).join("")}</tbody></table></div>`:`<p class="muted">Aún no se han enviado certificados.</p>`;
-  if(tab==="audit"){const a=store.get("audit",[]);body=`<div class="grid g2" style="margin-bottom:18px"><div class="card"><h3>Integridad del historial</h3><p class="muted" style="margin-top:0;font-size:14px">Cada registro guarda una huella calculada con la huella del registro anterior. Si alguien modifica o borra un registro, la cadena deja de coincidir.</p><div class="row"><button class="btn teal sm" id="va">Verificar integridad</button><button class="btn sec sm" id="tamper">Simular alteración</button></div><div id="vares" style="margin-top:12px"></div></div><div class="card"><h3>Datos del simulador</h3><p class="muted" style="margin-top:0;font-size:14px">Todo se guarda en este navegador. Puedes generar ejemplos o empezar de cero.</p><div class="row"><button class="btn sec sm" id="seed">Generar ejemplos</button><button class="btn red sm" id="reset">Borrar todos los datos</button></div></div></div>
-    <div class="tblwrap"><table class="tbl"><thead><tr><th>#</th><th>Fecha</th><th>Transacción</th><th>Evento</th><th>Actor</th><th>Huella</th></tr></thead><tbody>${a.slice(-60).reverse().map(e=>`<tr><td>${e.n}</td><td>${fdt(e.at)}</td><td class="mono">${e.tx}</td><td style="white-space:normal;min-width:320px">${esc(e.ev)}</td><td>${esc(e.by)}</td><td class="mono">${e.h}</td></tr>`).join("")||`<tr><td colspan="6" class="muted">Sin registros.</td></tr>`}</tbody></table></div>`}
-  return `<div class="wrap" style="padding-top:28px"><div class="console-h"><div><h1>${ic("server").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} Servidor central · Sede principal Bogotá</h1><p>Consola interna simulada. Aquí se aprueban todas las ventas de la web y de las oficinas.</p></div><span class="live">En línea</span></div>
-  <div class="kpis"><div class="kpi"><b>${txs.length}</b><span>Transacciones</span></div><div class="kpi"><b>${web} / ${off}</b><span>Web / Oficinas</span></div><div class="kpi"><b>${em.length}</b><span>Pólizas emitidas</span></div><div class="kpi"><b>${money(em.reduce((a,t)=>a+t.premium.total,0))}</b><span>Primas emitidas</span></div><div class="kpi"><b>${txs.filter(t=>["revision","bloqueada"].includes(t.status)).length}</b><span>Requieren acción</span></div><div class="kpi"><b>${rate}%</b><span>Tasa de aprobación</span></div></div>
+    ${L.length?`<div class="tblwrap"><table class="tbl" id="txt"><thead><tr><th>Transacción</th><th>Fecha</th><th>Canal</th><th>Seguro</th><th>Cliente</th><th>Total</th><th>Póliza</th><th>Aprobación</th><th>Estado</th></tr></thead><tbody>${L.map(t=>`<tr class="click" data-c="${t.channel}" data-s="${t.status}" onclick="location.hash='#/central/tx/${t.id}'"><td class="mono">${t.id}</td><td>${fdt(t.createdAt)}</td><td>${chName(t)}</td><td>${P[t.product].name} · ${planName(t.plan)}</td><td>${esc(t.client)} <span class="muted">•••• ${esc(t.doc4)}</span></td><td>${money(t.total)}</td><td class="mono">${t.policy||"—"}</td><td class="mono">${t.approval||"—"}</td><td>${badge(t.status)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="card"><p style="margin-top:0">Aún no hay transacciones. Haz una compra en la web o una venta en el portal de asesores, o genera datos de ejemplo.</p><button class="btn" data-seed>Generar transacciones de ejemplo</button></div>`}`;
+  if(tab==="sin")body=T(["Radicado","Fecha","Póliza","Tipo","Ciudad","Estado"],L.map(c=>`<tr><td class="mono">${esc(c.id)}</td><td>${fdt(c.at)}</td><td class="mono">${esc(c.policy)}</td><td>${esc(c.tipo)}</td><td>${esc(c.ciudad)}</td><td><span class="badge b-pre">Asignado a ajustador</span></td></tr>`),"No hay siniestros reportados.");
+  if(tab==="pqr")body=T(["Radicado","Fecha","Tipo","Correo","Respuesta máxima","Estado"],L.map(c=>`<tr><td class="mono">${esc(c.id)}</td><td>${fdt(c.at)}</td><td>${esc(c.tipo)}</td><td>${esc(c.email)}</td><td>${fdate(c.due)}</td><td><span class="badge b-rev">En trámite</span></td></tr>`),"No hay PQR radicadas.");
+  if(tab==="ben")body=T(["Código","Fecha","Póliza","Cliente","Beneficio","Detalle"],L.map(x=>`<tr><td class="mono">${esc(x.code)}</td><td>${fdt(x.at)}</td><td class="mono"><a href="#/poliza/${esc(x.policy)}">${esc(x.policy)}</a></td><td>${esc(x.client||"")}</td><td>${esc((BENEFITS[x.benefit]||{}).name||x.benefit)}</td><td style="white-space:normal">${x.detail?esc(x.detail.ciudad?`${x.detail.ciudad} · ${fdate(x.detail.fecha)} · ${x.detail.jornada}`:`${x.detail.tema} · ${x.detail.canal}`):"Código de descuento o acceso"}</td></tr>`),"Aún no se han activado beneficios.");
+  if(tab==="mail")body=`<p class="muted" style="margin-top:0;font-size:14px">El servidor central envía el certificado y las confirmaciones solo al correo registrado del tomador (función <span class="mono">/api/v1/mail</span>, SMTP de GoDaddy). Los correos de prueba (@ejemplo.com) se simulan.</p>`+T(["Envío","Fecha","Para","Asunto","Estado",""],L.map(m=>`<tr><td class="mono">${esc(m.id)}</td><td>${fdt(m.at)}</td><td>${esc(m.to)}</td><td>${esc(m.subject)}</td><td>${mailBadge(m)}</td><td>${["error","pendiente"].includes(m.status)?`<button class="btn sec sm" data-retry data-pol="${esc(m.policy)}" ${m.benefitCode?`data-ben="${esc(m.benefitCode)}" data-key="${esc(benKeyOf(m.benefitCode))}"`:""}>Enviar ahora</button>`:""}</td></tr>`),"Aún no se han enviado certificados.");
+  if(tab==="audit")body=`<div class="card" style="margin-bottom:18px"><h3>Integridad del historial</h3><p class="muted" style="margin-top:0;font-size:14px">Cada registro de la tabla <span class="mono">ig_audit</span> guarda una huella HMAC-SHA256 calculada en el servidor con una clave secreta y la huella del registro anterior. Si alguien modifica o borra un registro directamente en la base de datos, la cadena deja de coincidir.</p><button class="btn teal sm" id="va">Verificar integridad</button><div id="vares" style="margin-top:12px"></div></div>`+T(["#","Fecha","Transacción","Evento","Actor","Huella"],L.map(e=>`<tr><td>${e.n}</td><td>${fdt(e.at)}</td><td class="mono">${esc(e.tx)}</td><td style="white-space:normal;min-width:320px">${esc(e.ev)}</td><td>${esc(e.by)}</td><td class="mono" title="${esc(e.h)}">${esc(String(e.h).slice(0,16))}…</td></tr>`),"Sin registros.");
+  if(tab==="users")body=`<div class="users-grid"><div style="min-width:0">${T(["Nombre","Correo","Rol","Oficina","Último ingreso","Estado",""],L.map(u=>`<tr><td>${esc(u.name)}</td><td>${esc(u.email)}</td><td>${ROLE_NAME[u.role]}</td><td>${esc(u.office?(officeById(u.office)||{}).city||u.office:"—")}</td><td>${u.lastLogin?fdt(u.lastLogin):"—"}</td><td>${u.active?(u.locked?`<span class="badge b-bad">Bloqueado</span>`:u.mustChange?`<span class="badge b-pre">Clave temporal</span>`:`<span class="badge b-ok">Activo</span>`):`<span class="badge b-gray">Inactivo</span>`}</td><td style="white-space:nowrap">${u.id===ME.id?"(tú)":`${u.locked?`<button class="btn sec sm" data-u="${u.id}" data-op="unlock">Desbloquear</button> `:""}${u.role!=="cliente"?`<button class="btn sec sm" data-u="${u.id}" data-op="reset">Clave temporal</button> `:""}<button class="btn ${u.active?"red":"sec"} sm" data-u="${u.id}" data-op="toggle" data-v="${u.active?0:1}">${u.active?"Desactivar":"Activar"}</button>`}</td></tr>`),"Sin usuarios.")}</div>
+    <form class="card" id="uf"><h3>Crear asesor o administrador</h3><p class="tiny" style="margin-top:0">Los clientes se registran solos. El usuario nuevo debe cambiar la contraseña temporal en su primer ingreso.</p><label class="l">Nombre</label><input name="name" required><label class="l" style="margin-top:10px">Correo</label><input name="email" type="email" required><label class="l" style="margin-top:10px">Rol</label><select name="role"><option value="asesor">Asesor de oficina</option><option value="admin">Administrador</option></select><label class="l" style="margin-top:10px">Oficina</label><select name="office">${OFFICES.map(o=>`<option value="${o.id}">${o.city} · ${o.name}</option>`).join("")}</select><label class="l" style="margin-top:10px">Contraseña temporal</label><input name="password" type="text" autocomplete="off" minlength="10" required><div class="errbox" id="uerr"></div><button class="btn full" style="margin-top:12px">Crear usuario</button></form></div>`;
+  return `<div class="wrap" style="padding-top:28px"><div class="console-h"><div><h1>${ic("server").replace("<svg",'<svg style="width:24px;height:24px;vertical-align:-4px"')} Servidor central · Sede principal Bogotá</h1><p>Consola de administración. Datos en ${S.store==="sql"?"Azure SQL Database":"almacenamiento de pruebas en memoria"} · sesión de ${esc(ME.name)}.</p></div><div class="row"><span class="live">En línea</span><button class="btn sec sm" data-seed>Generar ejemplos</button></div></div>
+  <div class="kpis"><div class="kpi"><b>${k.tx}</b><span>Transacciones</span></div><div class="kpi"><b>${k.web} / ${k.office}</b><span>Web / Oficinas</span></div><div class="kpi"><b>${k.emitted}</b><span>Pólizas emitidas</span></div><div class="kpi"><b>${money(k.premiums)}</b><span>Primas emitidas</span></div><div class="kpi"><b>${k.action}</b><span>Requieren acción</span></div><div class="kpi"><b>${k.rate}%</b><span>Tasa de aprobación</span></div></div>
   ${tabs}${body}</div>`;
+  };
 }
+const benKeyOf=code=>{const c=String(code||"");const m=c.match(/^BEN-([A-Z]{3})-/)||c.match(/^([A-Z]{3})-/);return m?(Object.keys(BENEFITS).find(k=>BENEFITS[k].code===m[1])||""):""};
 const mailBadge=m=>{const k={enviado:["Enviado","b-ok"],simulado:["Simulado","b-gray"],error:["Error","b-bad"],pendiente:["En cola","b-pre"],enviando:["Enviando…","b-pre"]}[m.status||"simulado"]||["—","b-gray"];return `<span class="badge ${k[1]}" title="${esc(m.note||"")}">${k[0]}</span>${m.note?`<div class="tiny" style="white-space:normal;max-width:240px">${esc(m.note)}</div>`:""}`};
-function vCentralTx(id){
-  const t=getTx(id);if(!t)return vNotFound();
-  after(()=>{const b=(s,f)=>{const el=$(s);if(el)el.onclick=()=>{f();router()}};
-    b("#ap",()=>CENTRAL.approveReview(id));b("#ul",()=>CENTRAL.unlock(id));
-    const rj=$("#rj");if(rj)rj.onclick=()=>{const r=$("#rjr").value.trim();if(r.length<5){toast("Escribe el motivo del rechazo");return}CENTRAL.reject(id,r);router()}});
+async function vCentralTx(id){
+  const g=gate(["admin"]);if(g)return g;
+  let t;try{t=(await api("admin/tx/"+id)).tx}catch(e){return ()=>errView(e)}
+  return ()=>{
+  after(()=>{const act=async(a,body)=>{try{const j=await api("admin/tx/"+id+"/"+a,{method:"POST",body});toast("Listo");if(j.tx.status==="aprobada"&&j.tx.channel==="web")mailPolicy(j.tx,true);router()}catch(e){toast(e.message)}};
+    const ap=$("#ap");if(ap)ap.onclick=()=>act("approve");const ul=$("#ul");if(ul)ul.onclick=()=>act("unlock");
+    const rj=$("#rj");if(rj)rj.onclick=()=>{const r=$("#rjr").value.trim();if(r.length<5){toast("Escribe el motivo del rechazo");return}act("reject",{reason:r})}});
   const actions=t.status==="revision"?`<div class="card" style="margin-top:18px"><h3>Revisión manual</h3><div class="warnbox">${esc((t.reasons||[]).join(" "))}</div><div class="row" style="margin-top:12px"><button class="btn teal sm" id="ap">Aprobar</button></div><label class="l" for="rjr" style="margin-top:14px">Motivo del rechazo</label><input id="rjr"><button class="btn red sm" id="rj" style="margin-top:8px">Rechazar</button></div>`
     :t.status==="bloqueada"?`<div class="card" style="margin-top:18px"><h3>Venta bloqueada</h3><p>3 intentos fallidos de aprobado en oficina. Al desbloquear se anula el número de aprobación anterior y se emite uno nuevo.</p><button class="btn sm" id="ul">Desbloquear y emitir nueva aprobación</button></div>`:"";
   return `<div class="wrap" style="padding-top:28px"><div class="crumbs"><a href="#/central">Servidor central</a> › ${t.id}</div><div class="row" style="justify-content:space-between"><h1 style="margin:0">${t.id}</h1>${badge(t.status)}</div>
-  <div class="layout2" style="margin-top:18px"><div><div class="card"><dl class="kv"><dt>Canal</dt><dd>${chName(t)}${t.seller?" · "+esc(t.seller)+" ("+t.sellerCode+")":""}</dd><dt>Seguro</dt><dd>${P[t.product].name} · ${planName(t.plan)}</dd><dt>Riesgo</dt><dd>${esc(P[t.product].desc(t.params))}</dd><dt>Cliente</dt><dd>${esc(maskName(t.client))} · ${esc(t.client.tipoDoc)} ${maskDoc(t.client.doc)}</dd><dt>Total</dt><dd>${money(t.premium.total)} · ${payName(t.pay.method)}${t.pay.last4?" •••• "+t.pay.last4:""}</dd><dt>Póliza</dt><dd class="mono">${t.policy?`<a href="#/poliza/${t.policy}">${t.policy}</a>`:"—"}</dd><dt>Aprobación</dt><dd class="mono">${t.approval?t.approval.code:"—"}</dd>${t.fp?`<dt>Huella</dt><dd class="mono">${t.fp}</dd>`:""}</dl></div>${actions}</div>
+  <div class="layout2" style="margin-top:18px"><div><div class="card"><dl class="kv"><dt>Canal</dt><dd>${chName(t)}${t.seller?" · "+esc(t.seller)+" ("+esc(t.sellerCode||"")+")":""}</dd><dt>Seguro</dt><dd>${P[t.product].name} · ${planName(t.plan)}</dd><dt>Riesgo</dt><dd>${esc(P[t.product].desc(t.params))}</dd><dt>Cliente</dt><dd>${esc(maskName(t.client))} · ${esc(t.client.tipoDoc)} ${maskDoc(t.client.doc)}</dd><dt>Total</dt><dd>${money(t.premium.total)} · ${payName(t.pay.method)}${t.pay.last4?" •••• "+t.pay.last4:""}</dd><dt>Póliza</dt><dd class="mono">${t.policy?`<a href="#/poliza/${t.policy}">${t.policy}</a>`:"—"}</dd><dt>Aprobación</dt><dd class="mono">${t.approval?t.approval.code:"—"}</dd>${t.fp?`<dt>Huella</dt><dd class="mono">${t.fp}</dd>`:""}</dl></div>${actions}</div>
   <div class="card"><h3>Pasos</h3>${stepsHTML(t)}</div></div>
-  <div class="card" style="margin-top:18px"><h3>Historial de la transacción</h3><ul class="loglist">${t.log.map(l=>`<li><time>${fdt(l.at)}</time><span>${esc(l.ev)} <span class="muted">· ${esc(l.by)}</span></span></li>`).join("")}</ul></div></div>`;
-}
-async function seedDemo(){
-  const people=[["Laura","Gómez Ruiz","1020304051"],["Andrés","Pérez Mora","79865432"],["Natalia","Suárez León","52987123"],["Jorge","Ramírez Díaz","80100000"],["Paula","Castro Niño","1098765432"],["Diego","Vargas Rey","1015432876"]];
-  const specs=[["web","auto","plus",{valor:92000000,modelo:2022,ciudad:"Bogotá",uso:"Particular"},{placa:"JKL482",marca:"Mazda 3"}],["oficina","vida","total",{edad:41,suma:300000000,fuma:"No"},{beneficiarios:[{nombre:"Sofía Pérez",parentesco:"Hijo(a)",pct:100}]}],["web","viaje","plus",{destino:"Europa (Schengen)",dias:20,viajeros:2,edad:38},{salida:addDays(isoDate(new Date()),10)}],["web","hogar","plus",{inmueble:420000000,contenido:60000000,tipo:"Apartamento",ciudad:"Medellín"},{dir_riesgo:"Cra 43A # 1-50"}],["oficina","auto","total",{valor:350000000,modelo:2025,ciudad:"Cali",uso:"Particular"},{placa:"XYZ123",marca:"BMW X3"}],["oficina","mascotas","plus",{tipo:"Perro",edad:4},{mascota:"Toby",raza:"Labrador"}]];
-  let i=0;for(const [ch,pid,plan,params,extra] of specs){const [n,a,doc]=people[i];const off=OFFICES[i%OFFICES.length];
-    const c={tipoDoc:"Cédula de ciudadanía",doc,nombres:n,apellidos:a,nacimiento:"1988-05-14",celular:"3001234567",email:n.toLowerCase()+"@ejemplo.com",ciudad:"Bogotá",direccion:"Calle 10 # 20-30"};
-    const id=newTx({channel:ch,office:ch==="oficina"?off.id:undefined,seller:ch==="oficina"?off.sellers[0]:undefined,sellerCode:ch==="oficina"?`AS-${off.id}-1`:undefined,product:pid,plan,params,extra,client:c,start:pid==="viaje"?extra.salida:addDays(isoDate(new Date()),1),premium:price(pid,params,plan),freq:"anual",pay:ch==="web"?{method:"pse",bank:"Bancolombia"}:{method:"efectivo"},accepted:["demo"],demo:true});
-    await CENTRAL.process(id,null,true);
-    if(ch==="oficina"&&getTx(id).status==="preaprobada"&&i!==5)CENTRAL.officeClose(id,getTx(id).approval.code,getTx(id).premium.total,off.sellers[0]);
-    i++}
+  <div class="card" style="margin-top:18px"><h3>Historial de la transacción</h3><ul class="loglist">${(t.log||[]).map(l=>`<li><time>${fdt(l.at)}</time><span>${esc(l.ev)} <span class="muted">· ${esc(l.by)}</span></span></li>`).join("")}</ul></div></div>`;
+  };
 }
 
 /* ============ Siniestros ============ */
-function vClaim(){
-  after(()=>{const f=$("#sf"),box=$("#serr");f.elements.fecha.max=isoDate(new Date());f.onsubmit=e=>{e.preventDefault();
-    const t=findPolicy(f.elements.pol.value);
-    if(!t)return showErr(box,{err:"No encontramos esa póliza.",el:f.elements.pol});
-    if(t.client.doc!==f.elements.doc.value.trim())return showErr(box,{err:"El documento no coincide con el del tomador de la póliza.",el:f.elements.doc});
+async function vClaim(){
+  const g=gate(["cliente"],"Para reportar un siniestro ingresa con tu cuenta de cliente. Si es urgente, llama a la línea 24/7.");if(g)return g;
+  let pols;try{pols=(await api("my/policies")).list.filter(t=>t.status==="aprobada")}catch(e){return ()=>errView(e)}
+  return ()=>{
+  after(()=>{const f=$("#sf"),box=$("#serr");f.elements.fecha.max=isoDate(new Date());f.onsubmit=async e=>{e.preventDefault();
     const d=f.elements.fecha.value;if(!d||d>isoDate(new Date()))return showErr(box,{err:"Escribe una fecha válida (no futura).",el:f.elements.fecha});
-    if(t.status!=="aprobada"||d<t.start||d>t.end)return showErr(box,{err:"La fecha del siniestro está fuera de la vigencia de la póliza o la póliza no está vigente.",el:f.elements.fecha});
     if(f.elements.desc.value.trim().length<20)return showErr(box,{err:"Describe qué pasó (mínimo 20 caracteres).",el:f.elements.desc});
-    showErr(box,{});
-    const id=`SIN-${new Date().getFullYear()}-${pad(seq("sin"),6)}`;const c={id,at:new Date().toISOString(),policy:t.policy,tipo:f.elements.tipo.value,fecha:d,ciudad:f.elements.ciudad.value,desc:f.elements.desc.value.trim()};
-    const all=store.get("claims",[]);all.push(c);store.set("claims",all);upd(t.id,x=>logTx(x,`Siniestro ${id} reportado (${c.tipo})`,"Asegurado (web)"));
-    $("#sres").innerHTML=`<div class="okbox"><b>Siniestro radicado: <span class="mono">${id}</span></b><br>Un ajustador te contactará en máximo 2 días hábiles. Tras presentar los documentos que prueben la ocurrencia y la cuantía, el pago se hace dentro del mes siguiente (art. 1080 del Código de Comercio).</div>`;f.reset()}});
+    showErr(box,{});const sb=e.submitter;if(sb)sb.disabled=true;
+    try{const j=await api("claims",{method:"POST",body:{policy:f.elements.pol.value,tipo:f.elements.tipo.value,fecha:d,ciudad:f.elements.ciudad.value,desc:f.elements.desc.value.trim()}});
+      $("#sres").innerHTML=`<div class="okbox"><b>Siniestro radicado: <span class="mono">${esc(j.id)}</span></b><br>Un ajustador te contactará en máximo 2 días hábiles. Tras presentar los documentos que prueben la ocurrencia y la cuantía, el pago se hace dentro del mes siguiente (art. 1080 del Código de Comercio).</div>`;f.reset()}
+    catch(err){showErr(box,{err:err.message})}if(sb)sb.disabled=false}});
   return pageH("Reportar un siniestro","Lamentamos lo ocurrido. Cuéntanos qué pasó y te asignamos un ajustador. Si hay heridos, llama primero a la línea 123.","Siniestros")+`
-  <div class="wrap layout2"><form class="card" id="sf" novalidate><div class="fg"><div><label class="l" for="s_pol">Número de póliza</label><input id="s_pol" name="pol" placeholder="IG-AUT-2026-000001"></div><div><label class="l" for="s_doc">Documento del tomador</label><input id="s_doc" name="doc"></div><div><label class="l" for="s_tipo">¿Qué pasó?</label><select id="s_tipo" name="tipo"><option>Choque o daño</option><option>Hurto</option><option>Incendio o daño por agua</option><option>Enfermedad o accidente</option><option>Fallecimiento</option><option>Pérdida de equipaje</option><option>Otro</option></select></div><div><label class="l" for="s_fecha">Fecha</label><input type="date" id="s_fecha" name="fecha"></div><div class="full"><label class="l" for="s_ciudad">Ciudad</label><select id="s_ciudad" name="ciudad">${CITIES.map(c=>`<option>${c}</option>`).join("")}</select></div><div class="full"><label class="l" for="s_desc">Descripción</label><textarea id="s_desc" name="desc" placeholder="Cuéntanos qué pasó, dónde y si hubo otras personas involucradas."></textarea></div></div><div class="errbox" id="serr"></div><button class="btn" style="margin-top:12px">Reportar siniestro</button><div id="sres" style="margin-top:14px"></div></form>
+  <div class="wrap layout2"><form class="card" id="sf" novalidate><div class="fg"><div class="full"><label class="l" for="s_pol">Póliza vigente</label><select id="s_pol" name="pol">${pols.map(t=>`<option value="${t.policy}">${t.policy} · ${P[t.product].name}</option>`).join("")||`<option value="">No tienes pólizas vigentes</option>`}</select></div><div><label class="l" for="s_tipo">¿Qué pasó?</label><select id="s_tipo" name="tipo"><option>Choque o daño</option><option>Hurto</option><option>Incendio o daño por agua</option><option>Enfermedad o accidente</option><option>Fallecimiento</option><option>Pérdida de equipaje</option><option>Otro</option></select></div><div><label class="l" for="s_fecha">Fecha</label><input type="date" id="s_fecha" name="fecha"></div><div class="full"><label class="l" for="s_ciudad">Ciudad</label><select id="s_ciudad" name="ciudad">${CITIES.map(c=>`<option>${c}</option>`).join("")}</select></div><div class="full"><label class="l" for="s_desc">Descripción</label><textarea id="s_desc" name="desc" placeholder="Cuéntanos qué pasó, dónde y si hubo otras personas involucradas."></textarea></div></div><div class="errbox" id="serr"></div><button class="btn" style="margin-top:12px">Reportar siniestro</button><div id="sres" style="margin-top:14px"></div></form>
   <aside class="card"><h3>Atención inmediata 24/7</h3><p style="margin-top:0">${ic("phone").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-3px"')} ${CO.tel}<br>${ic("whatsapp").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-3px"')} ${CO.wa}</p><h4>Documentos que te pediremos</h4><ul style="padding-left:18px;font-size:14.5px"><li>Documento de identidad</li><li>Denuncia (en caso de hurto)</li><li>Fotos y facturas del daño</li><li>Historia clínica (salud, vida o viaje)</li></ul></aside></div>`;
+  };
 }
 
 /* ============ Atención al cliente (PQR) ============ */
@@ -903,9 +892,10 @@ function vCare(){
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(g("email")))return showErr(box,{err:"Escribe un correo válido.",el:f.elements.email});
     if(g("msg").length<20)return showErr(box,{err:"Cuéntanos tu caso (mínimo 20 caracteres).",el:f.elements.msg});
     if(!f.elements.datos.checked)return showErr(box,{err:"Autoriza el tratamiento de datos para poder responderte.",el:f.elements.datos});
-    showErr(box,{});const id=`PQR-${new Date().getFullYear()}-${pad(seq("pqr"),6)}`;const due=addBizDays(new Date(),15);
-    const all=store.get("pqr",[]);all.push({id,at:new Date().toISOString(),tipo:g("tipo"),nombre:g("nombre"),doc:g("doc"),email:g("email"),poliza:g("poliza"),msg:g("msg"),due:due.toISOString()});store.set("pqr",all);audit("—",`PQR ${id} radicada (${g("tipo")})`,"Consumidor (web)");
-    $("#pres").innerHTML=`<div class="okbox"><b>Radicado: <span class="mono">${id}</span></b><br>Te responderemos a ${esc(g("email"))} a más tardar el ${fdate(due.toISOString())} (15 días hábiles).</div>`;f.reset()}});
+    showErr(box,{});const sb=e.submitter;if(sb)sb.disabled=true;
+    api("pqr",{method:"POST",body:{tipo:g("tipo"),nombre:g("nombre"),doc:g("doc"),email:g("email"),poliza:g("poliza"),msg:g("msg"),datos:true}})
+      .then(j=>{$("#pres").innerHTML=`<div class="okbox"><b>Radicado: <span class="mono">${esc(j.id)}</span></b><br>Te responderemos a ${esc(g("email"))} a más tardar el ${fdate(j.due)} (15 días hábiles).</div>`;f.reset()})
+      .catch(err=>showErr(box,{err:err.message})).finally(()=>{if(sb)sb.disabled=false})}});
   return pageH("Atención al cliente","Peticiones, quejas, reclamos y sugerencias. Todas reciben un radicado y respuesta en máximo 15 días hábiles.","Atención")+`
   <div class="wrap layout2"><form class="card" id="pf" novalidate><div class="fg"><div><label class="l" for="p_tipo">Tipo</label><select id="p_tipo" name="tipo"><option>Petición</option><option>Queja</option><option>Reclamo</option><option>Sugerencia</option><option>Felicitación</option></select></div><div><label class="l" for="p_pol">Póliza (opcional)</label><input id="p_pol" name="poliza"></div><div><label class="l" for="p_nom">Nombre completo</label><input id="p_nom" name="nombre"></div><div><label class="l" for="p_doc">Documento</label><input id="p_doc" name="doc"></div><div class="full"><label class="l" for="p_mail">Correo</label><input id="p_mail" name="email" type="email"></div><div class="full"><label class="l" for="p_msg">Tu caso</label><textarea id="p_msg" name="msg"></textarea></div></div><label class="check"><input type="checkbox" name="datos"><span>Autorizo el tratamiento de mis datos para atender esta solicitud (Ley 1581 de 2012).</span></label><div class="errbox" id="perr"></div><button class="btn">Radicar</button><div id="pres" style="margin-top:14px"></div></form>
   <aside><div class="card"><h3>Defensor del Consumidor Financiero</h3><p style="margin-top:0;font-size:14.5px">Si no estás de acuerdo con nuestra respuesta, puedes acudir al Defensor, un tercero independiente que resuelve tu caso sin costo (Ley 1328 de 2009).</p><p style="font-size:14.5px">${CO.defensor.name}<br>${CO.defensor.mail}<br>${CO.defensor.tel}<br>${CO.defensor.addr}</p></div>
@@ -981,24 +971,29 @@ function chatInit(){
 }
 
 /* ============ Router ============ */
-const routes=[[/^$/,vHome],[/^cotizar$/,vProducts],[/^cotizar\/(\w+)$/,vQuote],[/^comprar$/,vBuy],[/^proceso\/([\w-]+)$/,vProcess],[/^poliza\/([\w-]+)$/,vPolicy],[/^verificar$/,vVerify],[/^mis-polizas$/,vMine],[/^siniestros$/,vClaim],[/^atencion$/,vCare],[/^canales$/,vChannels],[/^oficina$/,vOffice],[/^oficina\/venta\/([\w-]+)$/,vOfficeSale],[/^central$/,vCentral],[/^central\/tx\/([\w-]+)$/,vCentralTx],[/^legal\/(\w+)$/,vLegal],[/^c\/([\w-]+)$/,vCertLink],[/^beneficios$/,vBenefits]];
-let lastPath=null;
-function router(){
+const routes=[[/^$/,vHome],[/^cotizar$/,vProducts],[/^cotizar\/(\w+)$/,vQuote],[/^comprar$/,vBuy],[/^proceso\/([\w-]+)$/,vProcess],[/^poliza\/([\w-]+)$/,vPolicy],[/^verificar$/,vVerify],[/^mis-polizas$/,vMine],[/^siniestros$/,vClaim],[/^atencion$/,vCare],[/^canales$/,vChannels],[/^oficina$/,vOffice],[/^oficina\/venta\/([\w-]+)$/,vOfficeSale],[/^central$/,vCentral],[/^central\/tx\/([\w-]+)$/,vCentralTx],[/^legal\/(\w+)$/,vLegal],[/^c\/([\w-]+)$/,vCertLink],[/^beneficios$/,vBenefits],[/^ingresar$/,vLogin],[/^registro$/,vRegister],[/^cuenta$/,vAccount],[/^instalar$/,vSetup],[/^certificado\/(IG-[A-Z]{3}-\d{4}-\d{6})\/(APR-\d{8}-\d{6})$/i,vCertPublic]];
+let lastPath=null,RT=0;
+async function router(){
   const raw=location.hash.replace(/^#\/?/,"");
   if(/^[a-z]+$/i.test(raw)&&document.getElementById(raw)&&!routes.some(r=>r[0].test(raw))){document.getElementById(raw).scrollIntoView();return}
-  const h=decodeURIComponent(raw.split("?")[0]);AFTER=[];let html=null;
-  for(const [re,fn] of routes){const m=h.match(re);if(m){html=fn(...m.slice(1));break}}
-  $("#app").innerHTML=html??vNotFound();
-  AFTER.forEach(f=>f());AFTER=[];
+  const h=decodeURIComponent(raw.split("?")[0]);const tok=++RT;AFTER=[];let out=null;
+  try{for(const [re,fn] of routes){const m=h.match(re);if(m){out=fn(...m.slice(1));break}}
+    if(out&&typeof out.then==="function"){$("#app").innerHTML=`<div class="wrap" style="padding:60px 0"><p class="muted">Consultando el servidor central…</p></div>`;out=await out;if(tok!==RT)return;AFTER=[]}}
+  catch(e){if(tok!==RT)return;AFTER=[];out=errView(e)}
+  if(tok!==RT)return;
+  if(typeof out==="function"){AFTER=[];try{out=out()}catch(e){console.error(e);out=errView(e)}}
+  $("#app").innerHTML=out??vNotFound();
+  AFTER.forEach(f=>{try{f()}catch(e){console.error(e)}});AFTER=[];
   if(h!==lastPath)window.scrollTo(0,0);lastPath=h;
   const sec=h.split("/")[0];$$("nav.main a").forEach(a=>a.classList.toggle("on",a.getAttribute("href").slice(2).split("/")[0]===sec&&sec!==""));
   $("nav.main").classList.remove("open");
   document.title=h===""?"Insurance Global · Seguros para todo lo que te importa":((($("#app h1")||{}).textContent||"").trim()+" · Insurance Global");
 }
 window.addEventListener("hashchange",router);
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded",async()=>{
   $("#menuBtn").onclick=()=>$("nav.main").classList.toggle("open");
-  chatInit();router();setTimeout(()=>{const o=store.get("outbox",[]);let ch=false;o.forEach(m=>{if(m.status==="enviando"){m.status="pendiente";ch=true}});if(ch)store.set("outbox",o);sendQueued()},800);
+  ["txs","audit","seq","claims","pqr","seller","verif","outbox","ben"].forEach(k=>store.del(k)); // limpia datos del simulador anterior (ya no se guardan en el navegador)
+  chatInit();paintAcct();await loadMe();router();
 });
 
 /* ============ Beneficios por seguro adquirido ============ */
@@ -1016,32 +1011,22 @@ const BENEFITS={
 };
 const PRODUCT_BENEFITS={auto:["legal","vehiculo","cursos"],hogar:["legal","hogar","coworking"],vida:["medico","legal","cursos"],salud:["medico","bienestar","cursos"],viaje:["viajero","medico","cursos"],mascotas:["mascota","legal","cursos"],pyme:["coworking","legal","empresa","cursos"]};
 const benefitsOf=pid=>PRODUCT_BENEFITS[pid]||[];
+const adobeBtn=()=>`<a class="btn sm sec" href="https://get.adobe.com/reader/" target="_blank" rel="noopener" title="Descarga gratuita en la página oficial de Adobe">${ic("doc")}Descargar Adobe Reader</a>`;
 const productsWith=b=>Object.keys(PRODUCT_BENEFITS).filter(p=>PRODUCT_BENEFITS[p].includes(b)).map(p=>P[p].name);
-const benCard=(b,extra="")=>{const x=BENEFITS[b];return `<div class="card ben-card"><span class="ic teal">${ic(x.ic)}</span><h3 style="margin-top:10px">${x.name}</h3><p class="muted">${x.desc}</p>${extra}</div>`};
-function benefitsInline(pid){return `<h3 style="margin-top:26px">Beneficios incluidos con este seguro</h3><p class="muted" style="margin-top:0;font-size:14px">Sin costo adicional, desde que se emite tu póliza y mientras esté vigente.</p><div class="grid g3 ben-grid">${benefitsOf(pid).map(b=>benCard(b)).join("")}</div>`}
+const benCard=(b,extra="",btn=false)=>{const x=BENEFITS[b];return `<div class="card ben-card"><span class="ic teal">${ic(x.ic)}</span><h3 style="margin-top:10px">${x.name}</h3><p class="muted">${x.desc}</p>${extra}${btn?`<div class="ben-cta row" style="gap:8px"><a class="btn sm teal" href="#/beneficios?b=${b}">Activar</a>${adobeBtn()}</div>`:""}</div>`};
+function benefitsInline(pid){return `<h3 style="margin-top:26px">Beneficios incluidos con este seguro</h3><p class="muted" style="margin-top:0;font-size:14px">Sin costo adicional, desde que se emite tu póliza y mientras esté vigente.</p><div class="grid g3 ben-grid">${benefitsOf(pid).map(b=>benCard(b,"",true)).join("")}</div>`}
 
 /* ---------- Activación (sobre la póliza local) ---------- */
 function benAvailable(t){return t&&t.status==="aprobada"&&t.end>=isoDate(new Date())}
-function activateBenefit(id,b,detail){
-  let out=null;
-  upd(id,t=>{
-    if(!benAvailable(t)||!benefitsOf(t.product).includes(b))return;
-    t.benefits=t.benefits||{};const x=BENEFITS[b];
-    const code=x.kind==="code"?`${x.code}-${digits(4)}-${digits(4)}`:`BEN-${x.code}-${new Date().getFullYear()}-${pad(seq("ben_"+b),6)}`;
-    const rec={code,at:new Date().toISOString(),...(detail||{})};
-    (t.benefits[b]=t.benefits[b]||[]).push(rec);
-    rec.mailTo=t.client.email;
-    const msg=x.kind==="code"?`Beneficio “${x.name}” activado: código ${code}`:x.kind==="reserve"?`Reserva de coworking ${code} en ${detail.ciudad} para el ${fdate(detail.fecha)} (${detail.jornada.toLowerCase()})`:`Solicitud de ${x.name.toLowerCase()} ${code}: ${detail.tema}, por ${detail.canal.toLowerCase()}`;
-    logTx(t,msg,"Tomador (beneficios)");
-    const all=store.get("ben",[]);all.push({id:code,at:rec.at,policy:t.policy,tx:t.id,benefit:b,detail:detail||null,client:maskName(t.client)});store.set("ben",all);
-    queueMail(t,t.client.email,"Servidor central",{key:b,code,detail:detail||null});
-    out=rec;
-  });
-  if(out)setTimeout(sendQueued,0);
-  return out;
+async function activateBenefit(id,b,detail){
+  const t=getTx(id);if(!t)return null;
+  try{const j=await api("benefits/activate",{method:"POST",body:{policy:t.policy,benefit:b,detail:detail||null}});
+    const nt=getTx(id);mailBenefit(nt,b,j.rec,true).then(m=>{if(m.status==="enviado")toast("Confirmación enviada a "+m.to)});
+    return j.rec}
+  catch(e){toast(e.message);return null}
 }
-function benRecordHTML(b,r){
-  const x=BENEFITS[b];const sent=r.mailTo?`<br><span style="font-size:12.5px">Confirmación enviada a ${esc(maskMail(r.mailTo))}.</span>`:"";
+function benRecordHTML(b,r,pol){
+  const x=BENEFITS[b];const sent=(r.mailTo?`<br><span style="font-size:12.5px">Confirmación enviada a ${esc(maskMail(r.mailTo))}.</span>`:"")+(pol?`<div class="row" style="margin-top:8px;gap:8px"><button class="btn sm" data-act="ben-pdf" data-pol="${pol}" data-ben="${b}" data-code="${esc(r.code)}">${ic("doc")}Descargar comprobante (PDF)</button></div>`:"");
   if(x.kind==="code")return `<div class="okbox" style="padding:10px 12px;font-size:14px">Activo · código <b class="mono">${esc(r.code)}</b><br><span style="font-size:13px">${x.use}</span>${sent}</div>`;
   if(x.kind==="reserve")return `<div class="okbox" style="padding:10px 12px;font-size:14px">Reserva <b class="mono">${esc(r.code)}</b><br>${esc(r.ciudad)} · ${fdate(r.fecha)} · ${esc(r.jornada)}<br><span style="font-size:13px">Te enviaremos la dirección del espacio por correo.</span>${sent}</div>`;
   return `<div class="okbox" style="padding:10px 12px;font-size:14px">Solicitud <b class="mono">${esc(r.code)}</b> · ${esc(r.tema)}<br><span style="font-size:13px">Te contactaremos por ${esc(r.canal.toLowerCase())} en máximo 24 horas hábiles.</span>${sent}</div>`;
@@ -1053,20 +1038,21 @@ function benFormHTML(t,b){
 }
 function benefitsBlock(d){
   const t=findPolicy(d.policy);const list=benefitsOf(d.product);if(!list.length)return "";
-  const local=!!t,ok=benAvailable(t);
+  const local=!!t&&!!ME&&ME.role==="cliente",ok=local&&benAvailable(t);
   const cards=list.map(b=>{const x=BENEFITS[b];const recs=(t&&t.benefits&&t.benefits[b])||[];
     let body="";
-    if(recs.length)body+=recs.map(r=>benRecordHTML(b,r)).join("<div style='height:8px'></div>");
-    if(ok&&(x.kind!=="code"||!recs.length))body+=`<div class="ben-act" style="margin-top:10px"><button class="btn sm sec" data-act="ben-open" data-ben="${b}" data-pol="${d.policy}">${recs.length&&x.kind==="reserve"?"Otra reserva":recs.length?"Otra solicitud":x.action}</button><div class="ben-slot" id="slot-${b}"></div></div>`;
+    if(recs.length)body+=recs.map(r=>benRecordHTML(b,r,d.policy)).join("<div style='height:8px'></div>");
+    if(ok&&(x.kind!=="code"||!recs.length))body+=`<div class="ben-act" style="margin-top:10px"><div class="row" style="gap:8px"><button class="btn sm teal" data-act="ben-open" data-ben="${b}" data-pol="${d.policy}">${recs.length&&x.kind==="reserve"?"Otra reserva":recs.length?"Otra solicitud":"Activar"}</button>${adobeBtn()}</div><div class="ben-slot" id="slot-${b}"></div></div>`;
+    else if(recs.length)body+=`<div class="row" style="gap:8px;margin-top:8px">${adobeBtn()}</div>`;
     return benCard(b,body);
   }).join("");
-  const note=!local?`<p class="tiny" style="margin:0 0 12px">Para activarlos, abre la póliza desde el navegador donde la compraste o desde <a href="#/mis-polizas">Mis pólizas</a>.</p>`:!ok?`<p class="tiny" style="margin:0 0 12px">Los beneficios están disponibles mientras la póliza esté vigente.</p>`:"";
-  return `<section class="noprint" id="beneficios" style="margin-top:26px"><h3>Beneficios de tu seguro</h3><p class="muted" style="margin-top:0;font-size:14px">Incluidos sin costo con tu póliza. Son servicios de aliados y no hacen parte de las coberturas (<a href="#/legal/beneficios">condiciones</a>).</p>${note}<div class="grid g3 ben-grid">${cards}</div></section>`;
+  const note=!local?`<p class="tiny" style="margin:0 0 12px">Para activarlos, <a href="#/ingresar?next=${encodeURIComponent("/poliza/"+d.policy)}">ingresa con tu cuenta</a> y abre la póliza desde <a href="#/mis-polizas">Mis pólizas</a>.</p>`:!ok?`<p class="tiny" style="margin:0 0 12px">Los beneficios están disponibles mientras la póliza esté vigente.</p>`:"";
+  return `<section class="noprint" id="beneficios" style="margin-top:26px"><h3>Beneficios de tu seguro</h3><p class="muted" style="margin-top:0;font-size:14px">Incluidos sin costo con tu póliza. Son servicios de aliados y no hacen parte de las coberturas (<a href="#/legal/beneficios">condiciones</a>).</p>${note}<p class="tiny" style="margin:0 0 12px">Cada beneficio activado tiene un comprobante en PDF con su código. Para abrirlo puedes usar el lector de PDF de tu navegador o <a href="${ADOBE_READER}" target="_blank" rel="noopener">descargar Adobe Acrobat Reader gratis ↗</a>.</p><div class="grid g3 ben-grid">${cards}</div></section>`;
 }
 document.addEventListener("click",e=>{
   const b=e.target.closest("[data-act=ben-open]");if(!b)return;e.preventDefault();
   const t=findPolicy(b.dataset.pol),k=b.dataset.ben,x=BENEFITS[k];if(!t)return;
-  if(x.kind==="code"){const r=activateBenefit(t.id,k);if(r){toast("Beneficio activado: "+r.code);router()}return}
+  if(x.kind==="code"){b.disabled=true;activateBenefit(t.id,k).then(r=>{if(r){toast("Beneficio activado: "+r.code);router()}else b.disabled=false});return}
   const slot=document.getElementById("slot-"+k);slot.innerHTML=benFormHTML(t,k);b.hidden=true;
 });
 document.addEventListener("submit",e=>{
@@ -1075,23 +1061,101 @@ document.addEventListener("submit",e=>{
   let detail;
   if(x.kind==="reserve"){const fe=f.elements.fecha.value;if(!fe||fe<isoDate(new Date())||fe<t.start||fe>t.end){box.textContent="Elige una fecha dentro de la vigencia de tu póliza (desde hoy).";return}detail={ciudad:f.elements.ciudad.value,fecha:fe,jornada:f.elements.jornada.value}}
   else{const nota=f.elements.nota.value.trim();if(nota.length<10){box.textContent="Cuéntanos un poco más (mínimo 10 caracteres).";return}detail={tema:f.elements.tema.value,canal:f.elements.canal.value,nota}}
-  const r=activateBenefit(t.id,k,detail);if(r){toast(x.kind==="reserve"?"Reserva confirmada: "+r.code:"Solicitud radicada: "+r.code);router()}
+  const btn=f.querySelector("button");btn.disabled=true;activateBenefit(t.id,k,detail).then(r=>{if(r){toast(x.kind==="reserve"?"Reserva confirmada: "+r.code:"Solicitud radicada: "+r.code);router()}else btn.disabled=false});
 });
 
 /* ---------- Página de beneficios ---------- */
 function vBenefits(){
-  after(()=>{const f=$("#bfind");f.onsubmit=e=>{e.preventDefault();const t=findPolicy(f.elements.pol.value);const box=$("#bfind .errbox");
-    if(!t){box.textContent="No encontramos esa póliza en este navegador. Ábrela desde Mis pólizas o desde el enlace del certificado.";return}
-    if(t.client.doc!==f.elements.doc.value.trim()){box.textContent="El documento no coincide con el del tomador.";return}
-    location.hash="#/poliza/"+t.policy;setTimeout(()=>{const s=document.getElementById("beneficios");if(s)s.scrollIntoView({behavior:"smooth"})},150)}});
+  const want=new URLSearchParams(location.hash.split("?")[1]||"").get("b");const wb=BENEFITS[want]?want:null;
+  after(()=>{const f=$("#bfind");if(wb)setTimeout(()=>{f.scrollIntoView({behavior:"smooth",block:"center"});f.elements.pol.focus()},120);f.onsubmit=async e=>{e.preventDefault();const box=$("#bfind .errbox");const no=f.elements.pol.value.trim().toUpperCase();
+    if(!ME){location.hash="#/ingresar?next="+encodeURIComponent("/beneficios"+(wb?"?b="+wb:""));return}
+    let t;try{t=(await api("policy/"+encodeURIComponent(no))).tx}catch(err){box.textContent=err.status===404?"No encontramos esa póliza en tu cuenta.":err.message;return}
+    if(wb&&!benefitsOf(t.product).includes(wb)){box.textContent=`Tu seguro de ${P[t.product].name.toLowerCase()} no incluye “${BENEFITS[wb].name}”. Te mostramos los beneficios que sí incluye.`;setTimeout(()=>{location.hash="#/poliza/"+t.policy+"?b=all"},1800);return}
+    location.hash="#/poliza/"+t.policy+"?b="+(wb||"all")}});
   const all=Object.keys(BENEFITS);
   return pageH("Beneficios pensados para ti por tener tu seguro","Cada seguro de Insurance Global incluye beneficios sin costo adicional desde que se emite la póliza y mientras esté vigente.","Beneficios")+`
-  <div class="wrap"><div class="grid g3 ben-grid">${["cursos","coworking","legal"].map(b=>benCard(b,`<p class="tiny" style="margin:6px 0 0">Incluido en: ${productsWith(b).join(", ")}</p>`)).join("")}</div>
+  <div class="wrap"><div class="grid g3 ben-grid">${["cursos","coworking","legal"].map(b=>benCard(b,`<p class="tiny" style="margin:6px 0 0">Incluido en: ${productsWith(b).join(", ")}</p>`,true)).join("")}</div>
   <h2 style="margin-top:44px">Beneficios por seguro</h2><p class="lead">Lo que recibes según el seguro que compres.</p>
   <div class="tblwrap"><table class="tbl"><thead><tr><th>Seguro</th><th>Beneficios incluidos</th></tr></thead><tbody>${Object.keys(PRODUCT_BENEFITS).map(p=>`<tr><td><a href="#/cotizar/${p}">${P[p].name}</a></td><td style="white-space:normal">${benefitsOf(p).map(b=>BENEFITS[b].name).join(" · ")}</td></tr>`).join("")}</tbody></table></div>
-  <h2 style="margin-top:44px">Más beneficios de la red</h2><div class="grid g3 ben-grid">${all.filter(b=>!["cursos","coworking","legal"].includes(b)).map(b=>benCard(b,`<p class="tiny" style="margin:6px 0 0">Incluido en: ${productsWith(b).join(", ")}</p>`)).join("")}</div>
-  <div class="grid g2" style="margin-top:44px;align-items:center"><div><h2>Activa tus beneficios</h2><p class="lead">Escribe tu número de póliza y tu documento. Te llevamos a tu certificado, donde puedes activar códigos, reservar coworking o pedir asesoría.</p></div>
-  <form class="card" id="bfind"><div class="fg"><div><label class="l" for="bf_pol">Número de póliza</label><input id="bf_pol" name="pol" placeholder="IG-AUT-2026-000001"></div><div><label class="l" for="bf_doc">Documento del tomador</label><input id="bf_doc" name="doc"></div></div><div class="errbox"></div><button class="btn teal" style="margin-top:12px">Ver mis beneficios</button></form></div></div>`;
+  <h2 style="margin-top:44px">Más beneficios de la red</h2><div class="grid g3 ben-grid">${all.filter(b=>!["cursos","coworking","legal"].includes(b)).map(b=>benCard(b,`<p class="tiny" style="margin:6px 0 0">Incluido en: ${productsWith(b).join(", ")}</p>`,true)).join("")}</div>
+  <div class="grid g2" style="margin-top:44px;align-items:center"><div><h2>${wb?`Activar: ${BENEFITS[wb].name}`:"Activa tus beneficios"}</h2><p class="lead">Ingresa con tu cuenta y escribe tu número de póliza. ${wb?"Te llevamos directo a ese beneficio en tu póliza.":"Te llevamos a tu certificado, donde puedes activar códigos, reservar coworking o pedir asesoría."}</p><p class="tiny">¿Aún no tienes póliza? <a href="#/cotizar">Cotiza tu seguro</a> y los beneficios quedan incluidos.</p></div>
+  <form class="card" id="bfind" style="${wb?"box-shadow:0 0 0 4px var(--teal-l);border-color:var(--teal)":""}"><div class="fg"><div><label class="l" for="bf_pol">Número de póliza</label><input id="bf_pol" name="pol" placeholder="IG-AUT-2026-000001"></div><div><label class="l">Cuenta</label><input value="${ME?esc(ME.email):"Debes ingresar con tu cuenta"}" disabled></div></div><div class="errbox"></div><button class="btn teal" style="margin-top:12px">Ver mis beneficios</button></form></div></div>`;
+}
+
+/* ---------- Comprobante PDF del beneficio ---------- */
+const ADOBE_READER="https://get.adobe.com/reader/";
+function findBenRec(t,b,code){return ((t&&t.benefits&&t.benefits[b])||[]).find(r=>r.code===code)}
+function buildBenefitPdf(d,b,r){
+  const H=842,Wd=595,M=48;let c="";const annots=[];const x=BENEFITS[b];
+  const rgb=h=>{const n=parseInt(h.slice(1),16);return[(n>>16)/255,(n>>8&255)/255,(n&255)/255].map(v=>v.toFixed(3)).join(" ")};
+  const rect=(X,Y,w,h,fill,stroke,lw=1)=>{c+=`${fill?rgb(fill)+" rg ":""}${stroke?rgb(stroke)+" RG "+lw+" w ":""}${X.toFixed(2)} ${(H-Y-h).toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re ${fill&&stroke?"B":fill?"f":"S"}\n`};
+  const line=(x1,y1,x2,y2,col,lw=.8)=>{c+=`${rgb(col)} RG ${lw} w ${x1} ${H-y1} m ${x2} ${H-y2} l S\n`};
+  const text=(X,Y,s,o={})=>{const size=o.size||10,f=o.mono?"F3":o.bold?"F2":"F1";let xx=X;if(o.align==="right")xx=X-txtW(s,size,o.bold,o.mono);if(o.align==="center")xx=X-txtW(s,size,o.bold,o.mono)/2;c+=`BT /${f} ${size} Tf ${rgb(o.color||"#14213d")} rg ${xx.toFixed(2)} ${(H-Y).toFixed(2)} Td (${pdfStr(s)}) Tj ET\n`};
+  const url=certUrl(d);
+  rect(0,0,Wd,92,"#0e2a47");rect(0,92,Wd,4,"#0f8f7e");
+  text(M,44,"Insurance Global",{size:20,bold:true,color:"#ffffff"});
+  text(M,63,"COMPROBANTE DE BENEFICIO",{size:8.5,color:"#c9d6e6"});
+  text(Wd-M,44,"Póliza",{size:9,color:"#c9d6e6",align:"right"});
+  text(Wd-M,63,d.policy,{size:13,mono:true,color:"#ffffff",align:"right"});
+  rect(0,96,Wd,20,"#fbf3e0");text(Wd/2,109.5,"Simulador académico: Insurance Global es una compañía ficticia; aliados, códigos y reservas son ficticios.",{size:7.5,color:"#6b4e00",align:"center"});
+  let y=158;text(Wd/2,y,x.name,{size:20,bold:true,color:"#0e2a47",align:"center"});y+=22;
+  wrapTxt(x.desc,Wd-2*M-40,10).forEach(l=>{text(Wd/2,y,l,{size:10,color:"#5b6b82",align:"center"});y+=14});
+  y+=16;
+  const lbl=x.kind==="code"?"CÓDIGO DEL BENEFICIO":x.kind==="reserve"?"NÚMERO DE RESERVA":"NÚMERO DE SOLICITUD";
+  rect(M+40,y,Wd-2*M-80,92,"#e2f4f1","#0f8f7e",1.5);
+  text(Wd/2,y+26,lbl,{size:8.5,bold:true,color:"#0b6b5f",align:"center"});
+  const cs=x.kind==="code"?28:22;text(Wd/2,y+64,r.code,{size:cs,mono:true,color:"#0e2a47",align:"center"});
+  y+=124;
+  const rows=[["Tomador",d.name],["Póliza",`${d.policy} · ${P[d.product].name} plan ${planName(d.plan)}`]];
+  if(x.kind==="code")rows.push(["Cómo usarlo",x.use]);
+  if(x.kind==="reserve")rows.push(["Ciudad",r.ciudad],["Fecha",fdate(r.fecha)],["Jornada",r.jornada],["Siguiente paso","Te enviaremos la dirección del espacio antes de la fecha."]);
+  if(x.kind==="request")rows.push(["Tema",r.tema],["Contacto por",r.canal],["Siguiente paso","Te contactaremos en máximo 24 horas hábiles."]);
+  rows.push(["Activado",fdt(r.at)],["Válido hasta",fdate(d.end)+" (mientras la póliza esté vigente)"]);
+  text(M,y,"Detalle",{size:12,bold:true,color:"#0e2a47"});line(M,y+7,Wd-M,y+7,"#dde3ec");y+=26;
+  const kw=118,vw=Wd-2*M-kw-150;
+  const qs=124,qx=Wd-M-qs,qy=y-6;
+  rows.forEach(([k,v])=>{text(M,y,k,{size:9,color:"#5b6b82"});const ls=wrapTxt(v,vw,10,true);ls.forEach((l,i)=>text(M+kw,y+i*13,l,{size:10,bold:true}));y+=Math.max(1,ls.length)*13+9});
+  const m=qrMatrix(url),n=m.length,ms=qs/(n+2);rect(qx,qy,qs,qs,"#ffffff","#dde3ec",.8);
+  c+=rgb("#0e2a47")+" rg\n";m.forEach((row,ri)=>row.forEach((v,ci)=>{if(v)c+=`${(qx+ms*(ci+1)).toFixed(2)} ${(H-qy-ms*(ri+2)).toFixed(2)} ${(ms+.05).toFixed(2)} ${(ms+.05).toFixed(2)} re\n`}));c+="f\n";
+  text(qx+qs/2,qy+qs+14,"Escanea para ver tu póliza",{size:7.5,color:"#5b6b82",align:"center"});
+  y=Math.max(y,qy+qs+30)+10;
+  const lt="Ver mi póliza y beneficios en "+location.host;text(M,y,lt,{size:9,color:"#1f5fbf"});line(M,y+2,M+txtW(lt,9),y+2,"#1f5fbf",.5);annots.push([M,H-y-3,M+txtW(lt,9),H-y+10,url]);
+  const foot=["Los beneficios son servicios de aliados de Insurance Global y no hacen parte de las coberturas de la póliza. Están sujetos a disponibilidad y terminan cuando la póliza vence o se revoca.",`Dudas: ${CO.tel} · ${CO.mail}`,`Generado el ${fdt(new Date().toISOString())} · ${CO.legal}`];
+  let fy=H-66;line(M,fy-12,Wd-M,fy-12,"#dde3ec");foot.forEach(f=>wrapTxt(f,Wd-2*M,7.4).forEach(l=>{text(M,fy,l,{size:7.4,color:"#5b6b82"});fy+=10}));
+  const objs=[];const add=s=>{objs.push(s);return objs.length};
+  const cat=add(""),pages=add(""),page=add(""),cont=add(`<< /Length ${c.length} >>\nstream\n${c}endstream`);
+  const f1=add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>"),f2=add("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"),f3=add("<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold /Encoding /WinAnsiEncoding >>");
+  const an=annots.map(a=>add(`<< /Type /Annot /Subtype /Link /Rect [${a.slice(0,4).map(v=>v.toFixed(1)).join(" ")}] /Border [0 0 0] /A << /S /URI /URI (${pdfStr(a[4])}) >> >>`));
+  const info=add(`<< /Title (${pdfStr("Beneficio "+r.code+" · Insurance Global")}) /Author (Insurance Global - simulador) /Subject (${pdfStr(x.name+" · póliza "+d.policy)}) /Producer (Insurance Global) >>`);
+  objs[cat-1]=`<< /Type /Catalog /Pages ${pages} 0 R >>`;objs[pages-1]=`<< /Type /Pages /Kids [${page} 0 R] /Count 1 >>`;
+  objs[page-1]=`<< /Type /Page /Parent ${pages} 0 R /MediaBox [0 0 ${Wd} ${H}] /Resources << /Font << /F1 ${f1} 0 R /F2 ${f2} 0 R /F3 ${f3} 0 R >> >> /Contents ${cont} 0 R${an.length?` /Annots [${an.map(i=>i+" 0 R").join(" ")}]`:""} >>`;
+  let out="%PDF-1.4\n%\xE2\xE3\xCF\xD3\n";const offs=[];objs.forEach((o,i)=>{offs.push(out.length);out+=`${i+1} 0 obj\n${o}\nendobj\n`});
+  const xref=out.length;out+=`xref\n0 ${objs.length+1}\n0000000000 65535 f \n`+offs.map(o=>String(o).padStart(10,"0")+" 00000 n \n").join("")+`trailer\n<< /Size ${objs.length+1} /Root ${cat} 0 R /Info ${info} 0 R >>\nstartxref\n${xref}\n%%EOF`;
+  const bytes=new Uint8Array(out.length);for(let i=0;i<out.length;i++)bytes[i]=out.charCodeAt(i)&255;return bytes;
+}
+function downloadBenefitPdf(t,b,code){
+  const r=findBenRec(t,b,code);if(!r)return;const blob=new Blob([buildBenefitPdf(certData(t),b,r)],{type:"application/pdf"});const u=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=u;a.download=`Beneficio-${code}.pdf`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),60000);toast("Comprobante descargado: Beneficio-"+code+".pdf");
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-act=ben-pdf]");if(!b)return;e.preventDefault();const t=findPolicy(b.dataset.pol);if(t)pdfGate(()=>downloadBenefitPdf(t,b.dataset.ben,b.dataset.code),"El comprobante del beneficio")});
+
+/* ---------- Validación de lector de PDF antes de descargar ---------- */
+// Un sitio web no puede saber si Adobe Acrobat Reader está instalado; sí puede saber si el navegador abre PDF.
+function pdfCapable(){try{if(typeof navigator.pdfViewerEnabled==="boolean")return navigator.pdfViewerEnabled}catch(e){}return null}
+function pdfGate(run,label){
+  if(store.get("pdf_reader_ok",false)||pdfCapable()===true){run();if(!store.get("pdf_note_shown",false)){store.set("pdf_note_shown",true);setTimeout(()=>toast("Si el PDF no abre, descarga Adobe Acrobat Reader gratis desde get.adobe.com/reader"),3200)}return}
+  const old=document.getElementById("pdfgate");if(old)old.remove();
+  const w=document.createElement("div");w.id="pdfgate";w.className="pg-wrap";w.setAttribute("role","dialog");w.setAttribute("aria-modal","true");w.setAttribute("aria-labelledby","pg-t");
+  w.innerHTML=`<div class="pg-box"><h3 id="pg-t">Necesitas un lector de PDF</h3><p class="muted" style="margin-top:0">${esc(label||"El documento")} se descarga en formato PDF. Tu navegador no indica que pueda abrir este tipo de archivo. Si no tienes un lector de PDF, instala Adobe Acrobat Reader: es gratis.</p>
+  <div class="row" style="gap:10px;margin-top:6px"><a class="btn" href="${ADOBE_READER}" target="_blank" rel="noopener" id="pg-adobe">${ic("doc")}Descargar Adobe Acrobat Reader</a><button class="btn sec" id="pg-ok">Ya tengo un lector de PDF</button></div>
+  <p class="tiny" style="margin:12px 0 0">El enlace abre la página oficial de Adobe. Después de instalarlo, vuelve y haz clic en “Ya tengo un lector de PDF”.</p><button class="pg-x" id="pg-x" aria-label="Cerrar">×</button></div>`;
+  document.body.appendChild(w);
+  const close=()=>w.remove();
+  w.querySelector("#pg-x").onclick=close;w.onclick=e=>{if(e.target===w)close()};
+  w.querySelector("#pg-adobe").onclick=()=>{store.set("pdf_adobe_clicked",true);setTimeout(()=>{const b=w.querySelector("#pg-ok");if(b){b.textContent="Ya lo instalé, descargar";b.classList.remove("sec")}},400)};
+  w.querySelector("#pg-ok").onclick=()=>{store.set("pdf_reader_ok",true);close();run()};
+  document.addEventListener("keydown",function esc(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",esc)}});
+  w.querySelector("#pg-ok").focus();
 }
 
 /* ============ Certificado: datos, enlace, PDF y correo ============ */
@@ -1102,62 +1166,29 @@ function certExtraRows(t){
   return Object.entries(ex).map(([k,v])=>{const f=(Array.isArray(p.extra)?p.extra:[]).find(x=>x.id===k);return f?[f.label,k==="salida"?fdate(v):String(v)]:null}).filter(Boolean);
 }
 function certData(t){return{policy:t.policy,approval:t.approval.code,approvedAt:t.approvedAt,product:t.product,plan:t.plan,params:t.params,rows:certExtraRows(t),name:fullName(t.client),tipoDoc:t.client.tipoDoc,doc4:String(t.client.doc).slice(-4),start:t.start,end:t.end,premium:t.premium,freq:t.freq,pay:{method:t.pay.method,last4:t.pay.last4||"",bank:t.pay.bank||""},channel:chName(t),seller:t.seller||"",status:t.status,fp:t.fp,issuedBy:CO.domain}}
-const b64u={enc:s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""),dec:s=>decodeURIComponent(escape(atob(s.replace(/-/g,"+").replace(/_/g,"/"))))};
-function certToken(d){const o={...d};delete o.status;delete o.revokedAt;delete o.refund;const j=JSON.stringify(o);return b64u.enc(JSON.stringify({d:o,h:hash("IG-CERT|"+j)}))}
-function readToken(tok){try{const x=JSON.parse(b64u.dec(tok));if(!x||!x.d||!x.h)return{err:"bad"};return hash("IG-CERT|"+JSON.stringify(x.d))===x.h?{d:x.d}:{err:"tampered"}}catch(e){return{err:"bad"}}}
 const siteBase=()=>location.origin+location.pathname;
-const certUrl=d=>siteBase()+"#/c/"+certToken(d);
+/* Enlace público: el servidor central valida póliza + número de aprobación (no se puede falsificar). */
+const certUrl=d=>siteBase()+"#/certificado/"+d.policy+"/"+d.approval;
 let CURRENT_CERT=null;
-function certFor(pol){const t=findPolicy(pol);if(t)return certData(t);return CURRENT_CERT&&CURRENT_CERT.policy===pol?CURRENT_CERT:null}
+function certFor(pol){const t=findPolicy(pol);if(t&&t.approval&&t.id!=="PUB")return certData(t);return CURRENT_CERT&&CURRENT_CERT.policy===pol?CURRENT_CERT:null}
 const maskMail=m=>m?m.replace(/^(.)(.*)(@.*)$/,(_,a,b,c)=>a+"•".repeat(Math.min(6,b.length))+c):"";
 function mailtoFor(d,to){
   const url=certUrl(d);
-  const body=`Hola ${d.name.split(" ")[0]}:\n\nTu póliza de ${P[d.product].name.toLowerCase()} (plan ${planName(d.plan)}) fue emitida por Insurance Global.\n\nNúmero de póliza: ${d.policy}\nNúmero de aprobación: ${d.approval}\nVigencia: ${fdate(d.start)} a ${fdate(d.end)}\nTotal: ${money(d.premium.total)}\n\nConsulta tu certificado y descárgalo en PDF aquí:\n${url}\n\nTambién puedes verificar la póliza en ${siteBase()}#/verificar\n\nInsurance Global · ${CO.tel}\n(Simulador académico: no es un seguro real.)`;
-  return `mailto:${encodeURIComponent(to||"")}?subject=${encodeURIComponent("Tu póliza "+d.policy+" · Insurance Global")}&body=${encodeURIComponent(body)}`;
+  const body=`Hola:\n\nTe comparto el certificado de la póliza ${d.policy} de Insurance Global (${P[d.product].name.toLowerCase()}, plan ${planName(d.plan)}).\n\nNúmero de aprobación: ${d.approval}\nVigencia: ${fdate(d.start)} a ${fdate(d.end)}\n\nConsúltalo aquí (lo valida el servidor central):\n${url}\n\nInsurance Global · ${CO.tel}\n(Simulador académico: no es un seguro real.)`;
+  return `mailto:${encodeURIComponent(to||"")}?subject=${encodeURIComponent("Póliza "+d.policy+" · Insurance Global")}&body=${encodeURIComponent(body)}`;
 }
-function queueMail(t,to,by,ben){
-  const d=certData(t);const out=store.get("outbox",[]);
-  const subject=ben?`${BENEFITS[ben.key].name} (${ben.code}) · Insurance Global`:"Tu póliza "+t.policy+" · Insurance Global";
-  out.push({id:"MAIL-"+pad(seq("mail"),6),at:new Date().toISOString(),to:to||t.client.email,subject,policy:t.policy,tx:t.id,demo:!!t.demo,status:"pendiente",link:certUrl(d),kind:ben?"benefit":"policy",benefit:ben||null});
-  store.set("outbox",out);logTx(t,ben?`Confirmación del beneficio ${ben.code} en cola de envío a ${maskMail(to||t.client.email)}`:`Certificado PDF y enlace en cola de envío a ${maskMail(to||t.client.email)}`,by||"Servidor central");
-}
-/* ---------- Envío real por la función de Azure (/api/send-policy) ---------- */
-const FAKE_MAIL=/@(ejemplo|example|test|prueba)\.(com|co|org|net)$/i;
+/* ---------- Correo: el PDF se arma aquí y el servidor lo envía SOLO al correo registrado del tomador ---------- */
 const u8b64=u=>{let s="";for(let i=0;i<u.length;i+=32768)s+=String.fromCharCode.apply(null,u.subarray(i,i+32768));return btoa(s)};
-async function apiSend(d,to,ben){
-  try{
-    const body=ben?{type:"benefit",token:certToken(d),to,benefit:ben}:{token:certToken(d),to,pdf:u8b64(buildPdf(d))};
-    const r=await fetch("/api/send-policy",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
-    let j={};try{j=await r.json()}catch(_){}
-    if(r.ok&&j.ok&&j.dryRun)return{status:"simulado",note:"Modo de pruebas de seguridad (MAIL_DRYRUN): validado, no enviado"};
-    if(r.ok&&j.ok)return{status:"enviado",note:"Enviado por SMTP"};
-    if(r.status===404||r.status===405)return{status:"simulado",note:"El servicio de correo no está disponible en esta vista"};
-    if(r.status===503)return{status:"simulado",note:"Correo no configurado en Azure (faltan SMTP_USER y SMTP_PASS)"};
-    return{status:"error",note:j.error||("Error "+r.status)};
-  }catch(e){return{status:"simulado",note:"Sin conexión con el servicio de correo"}}
+async function mailPolicy(t,quiet){
+  try{const j=await api("mail/policy",{method:"POST",body:{policy:t.policy,pdf:u8b64(buildPdf(certData(t)))}});
+    if(!quiet)toast(j.status==="enviado"?"Certificado enviado a "+j.to:j.status==="simulado"?"Envío simulado: "+j.note:"No se pudo enviar: "+j.note);return j}
+  catch(e){if(!quiet)toast(e.message);return{status:"error",note:e.message}}
 }
-let SENDING=false;
-async function sendQueued(){
-  if(SENDING)return;SENDING=true;
-  try{
-    for(;;){
-      const out=store.get("outbox",[]);const m=out.find(x=>x.status==="pendiente");if(!m)break;
-      const setM=(st,note)=>{const o=store.get("outbox",[]);const x=o.find(y=>y.id===m.id);if(x){x.status=st;x.note=note;x.sentAt=new Date().toISOString()}store.set("outbox",o)};
-      setM("enviando","");
-      const t=findPolicy(m.policy);
-      let res;
-      if(!t)res={status:"error",note:"No se encontró la póliza"};
-      else if(m.demo||FAKE_MAIL.test(m.to))res={status:"simulado",note:"Correo de prueba: no se envía de verdad"};
-      else res=await apiSend(certData(t),m.to,m.kind==="benefit"?m.benefit:null);
-      setM(res.status,res.note);
-      const what=m.kind==="benefit"?`la confirmación del beneficio ${m.benefit.code}`:"el certificado PDF";
-      if(t)upd(t.id,x=>logTx(x,res.status==="enviado"?`Correo con ${what} enviado a ${maskMail(m.to)}`:res.status==="simulado"?`Envío de correo simulado a ${maskMail(m.to)}: ${res.note}`:`Falló el envío del correo a ${maskMail(m.to)}: ${res.note}`,"Servicio de correo"));
-      if(res.status==="enviado")toast((m.kind==="benefit"?"Confirmación enviada a ":"Certificado enviado a ")+maskMail(m.to));
-      if(location.hash.startsWith("#/central"))router();
-    }
-  }finally{SENDING=false}
+async function mailBenefit(t,key,rec,quiet){
+  try{const j=await api("mail/benefit",{method:"POST",body:{code:rec.code,pdf:u8b64(buildBenefitPdf(certData(t),key,rec))}});
+    if(!quiet&&j.status==="enviado")toast("Confirmación enviada a "+j.to);return j}
+  catch(e){return{status:"error",note:e.message}}
 }
-function retryMail(id){const o=store.get("outbox",[]);const x=o.find(y=>y.id===id);if(x){x.status="pendiente";store.set("outbox",o);sendQueued()}}
 const certActions=(pol,opts={})=>`<div class="row noprint cert-actions">
   <button class="btn sm" data-act="pdf" data-pol="${pol}">${ic("doc")}Descargar PDF</button>
   <a class="btn sec sm" data-act="mail" data-pol="${pol}" href="#">${ic("chat")}Enviar por correo</a>
@@ -1168,16 +1199,12 @@ document.addEventListener("click",async e=>{
   const b=e.target.closest("[data-act]");if(!b)return;const act=b.dataset.act;
   if(act==="print"){window.print();return}
   const d=certFor(b.dataset.pol);if(!d)return;
-  if(act==="pdf"){e.preventDefault();downloadPdf(d);return}
+  if(act==="pdf"){e.preventDefault();pdfGate(()=>downloadPdf(d),"El certificado de tu póliza");return}
   if(act==="copy"){e.preventDefault();const ok=await copyText(certUrl(d));toast(ok?"Enlace copiado. Ábrelo desde cualquier dispositivo.":"No se pudo copiar; usa el enlace que aparece en la página.");return}
-  if(act==="mail"){e.preventDefault();const box=$("#mailbox");if(box){box.hidden=false;const t=findPolicy(d.policy);const i=$("#mailto");if(t&&!i.value)i.value=t.client.email;i.focus();return}const t=findPolicy(d.policy);if(t){upd(t.id,x=>queueMail(x,x.client.email,"Usuario"));sendQueued();toast("Enviando el certificado…")}else window.location.href=mailtoFor(d,"");return}
-  if(act==="mail-send"){e.preventDefault();const to=$("#mailto").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(to)){toast("Escribe un correo válido");return}
-    b.disabled=true;b.textContent="Enviando…";const t=findPolicy(d.policy);let res;
-    if(t){upd(t.id,x=>queueMail(x,to,"Usuario"));await sendQueued();const m=store.get("outbox",[]).filter(x=>x.policy===d.policy).pop();res=m?{status:m.status,note:m.note}:{status:"error",note:""}}
-    else res=FAKE_MAIL.test(to)?{status:"simulado",note:"Correo de prueba: no se envía de verdad"}:await apiSend(d,to);
-    b.disabled=false;b.textContent="Enviar";
-    $("#mailres").innerHTML=res.status==="enviado"?`<div class="okbox">Listo: enviamos el certificado en PDF a ${esc(maskMail(to))}.</div>`:res.status==="simulado"?`<div class="warnbox">${esc(res.note)}. <a href="${esc(mailtoFor(d,to))}">Abrir en mi programa de correo</a></div>`:`<div class="errbox" style="margin:0">${esc(res.note)}. <a href="${esc(mailtoFor(d,to))}">Abrir en mi programa de correo</a></div>`;return}
-  if(act==="retry"){e.preventDefault();retryMail(b.dataset.mail);toast("Reintentando el envío…");return}
+  if(act==="mail"){e.preventDefault();const t=findPolicy(d.policy);
+    if(t&&t.id!=="PUB"&&ME){b.classList.add("disabled");toast("Enviando el certificado…");await mailPolicy(t);b.classList.remove("disabled")}
+    else window.location.href=mailtoFor(d,"");return}
+
 });
 
 /* ---------- Vista del certificado (local o por enlace) ---------- */
@@ -1193,17 +1220,18 @@ function certHTML(d,opts={}){
   <dl class="kv"><dt>Prima neta</dt><dd>${money(d.premium.neta)}</dd><dt>IVA</dt><dd>${p.iva?money(d.premium.iva):"No aplica"}</dd><dt>Total</dt><dd>${money(d.premium.total)}${d.freq==="mensual"?` <span class="muted">(12 cuotas de ${money(d.premium.mensual)})</span>`:""}</dd><dt>Medio de pago</dt><dd>${payName(d.pay.method)}${d.pay.last4?" •••• "+d.pay.last4:""}${d.pay.bank?" · "+esc(d.pay.bank):""}</dd><dt>Canal de venta</dt><dd>${esc(d.channel)}${d.seller?" · Asesor: "+esc(d.seller):""}</dd>${d.status==="revocada"&&d.refund!=null?`<dt>Revocada</dt><dd>Devolución ${money(d.refund)}</dd>`:""}</dl></div>
   <h3 style="margin-top:24px">Coberturas</h3>${covTable(d.product,d.plan)}${benefitsBlock(d)}
   <div class="seal-row"><div class="seal"><b>Aprobado por el servidor central de Insurance Global</b><br>Número de aprobación <span class="mono"><b>${d.approval}</b></span> · ${fdt(d.approvedAt)}<br>Huella del documento <span class="mono">${d.fp}</span></div><div class="qrbox">${qrSVG(url)}<small>Escanea para ver este certificado en línea</small></div></div>
-  <div class="linkbox noprint"><label class="l" for="certlink">Enlace permanente de este certificado</label><div class="row" style="flex-wrap:nowrap"><input id="certlink" readonly value="${esc(url)}" onclick="this.select()"><button class="btn sec sm" data-act="copy" data-pol="${d.policy}">Copiar</button></div><p class="tiny" style="margin:6px 0 0">Funciona en cualquier navegador y dispositivo: el certificado viaja dentro del enlace con un sello que detecta si alguien lo modifica.</p>
-  <div id="mailbox" hidden style="margin-top:14px"><label class="l" for="mailto">Enviar el certificado en PDF a</label><div class="row" style="flex-wrap:nowrap"><input id="mailto" type="email" placeholder="correo@dominio.com"><button class="btn sm" data-act="mail-send" data-pol="${d.policy}">Enviar</button></div><div id="mailres" style="margin-top:10px"></div></div></div>
+  <div class="linkbox noprint"><label class="l" for="certlink">Enlace permanente de este certificado</label><div class="row" style="flex-wrap:nowrap"><input id="certlink" readonly value="${esc(url)}" onclick="this.select()"><button class="btn sec sm" data-act="copy" data-pol="${d.policy}">Copiar</button></div><p class="tiny" style="margin:6px 0 0">Funciona en cualquier dispositivo: al abrirlo, el servidor central confirma en línea que la póliza y su número de aprobación son auténticos. “Enviar por correo” manda el PDF solo al correo registrado del tomador.</p></div>
   <p class="tiny" style="margin-top:18px">Documento generado por un simulador académico; no constituye un contrato de seguro real. Puedes revocar la póliza en cualquier momento (art. 1071 C. de Co.). Para quejas: ${CO.defensor.name}, ${CO.defensor.mail}.</p></article></div>`;
 }
-function vCertLink(tok){
-  const r=readToken(tok);
-  if(r.err)return pageH(r.err==="tampered"?"Este certificado fue modificado":"Enlace de certificado no válido",r.err==="tampered"?"El contenido del enlace no coincide con su sello. No confíes en este documento y repórtalo a "+CO.tel+".":"El enlace está incompleto o dañado. Pide que te lo envíen de nuevo.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`;
-  const d={...r.d};const local=findPolicy(d.policy);if(local){d.status=local.status;d.refund=local.refund}else d.status="aprobada";
-  CURRENT_CERT=d;
-  const notice=`<div class="okbox noprint" style="margin-bottom:16px">${ic("shield").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-4px"')} <b>Certificado íntegro.</b> El sello del enlace coincide: este documento no fue alterado desde que lo emitió el servidor central.${local?"":" El estado mostrado corresponde al momento de la emisión."}</div>`;
-  return certHTML(d,{notice,back:`<a href="#/verificar">← Verificar otra póliza</a>`});
+function vCertLink(){return pageH("Este enlace ya no se usa","Por seguridad, los certificados ahora se validan en línea con el servidor central. Verifica la póliza con su número y su número de aprobación.")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`}
+async function vCertPublic(pol,apr){
+  let j;try{j=await api("public/verify",{query:{p:pol,a:apr}})}catch(e){return ()=>errView(e)}
+  return ()=>{
+    if(!j.found)return pageH("Certificado no válido","No existe una póliza con ese número y ese número de aprobación. No confíes en este documento y repórtalo a "+CO.tel+".")+`<div class="wrap"><a class="btn" href="#/verificar">Verificar una póliza</a></div>`;
+    const own=findPolicy(pol);const d=certData(own&&own.id!=="PUB"?own:j.cert);d.refund=j.cert.refund;d.status=j.cert.status;CURRENT_CERT=d;
+    const notice=`<div class="okbox noprint" style="margin-bottom:16px">${ic("shield").replace("<svg",'<svg style="width:18px;height:18px;vertical-align:-4px"')} <b>Certificado auténtico.</b> El servidor central confirmó en línea la póliza ${esc(pol)} y su número de aprobación. Estado actual: ${(STATUS[d.status]||[d.status])[0].toLowerCase()}. Los datos personales se muestran enmascarados.</div>`;
+    return certHTML(d,{notice,back:`<a href="#/verificar">← Verificar otra póliza</a>`});
+  };
 }
 
 /* ---------- QR ---------- */
@@ -1277,6 +1305,58 @@ function downloadPdf(d){
   const blob=new Blob([buildPdf(d)],{type:"application/pdf"});const u=URL.createObjectURL(blob);
   const a=document.createElement("a");a.href=u;a.download=`Poliza-${d.policy}.pdf`;document.body.appendChild(a);a.click();a.remove();
   setTimeout(()=>URL.revokeObjectURL(u),60000);toast("PDF generado: Poliza-"+d.policy+".pdf");
+}
+
+/* ============ Cuentas: ingreso, registro, cuenta e instalación ============ */
+const qsParam=k=>new URLSearchParams(location.hash.split("?")[1]||"").get(k);
+const safeNext=()=>{const n=qsParam("next")||"";return /^\/[\w\-\/?=&%.]*$/.test(n)&&!n.startsWith("//")?"#"+n:null};
+const homeFor=u=>u.role==="admin"?"#/central":u.role==="asesor"?"#/oficina":"#/mis-polizas";
+const PWD_HINT="Mínimo 10 caracteres, con letras y números.";
+function vLogin(){
+  if(ME)return pageH("Ya iniciaste sesión",`Estás conectado como ${esc(ME.name)} (${ROLE_NAME[ME.role]}).`)+`<div class="wrap row"><a class="btn" href="${safeNext()||homeFor(ME)}">Continuar</a><a class="btn sec" href="#/cuenta">Mi cuenta</a></div>`;
+  const why=qsParam("why")==="buy"?`<div class="okbox" style="margin-bottom:14px">Tu cotización quedó guardada. Ingresa o crea tu cuenta para terminar la compra.</div>`:"";
+  after(()=>{const f=$("#lgf"),box=$("#lgerr");f.elements.email.focus();f.onsubmit=async e=>{e.preventDefault();const sb=e.submitter;sb.disabled=true;box.textContent="";
+    try{const j=await api("auth/login",{method:"POST",body:{email:f.elements.email.value.trim(),password:f.elements.password.value}});ME=j.user;paintAcct();
+      toast("Bienvenido, "+ME.name.split(" ")[0]);location.hash=ME.mustChange?"#/cuenta":(safeNext()||homeFor(ME))}
+    catch(err){box.textContent=err.message;f.elements.password.value="";sb.disabled=false}}});
+  const nx=qsParam("next")?"?next="+encodeURIComponent(qsParam("next")):"";
+  return pageH("Ingresar","Clientes, asesores y administradores ingresan con su correo y contraseña. La sesión se cierra sola a las 8 horas.","Ingresar")+`
+  <div class="wrap grid g2" style="align-items:start"><form class="card" id="lgf" novalidate>${why}<label class="l" for="lg_e">Correo</label><input id="lg_e" name="email" type="email" autocomplete="username" required><label class="l" for="lg_p" style="margin-top:12px">Contraseña</label><input id="lg_p" name="password" type="password" autocomplete="current-password" required><div class="errbox" id="lgerr" role="alert"></div><button class="btn full" style="margin-top:14px">${ic("lock")}Ingresar</button><p class="tiny" style="margin-bottom:0">¿No tienes cuenta? <a href="#/registro${nx}">Crea tu cuenta de cliente</a>. Los asesores reciben su usuario del administrador.</p></form>
+  <div class="card"><h3>Tu cuenta te protege</h3><ul style="padding-left:18px;margin:0;font-size:14.5px"><li>Solo tú ves tus pólizas, certificados y beneficios.</li><li>Tras 5 intentos fallidos la cuenta se bloquea 15 minutos.</li><li>Guardamos tu contraseña cifrada (scrypt); nadie en Insurance Global puede leerla.</li><li>La sesión viaja en una cookie segura que el navegador no deja leer a otros scripts.</li></ul></div></div>`;
+}
+function vRegister(){
+  if(ME)return vLogin();
+  after(()=>{const f=$("#rgf"),box=$("#rgerr");f.onsubmit=async e=>{e.preventDefault();const g=n=>f.elements[n].value.trim();
+    if(f.elements.password.value!==f.elements.password2.value)return showErr(box,{err:"Las contraseñas no coinciden.",el:f.elements.password2});
+    if(!f.elements.acepto.checked)return showErr(box,{err:"Debes autorizar el tratamiento de datos.",el:f.elements.acepto});
+    showErr(box,{});const sb=e.submitter;sb.disabled=true;
+    try{const j=await api("auth/register",{method:"POST",body:{tipoDoc:g("tipoDoc"),doc:g("doc"),nombres:g("nombres"),apellidos:g("apellidos"),nacimiento:g("nacimiento"),celular:g("celular"),email:g("email").toLowerCase(),password:f.elements.password.value,acepto:true}});
+      ME=j.user;paintAcct();toast("Cuenta creada. ¡Bienvenido!");location.hash=safeNext()||"#/mis-polizas"}
+    catch(err){showErr(box,{err:err.message});sb.disabled=false}}});
+  const F=CLIENT_F.filter(x=>!["ciudad","direccion"].includes(x.id));
+  return pageH("Crear cuenta de cliente","Con tu cuenta compras en línea y ves las pólizas que compraste en la web o en una oficina (con el mismo documento y correo).","Crear cuenta")+`
+  <div class="wrap layout2"><form class="card" id="rgf" novalidate><div class="fg">${F.map(x=>fieldHTML(x,undefined,"")).join("")}<div><label class="l" for="rg_p">Contraseña</label><input id="rg_p" name="password" type="password" autocomplete="new-password"><div class="hint">${PWD_HINT}</div></div><div><label class="l" for="rg_p2">Repite la contraseña</label><input id="rg_p2" name="password2" type="password" autocomplete="new-password"></div></div>
+  <label class="check" style="margin-top:12px"><input type="checkbox" name="acepto"><span>Autorizo el tratamiento de mis datos personales según la <a href="#/legal/privacidad" target="_blank">política de privacidad</a> (Ley 1581 de 2012).</span></label><div class="errbox" id="rgerr" role="alert"></div><button class="btn" style="margin-top:12px">Crear cuenta</button></form>
+  <aside class="card side"><h3>¿Ya tienes cuenta?</h3><a class="btn sec full" href="#/ingresar${qsParam("next")?"?next="+encodeURIComponent(qsParam("next")):""}">Ingresar</a><p class="tiny">Tu documento y tu correo no se pueden cambiar después: son los que el servidor central usa para asociar tus pólizas.</p></aside></div>`;
+}
+function vAccount(){
+  if(!ME)return gate();
+  after(()=>{const f=$("#pwf"),box=$("#pwerr");f.onsubmit=async e=>{e.preventDefault();
+    if(f.elements.password.value!==f.elements.password2.value)return showErr(box,{err:"Las contraseñas nuevas no coinciden.",el:f.elements.password2});
+    showErr(box,{});const sb=e.submitter;sb.disabled=true;
+    try{await api("auth/password",{method:"POST",body:{current:f.elements.current.value,password:f.elements.password.value}});const was=ME.mustChange;await loadMe();toast("Contraseña actualizada");f.reset();if(was)location.hash=homeFor(ME);else router()}
+    catch(err){showErr(box,{err:err.message})}sb.disabled=false}});
+  return pageH("Mi cuenta",`${esc(ME.name)} · ${ROLE_NAME[ME.role]}`,"Mi cuenta")+`
+  <div class="wrap grid g2" style="align-items:start"><div class="card"><dl class="kv"><dt>Correo</dt><dd>${esc(ME.email)}</dd><dt>Rol</dt><dd>${ROLE_NAME[ME.role]}</dd>${ME.office?`<dt>Oficina</dt><dd>${esc((officeById(ME.office)||{}).name||ME.office)}</dd>`:""}${ME.doc?`<dt>Documento</dt><dd>${esc(ME.docType||"")} ${maskDoc(ME.doc)}</dd>`:""}</dl><div class="row" style="margin-top:14px"><a class="btn sec sm" href="${homeFor(ME)}">Ir a ${ME.role==="admin"?"la consola":ME.role==="asesor"?"el portal de asesores":"mis pólizas"}</a><button class="btn red sm" onclick="document.getElementById('acctOut').click()">Cerrar sesión</button></div></div>
+  <form class="card" id="pwf" novalidate><h3>${ME.mustChange?"Cambia tu contraseña temporal":"Cambiar contraseña"}</h3>${ME.mustChange?`<div class="warnbox" style="margin-bottom:12px">El administrador te asignó una contraseña temporal. Cámbiala para usar el portal.</div>`:""}<label class="l" for="pw_c">Contraseña actual</label><input id="pw_c" name="current" type="password" autocomplete="current-password"><label class="l" for="pw_n" style="margin-top:10px">Contraseña nueva</label><input id="pw_n" name="password" type="password" autocomplete="new-password"><div class="hint">${PWD_HINT}</div><label class="l" for="pw_n2" style="margin-top:10px">Repite la contraseña nueva</label><input id="pw_n2" name="password2" type="password" autocomplete="new-password"><div class="errbox" id="pwerr" role="alert"></div><button class="btn" style="margin-top:12px">Guardar</button></form></div>`;
+}
+function vSetup(){
+  after(()=>{const f=$("#suf"),box=$("#suerr");f.onsubmit=async e=>{e.preventDefault();showErr(box,{});const sb=e.submitter;sb.disabled=true;
+    try{await api("setup",{method:"POST",body:{key:f.elements.key.value,name:f.elements.name.value,email:f.elements.email.value,password:f.elements.password.value}});
+      $("#sures").innerHTML=`<div class="okbox">Administrador creado. Ya puedes <a href="#/ingresar">ingresar</a>. Este paso queda deshabilitado; borra la variable SETUP_KEY en Azure.</div>`;f.reset()}
+    catch(err){showErr(box,{err:err.message})}sb.disabled=false}});
+  return pageH("Instalación: primer administrador","Paso único. Requiere la clave de instalación (variable SETUP_KEY configurada en Azure). Solo funciona si todavía no existe ningún administrador.")+`
+  <div class="wrap"><form class="card" id="suf" style="max-width:560px" novalidate><label class="l">Clave de instalación (SETUP_KEY)</label><input name="key" type="password" autocomplete="off"><label class="l" style="margin-top:10px">Nombre del administrador</label><input name="name"><label class="l" style="margin-top:10px">Correo</label><input name="email" type="email" autocomplete="username"><label class="l" style="margin-top:10px">Contraseña</label><input name="password" type="password" autocomplete="new-password"><div class="hint">${PWD_HINT}</div><div class="errbox" id="suerr"></div><button class="btn" style="margin-top:12px">Crear administrador</button><div id="sures" style="margin-top:12px"></div></form></div>`;
 }
 
 

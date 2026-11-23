@@ -1,7 +1,10 @@
 {
   "name": "insurance-global-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Envío del certificado de póliza por correo (SMTP) para Insurance Global",
-  "dependencies": {}
+  "description": "API de Insurance Global: login, servidor central y Azure SQL Database",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "mssql": "^12.0.0"
+  }
 }
