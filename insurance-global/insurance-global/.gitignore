@@ -1,9 +1,0 @@
-# Nunca subir secretos ni configuraciones locales
-.env
-*.env
-local.settings.json
-api/local.settings.json
-node_modules/
-.swa/
-.DS_Store
-Thumbs.db
