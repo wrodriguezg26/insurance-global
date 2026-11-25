@@ -107,6 +107,37 @@ async function changePassword(ctx, b) {
   ctx.setCookie = A.sessionCookie(A.newSession(u));
   return { ok: true };
 }
+/* ---------- Recuperar contraseña por correo ----------
+ * Enlace firmado con AUTH_SECRET que incluye un pedazo del hash actual de la contraseña:
+ * vence a los 30 minutos y deja de servir apenas se cambia la contraseña (un solo uso), sin tablas nuevas. */
+const RESET_MIN = 30;
+const resetSig = (u, exp) => A.hmac(["reset", u.id, exp, String(u.pwd_hash).slice(-24)].join("|"));
+async function forgotPassword(ctx, b) {
+  const email = str(b.email, 160).toLowerCase();
+  const generic = { message: "Si el correo está registrado, te enviamos un enlace para restablecer la contraseña. Revisa también la carpeta de spam." };
+  if (!EMAIL_RE.test(email)) throw E(400, "Escribe un correo válido.");
+  if (limited("forgot:" + ctx.ip, 5, 3600e3) || limited("forgot:" + email, 3, 3600e3)) return generic; // misma respuesta: no revela nada
+  const u = await ctx.store.getUserByEmail(email);
+  if (!u || !u.active) return generic;
+  const exp = Date.now() + RESET_MIN * 60e3, token = `${u.id}.${exp}.${resetSig(u, exp).slice(0, 43)}`;
+  const res = await mail.sendReset(u.email, u.name, `${mail.siteUrl()}/#/restablecer/${token}`, RESET_MIN);
+  await audit(ctx, "—", `Solicitud de recuperación de contraseña para ${maskMail(u.email)} (correo: ${res.status})`, "Recuperación de contraseña");
+  return generic;
+}
+async function resetPassword(ctx, b) {
+  if (limited("reset:" + ctx.ip, 10, 3600e3)) throw E(429, "Demasiados intentos. Espera una hora.");
+  const m = String(b.token || "").match(/^(\d{1,9})\.(\d{13})\.([A-Za-z0-9+/=_-]{20,64})$/);
+  const bad = E(400, "El enlace no es válido o ya venció. Solicita uno nuevo.");
+  if (!m) throw bad;
+  const exp = Number(m[2]); if (exp < Date.now()) throw bad;
+  const u = await ctx.store.getUserById(Number(m[1])); if (!u || !u.active) throw bad;
+  const want = Buffer.from(resetSig(u, exp).slice(0, 43)), got = Buffer.from(m[3]);
+  if (want.length !== got.length || !crypto.timingSafeEqual(want, got)) throw bad;
+  const pp = A.passwordProblem(b.password); if (pp) throw E(400, pp);
+  await ctx.store.updateUser(u.id, { pwd_hash: A.hashPassword(b.password), failed: 0, locked_until: null, must_change: false });
+  await audit(ctx, "—", `Contraseña restablecida con enlace de recuperación (${maskMail(u.email)})`, "Recuperación de contraseña");
+  return { ok: true };
+}
 async function setup(ctx, b) {
   const key = process.env.SETUP_KEY || "";
   if (key.length < 16) throw E(404, "No encontrado");
@@ -530,4 +561,4 @@ async function seedDemo(ctx) {
   return { created: specs.length };
 }
 
-module.exports = { E, currentUser, publicUser, need, register, login, logout, changePassword, setup, createWebTx, createOfficeTx, closeOfficeTx, adminAction, getTx, getPolicy, myPolicies, revoke, publicVerify, activateBenefit, mailPolicy, mailBenefit, createClaim, createPqr, officeList, adminTxList, adminTx, summary, adminList, verifyAudit, users, createStaff, updateStaff, seedDemo, STEP_NAMES, _limits: hits };
+module.exports = { E, currentUser, publicUser, need, register, login, logout, changePassword, setup, forgotPassword, resetPassword, createWebTx, createOfficeTx, closeOfficeTx, adminAction, getTx, getPolicy, myPolicies, revoke, publicVerify, activateBenefit, mailPolicy, mailBenefit, createClaim, createPqr, officeList, adminTxList, adminTx, summary, adminList, verifyAudit, users, createStaff, updateStaff, seedDemo, STEP_NAMES, _limits: hits };

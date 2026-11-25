@@ -91,3 +91,13 @@ Ahora la seguridad del servidor queda a tu cargo:
 - Deja SSH solo con llave y solo desde tu IP.
 - No subas `/etc/insurance-global.env` a GitHub.
 - Nginx bloquea los archivos ocultos (`.git`, `.env`) y envía la IP real a la API para el límite de 8 envíos cada 10 minutos.
+
+## Restablecer la contraseña de un usuario
+
+Si el administrador olvida su contraseña (o queda bloqueado), en la VM:
+
+```bash
+sudo node /var/www/insurance-global/deploy/vm/reset-password.js correo@dominio.com
+```
+
+Pide la contraseña nueva dos veces, desbloquea y reactiva la cuenta, la marca como temporal y deja registro en la auditoría.

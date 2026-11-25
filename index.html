@@ -971,7 +971,7 @@ function chatInit(){
 }
 
 /* ============ Router ============ */
-const routes=[[/^$/,vHome],[/^cotizar$/,vProducts],[/^cotizar\/(\w+)$/,vQuote],[/^comprar$/,vBuy],[/^proceso\/([\w-]+)$/,vProcess],[/^poliza\/([\w-]+)$/,vPolicy],[/^verificar$/,vVerify],[/^mis-polizas$/,vMine],[/^siniestros$/,vClaim],[/^atencion$/,vCare],[/^canales$/,vChannels],[/^oficina$/,vOffice],[/^oficina\/venta\/([\w-]+)$/,vOfficeSale],[/^central$/,vCentral],[/^central\/tx\/([\w-]+)$/,vCentralTx],[/^legal\/(\w+)$/,vLegal],[/^c\/([\w-]+)$/,vCertLink],[/^beneficios$/,vBenefits],[/^ingresar$/,vLogin],[/^registro$/,vRegister],[/^cuenta$/,vAccount],[/^instalar$/,vSetup],[/^certificado\/(IG-[A-Z]{3}-\d{4}-\d{6})\/(APR-\d{8}-\d{6})$/i,vCertPublic]];
+const routes=[[/^$/,vHome],[/^cotizar$/,vProducts],[/^cotizar\/(\w+)$/,vQuote],[/^comprar$/,vBuy],[/^proceso\/([\w-]+)$/,vProcess],[/^poliza\/([\w-]+)$/,vPolicy],[/^verificar$/,vVerify],[/^mis-polizas$/,vMine],[/^siniestros$/,vClaim],[/^atencion$/,vCare],[/^canales$/,vChannels],[/^oficina$/,vOffice],[/^oficina\/venta\/([\w-]+)$/,vOfficeSale],[/^central$/,vCentral],[/^central\/tx\/([\w-]+)$/,vCentralTx],[/^legal\/(\w+)$/,vLegal],[/^c\/([\w-]+)$/,vCertLink],[/^beneficios$/,vBenefits],[/^ingresar$/,vLogin],[/^recuperar$/,vForgot],[/^restablecer\/(\d{1,9}\.\d{13}\.[A-Za-z0-9_-]{20,64})$/,vReset],[/^registro$/,vRegister],[/^cuenta$/,vAccount],[/^instalar$/,vSetup],[/^certificado\/(IG-[A-Z]{3}-\d{4}-\d{6})\/(APR-\d{8}-\d{6})$/i,vCertPublic]];
 let lastPath=null,RT=0;
 async function router(){
   const raw=location.hash.replace(/^#\/?/,"");
@@ -1321,7 +1321,7 @@ function vLogin(){
     catch(err){box.textContent=err.message;f.elements.password.value="";sb.disabled=false}}});
   const nx=qsParam("next")?"?next="+encodeURIComponent(qsParam("next")):"";
   return pageH("Ingresar","Clientes, asesores y administradores ingresan con su correo y contraseña. La sesión se cierra sola a las 8 horas.","Ingresar")+`
-  <div class="wrap grid g2" style="align-items:start"><form class="card" id="lgf" novalidate>${why}<label class="l" for="lg_e">Correo</label><input id="lg_e" name="email" type="email" autocomplete="username" required><label class="l" for="lg_p" style="margin-top:12px">Contraseña</label><input id="lg_p" name="password" type="password" autocomplete="current-password" required><div class="errbox" id="lgerr" role="alert"></div><button class="btn full" style="margin-top:14px">${ic("lock")}Ingresar</button><p class="tiny" style="margin-bottom:0">¿No tienes cuenta? <a href="#/registro${nx}">Crea tu cuenta de cliente</a>. Los asesores reciben su usuario del administrador.</p></form>
+  <div class="wrap grid g2" style="align-items:start"><form class="card" id="lgf" novalidate>${why}<label class="l" for="lg_e">Correo</label><input id="lg_e" name="email" type="email" autocomplete="username" required><label class="l" for="lg_p" style="margin-top:12px">Contraseña</label><input id="lg_p" name="password" type="password" autocomplete="current-password" required><p class="tiny" style="margin:8px 0 0;text-align:right"><a href="#/recuperar">¿Olvidaste tu contraseña?</a></p><div class="errbox" id="lgerr" role="alert"></div><button class="btn full" style="margin-top:14px">${ic("lock")}Ingresar</button><p class="tiny" style="margin-bottom:0">¿No tienes cuenta? <a href="#/registro${nx}">Crea tu cuenta de cliente</a>. Los asesores reciben su usuario del administrador.</p></form>
   <div class="card"><h3>Tu cuenta te protege</h3><ul style="padding-left:18px;margin:0;font-size:14.5px"><li>Solo tú ves tus pólizas, certificados y beneficios.</li><li>Tras 5 intentos fallidos la cuenta se bloquea 15 minutos.</li><li>Guardamos tu contraseña cifrada (scrypt); nadie en Insurance Global puede leerla.</li><li>La sesión viaja en una cookie segura que el navegador no deja leer a otros scripts.</li></ul></div></div>`;
 }
 function vRegister(){
@@ -1357,6 +1357,24 @@ function vSetup(){
     catch(err){showErr(box,{err:err.message})}sb.disabled=false}});
   return pageH("Instalación: primer administrador","Paso único. Requiere la clave de instalación (variable SETUP_KEY configurada en Azure). Solo funciona si todavía no existe ningún administrador.")+`
   <div class="wrap"><form class="card" id="suf" style="max-width:560px" novalidate><label class="l">Clave de instalación (SETUP_KEY)</label><input name="key" type="password" autocomplete="off"><label class="l" style="margin-top:10px">Nombre del administrador</label><input name="name"><label class="l" style="margin-top:10px">Correo</label><input name="email" type="email" autocomplete="username"><label class="l" style="margin-top:10px">Contraseña</label><input name="password" type="password" autocomplete="new-password"><div class="hint">${PWD_HINT}</div><div class="errbox" id="suerr"></div><button class="btn" style="margin-top:12px">Crear administrador</button><div id="sures" style="margin-top:12px"></div></form></div>`;
+}
+
+function vForgot(){
+  after(()=>{const f=$("#fgf"),box=$("#fgerr");f.elements.email.focus();f.onsubmit=async e=>{e.preventDefault();showErr(box,{});const sb=e.submitter;sb.disabled=true;
+    try{const j=await api("auth/forgot",{method:"POST",body:{email:f.elements.email.value.trim()}});$("#fgres").innerHTML=`<div class="okbox">${esc(j.message)} El enlace vence en 30 minutos.</div>`;f.reset()}
+    catch(err){showErr(box,{err:err.message})}sb.disabled=false}});
+  return pageH("Recuperar contraseña","Escribe el correo de tu cuenta. Te enviaremos un enlace para crear una contraseña nueva.","Recuperar contraseña")+`
+  <div class="wrap"><form class="card" id="fgf" style="max-width:520px" novalidate><label class="l" for="fg_e">Correo de tu cuenta</label><input id="fg_e" name="email" type="email" autocomplete="username"><div class="errbox" id="fgerr" role="alert"></div><button class="btn" style="margin-top:12px">Enviar enlace</button><div id="fgres" style="margin-top:12px"></div><p class="tiny" style="margin-bottom:0">Por seguridad, la respuesta es la misma exista o no la cuenta. Funciona para clientes, asesores y administradores. <a href="#/ingresar">Volver a ingresar</a></p></form></div>`;
+}
+function vReset(token){
+  after(()=>{const f=$("#rsf"),box=$("#rserr");f.onsubmit=async e=>{e.preventDefault();
+    if(f.elements.password.value!==f.elements.password2.value)return showErr(box,{err:"Las contraseñas no coinciden.",el:f.elements.password2});
+    showErr(box,{});const sb=e.submitter;sb.disabled=true;
+    try{await api("auth/reset",{method:"POST",body:{token,password:f.elements.password.value}});
+      f.outerHTML=`<div class="card" style="max-width:520px"><div class="okbox">Contraseña actualizada. Ya puedes ingresar con la nueva.</div><a class="btn" style="margin-top:12px" href="#/ingresar">Ingresar</a></div>`}
+    catch(err){showErr(box,{err:err.message});sb.disabled=false}}});
+  return pageH("Crea tu contraseña nueva","El enlace vence 30 minutos después de pedirlo y solo sirve una vez.")+`
+  <div class="wrap"><form class="card" id="rsf" style="max-width:520px" novalidate><label class="l" for="rs_p">Contraseña nueva</label><input id="rs_p" name="password" type="password" autocomplete="new-password"><div class="hint">${PWD_HINT}</div><label class="l" for="rs_p2" style="margin-top:10px">Repite la contraseña</label><input id="rs_p2" name="password2" type="password" autocomplete="new-password"><div class="errbox" id="rserr" role="alert"></div><button class="btn" style="margin-top:12px">Guardar contraseña</button><p class="tiny" style="margin-bottom:0">¿El enlace venció? <a href="#/recuperar">Pide uno nuevo</a>.</p></form></div>`;
 }
 
 

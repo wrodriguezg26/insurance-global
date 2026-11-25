@@ -26,6 +26,7 @@ elif [ ! -f /opt/insurance-global/index.html ]; then git clone "$REPO" /opt/insu
 chown -R root:root /opt/insurance-global && chmod -R a+rX /opt/insurance-global
 mkdir -p /var/www/insurance-global
 cp /opt/insurance-global/index.html /var/www/insurance-global/index.html
+rm -rf /var/www/insurance-global/img && cp -r /opt/insurance-global/img /var/www/insurance-global/
 (cd /opt/insurance-global/api && npm install --omit=dev --no-audit --no-fund)
 
 echo "== 4/6 Variables de entorno"

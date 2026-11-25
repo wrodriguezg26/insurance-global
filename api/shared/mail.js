@@ -161,17 +161,26 @@ const FAKE_MAIL=/@(ejemplo|example|test|prueba)\.(com|co|org|net)$/i;
 function cfg(){return{host:process.env.SMTP_HOST||"smtpout.secureserver.net",port:Number(process.env.SMTP_PORT||465),user:process.env.SMTP_USER,pass:process.env.SMTP_PASS}}
 const siteUrl=()=>(process.env.SITE_URL||"https://seguros.t-shits.co").replace(/\/+$/,"");
 /* Envía un correo ya armado. Devuelve {status:"enviado"|"simulado"|"error", note}. */
-async function deliver(to,buildFn){
+async function deliver(to,buildFn,opt={}){
   if(FAKE_MAIL.test(to))return{status:"simulado",note:"Correo de prueba: no se envía de verdad"};
   const c=cfg();const dry=process.env.MAIL_DRYRUN==="1";
   if(!dry&&(!c.user||!c.pass))return{status:"simulado",note:"Correo no configurado (faltan SMTP_USER y SMTP_PASS)"};
   const from=process.env.MAIL_FROM||c.user||"seguros@t-shits.co";
   const data=buildFn({fromName:process.env.MAIL_FROM_NAME||"Insurance Global",from});
   if(dry)return{status:"simulado",note:"Modo de pruebas de seguridad (MAIL_DRYRUN): validado, no enviado"};
-  const bcc=(process.env.MAIL_BCC||"").trim();
+  const bcc=opt.noBcc?"":(process.env.MAIL_BCC||"").trim();
   try{await smtpSend({...c,from,rcpts:bcc?[to,bcc]:[to],data});return{status:"enviado",note:"Enviado por SMTP"}}
   catch(e){return{status:"error",note:"No se pudo enviar: "+String(e.message).slice(0,200)}}
 }
 function sendPolicy(to,d,link,pdf){return deliver(to,({fromName,from})=>buildMessage({fromName,from,to,d,link,pdf}))}
 function sendBenefit(to,d,x,link,pdf){return deliver(to,({fromName,from})=>buildBenefitMessage({fromName,from,to,d,x,link,pdf}))}
-module.exports={sendPolicy,sendBenefit,siteUrl,FAKE_MAIL,BEN};
+/* Recuperación de contraseña: sin copia oculta (el enlace es personal) */
+function buildResetMessage({fromName,from,to,name,link,minutes}){
+  const first=String(name||"").split(" ")[0]||"hola",subject="Restablece tu contraseña · Insurance Global";
+  const text=`Hola ${first}:\n\nRecibimos una solicitud para restablecer la contraseña de tu cuenta en Insurance Global.\n\nUsa este enlace en los próximos ${minutes} minutos (solo sirve una vez):\n${link}\n\nSi no fuiste tú, ignora este correo: tu contraseña no cambia.\n\nInsurance Global\n(Simulador académico: Insurance Global es una compañía ficticia.)`;
+  const html=`<!doctype html><html><body style="margin:0;background:#f5f7fb;font-family:Arial,Helvetica,sans-serif;color:#14213d"><table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fb;padding:24px 0"><tr><td align="center"><table width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #dde3ec;border-radius:12px;overflow:hidden"><tr><td style="background:#0e2a47;padding:22px 28px;color:#ffffff"><b style="font-size:20px">Insurance Global</b><br><span style="font-size:12px;color:#c9d6e6">Seguridad de tu cuenta</span></td></tr><tr><td style="padding:26px 28px;font-size:15px;line-height:1.55"><p>Hola ${escHtml(first)}:</p><p>Recibimos una solicitud para restablecer la contraseña de tu cuenta.</p><p style="text-align:center;margin:24px 0"><a href="${escHtml(link)}" style="display:inline-block;background:#1f5fbf;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;font-weight:bold">Crear una contraseña nueva</a></p><p style="font-size:13px;color:#5b6b82">El enlace vence en ${minutes} minutos y solo sirve una vez. Si no fuiste tú, ignora este correo: tu contraseña no cambia.</p></td></tr><tr><td style="background:#fbf3e0;color:#6b4e00;font-size:11px;padding:10px 28px">Simulador académico: Insurance Global es una compañía ficticia.</td></tr></table></td></tr></table></body></html>`;
+  const b2="alt_"+crypto.randomBytes(8).toString("hex"),domain=(from.split("@")[1]||"localhost");
+  return [`From: ${encHeader(fromName)} <${from}>`,`To: <${to}>`,`Subject: ${encHeader(subject)}`,`Date: ${new Date().toUTCString()}`,`Message-ID: <${crypto.randomUUID()}@${domain}>`,`MIME-Version: 1.0`,`Content-Type: multipart/alternative; boundary="${b2}"`,``,`--${b2}`,`Content-Type: text/plain; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(text),`--${b2}`,`Content-Type: text/html; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(html),`--${b2}--`,``].join("\r\n");
+}
+function sendReset(to,name,link,minutes){return deliver(to,({fromName,from})=>buildResetMessage({fromName,from,to,name,link,minutes}),{noBcc:true})}
+module.exports={sendPolicy,sendBenefit,sendReset,siteUrl,FAKE_MAIL,BEN};

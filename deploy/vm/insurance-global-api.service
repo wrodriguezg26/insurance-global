@@ -1,6 +1,6 @@
 # /etc/systemd/system/insurance-global-api.service
 [Unit]
-Description=Insurance Global - API de correo
+Description=Insurance Global - API del servidor central
 After=network-online.target
 Wants=network-online.target
 
