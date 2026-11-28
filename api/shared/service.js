@@ -46,7 +46,7 @@ async function currentUser(ctx, req) {
   const u = await ctx.store.getUserById(p.uid);
   return u && u.active ? u : null;
 }
-const publicUser = u => u && ({ id: u.id, email: u.email, name: u.name, role: u.role, office: u.office, docType: u.doc_type, doc: u.doc, phone: u.phone, mustChange: !!u.must_change });
+const publicUser = u => u && ({ id: u.id, email: u.email, name: u.name, role: u.role, office: u.office, docType: u.doc_type, doc: u.doc, phone: u.phone, firstNames: u.first_names || null, lastNames: u.last_names || null, birthDate: u.birth_date || null, mustChange: !!u.must_change });
 function need(ctx, roles) {
   if (!ctx.user) throw E(401, "Debes iniciar sesión.", "login");
   if (ctx.user.must_change && !ctx.allowMustChange) throw E(403, "Debes cambiar tu contraseña antes de continuar.", "must_change");
@@ -72,11 +72,75 @@ async function register(ctx, b) {
   if (!b.acepto) throw E(400, "Debes autorizar el tratamiento de datos para crear la cuenta.");
   if (await ctx.store.getUserByEmail(c.email)) throw E(409, "Ya existe una cuenta con ese correo. Inicia sesión.");
   if (await ctx.store.getUserByDoc(c.doc)) throw E(409, "Ya existe una cuenta con ese documento. Inicia sesión.");
-  const u = await ctx.store.createUser({ email: c.email, name: `${c.nombres} ${c.apellidos}`, role: "cliente", doc_type: c.tipoDoc, doc: c.doc, phone: c.celular, pwd_hash: A.hashPassword(b.password) });
+  const consentAt = new Date().toISOString();
+  const u = await ctx.store.createUser({ email: c.email, name: `${c.nombres} ${c.apellidos}`, role: "cliente", doc_type: c.tipoDoc, doc: c.doc, phone: c.celular, pwd_hash: A.hashPassword(b.password),
+    first_names: c.nombres, last_names: c.apellidos, birth_date: c.nacimiento, consent_at: consentAt });
   await ctx.store.updateUser(u.id, { last_login: new Date().toISOString() });
   await audit(ctx, "—", `Cuenta de cliente creada (${maskMail(u.email)})`, "Registro web");
+  await notifyRegistration(ctx, u, c, consentAt);
   ctx.setCookie = A.sessionCookie(A.newSession(u));
   return { user: publicUser(u), profile: { nombres: c.nombres, apellidos: c.apellidos, nacimiento: c.nacimiento } };
+}
+/* Cada registro nuevo se envía en un archivo JSON al buzón de la compañía (REGISTRO_NOTIFY_TO).
+ * Si el correo falla, el registro sigue normal: el cliente ya quedó guardado en la base de datos. */
+function registrationJson(u, c, consentAt) {
+  const id = "CLI-" + pad(u.id, 6);
+  return { id, data: {
+    registro: { id, fecha: consentAt, canal: "web", formulario: "#/registro" },
+    cliente: { tipoDocumento: c.tipoDoc, documento: c.doc, nombres: c.nombres, apellidos: c.apellidos, fechaNacimiento: c.nacimiento, celular: c.celular, correo: c.email },
+    autorizaciones: { tratamientoDatos: true, politica: "Ley 1581 de 2012", fecha: consentAt },
+    origen: mail.siteUrl()
+  } };
+}
+/* En la VM, además, cada registro se guarda como archivo .json (REGISTRO_JSON_DIR, p. ej. /var/lib/insurance-global/registros).
+ * Nunca dentro de la carpeta pública del sitio. En Azure Static Web Apps no hay disco persistente: allí no se define. */
+const fs = require("fs"), pathMod = require("path");
+async function saveRegistrationFile(id, data) {
+  const dir = (process.env.REGISTRO_JSON_DIR || "").trim();
+  if (!dir) return { status: "omitido" };
+  const abs = pathMod.resolve(dir);
+  if (/^\/(var\/www|srv\/www|usr\/share\/nginx)(\/|$)/.test(abs)) return { status: "error", note: "REGISTRO_JSON_DIR está dentro de la carpeta pública del sitio" };
+  try {
+    await fs.promises.mkdir(abs, { recursive: true, mode: 0o700 });
+    const file = pathMod.join(abs, `registro-${id}.json`);
+    await fs.promises.writeFile(file, JSON.stringify(data, null, 2) + "\n", { mode: 0o600, flag: "wx" });
+    return { status: "guardado", file };
+  } catch (e) { return { status: "error", note: String(e.code || e.message).slice(0, 120) }; }
+}
+/* Copia del registro en Azure Blob Storage (contenedor privado), para descargarla desde el portal.
+ * REGISTRO_BLOB_SAS_URL = URL SAS del contenedor con permisos SOLO de crear y escribir (sp=cw):
+ *   https://<cuenta>.blob.core.windows.net/registros?sv=...&sp=cw&se=...&sig=...
+ * Sin dependencias: PUT Blob por REST. Funciona igual en Azure Static Web Apps y en la VM. */
+async function uploadRegistrationBlob(id, data) {
+  const sas = (process.env.REGISTRO_BLOB_SAS_URL || "").trim();
+  if (!sas) return { status: "omitido" };
+  let u;
+  try { u = new URL(sas); } catch (e) { return { status: "error", note: "REGISTRO_BLOB_SAS_URL no es una URL válida" }; }
+  const azure = u.protocol === "https:" && /\.blob\.core\.windows\.net$/i.test(u.hostname), azurite = u.hostname === "127.0.0.1";
+  if (!(azure || azurite) || !u.searchParams.get("sig")) return { status: "error", note: "REGISTRO_BLOB_SAS_URL debe ser la URL SAS de un contenedor de Azure Storage" };
+  const name = `registro-${id}.json`;
+  const target = `${u.origin}${u.pathname.replace(/\/+$/, "")}/${encodeURIComponent(name)}${u.search}`;
+  try {
+    const r = await fetch(target, { method: "PUT", body: JSON.stringify(data, null, 2) + "\n", signal: AbortSignal.timeout(15000),
+      headers: { "x-ms-blob-type": "BlockBlob", "x-ms-version": "2021-08-06", "Content-Type": "application/json; charset=utf-8", "If-None-Match": "*" } });
+    if (r.status === 201) return { status: "subido", name };
+    const txt = (await r.text().catch(() => "")).match(/<Code>([^<]+)<\/Code>/);
+    return { status: "error", note: `HTTP ${r.status}${txt ? " " + txt[1] : ""}` };
+  } catch (e) { return { status: "error", note: String(e.name === "TimeoutError" ? "tiempo de espera agotado" : e.message).slice(0, 120) }; }
+}
+async function notifyRegistration(ctx, u, c, consentAt) {
+  let to = (process.env.REGISTRO_NOTIFY_TO || process.env.MAIL_BCC || "administrador@t-shits.co").trim();
+  if (!EMAIL_RE.test(to)) to = "administrador@t-shits.co"; // REGISTRO_NOTIFY_TO mal escrito (p. ej. una URL)
+  const { id, data } = registrationJson(u, c, consentAt);
+  const saved = await saveRegistrationFile(id, data);
+  const blob = await uploadRegistrationBlob(id, data);
+  if (blob.status !== "omitido") { try { await audit(ctx, "—", blob.status === "subido" ? `Registro ${id} subido a Azure Blob Storage (${blob.name})` : `No se pudo subir el registro ${id} a Azure Blob Storage: ${blob.note}`, "Registro web"); } catch (e) { } }
+  if (saved.status !== "omitido") { try { await audit(ctx, "—", saved.status === "guardado" ? `Registro ${id} guardado en el servidor (${saved.file})` : `No se pudo guardar el archivo del registro ${id}: ${saved.note}`, "Registro web"); } catch (e) { } }
+  let res;
+  try { res = await mail.sendRegistration(to, data, `registro-${id}.json`); }
+  catch (e) { res = { status: "error", note: String(e.message).slice(0, 160) }; }
+  try { await audit(ctx, "—", `Datos del registro ${id} enviados en JSON a ${maskMail(to)} (correo: ${res.status})`, "Registro web"); } catch (e) { }
+  return res;
 }
 async function login(ctx, b) {
   if (limited("login:" + ctx.ip, 20, 600e3)) throw E(429, "Demasiados intentos desde esta conexión. Espera 10 minutos.");

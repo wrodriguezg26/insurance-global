@@ -70,7 +70,7 @@ module.exports = async function (context, req) {
     const out = await route[2](ctx, body, req.query || {}, path.match(route[1]));
     return reply(context, 200, { ok: true, ...out }, ctx.setCookie);
   } catch (e) {
-    const sqlDown = /ETIMEOUT|ESOCKET|ECONNCLOSED|Failed to connect|40613|not currently available|Login failed/i.test(String(e && (e.code || "") + " " + e.message));
+    const sqlDown = /ETIMEOUT|ESOCKET|ECONNCLOSED|Failed to connect|40613|not currently available|operation timed out|TimeoutError|ELOGIN|Login failed/i.test(String(e && ((e.code || "") + " " + (e.name || "") + " " + e.message)));
     if (!e.public) (context.log.error || context.log)("API error " + method + " " + path + ": " + (e && e.stack || e));
     if (sqlDown && !e.public) return reply(context, 503, { ok: false, error: "La base de datos se está activando o no está disponible. Intenta de nuevo en un minuto.", code: "db" });
     return reply(context, e.status || 500, { ok: false, error: e.public || "Error interno del servidor.", code: e.code }, ctx.setCookie);

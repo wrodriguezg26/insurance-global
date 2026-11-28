@@ -183,4 +183,13 @@ function buildResetMessage({fromName,from,to,name,link,minutes}){
   return [`From: ${encHeader(fromName)} <${from}>`,`To: <${to}>`,`Subject: ${encHeader(subject)}`,`Date: ${new Date().toUTCString()}`,`Message-ID: <${crypto.randomUUID()}@${domain}>`,`MIME-Version: 1.0`,`Content-Type: multipart/alternative; boundary="${b2}"`,``,`--${b2}`,`Content-Type: text/plain; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(text),`--${b2}`,`Content-Type: text/html; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(html),`--${b2}--`,``].join("\r\n");
 }
 function sendReset(to,name,link,minutes){return deliver(to,({fromName,from})=>buildResetMessage({fromName,from,to,name,link,minutes}),{noBcc:true})}
-module.exports={sendPolicy,sendBenefit,sendReset,siteUrl,FAKE_MAIL,BEN};
+/* Registro nuevo: los datos en JSON adjunto, al buzón de la compañía (sin contraseña) */
+function buildRegistrationMessage({fromName,from,to,data,filename}){
+  const subject=`Nuevo registro de cliente ${data.registro.id} · Insurance Global`;
+  const c=data.cliente,json=JSON.stringify(data,null,2);
+  const text=`Se registró un nuevo cliente en ${data.origen}.\n\nRegistro: ${data.registro.id}\nFecha: ${data.registro.fecha}\nNombre: ${c.nombres} ${c.apellidos}\nDocumento: ${c.tipoDocumento} ${c.documento}\nCorreo: ${c.correo}\n\nLos datos completos van en el archivo adjunto ${filename}.\nInformación personal protegida (Ley 1581 de 2012): úsala solo para la gestión del cliente.\n\nInsurance Global · servidor central`;
+  const b1="mix_"+crypto.randomBytes(8).toString("hex"),domain=(from.split("@")[1]||"localhost");
+  return [`From: ${encHeader(fromName)} <${from}>`,`To: <${to}>`,`Subject: ${encHeader(subject)}`,`Date: ${new Date().toUTCString()}`,`Message-ID: <${crypto.randomUUID()}@${domain}>`,`MIME-Version: 1.0`,`Content-Type: multipart/mixed; boundary="${b1}"`,``,`--${b1}`,`Content-Type: text/plain; charset=UTF-8`,`Content-Transfer-Encoding: base64`,``,b64lines(text),`--${b1}`,`Content-Type: application/json; charset=UTF-8; name="${filename}"`,`Content-Disposition: attachment; filename="${filename}"`,`Content-Transfer-Encoding: base64`,``,b64lines(json),`--${b1}--`,``].join("\r\n");
+}
+function sendRegistration(to,data,filename){return deliver(to,({fromName,from})=>buildRegistrationMessage({fromName,from,to,data,filename}),{noBcc:true})}
+module.exports={sendPolicy,sendBenefit,sendReset,sendRegistration,siteUrl,FAKE_MAIL,BEN};

@@ -21,7 +21,11 @@ CREATE TABLE dbo.ig_users (
     active        BIT           NOT NULL CONSTRAINT df_ig_users_active DEFAULT 1,
     must_change   BIT           NOT NULL CONSTRAINT df_ig_users_mc DEFAULT 0,
     created_at    DATETIME2     NOT NULL CONSTRAINT df_ig_users_created DEFAULT SYSUTCDATETIME(),
-    last_login    DATETIME2     NULL
+    last_login    DATETIME2     NULL,
+    first_names   NVARCHAR(60)  NULL,
+    last_names    NVARCHAR(60)  NULL,
+    birth_date    DATE          NULL,
+    consent_at    DATETIME2     NULL
 );
 GO
 IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE name = 'ux_ig_users_doc')

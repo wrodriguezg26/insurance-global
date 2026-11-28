@@ -627,7 +627,7 @@ function vBuy(){
     f.addEventListener("change",()=>{payUI();sum()});
     f.elements.cnum.oninput=e=>{e.target.value=e.target.value.replace(/\D/g,"").slice(0,19).replace(/(\d{4})(?=\d)/g,"$1 ")};
     f.elements.cexp.oninput=e=>{let v=e.target.value.replace(/\D/g,"").slice(0,4);if(v.length>2)v=v.slice(0,2)+"/"+v.slice(2);e.target.value=v};
-    const nm=ME.name.split(" ");f.elements.email.value=ME.email;f.elements.email.readOnly=true;f.elements.doc.value=ME.doc||"";f.elements.doc.readOnly=true;f.elements.tipoDoc.value=ME.docType||"Cédula de ciudadanía";f.elements.tipoDoc.disabled=true;if(ME.phone)f.elements.celular.value=ME.phone;if(!f.elements.nombres.value){f.elements.nombres.value=nm.slice(0,Math.ceil(nm.length/2)).join(" ");f.elements.apellidos.value=nm.slice(Math.ceil(nm.length/2)).join(" ")}
+    const nm=ME.name.split(" ");f.elements.email.value=ME.email;f.elements.email.readOnly=true;f.elements.doc.value=ME.doc||"";f.elements.doc.readOnly=true;f.elements.tipoDoc.value=ME.docType||"Cédula de ciudadanía";f.elements.tipoDoc.disabled=true;if(ME.phone)f.elements.celular.value=ME.phone;if(!f.elements.nombres.value){f.elements.nombres.value=ME.firstNames||nm.slice(0,Math.ceil(nm.length/2)).join(" ");f.elements.apellidos.value=ME.lastNames||nm.slice(Math.ceil(nm.length/2)).join(" ")}if(ME.birthDate&&!f.elements.nacimiento.value)f.elements.nacimiento.value=ME.birthDate;
     if(f.elements.start){f.elements.start.value=addDays(isoDate(new Date()),1);f.elements.start.min=isoDate(new Date())}
     payUI();sum();
     f.onsubmit=e=>{e.preventDefault();

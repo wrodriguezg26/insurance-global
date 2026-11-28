@@ -101,3 +101,7 @@ sudo node /var/www/insurance-global/deploy/vm/reset-password.js correo@dominio.c
 ```
 
 Pide la contraseña nueva dos veces, desbloquea y reactiva la cuenta, la marca como temporal y deja registro en la auditoría.
+
+## Registros de clientes en archivos .json
+
+Cada registro nuevo se guarda en Azure SQL, se envía en JSON a `REGISTRO_NOTIFY_TO` y, en la VM, se guarda una copia en `REGISTRO_JSON_DIR` (por ejemplo `/var/lib/insurance-global/registros`, archivos con permisos 600). La carpeta nunca debe estar dentro de `/var/www`, porque Nginx la publicaría. En Azure Static Web Apps no se define esa variable: allí no hay disco persistente.

@@ -200,3 +200,7 @@ Este simulador **no debe usarse para vender seguros reales**. Una operación rea
 - firma electrónica con OTP;
 - doble factor para asesores;
 - clausulados depositados.
+
+### Copia en Azure Blob Storage (opcional)
+
+Con `REGISTRO_BLOB_SAS_URL` (URL SAS de un contenedor privado, permisos solo **Crear** y **Escribir**), cada registro también se sube como `registro-CLI-NNNNNN.json` al contenedor. Funciona en Azure Static Web Apps y en la VM. Los archivos se descargan desde el portal (cuenta de almacenamiento → Contenedores → `registros`) o con Azure Storage Explorer. La SAS no permite leer ni listar: si se filtrara, nadie podría descargar los registros con ella.

@@ -17,6 +17,9 @@ ProtectSystem=strict
 ProtectHome=true
 PrivateTmp=true
 ReadOnlyPaths=/opt/insurance-global
+# Carpeta privada y escribible para los archivos .json de cada registro (/var/lib/insurance-global)
+StateDirectory=insurance-global
+StateDirectoryMode=0700
 
 [Install]
 WantedBy=multi-user.target

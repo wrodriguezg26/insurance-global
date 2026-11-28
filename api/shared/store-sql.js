@@ -9,15 +9,21 @@
 const sql = require("mssql");
 
 let poolPromise = null;
+/* La base gratuita (serverless) se pausa sola y tarda hasta ~1 minuto en despertar:
+ * el pool espera hasta 90 s por una conexión en vez de los 30 s por defecto. */
+const POOL = { max: 5, min: 0, idleTimeoutMillis: 30000, acquireTimeoutMillis: 90000 };
 function config() {
-  if (process.env.SQL_CONNECTION_STRING) return process.env.SQL_CONNECTION_STRING;
+  if (process.env.SQL_CONNECTION_STRING) {
+    const c = sql.ConnectionPool.parseConnectionString(process.env.SQL_CONNECTION_STRING);
+    return { ...c, options: { encrypt: true, trustServerCertificate: false, ...(c.options || {}) }, pool: { ...POOL, ...(c.pool || {}) }, connectionTimeout: Math.max(c.connectionTimeout || 0, 60000), requestTimeout: 60000 };
+  }
   if (!process.env.SQL_SERVER || !process.env.SQL_DATABASE || !process.env.SQL_USER || !process.env.SQL_PASSWORD) return null;
   return {
     server: process.env.SQL_SERVER, database: process.env.SQL_DATABASE,
     user: process.env.SQL_USER, password: process.env.SQL_PASSWORD,
     options: { encrypt: true, trustServerCertificate: false },
-    pool: { max: 5, min: 0, idleTimeoutMillis: 30000 },
-    connectionTimeout: 40000, requestTimeout: 30000
+    pool: POOL,
+    connectionTimeout: 60000, requestTimeout: 60000
   };
 }
 function pool() {
@@ -44,9 +50,15 @@ const iso = d => d ? new Date(d).toISOString() : null;
 
 const userRow = r => r && ({
   id: r.id, email: r.email, name: r.name, role: r.role, office: r.office, doc_type: r.doc_type, doc: r.doc, phone: r.phone,
+  first_names: r.first_names || null, last_names: r.last_names || null, birth_date: r.birth_date ? iso(r.birth_date).slice(0, 10) : null, consent_at: iso(r.consent_at),
   pwd_hash: r.pwd_hash, failed: r.failed, locked_until: iso(r.locked_until), active: !!r.active, must_change: !!r.must_change,
   created_at: iso(r.created_at), last_login: iso(r.last_login)
 });
+let regCols = null;
+async function hasRegistroCols() {
+  if (regCols === null) { const r = await q("SELECT CASE WHEN COL_LENGTH('dbo.ig_users','birth_date') IS NULL THEN 0 ELSE 1 END AS ok"); regCols = r.recordset[0].ok === 1; }
+  return regCols;
+}
 const txFromRow = r => r ? JSON.parse(r.data) : null;
 
 module.exports = {
@@ -58,11 +70,16 @@ module.exports = {
   async getUserById(id) { const r = await q("SELECT * FROM ig_users WHERE id=@id", { id: I(id) }); return userRow(r.recordset[0]); },
   async getUserByDoc(doc) { const r = await q("SELECT * FROM ig_users WHERE role='cliente' AND doc=@d", { d: S1(20, doc) }); return userRow(r.recordset[0]); },
   async createUser(u) {
-    const r = await q(`INSERT INTO ig_users(email,name,role,office,doc_type,doc,phone,pwd_hash,must_change)
-      OUTPUT inserted.* VALUES(@email,@name,@role,@office,@doc_type,@doc,@phone,@pwd,@mc)`, {
+    const p = {
       email: S1(160, u.email.toLowerCase()), name: S1(120, u.name), role: S1(12, u.role), office: S1(8, u.office || null),
       doc_type: S1(40, u.doc_type || null), doc: S1(20, u.doc || null), phone: S1(20, u.phone || null), pwd: S1(256, u.pwd_hash), mc: B(u.must_change)
-    });
+    };
+    let cols = "email,name,role,office,doc_type,doc,phone,pwd_hash,must_change", vals = "@email,@name,@role,@office,@doc_type,@doc,@phone,@pwd,@mc";
+    if (await hasRegistroCols()) {   // columnas de la migración 002 (si ya se ejecutó)
+      cols += ",first_names,last_names,birth_date,consent_at"; vals += ",@fn,@ln,@bd,@ca";
+      Object.assign(p, { fn: S1(60, u.first_names || null), ln: S1(60, u.last_names || null), bd: DT(u.birth_date || null), ca: D(u.consent_at || null) });
+    }
+    const r = await q(`INSERT INTO ig_users(${cols}) OUTPUT inserted.* VALUES(${vals})`, p);
     return userRow(r.recordset[0]);
   },
   async updateUser(id, patch) {
